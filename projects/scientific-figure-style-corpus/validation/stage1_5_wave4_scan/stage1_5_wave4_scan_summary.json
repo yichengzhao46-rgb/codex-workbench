@@ -1,8 +1,9 @@
 {
   "articles_total": 10,
   "articles_scanned": 10,
-  "figures_scanned": 0,
-  "previews_resolved": 0,
-  "metadata_only": 0,
+  "figures_scanned": 46,
+  "previews_resolved": 42,
+  "public_mirror_compatible_articles": 9,
+  "restrictive_or_unknown_articles": 1,
   "article_failures": []
 }
