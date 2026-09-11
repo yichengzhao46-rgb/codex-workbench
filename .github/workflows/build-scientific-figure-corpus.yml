@@ -43,20 +43,52 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Detect committed checkpoint
+      - name: Detect verified committed checkpoint
         id: current
         shell: bash
         run: |
-          python - <<'PY' >> "$GITHUB_OUTPUT"
-          import csv, pathlib
-          manifest = pathlib.Path('projects/scientific-figure-style-corpus/manifests/raw-image-manifest.csv')
-          count = 0
+          python - <<'PY'
+          import csv
+          import hashlib
+          import os
+          import pathlib
+
+          root = pathlib.Path('projects/scientific-figure-style-corpus')
+          manifest = root / 'manifests/raw-image-manifest.csv'
+          manifest_rows = 0
+          valid = 0
+          invalid = 0
+
           if manifest.exists():
               with manifest.open(encoding='utf-8', newline='') as f:
-                  count = sum(1 for _ in csv.DictReader(f))
-          print(f'count={count}')
-          print(f'next_target={min(100, ((count // 10) + 1) * 10) if count < 100 else 100}')
-          print(f'Committed checkpoint detected: {count}/100')
+                  rows = list(csv.DictReader(f))
+              manifest_rows = len(rows)
+              for row in rows:
+                  rel = (row.get('asset_path') or '').strip()
+                  expected = (row.get('sha256') or '').strip()
+                  if not rel or not expected:
+                      invalid += 1
+                      continue
+                  path = root / rel
+                  if not path.exists() or not path.is_file():
+                      invalid += 1
+                      continue
+                  actual = hashlib.sha256(path.read_bytes()).hexdigest()
+                  if actual != expected:
+                      invalid += 1
+                      continue
+                  valid += 1
+
+          next_target = min(100, ((valid // 10) + 1) * 10) if valid < 100 else 100
+          output = pathlib.Path(os.environ['GITHUB_OUTPUT'])
+          with output.open('a', encoding='utf-8') as out:
+              out.write(f'count={valid}\n')
+              out.write(f'next_target={next_target}\n')
+              out.write(f'manifest_rows={manifest_rows}\n')
+              out.write(f'invalid_rows={invalid}\n')
+
+          print(f'Verified committed checkpoint: {valid}/100')
+          print(f'Manifest rows present: {manifest_rows}; non-verified/placeholders: {invalid}')
           PY
 
       - name: Build and persist 10-image checkpoints
@@ -64,15 +96,16 @@ jobs:
         run: |
           set -euo pipefail
           CURRENT=${{ steps.current.outputs.count }}
+          echo "Starting from verified checkpoint: ${CURRENT}/100"
           if [ "$CURRENT" -ge 100 ]; then
-            echo "Corpus already has $CURRENT/100 images; skipping download batches."
+            echo "Corpus already has $CURRENT verified images; skipping download batches."
             exit 0
           fi
 
           START=$(( (CURRENT / 10 + 1) * 10 ))
           for TARGET in $(seq "$START" 10 100); do
             echo "============================================================"
-            echo "Checkpoint batch: committed=$CURRENT target=$TARGET/100"
+            echo "Checkpoint batch: verified=$CURRENT target=$TARGET/100"
             echo "============================================================"
 
             python projects/scientific-figure-style-corpus/scripts/build_raw_corpus_resume.py \
@@ -88,16 +121,22 @@ jobs:
           root = pathlib.Path('projects/scientific-figure-style-corpus')
           manifest = root / 'manifests/raw-image-manifest.csv'
           rows = list(csv.DictReader(manifest.open(encoding='utf-8', newline='')))
-          if len(rows) < target:
-              raise SystemExit(f'checkpoint incomplete: {len(rows)}/{target}')
+          valid = 0
           for row in rows:
-              path = root / row['asset_path']
-              if not path.exists():
+              rel = (row.get('asset_path') or '').strip()
+              expected = (row.get('sha256') or '').strip()
+              if not rel or not expected:
+                  continue
+              path = root / rel
+              if not path.exists() or not path.is_file():
                   raise SystemExit(f'missing checkpoint asset: {path}')
               digest = hashlib.sha256(path.read_bytes()).hexdigest()
-              if digest != row['sha256']:
+              if digest != expected:
                   raise SystemExit(f'checkpoint checksum mismatch: {path}')
-          print(f'checkpoint validated: {len(rows)}/{target}')
+              valid += 1
+          if valid < target:
+              raise SystemExit(f'checkpoint incomplete: {valid}/{target} verified assets')
+          print(f'checkpoint validated: {valid}/{target}')
           PY
 
             git add \
@@ -122,8 +161,7 @@ jobs:
           root = pathlib.Path('projects/scientific-figure-style-corpus')
           manifest = root / 'manifests/raw-image-manifest.csv'
           rows = list(csv.DictReader(manifest.open(encoding='utf-8', newline='')))
-          if len(rows) < 100:
-              raise SystemExit(f'raw corpus incomplete: {len(rows)}/100 images')
+          valid_rows = []
           excluded = {
               'est-letters', 'microbiome', 'mbio', 'npj-biofilms-microbiomes',
               'communications-biology', 'water-research-x', 'environmental-microbiome'
@@ -134,19 +172,18 @@ jobs:
           hashes = set()
           figure_keys = set()
           for row in rows:
-              slug = row['journal_slug']
+              rel = (row.get('asset_path') or '').strip()
+              expected = (row.get('sha256') or '').strip()
+              if not rel or not expected:
+                  continue
+              slug = row.get('journal_slug', '')
               if slug in excluded:
                   raise SystemExit(f'excluded journal entered corpus: {slug}')
-              journals[slug] = journals.get(slug, 0) + 1
-              if row.get('pmcid'):
-                  articles.add(row['pmcid'])
-              if row.get('source_tier') == 'core':
-                  core += 1
-              path = root / row['asset_path']
+              path = root / rel
               if not path.exists():
                   raise SystemExit(f'missing asset: {path}')
               digest = hashlib.sha256(path.read_bytes()).hexdigest()
-              if digest != row['sha256']:
+              if digest != expected:
                   raise SystemExit(f'checksum mismatch: {path}')
               if digest in hashes:
                   raise SystemExit(f'duplicate asset hash: {path}')
@@ -155,12 +192,21 @@ jobs:
               if key in figure_keys:
                   raise SystemExit(f'duplicate figure record: {key}')
               figure_keys.add(key)
+              valid_rows.append(row)
+              journals[slug] = journals.get(slug, 0) + 1
+              if row.get('pmcid'):
+                  articles.add(row['pmcid'])
+              if row.get('source_tier') == 'core':
+                  core += 1
+
+          if len(valid_rows) < 100:
+              raise SystemExit(f'raw corpus incomplete: {len(valid_rows)}/100 verified images')
           if core < 50:
               raise SystemExit(f'core-journal representation too low: {core}/100')
           if len(articles) < 45:
               raise SystemExit(f'article diversity too low: {len(articles)} distinct articles')
           summary = {
-              'validated_images': len(rows),
+              'validated_images': len(valid_rows),
               'journals': journals,
               'core_images': core,
               'distinct_articles': len(articles),
