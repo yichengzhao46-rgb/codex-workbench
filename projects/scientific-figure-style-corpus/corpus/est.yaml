@@ -1,0 +1,336 @@
+journal: "Environmental Science & Technology"
+samples:
+  - sample_id: "EST-2026-IEET-VA"
+    status: candidate
+    source:
+      journal: "Environmental Science & Technology"
+      year: 2026
+      article_title: "Visualizing Microbial Indirect Extracellular Electron Transfer"
+      doi_or_url: "https://doi.org/10.1021/acs.est.6c00304"
+      figure_id: "Visual Abstract"
+      panel_id: ""
+      source_checked_at: "2026-09-11"
+      access_note: "ACS page confirms Visual Abstract and the study's long-distance IEET focus."
+      rights_or_license: "© 2026 American Chemical Society; no image asset stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: graphical_abstract
+      secondary_purposes: [electron_transfer, environmental_process]
+      style_family: editorial_2d_overview
+      dimensionality: 2d
+      layout: linear_flow
+      information_density: low
+      target_medium: graphical_abstract
+    domain:
+      primary_domain: "indirect extracellular electron transfer"
+      scientific_entities: ["Shewanella oneidensis", "riboflavin", "phenazine-1-carboxylic acid", "natural organic matter", "Ag+ electron trap"]
+      process_keywords: ["IEET", "electron shuttle", "riboflavin", "long-distance electron transfer", "photothermal imaging"]
+    visual_language:
+      cell_style: "pending direct visual QA"
+      material_style: "likely electron-trap / imaging geometry; pending"
+      molecule_style: "candidate shuttle molecules are central scientific entities"
+      arrow_style: "expected donor-to-shuttle-to-trap direction; exact rendering pending"
+      palette: "pending direct pixel QA"
+      outline: "pending"
+      shading_or_texture: "pending"
+      background: "visual-abstract format"
+      text_density: low
+      label_hierarchy: "microbe > soluble shuttle > electron-transfer distance / trap"
+      panel_or_zoom_style: "single summary scene expected"
+      negative_space: "pending"
+    evidence_semantics:
+      evidence_coding_present: unclear
+      supported_pathway_encoding: "IEET through endogenous and exogenous shuttles is experimentally supported"
+      candidate_pathway_encoding: "specific shuttle contribution should remain molecule-specific and evidence-matched"
+      contextual_pathway_encoding: "distance and imaging/trap system define the study context"
+      causal_language_risk: low
+      notes: "Very strong scientific analogue for riboflavin/formate/H2 distinction because it separates shuttle-mediated transfer from direct contact."
+    reusability:
+      best_reusable_elements: ["microbe", "soluble electron shuttle", "long-range transfer path", "distance concept"]
+      best_reusable_layout_principles: ["make the shuttle an explicit intermediate rather than drawing a direct cell-to-target arrow"]
+      best_reusable_arrow_principles: ["electron-transfer arrows should visibly pass through the mediator when the mechanism is indirect"]
+      suitable_for: ["Bath-RP candidate riboflavin-mediated transfer", "IEET concept", "diffusible redox mediator figures"]
+      not_suitable_for: ["proven direct electron transfer", "cell-contact DIET"]
+      transferable_without_copying: "Reuse the mediator-as-intermediate logic; exact visual styling waits for pixel QA."
+    assessment:
+      why_it_works: "The scientific message is inherently visual: soluble mediators extend electron-transfer distance, making it an ideal low-density abstract."
+      main_weakness: "Fine visual annotation is not yet inspected."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Priority ES&T candidate for direct visual QA."
+    annotation_qc:
+      inspection_level: graphical_abstract_metadata
+      annotation_confidence: medium
+      direct_pixel_qa: pending
+      notes: "ACS page confirms Visual Abstract but current crawl exposes only placeholder metadata."
+    notes: "High relevance to the user's riboflavin-like mediator hypothesis."
+
+  - sample_id: "EST-2025-H2O2-EEU-VA"
+    status: candidate
+    source:
+      journal: "Environmental Science & Technology"
+      year: 2025
+      article_title: "Extracellular Electron Uptake Mediated by H2O2"
+      doi_or_url: "https://doi.org/10.1021/acs.est.4c13792"
+      figure_id: "Visual Abstract"
+      panel_id: ""
+      source_checked_at: "2026-09-11"
+      access_note: "ACS page confirms Visual Abstract and H2O2-mediated cathodic EEU mechanism."
+      rights_or_license: "© American Chemical Society; no image asset stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: graphical_abstract
+      secondary_purposes: [electron_transfer, material_microbe_interface, mechanistic_pathway]
+      style_family: pathway_cutaway_2d
+      dimensionality: 2d
+      layout: linear_flow
+      information_density: medium
+      target_medium: graphical_abstract
+    domain:
+      primary_domain: "cathodic extracellular electron uptake"
+      scientific_entities: ["cathode", "H2O2", "O2", "catalase KatG", "autotrophic bacteria"]
+      process_keywords: ["EEU", "H2O2", "oxygen reduction", "cathode", "autotrophy"]
+    visual_language:
+      cell_style: "pending direct visual QA"
+      material_style: "electrode is a primary object"
+      molecule_style: "H2O2 and O2 should be explicit intermediates"
+      arrow_style: "mechanistic sequence likely electrode → H2O2 intermediate → cellular uptake; exact style pending"
+      palette: "pending direct pixel QA"
+      outline: "pending"
+      shading_or_texture: "pending"
+      background: "visual abstract"
+      text_density: medium
+      label_hierarchy: "electrode reaction > H2O2 intermediate > cellular response"
+      panel_or_zoom_style: "interface mechanism expected"
+      negative_space: "pending"
+    evidence_semantics:
+      evidence_coding_present: unclear
+      supported_pathway_encoding: "H2O2-mediated uptake contribution is experimentally quantified"
+      candidate_pathway_encoding: "downstream intracellular detail should not exceed measured mechanism"
+      contextual_pathway_encoding: "continuous electron supply and O2 reduction are essential conditions"
+      causal_language_risk: low
+      notes: "Useful model for a non-direct EEU pathway with a chemical intermediate."
+    reusability:
+      best_reusable_elements: ["cathode", "chemical intermediate", "cellular uptake", "oxygen reduction"]
+      best_reusable_layout_principles: ["separate abiotic generation of intermediate from biotic consumption"]
+      best_reusable_arrow_principles: ["do not collapse electrode → cell into one arrow when an intermediate is mechanistically required"]
+      suitable_for: ["EEU alternatives", "Bath-mineral interface with mediated uptake", "abiotic-biotic coupled mechanisms"]
+      not_suitable_for: ["DIET", "pure cross-feeding without electrode"]
+      transferable_without_copying: "Reuse the two-stage abiotic→intermediate→biotic pathway logic."
+    assessment:
+      why_it_works: "It separates electron uptake from the electrode reaction that creates the actual mediator."
+      main_weakness: "Direct styling awaits visual inspection."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 4
+      style_relevance_score: 5
+      active_corpus_decision: "Keep as a mechanistic EEU comparator."
+    annotation_qc:
+      inspection_level: graphical_abstract_metadata
+      annotation_confidence: medium
+      direct_pixel_qa: pending
+      notes: "Visual Abstract confirmed by ACS."
+    notes: "Good evidence-boundary comparator for Objective 2."
+
+  - sample_id: "EST-2023-FE3O4-BIOCHAR-VA"
+    status: candidate
+    source:
+      journal: "Environmental Science & Technology"
+      year: 2023
+      article_title: "Enhanced Anaerobic Wastewater Treatment by a Binary Electroactive Material: Pseudocapacitance/Conductance-Mediated Microbial Interspecies Electron Transfer"
+      doi_or_url: "https://doi.org/10.1021/acs.est.3c01986"
+      figure_id: "Visual Abstract"
+      panel_id: ""
+      source_checked_at: "2026-09-11"
+      access_note: "ACS page confirms Visual Abstract and explicitly separates hydrolysis/acidification pseudocapacitance from methanogenic conductance/DIET roles."
+      rights_or_license: "© 2023 American Chemical Society; no image asset stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: graphical_abstract
+      secondary_purposes: [material_microbe_interface, electron_transfer, integrated_mechanism]
+      style_family: soft_2_5d_schematic
+      dimensionality: light_2_5d
+      layout: linear_flow
+      information_density: medium
+      target_medium: graphical_abstract
+    domain:
+      primary_domain: "electroactive material-enhanced anaerobic digestion"
+      scientific_entities: ["Fe3O4@biochar", "acid-producing bacteria", "methanogens", "NADH/NAD+", "ATP", "F420"]
+      process_keywords: ["pseudocapacitance", "conductance", "DIET", "anaerobic digestion", "biochar"]
+    visual_language:
+      cell_style: "pending direct visual QA"
+      material_style: "binary material should be focal; exact texture pending"
+      molecule_style: "redox cofactors and methane likely summarized rather than structurally detailed"
+      arrow_style: "stage-specific ET roles likely differentiated; exact semantics pending"
+      palette: "pending direct pixel QA"
+      outline: "pending"
+      shading_or_texture: "likely material-specific 2.5D cues; pending"
+      background: "visual abstract"
+      text_density: medium
+      label_hierarchy: "material function by AD stage > electron transfer > metabolic output"
+      panel_or_zoom_style: "two-stage process expected"
+      negative_space: "pending"
+    evidence_semantics:
+      evidence_coding_present: unclear
+      supported_pathway_encoding: "pseudocapacitance and conductance roles are stage-specific in the study"
+      candidate_pathway_encoding: "visual transfer to other systems must not imply the same mechanisms"
+      contextual_pathway_encoding: "hydrolysis/acidification and methanogenesis are distinct stages"
+      causal_language_risk: medium
+      notes: "Excellent scientific reference for assigning different functions to one material across stages."
+    reusability:
+      best_reusable_elements: ["composite conductive particle", "electron buffer concept", "microbe–material–microbe bridge", "stage-specific functions"]
+      best_reusable_layout_principles: ["split mechanism by process stage", "use the material as the persistent visual anchor"]
+      best_reusable_arrow_principles: ["differentiate electron storage/release from direct conduction"]
+      suitable_for: ["GAC/mineral interface", "conductive-material mechanism", "multi-function material graphical abstract"]
+      not_suitable_for: ["MIET-only Bath-RP result figure", "unresolved material mechanism"]
+      transferable_without_copying: "Reuse the stage-specific material-function architecture, not the exact composite rendering."
+    assessment:
+      why_it_works: "It avoids a vague 'material improves digestion' story by assigning mechanistically different material roles to different stages."
+      main_weakness: "May be too mechanistically specific for systems without equivalent electrochemical evidence."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Priority conductive-material candidate after pixel QA."
+    annotation_qc:
+      inspection_level: graphical_abstract_metadata
+      annotation_confidence: medium
+      direct_pixel_qa: pending
+      notes: "Visual Abstract confirmed by ACS; exact artwork not directly inspected."
+    notes: "Strong Objective 3 reference, especially for not conflating capacitive buffering with conduction."
+
+  - sample_id: "EST-2024-FES-CONDUIT-VA"
+    status: candidate
+    source:
+      journal: "Environmental Science & Technology"
+      year: 2024
+      article_title: "Biological Self-Assembled Transmembrane Electron Conduits for High-Efficiency Ammonia Production in Microbial Electrosynthesis"
+      doi_or_url: "https://doi.org/10.1021/acs.est.3c10897"
+      figure_id: "Visual Abstract"
+      panel_id: ""
+      source_checked_at: "2026-09-11"
+      access_note: "ACS page confirms Visual Abstract and describes self-assembled FeS / transmembrane electron conduit mechanism."
+      rights_or_license: "© 2024 American Chemical Society; no image asset stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: graphical_abstract
+      secondary_purposes: [material_microbe_interface, electron_transfer, mechanistic_pathway]
+      style_family: pathway_cutaway_2d
+      dimensionality: light_2_5d
+      layout: zoom_in_multiscale
+      information_density: medium
+      target_medium: graphical_abstract
+    domain:
+      primary_domain: "microbial electrosynthesis / self-assembled FeS interface"
+      scientific_entities: ["Shewanella oneidensis", "FeS nanoparticles", "outer membrane", "c-type cytochromes", "cathode", "nitrate", "ammonia"]
+      process_keywords: ["transmembrane electron conduit", "FeS", "EEU", "microbial electrosynthesis", "nitrate reduction"]
+    visual_language:
+      cell_style: "membrane/cell cutaway expected; exact rendering pending"
+      material_style: "self-assembled FeS nanoparticles at/on cells likely focal"
+      molecule_style: "substrate/product chemistry likely simplified"
+      arrow_style: "electron path should cross explicit extracellular-to-intracellular interfaces"
+      palette: "pending direct pixel QA"
+      outline: "pending"
+      shading_or_texture: "light 2.5D material cues likely; pending"
+      background: "visual abstract"
+      text_density: medium
+      label_hierarchy: "cathode/material interface > membrane conduit > product formation"
+      panel_or_zoom_style: "macro electrode plus membrane-level zoom likely"
+      negative_space: "pending"
+    evidence_semantics:
+      evidence_coding_present: unclear
+      supported_pathway_encoding: "study identifies amide-containing protein-like substances and c-type cytochromes as conduit components"
+      candidate_pathway_encoding: "visual route must stay aligned with demonstrated FeS-enabled system"
+      contextual_pathway_encoding: "microbial electrosynthesis / nitrate reduction"
+      causal_language_risk: medium
+      notes: "Particularly useful to distinguish self-assembled material on a cell from an externally added bulk mineral."
+    reusability:
+      best_reusable_elements: ["cell-surface nanoparticles", "membrane cutaway", "transmembrane electron arrow", "electrode interface"]
+      best_reusable_layout_principles: ["zoom from device interface to membrane conduit", "localize material texture to the cell boundary"]
+      best_reusable_arrow_principles: ["electron path crosses explicitly drawn interface components"]
+      suitable_for: ["Bath-Se self-assembled mineral interface", "membrane EET/EEU cutaway", "biohybrid zoom figure"]
+      not_suitable_for: ["diffusible metabolite-only mechanism", "environmental landscape"]
+      transferable_without_copying: "Reuse the multiscale interface-to-membrane logic and localized material treatment."
+    assessment:
+      why_it_works: "The scientific mechanism naturally spans electrode, mineral nanoparticle, membrane, and intracellular metabolism, making multiscale zoom necessary rather than decorative."
+      main_weakness: "Fine visual details remain unverified."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Top candidate for Objective 2 visual language."
+    annotation_qc:
+      inspection_level: graphical_abstract_metadata
+      annotation_confidence: medium
+      direct_pixel_qa: pending
+      notes: "Visual Abstract and scientific mechanism verified via ACS page."
+    notes: "Directly relevant to self-assembled Bath–Se concept."
+
+  - sample_id: "EST-2023-METHANE-SELENATE-VA"
+    status: candidate
+    source:
+      journal: "Environmental Science & Technology"
+      year: 2023
+      article_title: "Methane Oxidation Coupled to Selenate Reduction in a Membrane Bioreactor under Oxygen-Limiting Conditions"
+      doi_or_url: "https://doi.org/10.1021/acs.est.3c04958"
+      figure_id: "Visual Abstract"
+      panel_id: ""
+      source_checked_at: "2026-09-11"
+      access_note: "ACS page confirms Visual Abstract and a syntrophic partnership between aerobic methanotrophs and selenate reducers under O2 limitation."
+      rights_or_license: "© 2023 American Chemical Society; no image asset stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: graphical_abstract
+      secondary_purposes: [microbial_interaction, environmental_process, metabolic_pathway]
+      style_family: editorial_2d_overview
+      dimensionality: 2d
+      layout: two_organism_interaction
+      information_density: medium
+      target_medium: graphical_abstract
+    domain:
+      primary_domain: "oxygen-limited methane oxidation coupled to selenate reduction"
+      scientific_entities: ["Methylocystis", "Acidovorax", "Denitratisoma", "CH4", "O2", "acetate", "selenate"]
+      process_keywords: ["methane oxidation", "oxygen limitation", "acetate cross-feeding", "selenate reduction", "syntrophy"]
+    visual_language:
+      cell_style: "likely donor/partner organisms; exact morphology pending direct QA"
+      material_style: "membrane bioreactor context may be simplified"
+      molecule_style: "CH4, O2, acetate, and selenate are core tokens"
+      arrow_style: "expected CH4→methanotroph→acetate→selenate reducer flow; exact encoding pending"
+      palette: "pending direct pixel QA"
+      outline: "pending"
+      shading_or_texture: "pending"
+      background: "visual abstract"
+      text_density: medium
+      label_hierarchy: "oxygen-limited methane oxidation > acetate transfer > partner respiration"
+      panel_or_zoom_style: "integrated coculture/process summary expected"
+      negative_space: "pending"
+    evidence_semantics:
+      evidence_coding_present: unclear
+      supported_pathway_encoding: "mass balance, intermediates, DNA-SIP and functional genes collectively support acetate-mediated syntrophy"
+      candidate_pathway_encoding: "do not generalize acetate as the only transferable route in Bath-RP"
+      contextual_pathway_encoding: "oxygen limitation is mechanistically central"
+      causal_language_risk: low
+      notes: "Scientifically one of the closest analogues to the user's methane oxidation → partner metabolism logic."
+    reusability:
+      best_reusable_elements: ["methanotroph donor", "heterotrophic partner", "CH4/O2 tokens", "acetate intermediate", "terminal electron acceptor"]
+      best_reusable_layout_principles: ["arrange donor metabolism upstream and partner respiration downstream", "keep oxygen limitation visually contextual rather than merely decorative"]
+      best_reusable_arrow_principles: ["cross-feeding intermediate must occupy the interspecies space"]
+      suitable_for: ["Bath-RP overview", "methane-driven cross-feeding", "oxygen-limited interaction figures"]
+      not_suitable_for: ["claiming H2/formate/riboflavin from acetate-only evidence", "direct electron-transfer graphics"]
+      transferable_without_copying: "Reuse donor→diffusible metabolite→partner structure and O2-limitation context."
+    assessment:
+      why_it_works: "Its scientific logic is nearly isomorphic to a methane-oxidizer feeding a second functional guild under O2 limitation."
+      main_weakness: "Visual specifics remain unverified, and its acetate-centered mechanism should not narrow the user's multi-candidate Bath-RP model."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Priority analogue candidate for Bath-RP after pixel QA."
+    annotation_qc:
+      inspection_level: graphical_abstract_metadata
+      annotation_confidence: medium
+      direct_pixel_qa: pending
+      notes: "Visual Abstract and scientific pathway verified via ACS full page."
+    notes: "Highest domain relevance among ES&T samples."
