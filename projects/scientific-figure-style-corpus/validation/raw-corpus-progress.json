@@ -1,17 +1,18 @@
 {
-  "count": 60,
+  "count": 70,
   "target": 100,
-  "batch_target": 60,
-  "batch_start_count": 50,
+  "batch_target": 70,
+  "batch_start_count": 60,
   "new_this_batch": 10,
-  "distinct_articles": 41,
+  "distinct_articles": 48,
   "core_images": 57,
   "journals": {
     "est": 15,
     "isme": 20,
     "nature-communications": 20,
-    "nature-microbiology": 3,
+    "nature-microbiology": 8,
+    "nature-water": 5,
     "water-research": 2
   },
-  "updated_at_utc": "2026-09-11T09:57:21.277625+00:00"
+  "updated_at_utc": "2026-09-11T10:15:50.100552+00:00"
 }
