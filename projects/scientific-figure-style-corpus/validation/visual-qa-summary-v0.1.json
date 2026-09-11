@@ -1,0 +1,57 @@
+{
+  "total_visual_qa": 100,
+  "qa_status": {
+    "pass_with_caveat": 63,
+    "pass": 37
+  },
+  "style_learning_tier": {
+    "exclude_from_style_learning": 50,
+    "B_style_reference": 19,
+    "C_context_reference": 8,
+    "A_style_reference": 23
+  },
+  "primary_purpose": {
+    "quantitative_results": 37,
+    "mechanistic_pathway": 6,
+    "map_spatial": 4,
+    "environmental_process": 4,
+    "table_matrix": 1,
+    "microscopy_imaging": 8,
+    "conceptual_overview": 1,
+    "experimental_design": 18,
+    "microbial_interaction": 3,
+    "electron_transfer": 3,
+    "metabolic_pathway": 4,
+    "phylogeny_genomics": 3,
+    "integrated_mechanism": 3,
+    "material_interface": 3,
+    "multiscale_zoom": 2
+  },
+  "style_family": {
+    "quantitative_data_figure": 37,
+    "flat_2d_mechanism": 9,
+    "map_cartographic": 4,
+    "editorial_2d_overview": 4,
+    "table_matrix": 1,
+    "microscopy_composite": 8,
+    "flat_2d_workflow": 4,
+    "mixed_schematic_data": 23,
+    "2d_pathway_cutaway": 4,
+    "phylogeny_genomics": 3,
+    "3d_cutaway_caveat": 1,
+    "soft_2_5d_schematic": 2
+  },
+  "domain_relevance_to_bath_rp": {
+    "high": 51,
+    "moderate": 12,
+    "low": 37
+  },
+  "biorender_flagged": 12,
+  "low_resolution_short_dimension": 5,
+  "stage1_policy": {
+    "raw_corpus_preserved": true,
+    "quantitative_low_transfer_figures_not_deleted": "kept as raw/context but excluded from style-learning set",
+    "biorender_figures": "style reference allowed; element extraction blocked unless separately cleared",
+    "3d_figures": "retain as context only when useful; down-rank for current 2D/2.5D preference"
+  }
+}
