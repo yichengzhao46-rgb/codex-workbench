@@ -42,14 +42,14 @@ jobs:
 
       - name: Build 100-image rights-aware raw corpus
         run: |
-          python projects/scientific-figure-style-corpus/scripts/build_raw_corpus.py \
+          python projects/scientific-figure-style-corpus/scripts/run_raw_corpus_scoped.py \
             --project-root projects/scientific-figure-style-corpus \
             --target-total 100 \
             --retmax 400 \
             --max-per-article 2 \
             --min-score 4
 
-      - name: Validate image count and checksums
+      - name: Validate image count, source scope, and checksums
         run: |
           python - <<'PY'
           import csv, hashlib, pathlib
@@ -58,12 +58,19 @@ jobs:
           rows = list(csv.DictReader(manifest.open(encoding='utf-8')))
           if len(rows) < 100:
               raise SystemExit(f'raw corpus incomplete: {len(rows)}/100 images')
+          excluded = {
+              'est-letters', 'microbiome', 'mbio', 'npj-biofilms-microbiomes',
+              'communications-biology', 'water-research-x', 'environmental-microbiome'
+          }
           journals = {}
           core = 0
           scope_high = 0
           articles = set()
           for row in rows:
-              journals[row['journal_slug']] = journals.get(row['journal_slug'], 0) + 1
+              slug = row['journal_slug']
+              if slug in excluded:
+                  raise SystemExit(f'excluded journal entered corpus: {slug}')
+              journals[slug] = journals.get(slug, 0) + 1
               articles.add(row['pmcid'])
               if row.get('source_tier') == 'core':
                   core += 1
