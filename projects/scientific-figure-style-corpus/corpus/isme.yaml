@@ -1,0 +1,336 @@
+journal: "The ISME Journal"
+samples:
+  - sample_id: "ISME-2017-LOVLEY-F3"
+    status: active
+    source:
+      journal: "The ISME Journal"
+      year: 2017
+      article_title: "Happy together: microbial communities that hook up to swap electrons"
+      doi_or_url: "https://doi.org/10.1038/ismej.2016.136"
+      figure_id: "Figure 3"
+      panel_id: ""
+      source_checked_at: "2026-09-11"
+      access_note: "Publisher full-text page exposes the figure and caption."
+      rights_or_license: "Reuse rights not independently verified in this pass; no image asset stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: electron_transfer
+      secondary_purposes: [microbial_interaction, integrated_mechanism]
+      style_family: flat_2d_mechanism
+      dimensionality: 2d
+      layout: two_organism_interaction
+      information_density: medium
+      target_medium: paper
+    domain:
+      primary_domain: "anaerobic methane oxidation / DIET"
+      scientific_entities: ["ANME-2", "sulfate-reducing partner", "cytochromes", "methane", "sulfate"]
+      process_keywords: ["DIET", "electron transfer", "aggregate", "methane oxidation", "sulfate reduction"]
+    visual_language:
+      cell_style: "contrasting simplified cell populations inside an aggregate"
+      material_style: "cytochrome symbols form the intercellular conductive matrix"
+      molecule_style: "minimal reaction labels rather than detailed structures"
+      arrow_style: "lightning/flow marks distinguish local electron transfer from a longer percolation path"
+      palette: "functional organism contrast (green ANME / pink partner) with a yellow long-range electron path"
+      outline: "simple publication schematic outlines"
+      shading_or_texture: "minimal"
+      background: "plain"
+      text_density: medium
+      label_hierarchy: "organism identity first; electron-transfer components second"
+      panel_or_zoom_style: "single mechanism scene"
+      negative_space: "central intercellular space reserved for the transfer mechanism"
+    evidence_semantics:
+      evidence_coding_present: yes
+      supported_pathway_encoding: "adjacent-cell electron-transfer relationships are shown directly"
+      candidate_pathway_encoding: "longer cytochrome percolation is presented as a proposed model"
+      contextual_pathway_encoding: "methane oxidation and sulfate reduction anchor donor/acceptor roles"
+      causal_language_risk: medium
+      notes: "The paper explicitly states major assumptions in this model were not yet validated. This is a strong example of why mechanism graphics must preserve evidence boundaries."
+    reusability:
+      best_reusable_elements: ["two partner cell identities", "central conductive matrix", "electron-flow path"]
+      best_reusable_layout_principles: ["keep donor and acceptor populations visually distinct", "reserve the center for the transfer mechanism"]
+      best_reusable_arrow_principles: ["separate local transfer marks from long-range transfer paths"]
+      suitable_for: ["Bath-RP electron-transfer hypotheses", "aggregate-scale IET models", "two-organism mechanism figures"]
+      not_suitable_for: ["quantitative flux diagrams", "species-resolved isotope attribution"]
+      transferable_without_copying: "Use the donor-left/acceptor-right interaction grammar and a dedicated transfer zone, not the original cell shapes or exact color assignment."
+    assessment:
+      why_it_works: "A complex aggregate hypothesis is reduced to two biological actors plus one visually dominant transfer layer."
+      main_weakness: "The proposed conductive matrix can look more established than the text evidence unless uncertainty is explicitly coded."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Core reference for evidence-aware microbial electron-transfer schematics."
+    annotation_qc:
+      inspection_level: direct_figure_page
+      annotation_confidence: high
+      direct_pixel_qa: complete
+      notes: "Caption and on-page figure description exposed by publisher page."
+    notes: "Highly relevant to GAC/DIET and aggregate mechanism work."
+
+  - sample_id: "ISME-2016-STORCK-F1"
+    status: active
+    source:
+      journal: "The ISME Journal"
+      year: 2016
+      article_title: "Modelling extracellular limitations for mediated versus direct interspecies electron transfer"
+      doi_or_url: "https://doi.org/10.1038/ismej.2015.139"
+      figure_id: "Figure 1"
+      panel_id: "a-c"
+      source_checked_at: "2026-09-11"
+      access_note: "Publisher full-text page exposes figure caption and the three mechanism panels."
+      rights_or_license: "Reuse rights not independently verified; no image asset stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: electron_transfer
+      secondary_purposes: [comparative_perturbation, mechanistic_pathway]
+      style_family: editorial_2d_overview
+      dimensionality: 2d
+      layout: mirrored_comparison
+      information_density: high
+      target_medium: paper
+    domain:
+      primary_domain: "interspecies electron transfer modelling"
+      scientific_entities: ["acetogen", "methanogen", "H2", "formate", "nanowires"]
+      process_keywords: ["hydrogen MIET", "formate MIET", "DIET", "reaction diffusion", "voltage loss"]
+    visual_language:
+      cell_style: "paired simplified spherical cells repeated across comparable panels"
+      material_style: "conductive nanowire connection appears only in DIET panel"
+      molecule_style: "small chemical labels embedded in a transport domain"
+      arrow_style: "process arrows are panel-specific; DIET panel additionally labels voltage-loss locations"
+      palette: "functional comparison palette with repeated visual identities across three alternatives"
+      outline: "technical schematic"
+      shading_or_texture: "low"
+      background: "plain model domain"
+      text_density: high
+      label_hierarchy: "panel mode > cell pair > mediators / boundaries / losses"
+      panel_or_zoom_style: "three aligned mechanism alternatives"
+      negative_space: "controlled, with comparable spacing to support side-by-side reading"
+    evidence_semantics:
+      evidence_coding_present: yes
+      supported_pathway_encoding: "model components and boundary conditions are explicit"
+      candidate_pathway_encoding: "model assumptions are encoded as geometry and connection choices"
+      contextual_pathway_encoding: "chemical species and domain boundaries provide environmental context"
+      causal_language_risk: low
+      notes: "Strong reference for visual comparison of mechanisms without forcing one arrow grammar onto all transfer modes."
+    reusability:
+      best_reusable_elements: ["three-mode comparison", "repeated donor/acceptor pair", "mode-specific transfer conduit"]
+      best_reusable_layout_principles: ["hold organism positions constant while changing only the mechanism", "compare alternatives using equal visual weight"]
+      best_reusable_arrow_principles: ["make transfer carrier visually specific to each mode"]
+      suitable_for: ["MIET vs DIET comparison", "H2 vs formate vs conductive route figures", "5% vs 25% O2 mechanism comparisons after simplification"]
+      not_suitable_for: ["low-density graphical abstracts", "single-route hero mechanisms"]
+      transferable_without_copying: "Reuse the controlled-comparison logic rather than the exact transport-domain geometry."
+    assessment:
+      why_it_works: "Mechanism differences are legible because common elements remain fixed across aligned panels."
+      main_weakness: "Too information-dense for a presentation slide unless heavily simplified."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 4
+      style_relevance_score: 5
+      active_corpus_decision: "Core reference for comparison routing."
+    annotation_qc:
+      inspection_level: direct_figure_page
+      annotation_confidence: high
+      direct_pixel_qa: complete
+      notes: "Figure caption explicitly defines panels a-c and visual model contents."
+    notes: "Particularly useful for keeping MIET-only and DIET alternatives visually distinct."
+
+  - sample_id: "ISME-2014-PANDE-F1"
+    status: active
+    source:
+      journal: "The ISME Journal"
+      year: 2014
+      article_title: "Fitness and stability of obligate cross-feeding interactions that emerge upon gene loss in bacteria"
+      doi_or_url: "https://doi.org/10.1038/ismej.2013.211"
+      figure_id: "Figure 1"
+      panel_id: "cross-feeder inset"
+      source_checked_at: "2026-09-11"
+      access_note: "Full-text pages expose Figure 1 and its cross-feeding inset."
+      rights_or_license: "Reuse rights not independently verified; no image asset stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: microbial_interaction
+      secondary_purposes: [experimental_design, metabolic_pathway]
+      style_family: flat_2d_mechanism
+      dimensionality: 2d
+      layout: two_organism_interaction
+      information_density: medium
+      target_medium: paper
+    domain:
+      primary_domain: "synthetic microbial cross-feeding"
+      scientific_entities: ["E. coli cross-feeders", "amino acids", "gene deletions"]
+      process_keywords: ["cross-feeding", "auxotrophy", "metabolite exchange", "synthetic ecology"]
+    visual_language:
+      cell_style: "minimal genotype/organism representations rather than realistic cells"
+      material_style: "none"
+      molecule_style: "amino-acid exchange abstracted as named metabolites"
+      arrow_style: "reciprocal exchange arrows emphasize mutual dependence"
+      palette: "simple categorical accents used to distinguish genotypes and exchanged resources"
+      outline: "clean schematic"
+      shading_or_texture: "none to minimal"
+      background: "plain"
+      text_density: medium
+      label_hierarchy: "genotype construction > reciprocal exchange"
+      panel_or_zoom_style: "overview with a focused interaction inset"
+      negative_space: "central exchange space kept readable"
+    evidence_semantics:
+      evidence_coding_present: unclear
+      supported_pathway_encoding: "known engineered dependencies are shown directly"
+      candidate_pathway_encoding: "not a major emphasis"
+      contextual_pathway_encoding: "gene deletions establish why exchange is required"
+      causal_language_risk: low
+      notes: "Useful for simple reciprocal cross-feeding visual grammar."
+    reusability:
+      best_reusable_elements: ["reciprocal metabolite arrows", "two-partner balance", "interaction inset"]
+      best_reusable_layout_principles: ["place reciprocal exchange in the visual center", "keep causal genotype setup peripheral"]
+      best_reusable_arrow_principles: ["use opposing directional arrows only when exchange is genuinely reciprocal"]
+      suitable_for: ["two-organism cross-feeding", "Bath-RP donor/recipient overview", "synthetic coculture design"]
+      not_suitable_for: ["electron-transfer cutaways", "material interfaces"]
+      transferable_without_copying: "Transfer the balanced reciprocal-interaction layout without borrowing genotype-specific iconography."
+    assessment:
+      why_it_works: "The interaction is understood immediately because the reciprocal exchange is isolated from experimental detail."
+      main_weakness: "Less useful for asymmetric systems where one organism is the dominant upstream donor."
+      scientific_clarity_score: 4
+      layout_transferability_score: 5
+      element_reusability_score: 4
+      style_relevance_score: 4
+      active_corpus_decision: "Keep as a canonical cross-feeding layout reference."
+    annotation_qc:
+      inspection_level: direct_figure_page
+      annotation_confidence: high
+      direct_pixel_qa: complete
+      notes: "Figure description explicitly identifies the reciprocal exchange inset."
+    notes: "Good counterpoint to Bath-RP, which may need a deliberately asymmetric donor-recipient emphasis."
+
+  - sample_id: "ISME-2024-CHUANG-F1A"
+    status: active
+    source:
+      journal: "The ISME Journal"
+      year: 2024
+      article_title: "Bacterial adenine cross-feeding stems from a purine salvage bottleneck"
+      doi_or_url: "https://doi.org/10.1093/ismejo/wrae034"
+      figure_id: "Figure 1"
+      panel_id: "A"
+      source_checked_at: "2026-09-11"
+      access_note: "Publisher and PMC full text expose the Figure 1 description."
+      rights_or_license: "Full text publicly accessible; reuse license not independently normalized here; no image stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: microbial_interaction
+      secondary_purposes: [metabolic_pathway, experimental_design]
+      style_family: flat_2d_mechanism
+      dimensionality: 2d
+      layout: two_organism_interaction
+      information_density: medium
+      target_medium: paper
+    domain:
+      primary_domain: "Rhodopseudomonas palustris–E. coli cross-feeding"
+      scientific_entities: ["R. palustris", "E. coli", "organic acids", "NH4+", "purines"]
+      process_keywords: ["cross-feeding", "nitrogen exchange", "organic acid exchange", "purine salvage"]
+    visual_language:
+      cell_style: "organism-level icons/schematic labels with no unnecessary ultrastructure"
+      material_style: "none"
+      molecule_style: "named metabolite classes around organism pair"
+      arrow_style: "directional arrows map which partner provides each resource"
+      palette: "organism-identity accents with restrained metabolite labeling"
+      outline: "clean flat schematic"
+      shading_or_texture: "minimal"
+      background: "plain"
+      text_density: medium
+      label_hierarchy: "organism identity > exchanged resource > condition"
+      panel_or_zoom_style: "interaction schematic embedded in a larger evidence figure"
+      negative_space: "exchange zone remains open"
+    evidence_semantics:
+      evidence_coding_present: yes
+      supported_pathway_encoding: "established engineered carbon/nitrogen cross-feeding is shown directly"
+      candidate_pathway_encoding: "hypothesized purine interaction is distinguished by context in the panel description"
+      contextual_pathway_encoding: "nitrogen-source condition changes the interaction logic"
+      causal_language_risk: medium
+      notes: "Especially relevant because the partner is R. palustris and the figure differentiates known versus hypothesized exchange logic."
+    reusability:
+      best_reusable_elements: ["R. palustris partner identity", "metabolite exchange around two cells", "known-vs-hypothesized interaction framing"]
+      best_reusable_layout_principles: ["keep organism roles stable while changing the exchanged resource"]
+      best_reusable_arrow_principles: ["resource arrows should terminate on the actual consumer, not just point into empty space"]
+      suitable_for: ["Bath-RP cross-feeding figures", "defined coculture mechanisms", "candidate metabolite exchange"]
+      not_suitable_for: ["mineral–microbe interface", "environmental gradient overview"]
+      transferable_without_copying: "Use the known/candidate exchange distinction and partner-focused geometry, not the original metabolite labels or exact organism artwork."
+    assessment:
+      why_it_works: "It uses one stable coculture frame to explain how changing the metabolite logic changes the biological relationship."
+      main_weakness: "The full Figure 1 is multipanel and must be cropped conceptually to panel A for style retrieval."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Priority reference for Bath-RP microbial-interaction routing."
+    annotation_qc:
+      inspection_level: direct_figure_page
+      annotation_confidence: high
+      direct_pixel_qa: complete
+      notes: "Figure 1A content explicitly described on publisher page."
+    notes: "High relevance to the user's RP visual identity and cross-feeding language."
+
+  - sample_id: "ISME-2025-KIM-BRISSON-F1"
+    status: active
+    source:
+      journal: "The ISME Journal"
+      year: 2025
+      article_title: "Spatially structured bacterial interactions alter algal carbon flow to bacteria"
+      doi_or_url: "https://doi.org/10.1093/ismejo/wraf096"
+      figure_id: "Figure 1"
+      panel_id: "A-C"
+      source_checked_at: "2026-09-11"
+      access_note: "Publisher page exposes figure caption and states the schematic was created in BioRender."
+      rights_or_license: "No source image stored; BioRender attribution in original caption; reuse rights not assumed."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: experimental_design
+      secondary_purposes: [microbial_interaction, multiscale_zoom]
+      style_family: editorial_2d_overview
+      dimensionality: 2d
+      layout: linear_flow
+      information_density: medium
+      target_medium: paper
+    domain:
+      primary_domain: "microbial interaction experiments / metabolomics"
+      scientific_entities: ["bacterial isolates", "algal exometabolites", "spent medium", "porous microplates"]
+      process_keywords: ["experimental workflow", "metabolomics", "interaction assay", "spatial structure"]
+    visual_language:
+      cell_style: "clean standardized scientific icons"
+      material_style: "experimental vessels/plates simplified into recognizable flat objects"
+      molecule_style: "metabolites represented as abstract resource pool rather than full chemistry"
+      arrow_style: "stage-to-stage workflow arrows"
+      palette: "restrained multi-accent workflow palette"
+      outline: "consistent BioRender-like outline weight"
+      shading_or_texture: "very light"
+      background: "plain"
+      text_density: medium
+      label_hierarchy: "A/B/C experimental stage > assay objective > element labels"
+      panel_or_zoom_style: "three-stage workflow"
+      negative_space: "clear separation between stages"
+    evidence_semantics:
+      evidence_coding_present: no
+      supported_pathway_encoding: "not applicable; this is a design/workflow figure"
+      candidate_pathway_encoding: "not applicable"
+      contextual_pathway_encoding: "experimental logic is encoded by sequential panels"
+      causal_language_risk: low
+      notes: "Reference for experimental-design visual language, not mechanism proof."
+    reusability:
+      best_reusable_elements: ["culture vessel", "metabolite profiling step", "spent-medium exchange", "microplate assay"]
+      best_reusable_layout_principles: ["one question per stage", "left-to-right workflow with equal stage width"]
+      best_reusable_arrow_principles: ["workflow arrows connect experimental stages, not biological causality"]
+      suitable_for: ["Objective experimental design slides", "Bath-RP workflow", "screening pipelines"]
+      not_suitable_for: ["final integrated mechanism", "electron-flow diagrams"]
+      transferable_without_copying: "Use the stage grammar and hierarchy, not BioRender-specific assets."
+    assessment:
+      why_it_works: "The reader can reconstruct the experimental logic without reading a methods paragraph."
+      main_weakness: "Standardized icons can look generic if reused for a paper's core mechanism figure."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 4
+      style_relevance_score: 4
+      active_corpus_decision: "Keep as experimental-design benchmark."
+    annotation_qc:
+      inspection_level: direct_figure_page
+      annotation_confidence: high
+      direct_pixel_qa: complete
+      notes: "Publisher caption provides stage contents and explicit BioRender attribution."
+    notes: "Useful as a deliberately different style family from mechanism figures."
