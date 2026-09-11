@@ -1,0 +1,336 @@
+journal: "Water Research"
+samples:
+  - sample_id: "WR-2025-SHU-WU-GA"
+    status: candidate
+    source:
+      journal: "Water Research"
+      year: 2025
+      article_title: "Distinct effects of conductive materials on anaerobic sulfate-rich wastewater treatment under varying operational modes"
+      doi_or_url: "https://doi.org/10.1016/j.watres.2025.124384"
+      figure_id: "Graphical abstract"
+      panel_id: ""
+      source_checked_at: "2026-09-11"
+      access_note: "ScienceDirect search result confirms graphical abstract and high-resolution asset; article is open access."
+      rights_or_license: "Article reported open access / CC BY in institutional record; no image asset stored here."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: graphical_abstract
+      secondary_purposes: [comparative_perturbation, electron_transfer, material_microbe_interface]
+      style_family: editorial_2d_overview
+      dimensionality: 2d
+      layout: mirrored_comparison
+      information_density: medium
+      target_medium: graphical_abstract
+    domain:
+      primary_domain: "conductive materials in sulfate-rich anaerobic digestion"
+      scientific_entities: ["Fe3O4", "PAC", "SBR", "CFR", "Desulfovibrio", "Methanothrix", "Geobacter"]
+      process_keywords: ["DIET", "sulfate reduction", "methanogenesis", "conductive materials", "operational mode"]
+    visual_language:
+      cell_style: "pending direct visual QA"
+      material_style: "expected to differentiate Fe3O4 and PAC; exact rendering pending"
+      molecule_style: "pending"
+      arrow_style: "comparison-oriented process arrows expected; exact semantics pending direct QA"
+      palette: "pending direct pixel QA; do not reuse colors yet"
+      outline: "pending"
+      shading_or_texture: "pending"
+      background: "graphical-abstract format"
+      text_density: medium
+      label_hierarchy: "likely reactor mode/material intervention > electron-transfer outcome"
+      panel_or_zoom_style: "comparison graphic; exact composition pending"
+      negative_space: "pending"
+    evidence_semantics:
+      evidence_coding_present: unclear
+      supported_pathway_encoding: "article supports distinct roles for Fe3O4 and PAC, but visual encoding has not yet been checked"
+      candidate_pathway_encoding: "DIET claims must be matched to article evidence and not generalized beyond the studied systems"
+      contextual_pathway_encoding: "SBR vs CFR operational mode is a major contextual axis"
+      causal_language_risk: medium
+      notes: "High-value candidate for mirrored comparison and conductive-material mechanism design."
+    reusability:
+      best_reusable_elements: ["Fe3O4 particle", "PAC particle", "reactor-mode comparison", "syntrophic electron-transfer network"]
+      best_reusable_layout_principles: ["compare material effects within matched operational modes", "make reactor mode a first-class visual variable"]
+      best_reusable_arrow_principles: ["pending direct visual QA"]
+      suitable_for: ["GAC/Fe3O4 comparison", "engineering perturbation figure", "conductive-material graphical abstract"]
+      not_suitable_for: ["Bath-RP MIET-only mechanism unless DIET-specific content is removed"]
+      transferable_without_copying: "Use the comparison logic and material-vs-operation hierarchy; do not transfer unverified graphical details."
+    assessment:
+      why_it_works: "Scientifically, the study separates material identity from reactor mode and links both to microbial electron-transfer behavior."
+      main_weakness: "Pixel-level composition and palette are not yet inspected."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Promote after direct visual QA of graphical abstract."
+    annotation_qc:
+      inspection_level: graphical_abstract_metadata
+      annotation_confidence: medium
+      direct_pixel_qa: pending
+      notes: "Publisher crawl confirms graphical abstract but does not expose enough pixels for reliable palette/shape annotation."
+    notes: "Priority Water Research candidate because it maps closely to Objective 3 conductive-material questions."
+
+  - sample_id: "WR-2022-LIU-MSBC-GA"
+    status: candidate
+    source:
+      journal: "Water Research"
+      year: 2022
+      article_title: "A novel green composite conductive material enhancing anaerobic digestion of waste activated sludge via improving electron transfer and metabolic activity"
+      doi_or_url: "https://doi.org/10.1016/j.watres.2022.118687"
+      figure_id: "Graphical abstract"
+      panel_id: ""
+      source_checked_at: "2026-09-11"
+      access_note: "ScienceDirect confirms graphical abstract and article metadata."
+      rights_or_license: "Reuse rights not independently verified; no image asset stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: graphical_abstract
+      secondary_purposes: [material_microbe_interface, electron_transfer, integrated_mechanism]
+      style_family: soft_2_5d_schematic
+      dimensionality: light_2_5d
+      layout: central_hub
+      information_density: medium
+      target_medium: graphical_abstract
+    domain:
+      primary_domain: "magnetic biochar-enhanced anaerobic digestion"
+      scientific_entities: ["magnetic straw-based biochar", "sludge", "methanogens", "VFAs", "CH4"]
+      process_keywords: ["conductive material", "electron transfer", "DIET", "methanogenesis", "biochar"]
+    visual_language:
+      cell_style: "pending direct visual QA"
+      material_style: "likely focal composite-material object; exact texture pending"
+      molecule_style: "likely simplified VFA/CH4 labels; pending"
+      arrow_style: "mechanism-flow arrows expected; exact semantics pending"
+      palette: "pending direct pixel QA"
+      outline: "pending"
+      shading_or_texture: "likely material-specific texture; not yet verified"
+      background: "graphical abstract"
+      text_density: medium
+      label_hierarchy: "material intervention > electron transfer > methane outcome"
+      panel_or_zoom_style: "integrated mechanism expected"
+      negative_space: "pending"
+    evidence_semantics:
+      evidence_coding_present: unclear
+      supported_pathway_encoding: "study reports enhanced intra/extracellular ET and a shift toward DIET-related behavior"
+      candidate_pathway_encoding: "visual certainty must be checked against whether routes were directly resolved"
+      contextual_pathway_encoding: "anaerobic digestion context"
+      causal_language_risk: medium
+      notes: "Good candidate for material-centric hierarchy, but not yet safe for detailed stylistic transfer."
+    reusability:
+      best_reusable_elements: ["biochar composite", "microbe-material cluster", "methane output"]
+      best_reusable_layout_principles: ["place material intervention centrally and route biological consequences around it"]
+      best_reusable_arrow_principles: ["pending direct visual QA"]
+      suitable_for: ["GAC/mineral interface", "material-enhanced digestion graphical abstract", "soft 2.5D material rendering"]
+      not_suitable_for: ["pure diffusible metabolite exchange", "species-specific isotope attribution"]
+      transferable_without_copying: "Reuse only the material-centered storytelling concept until direct visual QA is complete."
+    assessment:
+      why_it_works: "The scientific narrative has a clear material intervention and downstream metabolic outcomes, ideal for a graphical-abstract hierarchy."
+      main_weakness: "Visual features beyond the existence of the graphical abstract remain unverified."
+      scientific_clarity_score: 4
+      layout_transferability_score: 4
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Candidate pending direct asset inspection."
+    annotation_qc:
+      inspection_level: graphical_abstract_metadata
+      annotation_confidence: medium
+      direct_pixel_qa: pending
+      notes: "ScienceDirect metadata only."
+    notes: "Potentially useful for low-saturation material treatment after pixel QA."
+
+  - sample_id: "WR-2017-TAO-TAD-F1"
+    status: candidate
+    source:
+      journal: "Water Research"
+      year: 2017
+      article_title: "Towards engineering application: Potential mechanism for enhancing anaerobic digestion of complex organic waste with different types of conductive materials"
+      doi_or_url: "https://doi.org/10.1016/j.watres.2017.02.067"
+      figure_id: "Figure 1"
+      panel_id: ""
+      source_checked_at: "2026-09-11"
+      access_note: "Article text identifies Figure 1 as the schematic diagram of the four parallel two-phase anaerobic digestion systems."
+      rights_or_license: "Reuse rights not independently verified; no image asset stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: experimental_design
+      secondary_purposes: [comparative_perturbation, material_microbe_interface]
+      style_family: editorial_2d_overview
+      dimensionality: 2d
+      layout: mirrored_comparison
+      information_density: medium
+      target_medium: paper
+    domain:
+      primary_domain: "two-phase anaerobic digestion with magnetite and GAC"
+      scientific_entities: ["acidogenic reactor", "methanogenic reactor", "magnetite", "GAC", "complex organics"]
+      process_keywords: ["two-phase AD", "conductive materials", "acidogenesis", "methanogenesis", "DIET"]
+    visual_language:
+      cell_style: "not a cell-focused figure"
+      material_style: "material additions should be encoded at reactor stage; exact icons pending"
+      molecule_style: "process stream labels likely more important than molecular detail"
+      arrow_style: "reactor/process-flow arrows"
+      palette: "pending direct pixel QA"
+      outline: "technical reactor schematic"
+      shading_or_texture: "likely minimal"
+      background: "plain"
+      text_density: medium
+      label_hierarchy: "reactor stage > material amendment > stream connection"
+      panel_or_zoom_style: "parallel system configurations"
+      negative_space: "likely structured by reactor columns"
+    evidence_semantics:
+      evidence_coding_present: no
+      supported_pathway_encoding: "primarily establishes experimental architecture"
+      candidate_pathway_encoding: "mechanistic interpretation should remain outside setup arrows"
+      contextual_pathway_encoding: "acidogenic vs methanogenic phase"
+      causal_language_risk: low
+      notes: "Useful to distinguish apparatus schematic from mechanism schematic."
+    reusability:
+      best_reusable_elements: ["two-stage reactor", "parallel treatment arms", "material dosing location"]
+      best_reusable_layout_principles: ["align matched experimental arms", "show intervention at the exact process stage"]
+      best_reusable_arrow_principles: ["process-flow arrows should not be confused with electron flow"]
+      suitable_for: ["experimental design", "parallel material perturbation", "reactor-stage schematic"]
+      not_suitable_for: ["final mechanism figure", "cellular EET cutaway"]
+      transferable_without_copying: "Reuse the matched-arm experimental grammar, not reactor artwork."
+    assessment:
+      why_it_works: "The design naturally separates where magnetite and GAC act in a two-phase system."
+      main_weakness: "Likely engineering-heavy and visually less transferable to biological mechanism panels."
+      scientific_clarity_score: 5
+      layout_transferability_score: 4
+      element_reusability_score: 4
+      style_relevance_score: 4
+      active_corpus_decision: "Keep as setup-figure candidate; direct visual QA needed."
+    annotation_qc:
+      inspection_level: caption_plus_page
+      annotation_confidence: medium
+      direct_pixel_qa: pending
+      notes: "Figure function verified from article text; pixel style not inspected."
+    notes: "Useful negative-control style: experimental design should remain visually distinct from mechanism graphics."
+
+  - sample_id: "WR-2021-ZHENG-DIET-GA"
+    status: candidate
+    source:
+      journal: "Water Research"
+      year: 2021
+      article_title: "Desulfovibrio feeding Methanobacterium with electrons in conductive methanogenic aggregates from coastal zones"
+      doi_or_url: "https://doi.org/10.1016/j.watres.2021.117490"
+      figure_id: "Graphical abstract"
+      panel_id: ""
+      source_checked_at: "2026-09-11"
+      access_note: "ScienceDirect confirms graphical abstract; article text also describes aggregate/FISH evidence and IET interpretation."
+      rights_or_license: "Reuse rights not independently verified; no image asset stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: graphical_abstract
+      secondary_purposes: [microbial_interaction, electron_transfer, integrated_mechanism]
+      style_family: flat_2d_mechanism
+      dimensionality: 2d
+      layout: two_organism_interaction
+      information_density: medium
+      target_medium: graphical_abstract
+    domain:
+      primary_domain: "conductive methanogenic aggregates"
+      scientific_entities: ["Desulfovibrio", "Methanobacterium", "aggregate", "cytochromes", "pili", "CH4"]
+      process_keywords: ["IET", "DIET", "aggregate conductivity", "methanogenesis", "coastal zone"]
+    visual_language:
+      cell_style: "expected two-partner aggregate representation; direct visual QA pending"
+      material_style: "conductive aggregate structure likely central; exact depiction pending"
+      molecule_style: "minimal expected"
+      arrow_style: "electron donor-to-acceptor direction expected; exact coding pending"
+      palette: "pending direct pixel QA"
+      outline: "pending"
+      shading_or_texture: "pending"
+      background: "graphical abstract"
+      text_density: medium
+      label_hierarchy: "electron donor > aggregate connection > methanogen / methane"
+      panel_or_zoom_style: "integrated aggregate mechanism expected"
+      negative_space: "pending"
+    evidence_semantics:
+      evidence_coding_present: unclear
+      supported_pathway_encoding: "Desulfovibrio electron-transfer machinery and aggregate conductivity have supporting data"
+      candidate_pathway_encoding: "Methanobacterium direct electron acceptance is phrased as a possibility in the article and should remain visually bounded"
+      contextual_pathway_encoding: "aggregate and coastal enrichment context"
+      causal_language_risk: high
+      notes: "Excellent evidence-boundary case: the graphic must not promote 'might directly accept electrons' to unconditional DIET."
+    reusability:
+      best_reusable_elements: ["conductive aggregate", "rod/coccus partner contrast", "electron donor/acceptor roles"]
+      best_reusable_layout_principles: ["aggregate can be the shared interface rather than drawing an unsupported direct cell-to-cell bridge"]
+      best_reusable_arrow_principles: ["candidate direct transfer should be visually weaker than established donor metabolism"]
+      suitable_for: ["GAC-facilitated interspecies coupling", "aggregate electron-transfer hypothesis", "evidence-aware DIET schematic"]
+      not_suitable_for: ["unqualified proof-of-DIET graphics", "MIET-only final Bath-RP mechanism"]
+      transferable_without_copying: "Reuse the aggregate-centered evidence logic; do not copy an unverified direct-transfer arrow as established fact."
+    assessment:
+      why_it_works: "The biological system is directly analogous to conductive aggregate questions while retaining a meaningful uncertainty boundary."
+      main_weakness: "High risk of visual overclaiming if candidate direct transfer is drawn with the same weight as supported findings."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Priority candidate after pixel QA and evidence-arrow review."
+    annotation_qc:
+      inspection_level: graphical_abstract_metadata
+      annotation_confidence: medium
+      direct_pixel_qa: pending
+      notes: "Article and graphical abstract verified; exact graphic not directly inspected."
+    notes: "Scientifically one of the most useful Water Research samples for Objective 3."
+
+  - sample_id: "WR-2024-TROPICAL-MOX-GA"
+    status: candidate
+    source:
+      journal: "Water Research"
+      year: 2024
+      article_title: "Environmental determinants of aerobic methane oxidation in a tropical river network"
+      doi_or_url: "https://doi.org/10.1016/j.watres.2024.122257"
+      figure_id: "Graphical abstract"
+      panel_id: ""
+      source_checked_at: "2026-09-11"
+      access_note: "ScienceDirect confirms graphical abstract titled around environmental determinants of CH4 oxidation."
+      rights_or_license: "Reuse rights not independently verified; no image asset stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: environmental_process
+      secondary_purposes: [graphical_abstract, conceptual_overview]
+      style_family: editorial_2d_overview
+      dimensionality: 2d
+      layout: central_hub
+      information_density: low
+      target_medium: graphical_abstract
+    domain:
+      primary_domain: "aerobic methane oxidation in rivers"
+      scientific_entities: ["river network", "CH4", "O2", "temperature", "organic pollution", "methanotrophs"]
+      process_keywords: ["methane oxidation", "river", "oxygen", "temperature", "emission control"]
+    visual_language:
+      cell_style: "likely background/supporting rather than cell-mechanism focus; pending QA"
+      material_style: "environmental landscape/process context"
+      molecule_style: "CH4/O2 likely primary tokens"
+      arrow_style: "environmental driver-to-process or CH4 fate arrows expected"
+      palette: "pending direct pixel QA; likely environmental palette"
+      outline: "pending"
+      shading_or_texture: "pending"
+      background: "environmental river context"
+      text_density: low
+      label_hierarchy: "environmental driver > methane oxidation > emission consequence"
+      panel_or_zoom_style: "high-level graphical summary"
+      negative_space: "expected to be higher than mechanism figures"
+    evidence_semantics:
+      evidence_coding_present: unclear
+      supported_pathway_encoding: "environmental determinants are supported by network-scale observations/modeling"
+      candidate_pathway_encoding: "mechanistic cell-level arrows should not be inferred from ecosystem correlations"
+      contextual_pathway_encoding: "river/lake oxygen response and temperature are environmental context"
+      causal_language_risk: medium
+      notes: "Useful for background-level methane biofilter graphics, not intracellular methane-oxidation mechanism."
+    reusability:
+      best_reusable_elements: ["CH4 emission arrow", "river/air interface", "O2 context", "environmental-driver labels"]
+      best_reusable_layout_principles: ["keep organism detail subordinate to environmental methane fate", "use one clear atmospheric outcome"]
+      best_reusable_arrow_principles: ["separate methane flux from causal driver arrows"]
+      suitable_for: ["PPT methane biofilter background", "environmental methane context", "high-level graphical abstract"]
+      not_suitable_for: ["Bath-RP intracellular/metabolite mechanism", "EET interface"]
+      transferable_without_copying: "Reuse the environmental hierarchy and CH4-fate focus after direct visual QA."
+    assessment:
+      why_it_works: "The scientific question naturally supports a low-density environment-to-process story rather than a dense mechanistic panel."
+      main_weakness: "Not yet visually inspected and may not contain reusable cell/material elements."
+      scientific_clarity_score: 4
+      layout_transferability_score: 4
+      element_reusability_score: 3
+      style_relevance_score: 4
+      active_corpus_decision: "Keep to broaden corpus beyond DIET/material figures."
+    annotation_qc:
+      inspection_level: graphical_abstract_metadata
+      annotation_confidence: medium
+      direct_pixel_qa: pending
+      notes: "Graphical abstract presence and scientific focus verified."
+    notes: "Important corpus-balancing sample for environmental context and methane oxidation."
