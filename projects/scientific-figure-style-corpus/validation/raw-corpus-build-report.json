@@ -1,6 +1,6 @@
 {
-  "target_total": 30,
-  "resume_start_count": 20,
+  "target_total": 40,
+  "resume_start_count": 30,
   "journals": {
     "isme": {
       "tier": "core",
@@ -16,9 +16,9 @@
       "tier": "core",
       "first_pass_cap": 20,
       "max_cap": 30,
-      "downloaded": 10,
-      "articles_examined": 55,
-      "license_rejected": 50,
+      "downloaded": 20,
+      "articles_examined": 191,
+      "license_rejected": 185,
       "third_party_rejected": 0,
       "download_failed": 0
     },
@@ -270,15 +270,15 @@
     "scope_high_fill_allowed": true,
     "resumable_checkpoint_build": true
   },
-  "downloaded_total": 30,
+  "downloaded_total": 40,
   "downloaded_new_this_batch": 10,
-  "distinct_articles": 18,
+  "distinct_articles": 24,
   "represented_journals": [
     "isme",
     "nature-communications"
   ],
-  "core_images": 30,
+  "core_images": 40,
   "manifest": "manifests/raw-image-manifest.csv",
   "assets_root": "assets/raw",
-  "checkpoint_target": 30
+  "checkpoint_target": 40
 }

@@ -1,14 +1,14 @@
 {
-  "count": 30,
+  "count": 40,
   "target": 100,
-  "batch_target": 30,
-  "batch_start_count": 20,
+  "batch_target": 40,
+  "batch_start_count": 30,
   "new_this_batch": 10,
-  "distinct_articles": 18,
-  "core_images": 30,
+  "distinct_articles": 24,
+  "core_images": 40,
   "journals": {
     "isme": 20,
-    "nature-communications": 10
+    "nature-communications": 20
   },
-  "updated_at_utc": "2026-09-11T09:12:31.703687+00:00"
+  "updated_at_utc": "2026-09-11T09:13:30.943381+00:00"
 }
