@@ -44,6 +44,7 @@ jobs:
         run: |
           python projects/scientific-figure-style-corpus/scripts/build_raw_corpus.py \
             --project-root projects/scientific-figure-style-corpus \
+            --target-total 100 \
             --retmax 400 \
             --max-per-article 2 \
             --min-score 4
@@ -51,26 +52,35 @@ jobs:
       - name: Validate image count and checksums
         run: |
           python - <<'PY'
-          import csv, hashlib, pathlib, sys
+          import csv, hashlib, pathlib
           root = pathlib.Path('projects/scientific-figure-style-corpus')
           manifest = root / 'manifests/raw-image-manifest.csv'
           rows = list(csv.DictReader(manifest.open(encoding='utf-8')))
           if len(rows) < 100:
               raise SystemExit(f'raw corpus incomplete: {len(rows)}/100 images')
           journals = {}
+          core = 0
+          scope_high = 0
+          articles = set()
           for row in rows:
               journals[row['journal_slug']] = journals.get(row['journal_slug'], 0) + 1
+              articles.add(row['pmcid'])
+              if row.get('source_tier') == 'core':
+                  core += 1
+              elif row.get('source_tier') == 'scope-high':
+                  scope_high += 1
               path = root / row['asset_path']
               if not path.exists():
                   raise SystemExit(f'missing asset: {path}')
               digest = hashlib.sha256(path.read_bytes()).hexdigest()
               if digest != row['sha256']:
                   raise SystemExit(f'checksum mismatch: {path}')
-          expected = {'isme': 30, 'nature-communications': 30, 'est': 20, 'water-research': 20}
-          for key, count in expected.items():
-              if journals.get(key, 0) < count:
-                  raise SystemExit(f'{key}: {journals.get(key,0)}/{count}')
+          if core < 50:
+              raise SystemExit(f'core-journal representation too low: {core}/100')
+          if len(articles) < 45:
+              raise SystemExit(f'article diversity too low: {len(articles)} distinct articles')
           print('validated', len(rows), 'images', journals)
+          print('core', core, 'scope-high', scope_high, 'distinct_articles', len(articles))
           PY
 
       - name: Commit generated corpus to branch
