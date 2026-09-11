@@ -1,24 +1,24 @@
 {
-  "target_total": 20,
-  "resume_start_count": 10,
+  "target_total": 30,
+  "resume_start_count": 20,
   "journals": {
     "isme": {
       "tier": "core",
       "first_pass_cap": 20,
       "max_cap": 30,
       "downloaded": 20,
-      "articles_examined": 11,
-      "license_rejected": 5,
-      "third_party_rejected": 1,
+      "articles_examined": 0,
+      "license_rejected": 0,
+      "third_party_rejected": 0,
       "download_failed": 0
     },
     "nature-communications": {
       "tier": "core",
       "first_pass_cap": 20,
       "max_cap": 30,
-      "downloaded": 0,
-      "articles_examined": 0,
-      "license_rejected": 0,
+      "downloaded": 10,
+      "articles_examined": 55,
+      "license_rejected": 50,
       "third_party_rejected": 0,
       "download_failed": 0
     },
@@ -270,14 +270,15 @@
     "scope_high_fill_allowed": true,
     "resumable_checkpoint_build": true
   },
-  "downloaded_total": 20,
+  "downloaded_total": 30,
   "downloaded_new_this_batch": 10,
-  "distinct_articles": 13,
+  "distinct_articles": 18,
   "represented_journals": [
-    "isme"
+    "isme",
+    "nature-communications"
   ],
-  "core_images": 20,
+  "core_images": 30,
   "manifest": "manifests/raw-image-manifest.csv",
   "assets_root": "assets/raw",
-  "checkpoint_target": 20
+  "checkpoint_target": 30
 }
