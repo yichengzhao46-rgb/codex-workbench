@@ -3,17 +3,16 @@ from __future__ import annotations
 
 import argparse
 import csv
-import io
 import json
 import re
-import tarfile
 import xml.etree.ElementTree as ET
 from pathlib import Path, PurePosixPath
+from urllib.parse import urlparse
 
 import requests
 from PIL import Image, ImageDraw
 
-OA_API = "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id={pmcid}"
+S3_BASE = "https://pmc-oa-opendata.s3.amazonaws.com"
 XLINK = "{http://www.w3.org/1999/xlink}href"
 
 POSITIVE = {
@@ -36,7 +35,7 @@ RISK_TERMS = (
 FIELDS = [
     "candidate_id", "year", "journal", "article_title", "article_url", "figure_number",
     "figure_id", "caption_score", "caption", "third_party_risk", "license",
-    "license_url", "image_resolved", "preview_path", "preliminary_rank"
+    "license_url", "image_resolved", "preview_path", "preliminary_rank", "cloud_version"
 ]
 
 
@@ -48,9 +47,7 @@ def txt(node) -> str:
 
 def score_caption(text: str) -> int:
     low = text.lower()
-    score = sum(w for t, w in POSITIVE.items() if t in low)
-    score += sum(w for t, w in NEGATIVE.items() if t in low)
-    return score
+    return sum(w for t, w in POSITIVE.items() if t in low) + sum(w for t, w in NEGATIVE.items() if t in low)
 
 
 def risk(text: str) -> str:
@@ -58,38 +55,79 @@ def risk(text: str) -> str:
     return "; ".join(t for t in RISK_TERMS if t in low)
 
 
-def detect_license(root: ET.Element) -> tuple[bool, str, str]:
+def as_https(url: str) -> str:
+    if not url:
+        return ""
+    if url.startswith("s3://pmc-oa-opendata/"):
+        return f"{S3_BASE}/" + url[len("s3://pmc-oa-opendata/"):]
+    return url
+
+
+def list_versions(session: requests.Session, pmcid: str) -> list[str]:
+    r = session.get(S3_BASE + "/", params={"list-type": "2", "prefix": pmcid + ".", "delimiter": "/"}, timeout=45)
+    r.raise_for_status()
+    root = ET.fromstring(r.content)
+    versions = []
+    for el in root.iter():
+        if el.tag.endswith("Prefix") and el.text and el.text.startswith(pmcid + "."):
+            versions.append(el.text.rstrip("/"))
+    return sorted(set(versions), key=lambda x: int(x.rsplit(".", 1)[-1]), reverse=True)
+
+
+def load_metadata(session: requests.Session, version: str) -> dict:
+    url = f"{S3_BASE}/{version}/{version}.json"
+    r = session.get(url, timeout=45)
+    r.raise_for_status()
+    return r.json()
+
+
+def choose_version(session: requests.Session, pmcid: str) -> tuple[str, dict]:
+    versions = list_versions(session, pmcid)
+    if not versions:
+        raise RuntimeError("PMCID not found in PMC AWS Cloud dataset")
     candidates = []
-    for el in root.findall(".//license"):
-        href = el.attrib.get(XLINK, "")
-        text = txt(el)
-        candidates.append((href, text))
-    for href, text in candidates:
-        blob = f"{href} {text}".lower()
-        if any(x in blob for x in ("by-nc", "by-nd", "by-nc-nd", "noncommercial", "no derivatives", "no-derivatives")):
+    for v in versions:
+        try:
+            meta = load_metadata(session, v)
+            candidates.append((v, meta))
+        except Exception:
             continue
-        if "creativecommons.org/licenses/by/" in blob or re.search(r"\bcc[- ]?by\b", blob):
-            return True, text or "CC BY", href
-        if "creativecommons.org/publicdomain/zero/" in blob or "cc0" in blob:
-            return True, text or "CC0", href
-    return False, "", ""
+    if not candidates:
+        raise RuntimeError("no readable AWS metadata object")
+    # Prefer final published version over author manuscript, then newest version number.
+    candidates.sort(key=lambda vm: (str(vm[1].get("is_manuscript", "")).lower() in {"yes", "true", "1"}, -int(vm[0].rsplit(".", 1)[-1])))
+    return candidates[0]
 
 
-def safe_member_name(name: str) -> bool:
-    p = PurePosixPath(name)
-    return not p.is_absolute() and ".." not in p.parts
+def allowed_license(meta: dict) -> tuple[bool, str]:
+    code = str(meta.get("license_code") or "").strip().lower().replace("_", "-")
+    norm = re.sub(r"\s+", "-", code)
+    if norm in {"cc-by", "ccby", "by", "cc-0", "cc0"} or norm.startswith("cc-by-") and all(x not in norm for x in ("-nc", "-nd", "-sa")):
+        return True, str(meta.get("license_code") or "CC BY")
+    return False, str(meta.get("license_code") or "")
 
 
-def find_member(tf: tarfile.TarFile, href: str):
-    target = PurePosixPath(href).name
-    stems = {target, target + ".jpg", target + ".jpeg", target + ".png", target + ".tif", target + ".tiff", target + ".gif", target + ".webp"}
-    for member in tf.getmembers():
-        if not member.isfile() or not safe_member_name(member.name):
+def media_map(meta: dict) -> dict[str, str]:
+    result = {}
+    for item in meta.get("media_urls") or []:
+        if isinstance(item, dict):
+            url = as_https(str(item.get("url") or item.get("href") or ""))
+        else:
+            url = as_https(str(item))
+        if not url:
             continue
-        base = PurePosixPath(member.name).name
-        if base in stems or PurePosixPath(base).stem == PurePosixPath(target).stem:
-            return member
-    return None
+        path = urlparse(url).path
+        base = PurePosixPath(path).name
+        result[base] = url
+        result[PurePosixPath(base).stem] = url
+    return result
+
+
+def find_media(meta_map: dict[str, str], href: str) -> str:
+    if not href:
+        return ""
+    base = PurePosixPath(href).name
+    return meta_map.get(base) or meta_map.get(PurePosixPath(base).stem) or ""
 
 
 def make_contact_sheet(items: list[tuple[Path, str]], out: Path) -> None:
@@ -127,7 +165,7 @@ def main() -> int:
 
     rows = list(csv.DictReader(Path(args.candidates).open(encoding="utf-8", newline="")))
     session = requests.Session()
-    session.headers.update({"User-Agent": "codex-workbench-stage1.5/0.2", "Accept-Language": "en-US,en;q=0.8"})
+    session.headers.update({"User-Agent": "codex-workbench-stage1.5/0.3", "Accept-Language": "en-US,en;q=0.8"})
     scanned = []
     summary = {"articles_total": len(rows), "articles_scanned": 0, "figures_scanned": 0, "previews_resolved": 0, "metadata_only": 0, "article_failures": []}
 
@@ -139,30 +177,23 @@ def main() -> int:
             continue
         pmcid = m.group(1).upper()
         try:
-            oa = session.get(OA_API.format(pmcid=pmcid), timeout=45)
-            oa.raise_for_status()
-            oa_root = ET.fromstring(oa.content)
-            links = oa_root.findall(".//link")
-            tgz = next((x.attrib.get("href", "") for x in links if x.attrib.get("format") == "tgz"), "")
-            if not tgz:
-                raise RuntimeError("PMC OA API returned no tgz package")
-            if tgz.startswith("ftp://"):
-                tgz = "https://" + tgz[len("ftp://"):]
-            pkg = session.get(tgz, timeout=90)
-            pkg.raise_for_status()
-            tf = tarfile.open(fileobj=io.BytesIO(pkg.content), mode="r:gz")
-            xml_members = [x for x in tf.getmembers() if x.isfile() and x.name.lower().endswith((".nxml", ".xml")) and safe_member_name(x.name)]
-            if not xml_members:
-                raise RuntimeError("OA package contains no JATS XML")
-            xml_bytes = tf.extractfile(xml_members[0]).read()
-            article = ET.fromstring(xml_bytes)
-            allowed, lic, lic_url = detect_license(article)
+            version, meta = choose_version(session, pmcid)
+            allowed, lic = allowed_license(meta)
+            xml_url = as_https(str(meta.get("xml_url") or ""))
+            if not xml_url:
+                raise RuntimeError("AWS metadata has no xml_url")
+            xr = session.get(xml_url, timeout=60)
+            xr.raise_for_status()
+            article = ET.fromstring(xr.content)
+            mmap = media_map(meta)
             figs = article.findall(".//fig")
             article_previews = []
+            article_count = 0
             for ordinal, fig in enumerate(figs, 1):
                 cap = txt(fig.find("caption"))
                 if not cap:
                     continue
+                article_count += 1
                 label = txt(fig.find("label"))
                 nm = re.search(r"(\d+)", label)
                 fnum = int(nm.group(1)) if nm else ordinal
@@ -170,34 +201,35 @@ def main() -> int:
                 score = score_caption(cap)
                 graphic = fig.find("graphic")
                 href = graphic.attrib.get(XLINK, "") if graphic is not None else ""
+                media_url = find_media(mmap, href)
                 resolved = False
                 preview_rel = ""
-                if allowed and not third and href:
-                    member = find_member(tf, href)
-                    if member:
-                        data = tf.extractfile(member).read()
-                        suffix = PurePosixPath(member.name).suffix.lower() or ".img"
-                        out_dir = preview_root / cid
-                        out_dir.mkdir(parents=True, exist_ok=True)
-                        p = out_dir / f"{cid}_fig{fnum}{suffix}"
-                        p.write_bytes(data)
-                        resolved = True
-                        preview_rel = str(p.relative_to(root_dir))
-                        article_previews.append((p, f"{cid} Fig.{fnum} score={score}"))
-                        summary["previews_resolved"] += 1
+                if allowed and not third and media_url:
+                    ir = session.get(media_url, timeout=60)
+                    ir.raise_for_status()
+                    suffix = PurePosixPath(urlparse(media_url).path).suffix.lower() or ".img"
+                    out_dir = preview_root / cid
+                    out_dir.mkdir(parents=True, exist_ok=True)
+                    p = out_dir / f"{cid}_fig{fnum}{suffix}"
+                    p.write_bytes(ir.content)
+                    resolved = True
+                    preview_rel = str(p.relative_to(root_dir))
+                    article_previews.append((p, f"{cid} Fig.{fnum} score={score}"))
+                    summary["previews_resolved"] += 1
                 scanned.append({
                     "candidate_id": cid, "year": row["year"], "journal": row["journal"],
                     "article_title": row["article_title"], "article_url": row["url"],
                     "figure_number": str(fnum), "figure_id": fig.attrib.get("id", f"fig{fnum}"),
                     "caption_score": str(score), "caption": cap, "third_party_risk": third,
-                    "license": lic if allowed else "not-public-mirror-compatible", "license_url": lic_url if allowed else "",
+                    "license": lic if allowed else (lic or "not-public-mirror-compatible"), "license_url": "",
                     "image_resolved": str(resolved).lower(), "preview_path": preview_rel,
                     "preliminary_rank": "high" if score >= 8 else "medium" if score >= 3 else "low",
+                    "cloud_version": version,
                 })
             if article_previews:
                 make_contact_sheet(article_previews, contact_root / f"{cid}_contact.jpg")
             summary["articles_scanned"] += 1
-            summary["figures_scanned"] += len([x for x in scanned if x["candidate_id"] == cid])
+            summary["figures_scanned"] += article_count
         except Exception as exc:
             summary["article_failures"].append({"candidate_id": cid, "pmcid": pmcid, "error": str(exc)})
 
