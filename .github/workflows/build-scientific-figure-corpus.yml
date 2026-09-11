@@ -7,27 +7,24 @@ on:
     paths:
       - ".github/workflows/build-scientific-figure-corpus.yml"
       - "projects/scientific-figure-style-corpus/scripts/**"
-  pull_request:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/build-scientific-figure-corpus.yml"
-      - "projects/scientific-figure-style-corpus/scripts/**"
   workflow_dispatch:
+
+concurrency:
+  group: scientific-figure-corpus-${{ github.ref_name }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
 
 jobs:
   build-corpus:
-    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
       - name: Checkout corpus branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref || github.ref_name }}
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -64,7 +61,6 @@ jobs:
           }
           journals = {}
           core = 0
-          scope_high = 0
           articles = set()
           for row in rows:
               slug = row['journal_slug']
@@ -74,8 +70,6 @@ jobs:
               articles.add(row['pmcid'])
               if row.get('source_tier') == 'core':
                   core += 1
-              elif row.get('source_tier') == 'scope-high':
-                  scope_high += 1
               path = root / row['asset_path']
               if not path.exists():
                   raise SystemExit(f'missing asset: {path}')
@@ -87,11 +81,10 @@ jobs:
           if len(articles) < 45:
               raise SystemExit(f'article diversity too low: {len(articles)} distinct articles')
           print('validated', len(rows), 'images', journals)
-          print('core', core, 'scope-high', scope_high, 'distinct_articles', len(articles))
+          print('core', core, 'distinct_articles', len(articles))
           PY
 
       - name: Commit generated corpus to branch
-        if: github.event_name != 'pull_request'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -103,7 +96,7 @@ jobs:
             echo "No corpus changes to commit"
           else
             git commit -m "Populate 100-image raw scientific figure corpus"
-            git push origin HEAD:${{ github.head_ref || github.ref_name }}
+            git push origin HEAD:${{ github.ref_name }}
           fi
 
       - name: Upload corpus build artifact
