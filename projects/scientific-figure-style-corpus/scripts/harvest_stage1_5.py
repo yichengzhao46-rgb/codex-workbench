@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Harvest manually screened Stage 1.5 figures from redistribution-compatible PMC articles.
 
-The selection manifest is human/visual-QA driven. This script only mirrors rows
-marked public_mirror=true, re-checks article-level CC licensing and caption-level
-third-party/BioRender risk, resolves the original image bytes, computes SHA256,
-and writes a harvest manifest plus status report.
+The selection manifest is human/visual-QA driven. This script mirrors only rows
+marked public_mirror=true. It re-checks article licensing when PMC exposes it,
+falls back only to the manually verified CC licence recorded in the screening
+manifest, screens captions for third-party/BioRender risk, resolves original
+image bytes, computes SHA256, and writes harvest/status reports.
 """
 
 from __future__ import annotations
@@ -64,7 +65,6 @@ def find_figure(soup: BeautifulSoup, figure_number: int):
         fid = str(fig.get("id") or "").lower().replace("-", "")
         if fid in {f"fig{figure_number}", f"f{figure_number}"}:
             return fig
-    # Last-resort ordinal fallback is acceptable only for PMC main-text figures.
     if 1 <= figure_number <= len(figures):
         return figures[figure_number - 1]
     return None
@@ -80,6 +80,54 @@ def third_party_reason(caption: str) -> str:
         if term in low and term not in reasons:
             reasons.append(term)
     return "; ".join(reasons)
+
+
+def declared_open_license(row: dict[str, str]) -> tuple[bool, str, str]:
+    """Use only the pre-screened licence field when automatic PMC parsing fails."""
+    raw = (row.get("rights_status") or "").strip()
+    low = raw.lower().replace("-", " ")
+    if "cc by" not in low or "noncommercial" in low or " no derivatives" in low or " nc" in low or " nd" in low:
+        return False, "", ""
+    version = "4.0" if "4.0" in low else ""
+    url = "https://creativecommons.org/licenses/by/4.0/" if version else "https://creativecommons.org/licenses/by/"
+    return True, raw, url
+
+
+def preferred_image_candidates(fig, article_url: str, pmcid: str) -> list[str]:
+    """Prefer current cdn.ncbi image URLs over obsolete PMC wrapper hosts."""
+    candidates: list[str] = []
+    for tag in fig.find_all(["img", "source"]):
+        for attr in ("data-src", "data-original", "data-full-src", "data-image-src", "src"):
+            value = tag.get(attr)
+            if value:
+                candidates.append(urljoin(article_url, str(value)))
+        for attr in ("srcset", "data-srcset"):
+            value = tag.get(attr)
+            if value:
+                candidates.extend(urljoin(article_url, u) for u in b._srcset_urls(str(value)))
+    for a in fig.find_all("a", href=True):
+        candidates.append(urljoin(article_url, str(a["href"])))
+    candidates.extend(b.html_image_candidates(str(fig), article_url))
+    fallback = b.pick_image_url(fig, article_url)
+    if fallback:
+        candidates.append(fallback)
+    filename = b.wrapper_filename(fallback) if fallback else ""
+    if filename and pmcid:
+        candidates.extend(b.direct_pmc_bin_candidates(pmcid, filename))
+
+    # Unique, then place stable CDN/direct image URLs before legacy wrapper hosts.
+    unique: list[str] = []
+    seen: set[str] = set()
+    for url in candidates:
+        if url and url not in seen:
+            seen.add(url)
+            unique.append(url)
+    unique.sort(key=lambda u: (
+        0 if "cdn.ncbi.nlm.nih.gov" in u else 1,
+        1 if "web.pubmedcentral.gov" in u or "sponomar.ncbi.nlm.nih.gov" in u else 0,
+        len(u),
+    ))
+    return unique
 
 
 def main() -> int:
@@ -127,7 +175,9 @@ def main() -> int:
             soup = BeautifulSoup(html, "html.parser")
             allowed, license_name, license_url = b.detect_license(soup)
             if not allowed:
-                raise RuntimeError("article does not expose an allowed CC BY/CC0 licence")
+                allowed, license_name, license_url = declared_open_license(row)
+            if not allowed:
+                raise RuntimeError("neither PMC parsing nor pre-screened metadata confirms CC BY/CC0")
 
             fig = find_figure(soup, fnum)
             if fig is None:
@@ -141,17 +191,14 @@ def main() -> int:
 
             article_id_match = re.search(r"/articles/(PMC\d+)/", url, re.I)
             pmcid = article_id_match.group(1).upper() if article_id_match else ""
-            image_url = b.pick_image_url(fig, url)
-            if not image_url:
-                raise RuntimeError("no image URL exposed by figure node")
             fig_id = str(fig.get("id") or f"fig{fnum}")
+            candidates = preferred_image_candidates(fig, url, pmcid)
+            if not candidates:
+                raise RuntimeError("no image URL exposed by figure node")
             figure_page = urljoin(url, f"figure/{fig_id}/")
-            initial_urls = [image_url, figure_page]
-            filename = b.wrapper_filename(image_url)
-            if filename and pmcid:
-                initial_urls = b.direct_pmc_bin_candidates(pmcid, filename) + initial_urls
+            candidates.append(figure_page)
             data, resolved_url, ctype = b.resolve_image_bytes(
-                session, initial_urls, pmcid, args.max_image_bytes
+                session, candidates, pmcid, args.max_image_bytes
             )
             ext = b.ext_from_response(resolved_url, ctype)
             out_dir = assets_root / cid
@@ -175,7 +222,7 @@ def main() -> int:
                 "license_url": license_url,
                 "figure_id": fig_id,
                 "caption": caption,
-                "source_image_url": image_url,
+                "source_image_url": candidates[0],
                 "resolved_image_url": resolved_url,
                 "asset_path": str(out_path.relative_to(root)),
                 "content_type": ctype,
@@ -224,12 +271,10 @@ def main() -> int:
         "current_ab_after_wave1": 42 + active_added,
         "target_ab_range": [80, 100],
         "target_new_figures_range": [40, 60],
-        "next_action": "expand and screen wave2 recent OA candidates",
+        "next_action": "screen and harvest wave2 recent OA candidates",
     }
     status_path.write_text(json.dumps(status, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps(report, indent=2, ensure_ascii=False), flush=True)
-
-    # A zero-asset result almost certainly means the harvester is broken.
     return 0 if harvested else 2
 
 
