@@ -20,7 +20,7 @@ permissions:
 jobs:
   build-corpus:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 120
     steps:
       - name: Checkout corpus branch
         uses: actions/checkout@v4
@@ -38,99 +38,90 @@ jobs:
       - name: Install dependencies
         run: pip install -r projects/scientific-figure-style-corpus/scripts/requirements.txt
 
-      - name: Find previous successful corpus artifact
-        id: previous
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const workflow_id = 'build-scientific-figure-corpus.yml';
-            const runs = await github.paginate(github.rest.actions.listWorkflowRuns, {
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id,
-              branch: context.ref.replace('refs/heads/', ''),
-              status: 'completed',
-              per_page: 100,
-            });
-            for (const run of runs) {
-              if (run.id === context.runId || run.conclusion !== 'success') continue;
-              const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                run_id: run.id,
-                per_page: 100,
-              });
-              const artifact = artifacts.data.artifacts.find(a => a.name === 'scientific-figure-raw-corpus' && !a.expired);
-              if (artifact) {
-                core.setOutput('run_id', String(run.id));
-                core.info(`Using prior successful corpus artifact from run ${run.id}`);
-                return;
-              }
-            }
-            core.setOutput('run_id', '');
-            core.info('No previous successful corpus artifact found; build will start from zero.');
+      - name: Configure checkpoint commits
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Download previous corpus artifact
-        if: steps.previous.outputs.run_id != ''
-        uses: actions/download-artifact@v4
-        with:
-          name: scientific-figure-raw-corpus
-          path: _previous_artifact
-          github-token: ${{ github.token }}
-          repository: ${{ github.repository }}
-          run-id: ${{ steps.previous.outputs.run_id }}
-
-      - name: Filter previous artifact into current-scope seed
-        id: seed
+      - name: Detect committed checkpoint
+        id: current
         shell: bash
         run: |
-          rm -rf _seed _increment
-          mkdir -p _seed _increment
-          if [ -d _previous_artifact ]; then
-            python projects/scientific-figure-style-corpus/scripts/merge_seed_corpus.py seed \
-              --artifact-root _previous_artifact \
-              --output-root _seed
-          fi
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import csv, pathlib
-          manifest = pathlib.Path('_seed/manifests/raw-image-manifest.csv')
+          manifest = pathlib.Path('projects/scientific-figure-style-corpus/manifests/raw-image-manifest.csv')
           count = 0
           if manifest.exists():
               with manifest.open(encoding='utf-8', newline='') as f:
                   count = sum(1 for _ in csv.DictReader(f))
-          print(f'seed_count={count}')
-          print(f'remaining={max(0, 100-count)}')
+          print(f'count={count}')
+          print(f'next_target={min(100, ((count // 10) + 1) * 10) if count < 100 else 100}')
+          print(f'Committed checkpoint detected: {count}/100')
           PY
 
-      - name: Build only the remaining corpus gap
-        if: steps.seed.outputs.remaining != '0'
+      - name: Build and persist 10-image checkpoints
+        shell: bash
         run: |
-          python projects/scientific-figure-style-corpus/scripts/run_raw_corpus_scoped.py \
-            --project-root _increment \
-            --target-total ${{ steps.seed.outputs.remaining }} \
-            --retmax 400 \
-            --max-per-article 2 \
-            --min-score 4
-
-      - name: Merge seed and new images under current scope
-        run: |
-          mkdir -p _increment/manifests
-          if [ ! -f _increment/manifests/raw-image-manifest.csv ]; then
-            printf 'sample_id,journal,journal_slug,source_tier,year,article_title,doi,pmcid,figure_id,article_url,source_image_url,resolved_image_url,license,license_url,rights_status,third_party_review,caption_score,caption,asset_path,content_type,size_bytes,sha256,inspection_status\n' > _increment/manifests/raw-image-manifest.csv
+          set -euo pipefail
+          CURRENT=${{ steps.current.outputs.count }}
+          if [ "$CURRENT" -ge 100 ]; then
+            echo "Corpus already has $CURRENT/100 images; skipping download batches."
+            exit 0
           fi
-          python projects/scientific-figure-style-corpus/scripts/merge_seed_corpus.py merge \
-            --seed-root _seed \
-            --increment-root _increment \
-            --output-root projects/scientific-figure-style-corpus \
-            --target 100
 
-      - name: Validate image count, source scope, and checksums
-        run: |
-          python - <<'PY'
-          import csv, hashlib, pathlib
+          START=$(( (CURRENT / 10 + 1) * 10 ))
+          for TARGET in $(seq "$START" 10 100); do
+            echo "============================================================"
+            echo "Checkpoint batch: committed=$CURRENT target=$TARGET/100"
+            echo "============================================================"
+
+            python projects/scientific-figure-style-corpus/scripts/build_raw_corpus_resume.py \
+              --project-root projects/scientific-figure-style-corpus \
+              --target-total "$TARGET" \
+              --retmax 400 \
+              --max-per-article 2 \
+              --min-score 4
+
+            python - "$TARGET" <<'PY'
+          import csv, hashlib, pathlib, sys
+          target = int(sys.argv[1])
           root = pathlib.Path('projects/scientific-figure-style-corpus')
           manifest = root / 'manifests/raw-image-manifest.csv'
-          rows = list(csv.DictReader(manifest.open(encoding='utf-8')))
+          rows = list(csv.DictReader(manifest.open(encoding='utf-8', newline='')))
+          if len(rows) < target:
+              raise SystemExit(f'checkpoint incomplete: {len(rows)}/{target}')
+          for row in rows:
+              path = root / row['asset_path']
+              if not path.exists():
+                  raise SystemExit(f'missing checkpoint asset: {path}')
+              digest = hashlib.sha256(path.read_bytes()).hexdigest()
+              if digest != row['sha256']:
+                  raise SystemExit(f'checkpoint checksum mismatch: {path}')
+          print(f'checkpoint validated: {len(rows)}/{target}')
+          PY
+
+            git add \
+              projects/scientific-figure-style-corpus/assets/raw \
+              projects/scientific-figure-style-corpus/manifests/raw-image-manifest.csv \
+              projects/scientific-figure-style-corpus/validation/raw-corpus-build-report.json \
+              projects/scientific-figure-style-corpus/validation/raw-corpus-progress.json
+
+            if git diff --cached --quiet; then
+              echo "No new files at checkpoint $TARGET"
+            else
+              git commit -m "Checkpoint scientific figure corpus at ${TARGET} images"
+              git push origin HEAD:${{ github.ref_name }}
+            fi
+            CURRENT=$TARGET
+          done
+
+      - name: Validate final 100-image corpus
+        run: |
+          python - <<'PY'
+          import csv, hashlib, pathlib, json
+          root = pathlib.Path('projects/scientific-figure-style-corpus')
+          manifest = root / 'manifests/raw-image-manifest.csv'
+          rows = list(csv.DictReader(manifest.open(encoding='utf-8', newline='')))
           if len(rows) < 100:
               raise SystemExit(f'raw corpus incomplete: {len(rows)}/100 images')
           excluded = {
@@ -140,12 +131,15 @@ jobs:
           journals = {}
           core = 0
           articles = set()
+          hashes = set()
+          figure_keys = set()
           for row in rows:
               slug = row['journal_slug']
               if slug in excluded:
                   raise SystemExit(f'excluded journal entered corpus: {slug}')
               journals[slug] = journals.get(slug, 0) + 1
-              articles.add(row['pmcid'])
+              if row.get('pmcid'):
+                  articles.add(row['pmcid'])
               if row.get('source_tier') == 'core':
                   core += 1
               path = root / row['asset_path']
@@ -154,31 +148,41 @@ jobs:
               digest = hashlib.sha256(path.read_bytes()).hexdigest()
               if digest != row['sha256']:
                   raise SystemExit(f'checksum mismatch: {path}')
+              if digest in hashes:
+                  raise SystemExit(f'duplicate asset hash: {path}')
+              hashes.add(digest)
+              key = (row.get('pmcid',''), row.get('figure_id',''))
+              if key in figure_keys:
+                  raise SystemExit(f'duplicate figure record: {key}')
+              figure_keys.add(key)
           if core < 50:
               raise SystemExit(f'core-journal representation too low: {core}/100')
           if len(articles) < 45:
               raise SystemExit(f'article diversity too low: {len(articles)} distinct articles')
-          print('validated', len(rows), 'images', journals)
-          print('core', core, 'distinct_articles', len(articles))
+          summary = {
+              'validated_images': len(rows),
+              'journals': journals,
+              'core_images': core,
+              'distinct_articles': len(articles),
+              'duplicate_hashes': 0,
+              'duplicate_figure_records': 0,
+          }
+          out = root / 'validation' / 'raw-corpus-final-validation.json'
+          out.write_text(json.dumps(summary, indent=2), encoding='utf-8')
+          print(json.dumps(summary, indent=2))
           PY
 
-      - name: Commit generated corpus to branch
+      - name: Commit final validation report
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add \
-            projects/scientific-figure-style-corpus/assets/raw \
-            projects/scientific-figure-style-corpus/manifests/raw-image-manifest.csv \
-            projects/scientific-figure-style-corpus/validation/raw-corpus-build-report.json \
-            projects/scientific-figure-style-corpus/validation/raw-corpus-merge-report.json
+          git add projects/scientific-figure-style-corpus/validation/raw-corpus-final-validation.json
           if git diff --cached --quiet; then
-            echo "No corpus changes to commit"
+            echo "No final validation changes to commit"
           else
-            git commit -m "Populate 100-image raw scientific figure corpus"
+            git commit -m "Validate 100-image scientific figure corpus"
             git push origin HEAD:${{ github.ref_name }}
           fi
 
-      - name: Upload corpus build artifact
+      - name: Upload final corpus artifact
         uses: actions/upload-artifact@v4
         with:
           name: scientific-figure-raw-corpus
@@ -186,5 +190,6 @@ jobs:
             projects/scientific-figure-style-corpus/assets/raw
             projects/scientific-figure-style-corpus/manifests/raw-image-manifest.csv
             projects/scientific-figure-style-corpus/validation/raw-corpus-build-report.json
-            projects/scientific-figure-style-corpus/validation/raw-corpus-merge-report.json
+            projects/scientific-figure-style-corpus/validation/raw-corpus-progress.json
+            projects/scientific-figure-style-corpus/validation/raw-corpus-final-validation.json
           if-no-files-found: error
