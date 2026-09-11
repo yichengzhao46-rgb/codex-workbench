@@ -1,0 +1,65 @@
+name: Stage 1.5 wave 3 screened harvest
+on:
+  push:
+    branches: [feat/figure-style-corpus-v0.1]
+    paths:
+      - ".github/workflows/stage1-5-wave3-harvest.yml"
+      - "projects/scientific-figure-style-corpus/scripts/harvest_stage1_5_wave3.py"
+      - "projects/scientific-figure-style-corpus/annotations/stage1_5_wave3_figure_screening.csv"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: stage1-5-wave3-harvest-${{ github.ref_name }}
+  cancel-in-progress: true
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout corpus branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 pillow
+      - name: Harvest Wave 3 selected assets
+        run: python projects/scientific-figure-style-corpus/scripts/harvest_stage1_5_wave3.py
+      - name: Checksum and manifest validation
+        run: |
+          python - <<'PY'
+          import csv,hashlib,json,pathlib
+          root=pathlib.Path('projects/scientific-figure-style-corpus')
+          m=root/'manifests/stage1_5_wave3_harvested_figures.csv'
+          rows=list(csv.DictReader(m.open(encoding='utf-8',newline='')))
+          sel=[r for r in csv.DictReader((root/'annotations/stage1_5_wave3_figure_screening.csv').open(encoding='utf-8',newline='')) if r['public_mirror'].lower()=='true']
+          assert len(rows)==len(sel),f'incomplete harvest {len(rows)}/{len(sel)}'
+          hashes=[]
+          for r in rows:
+            p=root/r['asset_path'];assert p.exists(),f'missing {p}'
+            d=hashlib.sha256(p.read_bytes()).hexdigest();assert d==r['sha256'],f'checksum mismatch {p}';hashes.append(d)
+          assert len(hashes)==len(set(hashes)),'duplicate hashes in Wave 3'
+          report={'wave':3,'selected':len(sel),'validated_assets':len(rows),'checksum_mismatches':0,'duplicate_hashes':0,'validation':'passed'}
+          (root/'validation/stage1_5_wave3_final_validation.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+          print(json.dumps(report,indent=2))
+          PY
+      - name: Commit Wave 3 assets and validation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982+github-actions[bot]@users.noreply.github.com"
+          git add projects/scientific-figure-style-corpus/assets/stage1_5 projects/scientific-figure-style-corpus/manifests/stage1_5_wave3_harvested_figures.csv projects/scientific-figure-style-corpus/validation/stage1_5_wave3_harvest_report.json projects/scientific-figure-style-corpus/validation/stage1_5_wave3_final_validation.json projects/scientific-figure-style-corpus/validation/stage1_5_status.json
+          if git diff --cached --quiet; then echo "No Wave 3 changes"; else git commit -m "Harvest and validate Stage 1.5 wave 3 figures" && git push origin HEAD:${{ github.ref_name }}; fi
+      - name: Upload validated Wave 3 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1-5-wave3-validated
+          path: |
+            projects/scientific-figure-style-corpus/assets/stage1_5
+            projects/scientific-figure-style-corpus/manifests/stage1_5_wave3_harvested_figures.csv
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave3_harvest_report.json
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave3_final_validation.json
+          if-no-files-found: error
