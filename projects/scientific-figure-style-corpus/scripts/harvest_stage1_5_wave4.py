@@ -15,9 +15,10 @@ def active(path):
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--project-root',default='projects/scientific-figure-style-corpus');ap.add_argument('--selection',default='projects/scientific-figure-style-corpus/annotations/stage1_5_wave4_figure_screening.csv');a=ap.parse_args()
  root=Path(a.project_root).resolve();sel=Path(a.selection).resolve();assets=root/'assets/stage1_5';manifest=root/'manifests/stage1_5_wave4_harvested_figures.csv';report=root/'validation/stage1_5_wave4_harvest_report.json';status=root/'validation/stage1_5_status.json';finalv=root/'validation/stage1_5_wave4_final_validation.json';assets.mkdir(parents=True,exist_ok=True);manifest.parent.mkdir(parents=True,exist_ok=True);report.parent.mkdir(parents=True,exist_ok=True)
- rows=list(csv.DictReader(sel.open(encoding='utf-8',newline='')));selected=[r for r in rows if truthy(r['public_mirror'])];s=requests.Session();s.headers.update({'User-Agent':'codex-workbench-stage1.5-wave4/0.1','Accept-Language':'en-US,en;q=0.8'});out=[];fail=[];cache={}
+ rows=list(csv.DictReader(sel.open(encoding='utf-8',newline='')));selected=[r for r in rows if truthy(r['public_mirror'])];s=requests.Session();s.headers.update({'User-Agent':'codex-workbench-stage1.5-wave4/0.2','Accept-Language':'en-US,en;q=0.8'});out=[];fail=[];cache={}
  for r in selected:
   cid=r['candidate_id'];n=int(r['figure_number']);url=r['article_url']
+  if cid=='S15-037':url='https://pmc.ncbi.nlm.nih.gov/articles/PMC11008690/'
   try:
    if r['rights_status']!='public_mirror_allowed_cc_by':raise RuntimeError('rights not mirror-compatible')
    m=re.search(r'(PMC\d+)',url,re.I)
