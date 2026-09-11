@@ -1,0 +1,21 @@
+sample_id,journal,year,status,primary_purpose,layout,style_family,domain,inspection_level,direct_pixel_qa
+ISME-2017-LOVLEY-F3,The ISME Journal,2017,active,electron_transfer,two_organism_interaction,flat_2d_mechanism,DIET aggregate,direct_figure_page,complete
+ISME-2016-STORCK-F1,The ISME Journal,2016,active,electron_transfer,mirrored_comparison,editorial_2d_overview,MIET vs DIET,direct_figure_page,complete
+ISME-2014-PANDE-F1,The ISME Journal,2014,active,microbial_interaction,two_organism_interaction,flat_2d_mechanism,cross-feeding,direct_figure_page,complete
+ISME-2024-CHUANG-F1A,The ISME Journal,2024,active,microbial_interaction,two_organism_interaction,flat_2d_mechanism,RP cross-feeding,direct_figure_page,complete
+ISME-2025-KIM-BRISSON-F1,The ISME Journal,2025,active,experimental_design,linear_flow,editorial_2d_overview,interaction workflow,direct_figure_page,complete
+NC-2019-NIEHAUS-F1,Nature Communications,2019,active,microbial_interaction,central_hub,flat_2d_mechanism,chemical-mediated interactions,direct_figure_page,complete
+NC-2020-YU-F1,Nature Communications,2020,active,material_microbe_interface,mirrored_comparison,pathway_cutaway_2d,biotic-abiotic interface,direct_figure_page,complete
+NC-2025-ZHOU-F2A,Nature Communications,2025,active,material_microbe_interface,zoom_in_multiscale,soft_2_5d_schematic,bacteria-semiconductor biohybrid,direct_figure_page,complete
+NC-2024-DIRECTIONAL-ET-F1,Nature Communications,2024,active,environmental_process,layered_gradient,editorial_2d_overview,redox gradient,direct_figure_page,complete
+NC-2019-RP-EEU-F1AB,Nature Communications,2019,active,experimental_design,zoom_in_multiscale,pathway_cutaway_2d,RP EEU,direct_figure_page,complete
+WR-2025-SHU-WU-GA,Water Research,2025,candidate,graphical_abstract,mirrored_comparison,editorial_2d_overview,conductive materials,graphical_abstract_metadata,pending
+WR-2022-LIU-MSBC-GA,Water Research,2022,candidate,graphical_abstract,central_hub,soft_2_5d_schematic,magnetic biochar,graphical_abstract_metadata,pending
+WR-2017-TAO-TAD-F1,Water Research,2017,candidate,experimental_design,mirrored_comparison,editorial_2d_overview,two-phase AD,caption_plus_page,pending
+WR-2021-ZHENG-DIET-GA,Water Research,2021,candidate,graphical_abstract,two_organism_interaction,flat_2d_mechanism,conductive aggregate,graphical_abstract_metadata,pending
+WR-2024-TROPICAL-MOX-GA,Water Research,2024,candidate,environmental_process,central_hub,editorial_2d_overview,aerobic methane oxidation,graphical_abstract_metadata,pending
+EST-2026-IEET-VA,Environmental Science & Technology,2026,candidate,graphical_abstract,linear_flow,editorial_2d_overview,indirect EET,graphical_abstract_metadata,pending
+EST-2025-H2O2-EEU-VA,Environmental Science & Technology,2025,candidate,graphical_abstract,linear_flow,pathway_cutaway_2d,H2O2 EEU,graphical_abstract_metadata,pending
+EST-2023-FE3O4-BIOCHAR-VA,Environmental Science & Technology,2023,candidate,graphical_abstract,linear_flow,soft_2_5d_schematic,Fe3O4 biochar,graphical_abstract_metadata,pending
+EST-2024-FES-CONDUIT-VA,Environmental Science & Technology,2024,candidate,graphical_abstract,zoom_in_multiscale,pathway_cutaway_2d,FeS conduit,graphical_abstract_metadata,pending
+EST-2023-METHANE-SELENATE-VA,Environmental Science & Technology,2023,candidate,graphical_abstract,two_organism_interaction,editorial_2d_overview,methane-selenate syntrophy,graphical_abstract_metadata,pending
