@@ -1,97 +1,106 @@
-# 2D/2.5D Scientific Figure Style Corpus — v0.1
+# 2D/2.5D Scientific Figure Style Corpus
 
 ## Objective
 
-Build the first real reference corpus for the experimental `scientific-figure-style-router` defined in `codex-playbook` PR #23.
+Build a source-backed visual corpus for the experimental `scientific-figure-style-router` defined in `codex-playbook` PR #23.
 
-This project does **not** mirror publisher figures. It stores source metadata, figure/panel locators, structured design annotations, reusable principles, inspection confidence, and copyright/provenance notes so the router can learn from real published figures without turning the repository into an image archive.
+The project now follows a strict **raw images first** architecture:
 
-## v0.1 scope
+> **≥100 real source images → figure-level annotation → reusable element extraction → Style Router validation**
 
-Initial target: **20 real samples**, five from each of four primary source journals:
+The original 20-record batch remains a useful schema/source-discovery pilot, but it is no longer treated as a sufficient foundation corpus.
 
-- The ISME Journal
-- Nature Communications
-- Water Research
-- Environmental Science & Technology
+## Stage 0 — 100-image raw corpus gate
 
-The batch is intentionally heterogeneous. It includes:
+Before expanding the element library, collect at least **100 legally mirrorable, provenance-checked, visually inspected source images**.
 
-- microbial cross-feeding and two-organism interaction;
-- MIET vs DIET comparison;
-- cell–material and electrode interfaces;
-- biohybrid / semiconductor interfaces;
-- environmental redox gradients;
-- methane oxidation and methane-driven environmental processes;
-- conductive-material-facilitated interspecies transfer;
-- experimental-design schematics;
-- graphical / visual abstracts.
+Initial target allocation:
 
-## Relationship to playbook
+- The ISME Journal: 30
+- Nature Communications: 30
+- Environmental Science & Technology: 20
+- Water Research: 20
 
-Canonical schema source:
+See `RAW_CORPUS_POLICY.md` for the full acceptance gate, diversity requirements, rights rules, and anti-bias constraints.
 
-`codex-playbook/skills/scientific-figure-style-router/references/sample-schema.md`
+A record counts toward 100 only when the actual image file is stored in an allowed asset location and has verified source metadata, redistribution rights, checksum, and completed visual inspection. Metadata-only references do not count.
 
-Current workbench branch intentionally allows one experimental extension block:
+## Rights-aware mirror design
+
+`codex-workbench` is public. Full publisher/source images may therefore be committed only when their license or explicit permission allows redistribution. Open-access status alone is not enough: the exact Creative Commons/public-use license and any third-party exclusions must be checked.
+
+For non-mirrorable figures, store an index-only source record with DOI, figure locator, source URL, rights note, and derived visual observations; do not commit the original image.
+
+This design preserves the user's requirement for a genuine original-image learning corpus without turning the repository into an unauthorized publisher mirror.
+
+## Stage 1 — figure-level annotation
+
+After raw acquisition, annotate each figure using the playbook schema:
+
+- scientific purpose;
+- information type and density;
+- 2D / light-2.5D style family;
+- layout/composition;
+- cell/material/molecule rendering;
+- arrow/connector grammar;
+- palette and outline strategy;
+- evidence-state coding;
+- reusable principles;
+- limitations and unsuitable transfer cases.
+
+An experimental QC block remains useful:
 
 ```yaml
 annotation_qc:
-  inspection_level: direct_figure_page | caption_plus_page | graphical_abstract_metadata
+  inspection_level: direct_image | direct_figure_page | caption_plus_page | metadata_only
   annotation_confidence: high | medium | low
   direct_pixel_qa: complete | pending
   notes: ""
 ```
 
-This block exists so publisher-access limitations are explicit rather than silently converted into invented visual details. If useful after validation, the block can later be proposed back to the playbook schema.
+## Stage 2 — element library
 
-## Corpus status logic
+Element extraction is **blocked until Stage 0 passes**. See:
 
-### `active`
+`derived-elements/BLOCKED_UNTIL_RAW_CORPUS_100.md`
 
-Use only when the figure/panel itself is exposed on the publisher/full-text page with enough visual/caption context to support the functional and design annotation.
+Only after the raw corpus reaches the gate should recurring cells, materials, arrows, molecules, gradients, zoom boxes, typography, and composition archetypes be promoted into a reusable element library.
 
-### `candidate`
+## Stage 3 — Style Router
 
-Use when the article and figure/graphical-abstract locator are verified but pixel-level visual inspection is incomplete. Candidate records may still be used for source discovery, but should not drive fine palette, texture, or typography transfer until promoted.
+The Style Router remains experimental until it is validated against the ≥100-image corpus. The target workflow is:
 
-### `rejected`
+`task → figure purpose → information structure → layout → style family → evidence grammar → reusable elements → final image`
 
-Use when a real figure is scientifically relevant but visually redundant, too data-heavy for the router task, or unsuitable for transferable design learning.
-
-## Copyright / provenance policy
-
-- No publisher image asset is stored in this repository in v0.1.
-- Every record points back to the article DOI or publisher page.
-- `rights_or_license` states either the known open-access state or that reuse rights were not independently verified.
-- Design principles must be abstractions across samples, not tracing instructions for a single published figure.
-- If a local image is ever stored in a later iteration, its license and provenance must be explicit.
-
-## Files
+## Current files
 
 ```text
 projects/scientific-figure-style-corpus/
 ├── README.md
+├── RAW_CORPUS_POLICY.md
 ├── ANNOTATION_QA.md
 ├── corpus-index.csv
+├── manifests/
+│   └── raw-image-manifest.csv       # 100 acquisition slots
 ├── corpus/
 │   ├── isme.yaml
 │   ├── nature-communications.yaml
 │   ├── water-research.yaml
 │   └── est.yaml
+├── derived-elements/
+│   └── BLOCKED_UNTIL_RAW_CORPUS_100.md
 └── validation/
     └── router-validation.md
 ```
 
-## v0.1 success criteria
+## Current status
 
-The batch is successful if it can support at least these retrieval routes without defaulting to journal-name imitation:
+- existing pilot: 20 source/annotation records;
+- raw-image acquisition target: 100;
+- element extraction: blocked;
+- Style Router: experimental;
+- publisher image mirroring: allowed only for assets with verified redistribution rights.
 
-1. `microbial_interaction + two_organism_interaction + flat_2d_mechanism`
-2. `electron_transfer + mirrored_comparison`
-3. `material_microbe_interface + zoom_in_multiscale + soft_2_5d_schematic`
-4. `environmental_process + layered_gradient`
-5. `experimental_design + linear_flow`
-6. `graphical_abstract + editorial_2d_overview`
+## Key quality principle
 
-It must also expose where the current router lacks enough samples, especially high-O2 vs low-O2 perturbation figures and restrained 2.5D mineral–microbe interface figures.
+The goal is not to imitate journal branding. The corpus should be large and heterogeneous enough to learn **which visual language works for which scientific job**. Journal/source family is a retrieval filter after purpose and information structure, not the primary style label.
