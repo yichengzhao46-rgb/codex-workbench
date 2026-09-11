@@ -68,9 +68,13 @@ def list_versions(session: requests.Session, pmcid: str) -> list[str]:
     r.raise_for_status()
     root = ET.fromstring(r.content)
     versions = []
+    version_re = re.compile(rf"^{re.escape(pmcid)}\.\d+$")
     for el in root.iter():
-        if el.tag.endswith("Prefix") and el.text and el.text.startswith(pmcid + "."):
-            versions.append(el.text.rstrip("/"))
+        if not el.tag.endswith("Prefix") or not el.text:
+            continue
+        candidate = el.text.rstrip("/")
+        if version_re.fullmatch(candidate):
+            versions.append(candidate)
     return sorted(set(versions), key=lambda x: int(x.rsplit(".", 1)[-1]), reverse=True)
 
 
@@ -94,17 +98,18 @@ def choose_version(session: requests.Session, pmcid: str) -> tuple[str, dict]:
             continue
     if not candidates:
         raise RuntimeError("no readable AWS metadata object")
-    # Prefer final published version over author manuscript, then newest version number.
     candidates.sort(key=lambda vm: (str(vm[1].get("is_manuscript", "")).lower() in {"yes", "true", "1"}, -int(vm[0].rsplit(".", 1)[-1])))
     return candidates[0]
 
 
 def allowed_license(meta: dict) -> tuple[bool, str]:
-    code = str(meta.get("license_code") or "").strip().lower().replace("_", "-")
-    norm = re.sub(r"\s+", "-", code)
-    if norm in {"cc-by", "ccby", "by", "cc-0", "cc0"} or norm.startswith("cc-by-") and all(x not in norm for x in ("-nc", "-nd", "-sa")):
-        return True, str(meta.get("license_code") or "CC BY")
-    return False, str(meta.get("license_code") or "")
+    raw = str(meta.get("license_code") or "").strip()
+    norm = re.sub(r"[\s_]+", "-", raw.lower())
+    if any(x in norm for x in ("-nc", "-nd", "-sa")):
+        return False, raw
+    if norm in {"cc-by", "ccby", "by", "cc-0", "cc0"} or norm.startswith("cc-by-"):
+        return True, raw or "CC BY"
+    return False, raw
 
 
 def media_map(meta: dict) -> dict[str, str]:
