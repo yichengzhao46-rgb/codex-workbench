@@ -1,0 +1,74 @@
+name: Stage 1.5 wave 5 screened harvest
+
+on:
+  push:
+    branches:
+      - feat/figure-style-corpus-v0.1
+    paths:
+      - ".github/workflows/stage1-5-wave5-harvest.yml"
+      - "projects/scientific-figure-style-corpus/scripts/harvest_stage1_5_wave5.py"
+      - "projects/scientific-figure-style-corpus/annotations/stage1_5_wave5_figure_screening.csv"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stage1-5-wave5-harvest-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout corpus branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 pillow
+      - name: Harvest Wave 5 selected assets
+        run: |
+          python projects/scientific-figure-style-corpus/scripts/harvest_stage1_5_wave5.py \
+            --project-root projects/scientific-figure-style-corpus \
+            --selection projects/scientific-figure-style-corpus/annotations/stage1_5_wave5_figure_screening.csv
+      - name: Checksum and manifest validation
+        run: |
+          python - <<'PY'
+          import csv,hashlib,json
+          from pathlib import Path
+          root=Path('projects/scientific-figure-style-corpus')
+          manifest=root/'manifests/stage1_5_wave5_harvested_figures.csv'
+          finalv=root/'validation/stage1_5_wave5_final_validation.json'
+          rows=list(csv.DictReader(manifest.open(encoding='utf-8',newline='')))
+          assert rows, 'empty Wave 5 manifest'
+          for r in rows:
+              p=root/r['asset_path']
+              assert p.exists(), f'missing {p}'
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==r['sha256'], f'checksum mismatch {p}'
+          v=json.loads(finalv.read_text())
+          assert v['validation_passed'] is True, v
+          print(f'validated {len(rows)} Wave 5 assets; active A+B total={v["active_ab_total"]}')
+          PY
+      - name: Commit Wave 5 assets and validation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add projects/scientific-figure-style-corpus/assets/stage1_5 projects/scientific-figure-style-corpus/manifests/stage1_5_wave5_harvested_figures.csv projects/scientific-figure-style-corpus/validation/stage1_5_wave5_harvest_report.json projects/scientific-figure-style-corpus/validation/stage1_5_wave5_final_validation.json projects/scientific-figure-style-corpus/validation/stage1_5_status.json
+          if git diff --cached --quiet; then echo "No Wave 5 harvest changes"; else git commit -m "Harvest and validate Stage 1.5 wave 5" && git push origin HEAD:${{ github.ref_name }}; fi
+      - name: Upload validated Wave 5 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1-5-wave5-validated
+          path: |
+            projects/scientific-figure-style-corpus/manifests/stage1_5_wave5_harvested_figures.csv
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave5_harvest_report.json
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave5_final_validation.json
+            projects/scientific-figure-style-corpus/validation/stage1_5_status.json
+          if-no-files-found: error
