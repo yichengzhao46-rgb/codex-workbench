@@ -1,11 +1,18 @@
 {
-  "verified_candidate_articles": 9,
-  "screening_queue_entries": 9,
-  "target_new_figures": "40-60",
-  "current_selected_figures": 0,
-  "stage1_ab_count": 42,
-  "target_ab_count": "80-100",
-  "raw_corpus_preserved": true,
-  "public_mirroring_policy": "CC BY/CC0 or equivalent explicit redistribution permission only",
-  "next_action": "Perform per-figure screening on the verified 2024-2026 OA candidate pool, assign A/B/C/exclude tiers, and mirror only rights-cleared high-value figures into a separate Stage 1.5 public asset layer."
+  "stage": "1.5_recent_targeted_refinement",
+  "verified_candidate_articles_wave1": 9,
+  "screened_figure_rows_wave1": 14,
+  "public_assets_wave1": 1,
+  "wave1_active_ab_added": 1,
+  "stage1_ab_baseline": 42,
+  "current_ab_after_wave1": 43,
+  "target_ab_range": [
+    80,
+    100
+  ],
+  "target_new_figures_range": [
+    40,
+    60
+  ],
+  "next_action": "expand and screen wave2 recent OA candidates"
 }
