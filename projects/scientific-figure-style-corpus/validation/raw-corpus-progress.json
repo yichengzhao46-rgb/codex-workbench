@@ -1,0 +1,13 @@
+{
+  "count": 10,
+  "target": 100,
+  "batch_target": 10,
+  "batch_start_count": 0,
+  "new_this_batch": 10,
+  "distinct_articles": 7,
+  "core_images": 10,
+  "journals": {
+    "isme": 10
+  },
+  "updated_at_utc": "2026-09-11T09:12:01.478216+00:00"
+}
