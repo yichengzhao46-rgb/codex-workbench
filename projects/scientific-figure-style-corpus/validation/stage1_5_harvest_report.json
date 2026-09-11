@@ -1,62 +1,28 @@
 {
   "screened_figure_rows": 14,
   "public_mirror_requested": 9,
-  "harvested_assets": 1,
-  "failed_or_rejected": 8,
+  "harvested_assets": 7,
+  "failed_or_rejected": 2,
   "tier_counts": {
-    "B_style_reference": 1
+    "B_style_reference": 2,
+    "A_style_reference": 5
   },
   "journal_counts": {
-    "Nature Communications": 1
+    "Nature Communications": 6,
+    "Chemical Reviews": 1
   },
   "failures": [
     {
-      "candidate_id": "S15-002",
-      "figure_number": "7",
-      "article_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12480950/",
-      "error": "could not resolve image bytes: https://web.pubmedcentral.gov/picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg: GET failed after retries: https://web.pubmedcentral.gov/picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg: HTTPSConnectionPool(host='web.pubmedcentral.gov', port=443): Max retries exceeded with url: /picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='web.pubmedcentral.gov', port=443): Failed to resolve 'web.pubmedcentral.gov' ([Errno -5] No address associated with hostname)\")) | http://sponomar.ncbi.nlm.nih.gov/corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg: GET failed after retries: http://sponomar.ncbi.nlm.nih.gov/corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg: HTTPConnectionPool(host='sponomar.ncbi.nlm.nih.gov', port=80): Max retries exceeded with url: /corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg (Caused by NameResolutionError(\"HTTPConnection(host='sponomar.ncbi.nlm.nih.gov', port=80): Failed to resolve 'sponomar.ncbi.nlm.nih.gov' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "candidate_id": "S15-003",
-      "figure_number": "1",
-      "article_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12521356/",
-      "error": "article does not expose an allowed CC BY/CC0 licence"
-    },
-    {
-      "candidate_id": "S15-003",
-      "figure_number": "3",
-      "article_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12521356/",
-      "error": "article does not expose an allowed CC BY/CC0 licence"
-    },
-    {
-      "candidate_id": "S15-004",
-      "figure_number": "1",
-      "article_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13107470/",
-      "error": "article does not expose an allowed CC BY/CC0 licence"
-    },
-    {
       "candidate_id": "S15-004",
       "figure_number": "2",
       "article_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13107470/",
-      "error": "article does not expose an allowed CC BY/CC0 licence"
-    },
-    {
-      "candidate_id": "S15-005",
-      "figure_number": "2",
-      "article_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13284237/",
-      "error": "article does not expose an allowed CC BY/CC0 licence"
-    },
-    {
-      "candidate_id": "S15-005",
-      "figure_number": "5",
-      "article_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13284237/",
-      "error": "article does not expose an allowed CC BY/CC0 licence"
+      "error": "caption third-party/tool-asset risk: with permission; permission from; copyright ; reproduced with permission"
     },
     {
       "candidate_id": "S15-007",
       "figure_number": "1",
       "article_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12088387/",
-      "error": "article does not expose an allowed CC BY/CC0 licence"
+      "error": "figure 1 not found"
     }
   ]
 }

@@ -2,10 +2,10 @@
   "stage": "1.5_recent_targeted_refinement",
   "verified_candidate_articles_wave1": 9,
   "screened_figure_rows_wave1": 14,
-  "public_assets_wave1": 1,
-  "wave1_active_ab_added": 1,
+  "public_assets_wave1": 7,
+  "wave1_active_ab_added": 7,
   "stage1_ab_baseline": 42,
-  "current_ab_after_wave1": 43,
+  "current_ab_after_wave1": 49,
   "target_ab_range": [
     80,
     100
@@ -14,5 +14,5 @@
     40,
     60
   ],
-  "next_action": "expand and screen wave2 recent OA candidates"
+  "next_action": "screen and harvest wave2 recent OA candidates"
 }
