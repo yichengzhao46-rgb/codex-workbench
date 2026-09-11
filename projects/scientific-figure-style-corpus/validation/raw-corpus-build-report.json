@@ -1,16 +1,16 @@
 {
-  "target_total": 10,
-  "resume_start_count": 0,
+  "target_total": 20,
+  "resume_start_count": 10,
   "journals": {
     "isme": {
       "tier": "core",
       "first_pass_cap": 20,
       "max_cap": 30,
-      "downloaded": 10,
-      "articles_examined": 33,
-      "license_rejected": 25,
-      "third_party_rejected": 0,
-      "download_failed": 4
+      "downloaded": 20,
+      "articles_examined": 11,
+      "license_rejected": 5,
+      "third_party_rejected": 1,
+      "download_failed": 0
     },
     "nature-communications": {
       "tier": "core",
@@ -263,26 +263,21 @@
       "download_failed": 0
     }
   },
-  "errors": [
-    "PMC13440305 f5: download failed: could not resolve image bytes: https://web.pubmedcentral.gov/picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg: GET failed after retries: https://web.pubmedcentral.gov/picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg: HTTPSConnectionPool(host='web.pubmedcentral.gov', port=443): Max retries exceeded with url: /picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='web.pubmedcentral.gov', port=443): Failed to resolve 'web.pubmedcentral.gov' ([Errno -5] No address associated with hostname)\")) | http://sponomar.ncbi.nlm.nih.gov/corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg: GET failed after retries: http://sponomar.ncbi.nlm.nih.gov/corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg: HTTPConnectionPool(host='sponomar.ncbi.nlm.nih.gov', port=80): Max retries exceeded with url: /corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg (Caused by NameResolutionError(\"HTTPConnection(host='sponomar.ncbi.nlm.nih.gov', port=80): Failed to resolve 'sponomar.ncbi.nlm.nih.gov' ([Errno -2] Name or service not known)\"))",
-    "PMC13440305 f4: download failed: could not resolve image bytes: https://web.pubmedcentral.gov/picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg: GET failed after retries: https://web.pubmedcentral.gov/picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg: HTTPSConnectionPool(host='web.pubmedcentral.gov', port=443): Max retries exceeded with url: /picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='web.pubmedcentral.gov', port=443): Failed to resolve 'web.pubmedcentral.gov' ([Errno -5] No address associated with hostname)\")) | http://sponomar.ncbi.nlm.nih.gov/corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg: GET failed after retries: http://sponomar.ncbi.nlm.nih.gov/corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg: HTTPConnectionPool(host='sponomar.ncbi.nlm.nih.gov', port=80): Max retries exceeded with url: /corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg (Caused by NameResolutionError(\"HTTPConnection(host='sponomar.ncbi.nlm.nih.gov', port=80): Failed to resolve 'sponomar.ncbi.nlm.nih.gov' ([Errno -2] Name or service not known)\"))",
-    "PMC13440305 f2: download failed: could not resolve image bytes: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13440305/bin/13440305_wrag175f2.jpg: GET failed after retries: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13440305/bin/13440305_wrag175f2.jpg: 404 Client Error: Not Found for url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13440305/bin/13440305_wrag175f2.jpg | https://web.pubmedcentral.gov/picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg: GET failed after retries: https://web.pubmedcentral.gov/picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg: HTTPSConnectionPool(host='web.pubmedcentral.gov', port=443): Max retries exceeded with url: /picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='web.pubmedcentral.gov', port=443): Failed to resolve 'web.pubmedcentral.gov' ([Errno -5] No address associated with hostname)\")) | http://sponomar.ncbi.nlm.nih.gov/corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg: GET failed after retries: http://sponomar.ncbi.nlm.nih.gov/corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg: HTTPConnectionPool(host='sponomar.ncbi.nlm.nih.gov', port=80): Max retries exceeded with url: /corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg (Caused by NameResolutionError(\"HTTPConnection(host='sponomar.ncbi.nlm.nih.gov', port=80): Failed to resolve 'sponomar.ncbi.nlm.nih.gov' ([Errno -2] Name or service not known)\"))",
-    "PMC13440307 f3: download failed: could not resolve image bytes: https://web.pubmedcentral.gov/picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg: GET failed after retries: https://web.pubmedcentral.gov/picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg: HTTPSConnectionPool(host='web.pubmedcentral.gov', port=443): Max retries exceeded with url: /picrender.fcgi?artid=2709059&blobname=DEV032391F1.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='web.pubmedcentral.gov', port=443): Failed to resolve 'web.pubmedcentral.gov' ([Errno -5] No address associated with hostname)\")) | http://sponomar.ncbi.nlm.nih.gov/corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg: GET failed after retries: http://sponomar.ncbi.nlm.nih.gov/corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg: HTTPConnectionPool(host='sponomar.ncbi.nlm.nih.gov', port=80): Max retries exceeded with url: /corecgi/tileshop/tileshop.html?rel=/corecgi/tileshop/tileshop.fcgi?p=PMC3&id=2709059_DEV032391F1.jpg (Caused by NameResolutionError(\"HTTPConnection(host='sponomar.ncbi.nlm.nih.gov', port=80): Failed to resolve 'sponomar.ncbi.nlm.nih.gov' ([Errno -2] Name or service not known)\"))"
-  ],
+  "errors": [],
   "source_policy": {
     "core_journals_prioritized": true,
     "fixed_water_research_quota": false,
     "scope_high_fill_allowed": true,
     "resumable_checkpoint_build": true
   },
-  "downloaded_total": 10,
+  "downloaded_total": 20,
   "downloaded_new_this_batch": 10,
-  "distinct_articles": 7,
+  "distinct_articles": 13,
   "represented_journals": [
     "isme"
   ],
-  "core_images": 10,
+  "core_images": 20,
   "manifest": "manifests/raw-image-manifest.csv",
   "assets_root": "assets/raw",
-  "checkpoint_target": 10
+  "checkpoint_target": 20
 }
