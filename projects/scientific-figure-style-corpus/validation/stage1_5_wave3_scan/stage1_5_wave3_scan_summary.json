@@ -1,8 +1,8 @@
 {
-  "articles_total": 8,
-  "articles_scanned": 8,
-  "figures_scanned": 44,
-  "previews_resolved": 16,
+  "articles_total": 18,
+  "articles_scanned": 18,
+  "figures_scanned": 0,
+  "previews_resolved": 0,
   "metadata_only": 0,
   "article_failures": []
 }
