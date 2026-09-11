@@ -4,17 +4,14 @@
   "wave1_active_ab_added": 7,
   "wave2_active_ab_added": 9,
   "wave3_active_ab_added": 5,
-  "current_ab_after_wave3": 63,
+  "wave4_active_ab_added": 14,
+  "current_ab_after_wave4": 77,
   "target_ab_range": [
     80,
     100
   ],
-  "target_new_figures_range": [
-    40,
-    60
-  ],
-  "wave3_screened_figures": 44,
-  "wave3_public_assets": 5,
-  "wave3_validation": "passed",
-  "next_action": "expand wave4 targeted OA candidates until A+B active set reaches 80\u2013100"
+  "wave4_screened_figures": 46,
+  "wave4_public_assets": 14,
+  "wave4_validation": "passed",
+  "next_action": "continue wave5 targeted OA refinement"
 }
