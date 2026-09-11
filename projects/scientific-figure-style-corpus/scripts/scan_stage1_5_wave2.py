@@ -10,7 +10,7 @@ from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
-from PIL import Image, ImageOps, ImageDraw
+from PIL import Image, ImageDraw
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
@@ -111,18 +111,20 @@ def main() -> int:
             html = b.http_get(session, url).text
             soup = BeautifulSoup(html, "html.parser")
             allowed, lic, lic_url = b.detect_license(soup)
-            figures = list(soup.find_all("figure"))
+            # PMC currently mixes semantic <figure> with legacy <div class="fig"> markup.
+            figures = list(soup.find_all("figure")) or list(soup.find_all("div", class_=re.compile(r"\bfig\b", re.I)))
             article_previews = []
+            article_count = 0
             for ordinal, fig in enumerate(figures, 1):
                 cap = h.caption_text(fig)
                 if not cap:
                     continue
+                article_count += 1
                 fnum = figure_number(fig, ordinal)
                 risk = h.third_party_reason(cap)
                 score = score_caption(cap)
                 preview_rel = ""
                 resolved = False
-                # Resolve every main-text figure only when article-level rights are compatible and caption has no third-party warning.
                 if allowed and not risk:
                     pmcid_m = re.search(r"/articles/(PMC\d+)/", url, re.I)
                     pmcid = pmcid_m.group(1).upper() if pmcid_m else ""
@@ -153,7 +155,7 @@ def main() -> int:
             if article_previews:
                 make_contact_sheet(article_previews, contact_root / f"{cid}_contact.jpg")
             summary["articles_scanned"] += 1
-            summary["figures_scanned"] += sum(1 for r in scanned if r["candidate_id"] == cid)
+            summary["figures_scanned"] += article_count
         except Exception as exc:
             summary["article_failures"].append({"candidate_id": cid, "error": str(exc)})
 
