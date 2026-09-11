@@ -1,0 +1,10 @@
+screening_id,candidate_id,source_article,figure_locator,status,priority,primary_purpose,style_family,layout_archetype,rights_status,notes
+Q-001,S15-001,"Metabolic coupling between soil aerobic methanotrophs and denitrifiers in rice paddy fields",TBD,pending_screening,high,TBD,TBD,TBD,CC BY 4.0,"Expect 1–2 high-value interaction/mechanism figures"
+Q-002,S15-002,"Electron shuttling promotes denitrification and mitigates nitrous oxide emissions in lakes",TBD,pending_screening,high,TBD,TBD,TBD,CC BY 4.0,"Look for shuttle/electron-flow schematic rather than quantitative plots"
+Q-003,S15-003,"Bio-hybrid photoelectrochemical catalysis for solar fuels and chemicals conversion",TBD,pending_screening,high,TBD,TBD,TBD,CC BY 4.0,"Seek material–microbe or photoelectrochemical interface overview"
+Q-004,S15-004,"Designing Microbe–Semiconductor Interfaces for Semibiological Photosynthesis",TBD,pending_screening,high,TBD,TBD,TBD,CC BY 4.0,"Likely multiple review schematics; cap at 2 figures"
+Q-005,S15-005,"Dissolved organic matter-generated photoelectrons enable microbial antimonate reduction in mine stream sediments",TBD,pending_screening,high,TBD,TBD,TBD,CC BY 4.0,"Seek environmental electron-source mechanism figure"
+Q-006,S15-006,"Redox-stratified macromolecule degradation supports microbial survival in the Kermadec Trench sediments",TBD,pending_screening,medium,TBD,TBD,TBD,CC BY 4.0,"Prefer redox-gradient/multiscale layouts"
+Q-007,S15-007,"Cross-feeding creates tipping points in microbiome diversity",TBD,pending_screening,medium,TBD,TBD,TBD,CC BY 4.0,"Use only network/schematic panels"
+Q-008,S15-008,"Expanding the C-S-R framework to incorporate microbial interactions: evidence from methane-consuming communities",TBD,pending_screening,medium,TBD,TBD,TBD,CC BY,"Likely conceptual framework rather than detailed mechanism"
+Q-009,S15-009,"Methane Oxidation Potential and Niche Differentiation of Aerobic Methanotrophs in Coastal Mangrove Forest Soils",TBD,pending_screening,medium,TBD,TBD,TBD,CC BY 4.0,"Take layout-useful environmental-process panels only"
