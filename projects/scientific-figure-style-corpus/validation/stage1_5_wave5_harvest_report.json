@@ -1,0 +1,15 @@
+{
+  "wave": 5,
+  "screened_figure_rows": 42,
+  "public_mirror_selected": 7,
+  "harvested_assets": 7,
+  "failed_or_rejected": 0,
+  "tier_counts": {
+    "A_style_reference": 5,
+    "B_style_reference": 2
+  },
+  "within_wave_duplicate_hashes": [],
+  "cross_wave_duplicates": [],
+  "file_validation_errors": [],
+  "failures": []
+}
