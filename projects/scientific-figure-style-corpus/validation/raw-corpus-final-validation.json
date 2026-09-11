@@ -1,0 +1,20 @@
+{
+  "validated_images": 100,
+  "journals": {
+    "isme": 20,
+    "nature-communications": 20,
+    "est": 15,
+    "water-research": 4,
+    "nature-microbiology": 8,
+    "nature-water": 6,
+    "science-advances": 8,
+    "ese": 6,
+    "isme-communications": 6,
+    "nature": 4,
+    "science": 3
+  },
+  "core_images": 59,
+  "distinct_articles": 65,
+  "duplicate_hashes": 0,
+  "duplicate_figure_records": 0
+}
