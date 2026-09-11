@@ -1,0 +1,336 @@
+journal: "Nature Communications"
+samples:
+  - sample_id: "NC-2019-NIEHAUS-F1"
+    status: active
+    source:
+      journal: "Nature Communications"
+      year: 2019
+      article_title: "Microbial coexistence through chemical-mediated interactions"
+      doi_or_url: "https://doi.org/10.1038/s41467-019-10062-x"
+      figure_id: "Figure 1"
+      panel_id: "a-b"
+      source_checked_at: "2026-09-11"
+      access_note: "Publisher page exposes Figure 1 and describes the two link types."
+      rights_or_license: "Publisher page available; reuse license not independently normalized here; no image stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: microbial_interaction
+      secondary_purposes: [conceptual_overview, integrated_mechanism]
+      style_family: flat_2d_mechanism
+      dimensionality: 2d
+      layout: central_hub
+      information_density: medium
+      target_medium: paper
+    domain:
+      primary_domain: "chemical-mediated microbial interactions"
+      scientific_entities: ["microbial species", "chemical mediators", "facilitation", "inhibition"]
+      process_keywords: ["mediator", "production/removal", "growth influence", "coexistence"]
+    visual_language:
+      cell_style: "species are abstract nodes rather than realistic cells"
+      material_style: "none"
+      molecule_style: "chemical mediators are separate functional nodes"
+      arrow_style: "hollow arrowheads encode chemical production/removal; filled arrows encode facilitation; bar termination encodes inhibition"
+      palette: "categorical node/link palette supporting functional decoding rather than realism"
+      outline: "network-style clean lines"
+      shading_or_texture: "none"
+      background: "plain"
+      text_density: medium
+      label_hierarchy: "species/chemical nodes > link semantics"
+      panel_or_zoom_style: "concept definition followed by community network example"
+      negative_space: "clear node spacing prevents link overlap"
+    evidence_semantics:
+      evidence_coding_present: yes
+      supported_pathway_encoding: "link shape encodes functional interaction type"
+      candidate_pathway_encoding: "model relationships are explicitly represented as model structure rather than empirical flux"
+      contextual_pathway_encoding: "species and mediators are separated into different node types"
+      causal_language_risk: low
+      notes: "Excellent example of connector semantics functioning as a scientific grammar."
+    reusability:
+      best_reusable_elements: ["distinct node types", "facilitation arrow", "inhibition bar", "mediator node"]
+      best_reusable_layout_principles: ["separate biological actors from exchanged chemical mediators", "avoid routing every link directly cell-to-cell"]
+      best_reusable_arrow_principles: ["assign one semantic role per connector style"]
+      suitable_for: ["candidate metabolite interaction networks", "Bath-RP multi-metabolite mechanism", "conceptual interaction overview"]
+      not_suitable_for: ["realistic material interface", "experimental apparatus"]
+      transferable_without_copying: "Reuse the semantic separation of producer/removal links and growth-effect links, not the original network artwork."
+    assessment:
+      why_it_works: "The figure teaches its visual grammar before asking the reader to interpret a complex interaction network."
+      main_weakness: "Node abstraction removes organism morphology and may be too conceptual for a biological mechanism hero figure."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Core reference for arrow/connector semantics."
+    annotation_qc:
+      inspection_level: direct_figure_page
+      annotation_confidence: high
+      direct_pixel_qa: complete
+      notes: "Publisher caption explicitly defines connector meanings."
+    notes: "High-value sample for the router's evidence/arrow grammar."
+
+  - sample_id: "NC-2020-YU-F1"
+    status: active
+    source:
+      journal: "Nature Communications"
+      year: 2020
+      article_title: "Single cell electron collectors for highly efficient wiring-up electronic abiotic/biotic interfaces"
+      doi_or_url: "https://doi.org/10.1038/s41467-020-17897-9"
+      figure_id: "Figure 1"
+      panel_id: "a-c"
+      source_checked_at: "2026-09-11"
+      access_note: "Open publisher/PMC page exposes schematic and panel descriptions."
+      rights_or_license: "Open-access article page; exact reuse license should be checked before storing assets; no image stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: material_microbe_interface
+      secondary_purposes: [electron_transfer, comparative_perturbation, multiscale_zoom]
+      style_family: pathway_cutaway_2d
+      dimensionality: light_2_5d
+      layout: mirrored_comparison
+      information_density: medium
+      target_medium: paper
+    domain:
+      primary_domain: "biotic–abiotic electron-transfer interface"
+      scientific_entities: ["Shewanella oneidensis", "cell surface collector", "transmembrane conduits", "electrode"]
+      process_keywords: ["EET", "electron collector", "biotic-abiotic interface", "conductive coating"]
+    visual_language:
+      cell_style: "single-cell cross-section / surface-oriented schematic"
+      material_style: "conductive layer wraps or penetrates the cell interface; material is shown as a distinct shell/network"
+      molecule_style: "electron-transfer conduits simplified into functional membrane components"
+      arrow_style: "electron pathways emphasize wired versus idle/dead conduits"
+      palette: "strong separation between cell body, conductive collector, and electron-transfer machinery"
+      outline: "clean interface boundaries"
+      shading_or_texture: "restrained depth cues on conductive material"
+      background: "plain"
+      text_density: medium
+      label_hierarchy: "native vs engineered interface > conduit state > electron transfer"
+      panel_or_zoom_style: "three aligned interface states"
+      negative_space: "space around each cell makes interface changes visually dominant"
+    evidence_semantics:
+      evidence_coding_present: yes
+      supported_pathway_encoding: "engineered collector states are shown as explicit structural interventions"
+      candidate_pathway_encoding: "conceptual expected wiring is separated across panels from the native state"
+      contextual_pathway_encoding: "native cell establishes the baseline"
+      causal_language_risk: low
+      notes: "Good model for visualizing an intervention at a cell–material boundary."
+    reusability:
+      best_reusable_elements: ["cell surface shell", "membrane electron conduits", "wired vs unwired pathway", "engineered interface comparison"]
+      best_reusable_layout_principles: ["compare interface states at the same scale", "make the material boundary the focal visual layer"]
+      best_reusable_arrow_principles: ["electron arrows should begin/end on explicit conduits or materials"]
+      suitable_for: ["Bath-Se interface", "EEU/EET cutaway", "mineral-coated cell hypothesis"]
+      not_suitable_for: ["environmental landscape overview", "diffusible cross-feeding without an interface"]
+      transferable_without_copying: "Reuse the baseline-vs-engineered interface comparison and shell/collector logic, not the specific collector geometry."
+    assessment:
+      why_it_works: "The same cell is repeated while only the interface architecture changes, making the engineering hypothesis immediately legible."
+      main_weakness: "More technical than ecological; whole-community context must be added separately when needed."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Priority reference for Bath-Se and EET/EEU interface routing."
+    annotation_qc:
+      inspection_level: direct_figure_page
+      annotation_confidence: high
+      direct_pixel_qa: complete
+      notes: "Figure 1 is explicitly described as native cell vs two engineered collector states."
+    notes: "One of the strongest v0.1 references for restrained cell–material schematic design."
+
+  - sample_id: "NC-2025-ZHOU-F2A"
+    status: active
+    source:
+      journal: "Nature Communications"
+      year: 2025
+      article_title: "Inorganic-bacterial biohybrids for efficient solar-driven nitrogen fixation"
+      doi_or_url: "https://doi.org/10.1038/s41467-025-60937-5"
+      figure_id: "Figure 2"
+      panel_id: "a"
+      source_checked_at: "2026-09-11"
+      access_note: "Open publisher page exposes the biohybrid schematic and caption."
+      rights_or_license: "Open-access article page; exact license should be checked before storing assets; no image stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: material_microbe_interface
+      secondary_purposes: [electron_transfer, integrated_mechanism, multiscale_zoom]
+      style_family: soft_2_5d_schematic
+      dimensionality: light_2_5d
+      layout: zoom_in_multiscale
+      information_density: medium
+      target_medium: paper
+    domain:
+      primary_domain: "photoelectrochemical bacteria–semiconductor biohybrid"
+      scientific_entities: ["Azotobacter vinelandii", "Cu2O@TiO2 nanowires", "photoelectrode", "N2", "NH3", "extracellular electron uptake"]
+      process_keywords: ["biohybrid", "photoelectron", "EEU", "nitrogen fixation", "semiconductor"]
+    visual_language:
+      cell_style: "whole-cell icon associated directly with nanostructured electrode"
+      material_style: "nanowire semiconductor receives modest depth/texture cues"
+      molecule_style: "key reaction molecules only; no excess chemistry"
+      arrow_style: "light/photoelectron route is visually dominant and terminates at the microbial interface"
+      palette: "biotic and inorganic components use distinct low-complexity color families with a highlighted energy/electron path"
+      outline: "clean with slightly stronger material contours"
+      shading_or_texture: "light 2.5D texture localized to nanowire material"
+      background: "plain"
+      text_density: medium
+      label_hierarchy: "light/material interface > electron uptake > biological product"
+      panel_or_zoom_style: "interface mechanism is isolated from the quantitative panels in the full figure"
+      negative_space: "clear separation between photoelectrode and cell/metabolic labels"
+    evidence_semantics:
+      evidence_coding_present: yes
+      supported_pathway_encoding: "biohybrid architecture and electron uptake are linked to measured PEC responses in the accompanying figure"
+      candidate_pathway_encoding: "mechanistic substeps should not be copied as proven if not independently resolved in another system"
+      contextual_pathway_encoding: "light input and N2 reduction anchor system function"
+      causal_language_risk: medium
+      notes: "Excellent style reference for Bath-Se, but scientific claims must be re-grounded in Bath-specific evidence."
+    reusability:
+      best_reusable_elements: ["nanostructured semiconductor", "cell–material contact", "photoelectron arrow", "light input"]
+      best_reusable_layout_principles: ["make the interface the visual center", "use shallow 2.5D only for the material", "keep biological process labels flat"]
+      best_reusable_arrow_principles: ["reserve the most visually salient arrow for photoelectron transfer"]
+      suitable_for: ["Bath-Se biohybrid hypothesis", "photoelectron-assisted EEU", "semiconductor–microbe interface"]
+      not_suitable_for: ["pure microbial cross-feeding", "low-density environmental overview"]
+      transferable_without_copying: "Reuse the interface-centered hierarchy and selective 2.5D treatment, not the nanowire morphology or exact colors."
+    assessment:
+      why_it_works: "A complex biohybrid is simplified around one central question: how light-derived electrons reach the bacterium."
+      main_weakness: "Could encourage overclaiming of direct electron uptake if transplanted into a system where transfer has not been resolved."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Core Bath-Se style reference."
+    annotation_qc:
+      inspection_level: direct_figure_page
+      annotation_confidence: high
+      direct_pixel_qa: complete
+      notes: "Publisher page exposes panel a description and biohybrid mechanism."
+    notes: "Primary source-family benchmark for soft 2.5D biohybrid figures."
+
+  - sample_id: "NC-2024-DIRECTIONAL-ET-F1"
+    status: active
+    source:
+      journal: "Nature Communications"
+      year: 2024
+      article_title: "Directional long-distance electron transfer from reduced to oxidized zones in the subsurface"
+      doi_or_url: "https://doi.org/10.1038/s41467-024-50974-x"
+      figure_id: "Figure 1"
+      panel_id: ""
+      source_checked_at: "2026-09-11"
+      access_note: "Publisher page exposes conceptual model and caption."
+      rights_or_license: "Publisher page available; reuse license not independently normalized here; no image stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: environmental_process
+      secondary_purposes: [electron_transfer, conceptual_overview]
+      style_family: editorial_2d_overview
+      dimensionality: 2d
+      layout: layered_gradient
+      information_density: medium
+      target_medium: paper
+    domain:
+      primary_domain: "subsurface redox gradients"
+      scientific_entities: ["reduced zone", "oxidized zone", "Fe(II)/Fe(III)", "natural organic matter", "microbes"]
+      process_keywords: ["redox gradient", "long-distance electron transfer", "subsurface", "directional transfer"]
+    visual_language:
+      cell_style: "microbes are supporting actors rather than hero objects"
+      material_style: "redox couples and environmental layers dominate"
+      molecule_style: "redox couples are labeled chemically"
+      arrow_style: "one directional chain traverses the environmental gradient; local redox steps support it"
+      palette: "environmental depth/oxidation contrast with a dedicated accent for the electron-transfer chain"
+      outline: "clean conceptual blocks/layers"
+      shading_or_texture: "light environmental gradient"
+      background: "layered subsurface context"
+      text_density: medium
+      label_hierarchy: "redox zones > transfer direction > local mechanisms"
+      panel_or_zoom_style: "macro gradient paired with mechanism annotations"
+      negative_space: "directional path remains readable across layers"
+    evidence_semantics:
+      evidence_coding_present: yes
+      supported_pathway_encoding: "redox couple chemistry is shown as local steps"
+      candidate_pathway_encoding: "the long-distance chain is explicitly introduced as a conceptual/hypothesized model in the text"
+      contextual_pathway_encoding: "environmental depth gradient provides thermodynamic direction"
+      causal_language_risk: medium
+      notes: "Good example of encoding hypothesis within environmental structure rather than presenting an isolated cartoon."
+    reusability:
+      best_reusable_elements: ["oxic-reduced gradient", "long directional arrow", "local redox couples", "environmental layers"]
+      best_reusable_layout_principles: ["let the environmental gradient establish directionality", "overlay local mechanisms without breaking the macro story"]
+      best_reusable_arrow_principles: ["one dominant long-range transfer path; secondary local steps are visually subordinate"]
+      suitable_for: ["microoxic–anoxic methane interfaces", "environmental process overview", "oxygen-gradient context slides"]
+      not_suitable_for: ["single-cell membrane pathway", "compact graphical abstract with no environmental context"]
+      transferable_without_copying: "Reuse layered redox storytelling and hierarchy, not the source's exact geological shapes."
+    assessment:
+      why_it_works: "The macro environmental gradient itself explains why the direction of transfer matters."
+      main_weakness: "Less effective when experimental conditions are homogeneous batch cultures rather than spatial gradients."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 4
+      style_relevance_score: 5
+      active_corpus_decision: "Keep as the main layered-gradient reference."
+    annotation_qc:
+      inspection_level: direct_figure_page
+      annotation_confidence: high
+      direct_pixel_qa: complete
+      notes: "Publisher caption describes the conceptual gradient and ET chain."
+    notes: "Useful for background/environmental framing, not for implying a gradient inside the user's batch bottles unless measured."
+
+  - sample_id: "NC-2019-RP-EEU-F1AB"
+    status: active
+    source:
+      journal: "Nature Communications"
+      year: 2019
+      article_title: "Phototrophic extracellular electron uptake is linked to carbon dioxide fixation in the bacterium Rhodopseudomonas palustris"
+      doi_or_url: "https://doi.org/10.1038/s41467-019-09377-6"
+      figure_id: "Figure 1"
+      panel_id: "a-b"
+      source_checked_at: "2026-09-11"
+      access_note: "Publisher page exposes Figure 1 schematic of the micro-bioelectrochemical cell and attached cells."
+      rights_or_license: "Publisher page available; reuse license not independently normalized here; no image stored."
+      local_asset_reference: ""
+    classification:
+      primary_purpose: experimental_design
+      secondary_purposes: [electron_transfer, material_microbe_interface]
+      style_family: pathway_cutaway_2d
+      dimensionality: 2d
+      layout: zoom_in_multiscale
+      information_density: medium
+      target_medium: paper
+    domain:
+      primary_domain: "Rhodopseudomonas palustris extracellular electron uptake"
+      scientific_entities: ["R. palustris", "ITO working electrode", "micro-bioelectrochemical cell", "electrons", "CO2 fixation"]
+      process_keywords: ["EEU", "electrode", "biofilm", "microfluidics", "carbon fixation"]
+    visual_language:
+      cell_style: "small attached-cell layer shown at the electrode interface"
+      material_style: "electrode/chamber geometry is simplified but technically recognizable"
+      molecule_style: "minimal"
+      arrow_style: "device-level and interface-level directions are separated by scale"
+      palette: "technical device palette with cells visually distinct from the electrode"
+      outline: "clean engineering schematic"
+      shading_or_texture: "minimal"
+      background: "plain"
+      text_density: medium
+      label_hierarchy: "device architecture > working electrode > attached cells"
+      panel_or_zoom_style: "device overview plus local cell/electrode view"
+      negative_space: "enough space around electrode interface for cell placement and labels"
+    evidence_semantics:
+      evidence_coding_present: no
+      supported_pathway_encoding: "the schematic primarily documents the experimental EEU configuration"
+      candidate_pathway_encoding: "mechanistic intracellular routes are not overloaded into this setup figure"
+      contextual_pathway_encoding: "illumination/electrode context defines the physiological experiment"
+      causal_language_risk: low
+      notes: "Important reminder that an experimental-design schematic should not be forced to carry all mechanistic claims."
+    reusability:
+      best_reusable_elements: ["R. palustris at electrode", "microreactor overview", "interface zoom", "working-electrode label"]
+      best_reusable_layout_principles: ["show apparatus first, then interface", "keep device and cell scales visually distinct"]
+      best_reusable_arrow_principles: ["do not use mechanism arrows where the panel only establishes experimental geometry"]
+      suitable_for: ["future RP electrode experiments", "EEU experimental design", "multiscale apparatus-to-cell schematics"]
+      not_suitable_for: ["Bath-RP diffusible-metabolite mechanism", "material-free coculture overview"]
+      transferable_without_copying: "Reuse the device-to-interface zoom logic and scale separation."
+    assessment:
+      why_it_works: "The multiscale layout connects experimental hardware to the biologically relevant interface without mixing scales."
+      main_weakness: "Not a final mechanism figure; overinterpreting it would confuse apparatus with pathway evidence."
+      scientific_clarity_score: 5
+      layout_transferability_score: 5
+      element_reusability_score: 5
+      style_relevance_score: 5
+      active_corpus_decision: "Keep as primary RP/EEU experimental-interface reference."
+    annotation_qc:
+      inspection_level: direct_figure_page
+      annotation_confidence: high
+      direct_pixel_qa: complete
+      notes: "Publisher description identifies four-chamber micro-BEC and cells attached to ITO working electrode."
+    notes: "Strong RP-specific reference and useful for Objective 2/3 interface visual language."
