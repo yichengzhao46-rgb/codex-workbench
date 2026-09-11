@@ -1,0 +1,28 @@
+{
+  "wave": 2,
+  "screened_figure_rows": 58,
+  "public_mirror_selected": 9,
+  "harvested_assets": 7,
+  "failed_or_rejected": 2,
+  "tier_counts": {
+    "B_style_reference": 4,
+    "A_style_reference": 3
+  },
+  "journal_counts": {
+    "Nature Communications": 3,
+    "The ISME Journal": 2,
+    "ISME Communications": 2
+  },
+  "failures": [
+    {
+      "candidate_id": "S15-015",
+      "figure_number": "1",
+      "error": "empty figure caption"
+    },
+    {
+      "candidate_id": "S15-017",
+      "figure_number": "1",
+      "error": "empty figure caption"
+    }
+  ]
+}
