@@ -3,7 +3,8 @@
   "stage1_ab_baseline": 42,
   "wave1_active_ab_added": 7,
   "wave2_active_ab_added": 9,
-  "current_ab_after_wave2": 58,
+  "wave3_active_ab_added": 5,
+  "current_ab_after_wave3": 63,
   "target_ab_range": [
     80,
     100
@@ -12,7 +13,8 @@
     40,
     60
   ],
-  "wave2_screened_figures": 58,
-  "wave2_public_assets": 9,
-  "next_action": "expand wave3 recent OA candidates and prioritize mechanism/material-interface/environmental-gradient gaps"
+  "wave3_screened_figures": 44,
+  "wave3_public_assets": 5,
+  "wave3_validation": "passed",
+  "next_action": "expand wave4 targeted OA candidates until A+B active set reaches 80\u2013100"
 }
