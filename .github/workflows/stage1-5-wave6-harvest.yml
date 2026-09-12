@@ -1,0 +1,53 @@
+name: Stage 1.5 wave 6 screened harvest
+
+on:
+  push:
+    branches:
+      - feat/figure-style-corpus-v0.1
+    paths:
+      - ".github/workflows/stage1-5-wave6-harvest.yml"
+      - "projects/scientific-figure-style-corpus/scripts/harvest_stage1_5_wave6.py"
+      - "projects/scientific-figure-style-corpus/annotations/stage1_5_wave6_figure_screening.csv"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stage1-5-wave6-harvest-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout corpus branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 pillow
+      - name: Harvest and validate Wave 6 selected assets
+        run: python projects/scientific-figure-style-corpus/scripts/harvest_stage1_5_wave6.py --project-root projects/scientific-figure-style-corpus --selection projects/scientific-figure-style-corpus/annotations/stage1_5_wave6_figure_screening.csv
+      - name: Commit Wave 6 assets and validation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add projects/scientific-figure-style-corpus/assets/stage1_5 projects/scientific-figure-style-corpus/manifests/stage1_5_wave6_harvested_figures.csv projects/scientific-figure-style-corpus/validation/stage1_5_wave6_harvest_report.json projects/scientific-figure-style-corpus/validation/stage1_5_wave6_final_validation.json projects/scientific-figure-style-corpus/validation/stage1_5_status.json
+          if git diff --cached --quiet; then echo "No Wave 6 harvest changes"; else git commit -m "Harvest and validate Stage 1.5 wave 6" && git push origin HEAD:${{ github.ref_name }}; fi
+      - name: Upload validated Wave 6 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1-5-wave6-validated
+          path: |
+            projects/scientific-figure-style-corpus/manifests/stage1_5_wave6_harvested_figures.csv
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave6_harvest_report.json
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave6_final_validation.json
+            projects/scientific-figure-style-corpus/validation/stage1_5_status.json
+          if-no-files-found: error
