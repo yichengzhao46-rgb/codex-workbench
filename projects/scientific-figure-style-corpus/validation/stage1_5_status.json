@@ -6,13 +6,14 @@
   "wave3_active_ab_added": 5,
   "wave4_active_ab_added": 14,
   "wave5_active_ab_added": 7,
-  "current_ab_after_wave5": 84,
+  "wave6_active_ab_added": 4,
+  "current_ab_after_wave6": 88,
   "target_ab_range": [
-    80,
-    100
+    100,
+    110
   ],
-  "wave5_screened_figures": 42,
-  "wave5_public_assets": 7,
-  "wave5_validation": "passed",
-  "next_action": "active A+B target reached; perform corpus-level balance QA"
+  "wave6_screened_figures": 48,
+  "wave6_public_assets": 4,
+  "wave6_validation": "passed",
+  "next_action": "continue targeted non-cross-feeding refinement toward 100-110 A+B"
 }
