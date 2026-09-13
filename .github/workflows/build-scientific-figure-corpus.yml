@@ -7,6 +7,11 @@ on:
     paths:
       - ".github/workflows/build-scientific-figure-corpus.yml"
       - "projects/scientific-figure-style-corpus/scripts/**"
+      - "projects/scientific-figure-style-corpus/manifests/raw-image-manifest.csv"
+      - "projects/scientific-figure-style-corpus/manifests/zotero-private-manifest.csv"
+      - "projects/scientific-figure-style-corpus/manifests/stage1_5*_harvested_figures.csv"
+      - "projects/scientific-figure-style-corpus/annotations/figure-level-classification-v0.1.csv"
+      - "projects/scientific-figure-style-corpus/validation/router-retrieval-test-cases.json"
   workflow_dispatch:
 
 concurrency:
@@ -218,13 +223,40 @@ jobs:
           print(json.dumps(summary, indent=2))
           PY
 
-      - name: Commit final validation report
+      - name: Build unified library index
         run: |
-          git add projects/scientific-figure-style-corpus/validation/raw-corpus-final-validation.json
+          python projects/scientific-figure-style-corpus/scripts/unified_library.py \
+            --project-root projects/scientific-figure-style-corpus \
+            build
+
+      - name: Validate unified library index and assets
+        run: |
+          python projects/scientific-figure-style-corpus/scripts/unified_library.py \
+            --project-root projects/scientific-figure-style-corpus \
+            validate \
+            --check-assets \
+            --strict-snapshot \
+            --report projects/scientific-figure-style-corpus/validation/unified-library-validation.json
+
+      - name: Validate Style Router retrieval against real figure tasks
+        run: |
+          python projects/scientific-figure-style-corpus/scripts/validate_router_retrieval.py \
+            --project-root projects/scientific-figure-style-corpus \
+            --cases projects/scientific-figure-style-corpus/validation/router-retrieval-test-cases.json \
+            --report projects/scientific-figure-style-corpus/validation/router-retrieval-validation.json
+
+      - name: Commit final validation and unified index
+        run: |
+          git add \
+            projects/scientific-figure-style-corpus/validation/raw-corpus-final-validation.json \
+            projects/scientific-figure-style-corpus/manifests/unified-library-index.csv \
+            projects/scientific-figure-style-corpus/manifests/unified-library-summary.json \
+            projects/scientific-figure-style-corpus/validation/unified-library-validation.json \
+            projects/scientific-figure-style-corpus/validation/router-retrieval-validation.json
           if git diff --cached --quiet; then
-            echo "No final validation changes to commit"
+            echo "No validation/index changes to commit"
           else
-            git commit -m "Validate 100-image scientific figure corpus"
+            git commit -m "Build and validate unified scientific figure library"
             git push origin HEAD:${{ github.ref_name }}
           fi
 
@@ -235,7 +267,11 @@ jobs:
           path: |
             projects/scientific-figure-style-corpus/assets/raw
             projects/scientific-figure-style-corpus/manifests/raw-image-manifest.csv
+            projects/scientific-figure-style-corpus/manifests/unified-library-index.csv
+            projects/scientific-figure-style-corpus/manifests/unified-library-summary.json
             projects/scientific-figure-style-corpus/validation/raw-corpus-build-report.json
             projects/scientific-figure-style-corpus/validation/raw-corpus-progress.json
             projects/scientific-figure-style-corpus/validation/raw-corpus-final-validation.json
+            projects/scientific-figure-style-corpus/validation/unified-library-validation.json
+            projects/scientific-figure-style-corpus/validation/router-retrieval-validation.json
           if-no-files-found: error
