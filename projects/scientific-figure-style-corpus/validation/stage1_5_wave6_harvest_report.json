@@ -1,12 +1,12 @@
 {
   "wave": 6,
-  "screened_figure_rows": 8,
-  "public_mirror_selected": 8,
-  "harvested_assets": 8,
+  "screened_figure_rows": 48,
+  "public_mirror_selected": 4,
+  "harvested_assets": 4,
   "failed_or_rejected": 0,
   "tier_counts": {
-    "B_style_reference": 4,
-    "A_style_reference": 4
+    "A_style_reference": 2,
+    "B_style_reference": 2
   },
   "within_wave_duplicate_hashes": [],
   "cross_wave_duplicates": [],

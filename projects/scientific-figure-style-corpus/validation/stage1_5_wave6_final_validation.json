@@ -1,10 +1,10 @@
 {
-  "validated_assets": 8,
-  "selected_assets": 8,
+  "validated_assets": 4,
+  "selected_assets": 4,
   "checksum_validation": "passed",
   "within_wave_duplicate_hashes": [],
   "cross_wave_duplicates": [],
   "manifest_complete": true,
   "validation_passed": true,
-  "active_ab_total": 92
+  "active_ab_total": 88
 }
