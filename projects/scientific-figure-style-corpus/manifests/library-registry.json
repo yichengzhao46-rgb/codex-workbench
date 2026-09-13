@@ -1,19 +1,24 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "library": "unified_scientific_figure_library",
   "library_id": "unified_master",
   "retrieval_surface": "single_library",
-  "record_total": 235,
-  "record_total_note": "96 validated active records plus 139 Zotero/Codex reference records before cross-tier perceptual deduplication.",
-  "active_ab_total": 96,
+  "snapshot": {
+    "source_rows": 235,
+    "active_records": 96,
+    "reference_records": 139,
+    "reference_unique_articles": 104,
+    "reference_visual_qa_complete": 33,
+    "reference_visual_qa_pending": 106
+  },
   "tiers": [
     {
       "tier_id": "active",
       "role": "validated_style_learning",
-      "asset_root": "projects/scientific-figure-style-corpus/assets/stage1_5",
-      "record_count": 96,
-      "rights_status": "redistribution_verified_for_committed_assets",
-      "qa_status": "validated",
+      "asset_roots": [
+        "projects/scientific-figure-style-corpus/assets/raw",
+        "projects/scientific-figure-style-corpus/assets/stage1_5"
+      ],
       "active_eligible": true,
       "retrieval_enabled": true,
       "default_rank_priority": 1
@@ -21,14 +26,10 @@
     {
       "tier_id": "reference",
       "role": "reference_style_retrieval",
-      "asset_root": "projects/scientific-figure-style-corpus/assets/zotero",
-      "manifest": "projects/scientific-figure-style-corpus/manifests/zotero-private-manifest.csv",
-      "record_count": 139,
-      "unique_articles": 104,
-      "visual_qa_complete": 33,
-      "visual_qa_pending": 106,
-      "rights_status": "not_verified_private_reference_only",
-      "redistribution_allowed": false,
+      "asset_roots": [
+        "projects/scientific-figure-style-corpus/assets/zotero"
+      ],
+      "source_manifest": "projects/scientific-figure-style-corpus/manifests/zotero-private-manifest.csv",
       "active_eligible": false,
       "retrieval_enabled": true,
       "default_rank_priority": 2
@@ -37,25 +38,58 @@
   "unified_index": "projects/scientific-figure-style-corpus/manifests/unified-library-index.csv",
   "unified_summary": "projects/scientific-figure-style-corpus/manifests/unified-library-summary.json",
   "builder": "projects/scientific-figure-style-corpus/scripts/unified_library.py",
+  "router_adapter": "projects/scientific-figure-style-corpus/scripts/router_reference_query.py",
+  "validation_script": "projects/scientific-figure-style-corpus/scripts/validate_router_retrieval.py",
+  "router_test_cases": "projects/scientific-figure-style-corpus/validation/router-retrieval-test-cases.json",
+  "commands": {
+    "build": "python projects/scientific-figure-style-corpus/scripts/unified_library.py build",
+    "validate": "python projects/scientific-figure-style-corpus/scripts/unified_library.py validate --check-assets --strict-snapshot",
+    "query": "python projects/scientific-figure-style-corpus/scripts/router_reference_query.py --text <query> --limit 8",
+    "router_validation": "python projects/scientific-figure-style-corpus/scripts/validate_router_retrieval.py"
+  },
+  "schema_contract": {
+    "primary_purpose": [
+      "conceptual_overview",
+      "microbial_interaction",
+      "mechanistic_pathway",
+      "metabolic_pathway",
+      "electron_transfer",
+      "material_microbe_interface",
+      "environmental_process",
+      "experimental_design",
+      "comparative_perturbation",
+      "integrated_mechanism",
+      "graphical_abstract",
+      "multiscale_zoom"
+    ],
+    "style_family": [
+      "flat_2d_mechanism",
+      "soft_2_5d_schematic",
+      "pathway_cutaway_2d",
+      "editorial_2d_overview"
+    ],
+    "layout": [
+      "linear_flow",
+      "two_organism_interaction",
+      "central_hub",
+      "mirrored_comparison",
+      "zoom_in_multiscale",
+      "circular_pathway",
+      "layered_gradient",
+      "evidence_to_model",
+      "other"
+    ],
+    "information_density": ["low", "medium", "high"]
+  },
   "deduplication": {
-    "exact_sha256": "performed by unified_library.py when the unified index is materialized",
-    "asset_path": "performed by unified_library.py when the unified index is materialized",
+    "exact_sha256": "performed during build; aliases remain for provenance but are excluded from default query results",
+    "asset_path": "performed during build",
     "cross_tier_perceptual": "pending"
   },
   "retrieval_policy": {
-    "default": "search both tiers through the unified interface",
-    "ranking": "prefer active records when relevance is otherwise comparable",
-    "public_reuse": "restrict to active tier unless a reference record is separately rights-cleared",
-    "promotion": "reference records require figure-level rights verification and completed visual QA before promotion to active"
-  },
-  "priority_topics": [
-    "methane_methanotrophy",
-    "electron_transfer",
-    "DIET",
-    "EET",
-    "oxygen_redox_interfaces",
-    "material_microbe_interfaces",
-    "environmental_microbiology_engineering",
-    "RP_carbon_fixation"
-  ]
+    "default": "search both tiers through the materialized unified index",
+    "ranking": "relevance first; active tier receives only a small tie-break preference",
+    "duplicates": "exclude rows with duplicate_of by default",
+    "promotion": "reference records remain reference until separately promoted after QA/classification"
+  }
 }

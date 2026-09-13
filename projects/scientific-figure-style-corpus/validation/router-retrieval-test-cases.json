@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "bath_rp_dark_carbon_integrated_mechanism",
+      "request": "Design a Bath–RP integrated mechanism figure for methane-driven dark inorganic-carbon fixation via diffusible metabolic support.",
+      "text": "methane methanotrophy Bath RP coculture carbon fixation microbial interaction metabolite exchange",
+      "expected_purposes": ["microbial_interaction", "integrated_mechanism", "metabolic_pathway"],
+      "expected_styles": ["flat_2d_mechanism", "pathway_cutaway_2d"],
+      "expected_layouts": ["two_organism_interaction", "evidence_to_model", "other"]
+    },
+    {
+      "id": "bath_biose_material_interface",
+      "request": "Draw a Bath–Bio-Se mineral/semiconductor biohybrid schematic for EET and potential light-driven EEU.",
+      "text": "methane methanotrophy selenium mineral semiconductor biohybrid material microbe electron transfer",
+      "expected_purposes": ["material_microbe_interface", "electron_transfer"],
+      "expected_styles": ["soft_2_5d_schematic", "pathway_cutaway_2d", "flat_2d_mechanism"],
+      "expected_layouts": ["zoom_in_multiscale", "other", "evidence_to_model"]
+    },
+    {
+      "id": "oxygen_perturbation_comparison",
+      "request": "Create a matched 5% versus 25% O2 perturbation schematic showing donor suppression and weakened RP maintenance.",
+      "text": "oxygen redox perturbation comparison methane microoxic high oxygen donor suppression",
+      "expected_purposes": ["comparative_perturbation", "environmental_process", "mechanistic_pathway"],
+      "expected_styles": ["editorial_2d_overview", "flat_2d_mechanism"],
+      "expected_layouts": ["mirrored_comparison", "layered_gradient", "other"]
+    },
+    {
+      "id": "gac_facilitated_potential_diet",
+      "request": "Design a Bath–GAC–RP schematic for conductive-material-facilitated interspecies electron transfer and potential DIET, with soluble alternatives shown separately.",
+      "text": "GAC conductive material DIET electron transfer methane microbial interaction graphite biochar",
+      "expected_purposes": ["electron_transfer", "material_microbe_interface", "microbial_interaction"],
+      "expected_styles": ["soft_2_5d_schematic", "flat_2d_mechanism", "pathway_cutaway_2d"],
+      "expected_layouts": ["zoom_in_multiscale", "two_organism_interaction", "central_hub", "other"]
+    },
+    {
+      "id": "membrane_eet_cutaway",
+      "request": "Draw a membrane-level MtrCAB/cytochrome EET or EEU cutaway showing electron flow across the cell envelope.",
+      "text": "MtrCAB cytochrome membrane electron transfer EET EEU cell envelope cutaway",
+      "expected_purposes": ["electron_transfer", "mechanistic_pathway", "multiscale_zoom"],
+      "expected_styles": ["pathway_cutaway_2d", "flat_2d_mechanism"],
+      "expected_layouts": ["other", "zoom_in_multiscale", "evidence_to_model"]
+    },
+    {
+      "id": "wetland_microoxic_anoxic_gradient",
+      "request": "Create an environmental wetland/intertidal oxic–microoxic–anoxic methane gradient schematic linking methane production and aerobic methane oxidation.",
+      "text": "wetland methane oxic microoxic anoxic redox gradient sediment environmental process",
+      "expected_purposes": ["environmental_process", "conceptual_overview"],
+      "expected_styles": ["editorial_2d_overview", "flat_2d_mechanism"],
+      "expected_layouts": ["layered_gradient", "other"]
+    },
+    {
+      "id": "graphical_abstract_dark_carbon",
+      "request": "Create a graphical abstract for methane-driven dark carbon fixation in a defined Bath–RP coculture.",
+      "text": "graphical abstract methane methanotrophy dark carbon fixation coculture Bath RP",
+      "expected_purposes": ["graphical_abstract", "microbial_interaction", "conceptual_overview"],
+      "expected_styles": ["editorial_2d_overview", "flat_2d_mechanism"],
+      "expected_layouts": ["linear_flow", "two_organism_interaction", "central_hub", "other"]
+    },
+    {
+      "id": "objective3_click_gac_experimental_design",
+      "request": "Design an Objective 3 experimental-design schematic comparing GAC-facilitated coupling and click-chemistry-enhanced cell association.",
+      "text": "experimental design GAC conductive material click chemistry cell association electron transfer microbial interaction",
+      "expected_purposes": ["experimental_design", "electron_transfer", "microbial_interaction", "material_microbe_interface"],
+      "expected_styles": ["editorial_2d_overview", "flat_2d_mechanism", "soft_2_5d_schematic"],
+      "expected_layouts": ["linear_flow", "mirrored_comparison", "two_organism_interaction", "zoom_in_multiscale", "other"]
+    }
+  ]
+}
