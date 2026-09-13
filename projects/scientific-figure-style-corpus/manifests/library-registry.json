@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "library": "scientific-figure-style-corpus",
+  "registered_pools": [
+    {
+      "pool_id": "stage1_5_active",
+      "role": "active_style_learning",
+      "asset_root": "projects/scientific-figure-style-corpus/assets/stage1_5",
+      "record_count": 96,
+      "rights_status": "redistribution_verified_for_committed_assets",
+      "qa_status": "validated",
+      "counted_toward_active_ab": true
+    },
+    {
+      "pool_id": "zotero_reference",
+      "role": "reference_only_style_retrieval",
+      "asset_root": "projects/scientific-figure-style-corpus/assets/zotero",
+      "manifest": "projects/scientific-figure-style-corpus/manifests/zotero-private-manifest.csv",
+      "record_count": 139,
+      "unique_articles": 104,
+      "visual_qa_complete": 33,
+      "visual_qa_pending": 106,
+      "rights_status": "not_verified_private_reference_only",
+      "redistribution_allowed": false,
+      "counted_toward_active_ab": false,
+      "retrieval_enabled": true,
+      "retrieval_priority_topics": [
+        "methane_methanotrophy",
+        "electron_transfer",
+        "oxygen_redox_interfaces",
+        "material_microbe_interfaces",
+        "environmental_microbiology_engineering",
+        "RP_carbon_fixation"
+      ],
+      "note": "Registered as a reference/retrieval pool. Do not promote individual records into the public active A/B set without figure-level rights verification and completed visual QA."
+    }
+  ],
+  "registered_record_total": 235,
+  "registered_record_total_note": "Arithmetic sum of registered pools; cross-pool perceptual deduplication has not been completed.",
+  "active_ab_total": 96
+}
