@@ -1,0 +1,16 @@
+{
+  "wave": 7,
+  "screened_figure_rows": 82,
+  "classification_counts": {
+    "exclude": 51,
+    "B": 4,
+    "C": 23,
+    "A": 4
+  },
+  "selected_assets": 8,
+  "harvested_assets": 8,
+  "failures": [],
+  "within_wave_duplicate_hashes": [],
+  "cross_wave_duplicates": [],
+  "file_validation_errors": []
+}
