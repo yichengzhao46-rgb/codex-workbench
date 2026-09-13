@@ -6,5 +6,8 @@
   "cross_wave_duplicates": [],
   "manifest_complete": true,
   "validation_passed": true,
-  "active_ab_total": 96
+  "provisional_active_ab_total": 96,
+  "repository_binary_assets_committed": false,
+  "committed_active_ab_total": 88,
+  "execution_note": "Wave 7 was validated from the exact source-media bytes preserved by the successful Wave 7 scan artifact. Binary assets still require repository writeback before the committed active set can be advanced to 96."
 }
