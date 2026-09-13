@@ -1,5 +1,5 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "library": "unified_scientific_figure_library",
   "library_id": "unified_master",
   "retrieval_surface": "single_library",
@@ -13,6 +13,14 @@
     "exact_duplicate_alias_rows": 1
   },
   "snapshot_note": "The active source set contains 96 validated A/B rows, but exact SHA/path deduplication identifies one alias, leaving 95 unique active references. The alias is retained for provenance and excluded from default retrieval.",
+  "reference_authorization": {
+    "source_manifest_historical_state": "zotero-private-manifest.csv preserves the state recorded at ingestion time",
+    "current_project_state": "user_confirmed_redistribution_permission",
+    "confirmed_at": "2026-09-13",
+    "applies_to_reference_source_rows": 139,
+    "user_confirmed_public_redistribution": true,
+    "note": "Keep the original manifest values for provenance; this registry records the user's later authorization separately. Authorization does not promote reference records to active or waive visual-QA/classification gates."
+  },
   "tiers": [
     {
       "tier_id": "active",
@@ -32,6 +40,7 @@
         "projects/scientific-figure-style-corpus/assets/zotero"
       ],
       "source_manifest": "projects/scientific-figure-style-corpus/manifests/zotero-private-manifest.csv",
+      "authorization_record": "reference_authorization",
       "active_eligible": false,
       "retrieval_enabled": true,
       "default_rank_priority": 2
