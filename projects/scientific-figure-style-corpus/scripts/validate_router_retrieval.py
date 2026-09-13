@@ -26,28 +26,31 @@ def main() -> int:
     failures = []
     for case in cases:
         hits = query_records(rows, text=case["text"])[: args.top_k]
-        purposes = {r["primary_purpose"] for r in hits}
-        styles = {r["style_family"] for r in hits}
-        layouts = {r["layout"] for r in hits}
+        top3 = hits[:3]
+        top3_purposes = {r["primary_purpose"] for r in top3}
+        top3_styles = {r["style_family"] for r in top3}
+        top3_layouts = {r["layout"] for r in top3}
         active_hits = [r for r in hits if r["library_tier"] == "active"]
         reference_hits = [r for r in hits if r["library_tier"] == "reference"]
-        purpose_ok = bool(purposes.intersection(case["expected_purposes"]))
-        style_ok = bool(styles.intersection(case["expected_styles"]))
-        layout_ok = bool(layouts.intersection(case["expected_layouts"]))
+        purpose_ok = bool(top3_purposes.intersection(case["expected_purposes"]))
+        style_ok = bool(top3_styles.intersection(case["expected_styles"]))
+        layout_ok = bool(top3_layouts.intersection(case["expected_layouts"]))
         enough_hits = len(hits) >= 3
-        active_ok = len(active_hits) >= 1
+        require_active = case.get("require_active_hit", True)
+        active_ok = (len(active_hits) >= 1) if require_active else True
         passed = purpose_ok and style_ok and layout_ok and enough_hits and active_ok
         item = {
             "id": case["id"],
             "request": case["request"],
             "query_text": case["text"],
+            "require_active_hit": require_active,
             "passed": passed,
             "checks": {
-                "purpose_match": purpose_ok,
-                "style_match": style_ok,
-                "layout_match": layout_ok,
+                "top3_purpose_match": purpose_ok,
+                "top3_style_match": style_ok,
+                "top3_layout_match": layout_ok,
                 "at_least_3_hits": enough_hits,
-                "at_least_1_active_hit": active_ok,
+                "active_requirement_satisfied": active_ok,
             },
             "hit_counts": {
                 "total": len(hits),
@@ -76,12 +79,13 @@ def main() -> int:
             failures.append(case["id"])
 
     report = {
-        "schema_version": 1,
+        "schema_version": 2,
         "library_integrity": integrity,
         "case_count": len(cases),
         "passed_cases": sum(1 for r in results if r["passed"]),
         "failed_cases": failures,
         "validation_passed": integrity["validation_passed"] and not failures,
+        "quality_gate": "expected purpose/style/layout must appear within top 3; >=3 total hits; active hit required only for cases whose intended reference mix needs validated active coverage",
         "cases": results,
     }
     args.report.parent.mkdir(parents=True, exist_ok=True)
