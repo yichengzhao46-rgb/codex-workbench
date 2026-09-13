@@ -1,0 +1,712 @@
+{
+  "schema_version": 2,
+  "library_integrity": {
+    "validation_passed": true,
+    "source_rows": 235,
+    "active_source_records": 96,
+    "reference_source_records": 139,
+    "canonical_records": 234,
+    "active_canonical_records": 95,
+    "reference_canonical_records": 139,
+    "exact_duplicate_alias_rows": 1,
+    "check_assets": true,
+    "strict_snapshot": true,
+    "errors": [],
+    "warnings": []
+  },
+  "case_count": 8,
+  "passed_cases": 8,
+  "failed_cases": [],
+  "validation_passed": true,
+  "quality_gate": "expected purpose/style/layout must appear within top 3; >=3 total hits; active hit required only for cases whose intended reference mix needs validated active coverage",
+  "cases": [
+    {
+      "id": "bath_rp_dark_carbon_integrated_mechanism",
+      "request": "Design a Bath–RP integrated mechanism figure for methane-driven dark inorganic-carbon fixation via diffusible metabolic support.",
+      "query_text": "methane methanotrophy Bath RP coculture carbon fixation microbial interaction metabolite exchange",
+      "require_active_hit": true,
+      "passed": true,
+      "checks": {
+        "top3_purpose_match": true,
+        "top3_style_match": true,
+        "top3_layout_match": true,
+        "at_least_3_hits": true,
+        "active_requirement_satisfied": true
+      },
+      "hit_counts": {
+        "total": 8,
+        "active": 4,
+        "reference": 4
+      },
+      "top_hits": [
+        {
+          "record_id": "ZOTERO::ZOT-3M33NPCZ-EZYQFXX8-FIG5-P5",
+          "tier": "reference",
+          "journal": "The ISME Journal",
+          "year": "2022",
+          "article_title": "Light-driven carbon dioxide reduction to methane by <i>Methanosarcina barkeri</i> in an electric syntrophic coculture",
+          "figure_id": "Figure 5",
+          "primary_purpose": "microbial_interaction",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "two_organism_interaction",
+          "asset_path": "assets/zotero/The-ISME-Journal/3M33NPCZ/ZOT-3M33NPCZ-EZYQFXX8-FIG5-P5.png",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-KE8ZBP93-NLGDNRV3-FIG7-P10",
+          "tier": "reference",
+          "journal": "Applied Microbiology and Biotechnology",
+          "year": "2022",
+          "article_title": "Systems analysis of the effect of hydrogen sulfide on the growth of Methylococcus capsulatus Bath",
+          "figure_id": "Figure 7",
+          "primary_purpose": "metabolic_pathway",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "other",
+          "asset_path": "assets/zotero/Applied-Microbiology-and-Biotechnology/KE8ZBP93/ZOT-KE8ZBP93-NLGDNRV3-FIG7-P10.png",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ACTIVE::S15-017::Figure 1",
+          "tier": "active",
+          "journal": "The ISME Journal",
+          "year": "2025",
+          "article_title": "",
+          "figure_id": "Figure 1",
+          "primary_purpose": "microbial_interaction",
+          "style_family": "flat_2d_mechanism",
+          "layout": "two_organism_interaction",
+          "asset_path": "assets/stage1_5/S15-017/S15-017_fig1.jpg",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ACTIVE::isme-015-PMC13557118-f5::baseline",
+          "tier": "active",
+          "journal": "The ISME Journal",
+          "year": "2026",
+          "article_title": "Influence of cell–cell distance on the ecology and evolution of microbial communities",
+          "figure_id": "f5",
+          "primary_purpose": "mechanistic_pathway",
+          "style_family": "flat_2d_mechanism",
+          "layout": "mirrored_comparison",
+          "asset_path": "assets/raw/isme/isme-015-PMC13557118-f5.webp",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-J5XG9Z5E-I4IT3A4W-FIG5-P6",
+          "tier": "reference",
+          "journal": "Science Advances",
+          "year": "2021",
+          "article_title": "Syntrophic interspecies electron transfer drives carbon fixation and growth by <i>Rhodopseudomonas palustris</i> under dark, anoxic conditions",
+          "figure_id": "Figure 5",
+          "primary_purpose": "microbial_interaction",
+          "style_family": "flat_2d_mechanism",
+          "layout": "layered_gradient",
+          "asset_path": "assets/zotero/Science-AdvAnceS/J5XG9Z5E/ZOT-J5XG9Z5E-I4IT3A4W-FIG5-P6.png",
+          "classification_source": "inferred_from_caption"
+        }
+      ]
+    },
+    {
+      "id": "bath_biose_material_interface",
+      "request": "Draw a Bath–Bio-Se mineral/semiconductor biohybrid schematic for EET and potential light-driven EEU.",
+      "query_text": "methane methanotrophy selenium mineral semiconductor biohybrid material microbe electron transfer",
+      "require_active_hit": false,
+      "passed": true,
+      "checks": {
+        "top3_purpose_match": true,
+        "top3_style_match": true,
+        "top3_layout_match": true,
+        "at_least_3_hits": true,
+        "active_requirement_satisfied": true
+      },
+      "hit_counts": {
+        "total": 8,
+        "active": 0,
+        "reference": 8
+      },
+      "top_hits": [
+        {
+          "record_id": "ZOTERO::ZOT-HKIZ3I85-GKR7TU4P-FIG2-P4",
+          "tier": "reference",
+          "journal": "Angewandte Chemie International Edition",
+          "year": "2025",
+          "article_title": "A <i>De Novo</i> Auto‐Activated Solar‐Driven Biohybrid System for Hydrogen Production in Methanotrophic Cells",
+          "figure_id": "Figure 2",
+          "primary_purpose": "electron_transfer",
+          "style_family": "flat_2d_mechanism",
+          "layout": "other",
+          "asset_path": "assets/zotero/Angewandte-Chemie-International-Edition/HKIZ3I85/ZOT-HKIZ3I85-GKR7TU4P-FIG2-P4.png",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-HKIZ3I85-GKR7TU4P-FIG4-P7",
+          "tier": "reference",
+          "journal": "Angewandte Chemie International Edition",
+          "year": "2025",
+          "article_title": "A <i>De Novo</i> Auto‐Activated Solar‐Driven Biohybrid System for Hydrogen Production in Methanotrophic Cells",
+          "figure_id": "Figure 4",
+          "primary_purpose": "electron_transfer",
+          "style_family": "flat_2d_mechanism",
+          "layout": "other",
+          "asset_path": "assets/zotero/Angewandte-Chemie-International-Edition/HKIZ3I85/ZOT-HKIZ3I85-GKR7TU4P-FIG4-P7.png",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-B5DYAD9Y-38F3E98C-FIG3-P5",
+          "tier": "reference",
+          "journal": "Water Research",
+          "year": "2023",
+          "article_title": "Iron oxides act as an alternative electron acceptor for aerobic methanotrophs in anoxic lake sediments",
+          "figure_id": "Figure 3",
+          "primary_purpose": "electron_transfer",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "other",
+          "asset_path": "assets/zotero/Water-Research/B5DYAD9Y/ZOT-B5DYAD9Y-38F3E98C-FIG3-P5.png",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-KRUDZRWN-XBZRQ7D5-FIG1-P3",
+          "tier": "reference",
+          "journal": "Bioresource Technology",
+          "year": "2026",
+          "article_title": "Functional genes and microbial interactions governing methanogenesis via direct interspecies electron transfer: Functions and emerging concepts",
+          "figure_id": "Figure 1",
+          "primary_purpose": "electron_transfer",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "other",
+          "asset_path": "assets/zotero/Bioresource-Technology/KRUDZRWN/ZOT-KRUDZRWN-XBZRQ7D5-FIG1-P3.png",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-KRUDZRWN-XBZRQ7D5-FIG4-P6",
+          "tier": "reference",
+          "journal": "Bioresource Technology",
+          "year": "2026",
+          "article_title": "Functional genes and microbial interactions governing methanogenesis via direct interspecies electron transfer: Functions and emerging concepts",
+          "figure_id": "Figure 4",
+          "primary_purpose": "electron_transfer",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "other",
+          "asset_path": "assets/zotero/Bioresource-Technology/KRUDZRWN/ZOT-KRUDZRWN-XBZRQ7D5-FIG4-P6.png",
+          "classification_source": "fallback_inference"
+        }
+      ]
+    },
+    {
+      "id": "oxygen_perturbation_comparison",
+      "request": "Create a matched 5% versus 25% O2 perturbation schematic showing donor suppression and weakened RP maintenance.",
+      "query_text": "oxygen redox perturbation comparison methane microoxic high oxygen donor suppression",
+      "require_active_hit": true,
+      "passed": true,
+      "checks": {
+        "top3_purpose_match": true,
+        "top3_style_match": true,
+        "top3_layout_match": true,
+        "at_least_3_hits": true,
+        "active_requirement_satisfied": true
+      },
+      "hit_counts": {
+        "total": 8,
+        "active": 1,
+        "reference": 7
+      },
+      "top_hits": [
+        {
+          "record_id": "ZOTERO::ZOT-JCF9LF9A-GZYTIUAW-FIG4-P6",
+          "tier": "reference",
+          "journal": "Science Advances",
+          "year": "2025",
+          "article_title": "Redox conduction facilitates direct interspecies electron transport in anaerobic methanotrophic consortia",
+          "figure_id": "Figure 4",
+          "primary_purpose": "comparative_perturbation",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "mirrored_comparison",
+          "asset_path": "assets/zotero/Science-AdvAnceS/JCF9LF9A/ZOT-JCF9LF9A-GZYTIUAW-FIG4-P6.png",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ACTIVE::S15-037::Figure 3",
+          "tier": "active",
+          "journal": "Frontiers in Microbiology",
+          "year": "2024",
+          "article_title": "",
+          "figure_id": "Figure 3",
+          "primary_purpose": "environmental_process",
+          "style_family": "editorial_2d_overview",
+          "layout": "layered_gradient",
+          "asset_path": "assets/stage1_5/S15-037/S15-037_fig3.jpg",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-76D7M9IR-7HDP65DC-FIG1-P3",
+          "tier": "reference",
+          "journal": "Nature Communications",
+          "year": "2013",
+          "article_title": "Highly efficient methane biocatalysis revealed in a methanotrophic bacterium",
+          "figure_id": "Figure 1",
+          "primary_purpose": "metabolic_pathway",
+          "style_family": "flat_2d_mechanism",
+          "layout": "other",
+          "asset_path": "assets/zotero/Nature-Communications/76D7M9IR/ZOT-76D7M9IR-7HDP65DC-FIG1-P3.png",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-B5DYAD9Y-38F3E98C-FIG2-P5",
+          "tier": "reference",
+          "journal": "Water Research",
+          "year": "2023",
+          "article_title": "Iron oxides act as an alternative electron acceptor for aerobic methanotrophs in anoxic lake sediments",
+          "figure_id": "Figure 2",
+          "primary_purpose": "metabolic_pathway",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "other",
+          "asset_path": "assets/zotero/Water-Research/B5DYAD9Y/ZOT-B5DYAD9Y-38F3E98C-FIG2-P5.png",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-CG5HDS4W-N6NDNVD8-FIG4-P8",
+          "tier": "reference",
+          "journal": "Environmental Science & Technology",
+          "year": "2026",
+          "article_title": "Sustainable Oxygen Reduction Catalyzed by Whole-Cell Electro-Mutualism",
+          "figure_id": "Figure 4",
+          "primary_purpose": "comparative_perturbation",
+          "style_family": "flat_2d_mechanism",
+          "layout": "mirrored_comparison",
+          "asset_path": "assets/zotero/Environmental-Science-Technology/CG5HDS4W/ZOT-CG5HDS4W-N6NDNVD8-FIG4-P8.png",
+          "classification_source": "inferred_from_caption"
+        }
+      ]
+    },
+    {
+      "id": "gac_facilitated_potential_diet",
+      "request": "Design a Bath–GAC–RP schematic for conductive-material-facilitated interspecies electron transfer and potential DIET, with soluble alternatives shown separately.",
+      "query_text": "GAC conductive material DIET electron transfer methane microbial interaction graphite biochar",
+      "require_active_hit": true,
+      "passed": true,
+      "checks": {
+        "top3_purpose_match": true,
+        "top3_style_match": true,
+        "top3_layout_match": true,
+        "at_least_3_hits": true,
+        "active_requirement_satisfied": true
+      },
+      "hit_counts": {
+        "total": 8,
+        "active": 1,
+        "reference": 7
+      },
+      "top_hits": [
+        {
+          "record_id": "ZOTERO::ZOT-TW2PI7B6-2M3TAALY-FIG5-P6",
+          "tier": "reference",
+          "journal": "Environmental Science & Technology",
+          "year": "2019",
+          "article_title": "Biochar-Mediated Anaerobic Oxidation of Methane",
+          "figure_id": "Figure 5",
+          "primary_purpose": "microbial_interaction",
+          "style_family": "flat_2d_mechanism",
+          "layout": "two_organism_interaction",
+          "asset_path": "assets/zotero/Environmental-Science-Technology/TW2PI7B6/ZOT-TW2PI7B6-2M3TAALY-FIG5-P6.png",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-KRUDZRWN-XBZRQ7D5-FIG1-P3",
+          "tier": "reference",
+          "journal": "Bioresource Technology",
+          "year": "2026",
+          "article_title": "Functional genes and microbial interactions governing methanogenesis via direct interspecies electron transfer: Functions and emerging concepts",
+          "figure_id": "Figure 1",
+          "primary_purpose": "electron_transfer",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "other",
+          "asset_path": "assets/zotero/Bioresource-Technology/KRUDZRWN/ZOT-KRUDZRWN-XBZRQ7D5-FIG1-P3.png",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-KRUDZRWN-XBZRQ7D5-FIG4-P6",
+          "tier": "reference",
+          "journal": "Bioresource Technology",
+          "year": "2026",
+          "article_title": "Functional genes and microbial interactions governing methanogenesis via direct interspecies electron transfer: Functions and emerging concepts",
+          "figure_id": "Figure 4",
+          "primary_purpose": "electron_transfer",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "other",
+          "asset_path": "assets/zotero/Bioresource-Technology/KRUDZRWN/ZOT-KRUDZRWN-XBZRQ7D5-FIG4-P6.png",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-YVMA22R4-6R56RAIY-FIG1-P6",
+          "tier": "reference",
+          "journal": "Environmental Microbiology Reports",
+          "year": "2021",
+          "article_title": "Anaerobic oxidation of methane mediated by microbial extracellular respiration",
+          "figure_id": "Figure 1",
+          "primary_purpose": "microbial_interaction",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "two_organism_interaction",
+          "asset_path": "assets/zotero/Environmental-Microbiology-Reports/YVMA22R4/ZOT-YVMA22R4-6R56RAIY-FIG1-P6.png",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-YVMA22R4-6R56RAIY-FIG2-P9",
+          "tier": "reference",
+          "journal": "Environmental Microbiology Reports",
+          "year": "2021",
+          "article_title": "Anaerobic oxidation of methane mediated by microbial extracellular respiration",
+          "figure_id": "Figure 2",
+          "primary_purpose": "microbial_interaction",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "two_organism_interaction",
+          "asset_path": "assets/zotero/Environmental-Microbiology-Reports/YVMA22R4/ZOT-YVMA22R4-6R56RAIY-FIG2-P9.png",
+          "classification_source": "inferred_from_caption"
+        }
+      ]
+    },
+    {
+      "id": "membrane_eet_cutaway",
+      "request": "Draw a membrane-level MtrCAB/cytochrome EET or EEU cutaway showing electron flow across the cell envelope.",
+      "query_text": "MtrCAB cytochrome membrane electron transfer EET EEU cell envelope cutaway",
+      "require_active_hit": true,
+      "passed": true,
+      "checks": {
+        "top3_purpose_match": true,
+        "top3_style_match": true,
+        "top3_layout_match": true,
+        "at_least_3_hits": true,
+        "active_requirement_satisfied": true
+      },
+      "hit_counts": {
+        "total": 8,
+        "active": 8,
+        "reference": 0
+      },
+      "top_hits": [
+        {
+          "record_id": "ACTIVE::S15-059::Figure 4",
+          "tier": "active",
+          "journal": "Nature Communications",
+          "year": "2025",
+          "article_title": "",
+          "figure_id": "Figure 4",
+          "primary_purpose": "electron_transfer",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "other",
+          "asset_path": "assets/stage1_5/S15-059/S15-059_fig4.jpg",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ACTIVE::S15-028::Figure 3",
+          "tier": "active",
+          "journal": "FEMS Microbiology Ecology",
+          "year": "2026",
+          "article_title": "",
+          "figure_id": "Figure 3",
+          "primary_purpose": "electron_transfer",
+          "style_family": "flat_2d_mechanism",
+          "layout": "other",
+          "asset_path": "assets/stage1_5/S15-028/S15-028_fig3.jpg",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ACTIVE::S15-056::Figure 3",
+          "tier": "active",
+          "journal": "Quantitative Biology",
+          "year": "2023",
+          "article_title": "",
+          "figure_id": "Figure 3",
+          "primary_purpose": "electron_transfer",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "other",
+          "asset_path": "assets/stage1_5/S15-056/S15-056_fig3.jpg",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ACTIVE::S15-002::Figure 7",
+          "tier": "active",
+          "journal": "Nature Communications",
+          "year": "2025",
+          "article_title": "",
+          "figure_id": "Figure 7",
+          "primary_purpose": "electron_transfer",
+          "style_family": "flat_2d_mechanism",
+          "layout": "other",
+          "asset_path": "assets/stage1_5/S15-002/S15-002_fig7.jpg",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ACTIVE::S15-031::Figure 3",
+          "tier": "active",
+          "journal": "Advanced Science",
+          "year": "2024",
+          "article_title": "",
+          "figure_id": "Figure 3",
+          "primary_purpose": "electron_transfer",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "other",
+          "asset_path": "assets/stage1_5/S15-031/S15-031_fig3.jpg",
+          "classification_source": "fallback_inference"
+        }
+      ]
+    },
+    {
+      "id": "wetland_microoxic_anoxic_gradient",
+      "request": "Create an environmental wetland/intertidal oxic–microoxic–anoxic methane gradient schematic linking methane production and aerobic methane oxidation.",
+      "query_text": "wetland methane oxic microoxic anoxic redox gradient sediment environmental process",
+      "require_active_hit": true,
+      "passed": true,
+      "checks": {
+        "top3_purpose_match": true,
+        "top3_style_match": true,
+        "top3_layout_match": true,
+        "at_least_3_hits": true,
+        "active_requirement_satisfied": true
+      },
+      "hit_counts": {
+        "total": 8,
+        "active": 6,
+        "reference": 2
+      },
+      "top_hits": [
+        {
+          "record_id": "ACTIVE::S15-037::Figure 3",
+          "tier": "active",
+          "journal": "Frontiers in Microbiology",
+          "year": "2024",
+          "article_title": "",
+          "figure_id": "Figure 3",
+          "primary_purpose": "environmental_process",
+          "style_family": "editorial_2d_overview",
+          "layout": "layered_gradient",
+          "asset_path": "assets/stage1_5/S15-037/S15-037_fig3.jpg",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ACTIVE::S15-037::Figure 2",
+          "tier": "active",
+          "journal": "Frontiers in Microbiology",
+          "year": "2024",
+          "article_title": "",
+          "figure_id": "Figure 2",
+          "primary_purpose": "environmental_process",
+          "style_family": "editorial_2d_overview",
+          "layout": "layered_gradient",
+          "asset_path": "assets/stage1_5/S15-037/S15-037_fig2.jpg",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-8UQKG5QR-8IBESLUP-FIG6-P8",
+          "tier": "reference",
+          "journal": "Nature Communications",
+          "year": "2024",
+          "article_title": "Persistent activity of aerobic methane-oxidizing bacteria in anoxic lake waters due to metabolic versatility",
+          "figure_id": "Figure 6",
+          "primary_purpose": "environmental_process",
+          "style_family": "editorial_2d_overview",
+          "layout": "layered_gradient",
+          "asset_path": "assets/zotero/Nature-Communications/8UQKG5QR/ZOT-8UQKG5QR-8IBESLUP-FIG6-P8.png",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ACTIVE::S15-062::Figure 3",
+          "tier": "active",
+          "journal": "Environmental Microbiology",
+          "year": "2025",
+          "article_title": "",
+          "figure_id": "Figure 3",
+          "primary_purpose": "environmental_process",
+          "style_family": "editorial_2d_overview",
+          "layout": "layered_gradient",
+          "asset_path": "assets/stage1_5/S15-062/S15-062_fig3.jpg",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ACTIVE::S15-029::Figure 6",
+          "tier": "active",
+          "journal": "Nature Communications",
+          "year": "2024",
+          "article_title": "",
+          "figure_id": "Figure 6",
+          "primary_purpose": "material_microbe_interface",
+          "style_family": "soft_2_5d_schematic",
+          "layout": "layered_gradient",
+          "asset_path": "assets/stage1_5/S15-029/S15-029_fig6.jpg",
+          "classification_source": "inferred_from_caption"
+        }
+      ]
+    },
+    {
+      "id": "graphical_abstract_dark_carbon",
+      "request": "Create a graphical abstract for methane-driven dark carbon fixation in a defined Bath–RP coculture.",
+      "query_text": "graphical abstract methane methanotrophy dark carbon fixation coculture Bath RP",
+      "require_active_hit": false,
+      "passed": true,
+      "checks": {
+        "top3_purpose_match": true,
+        "top3_style_match": true,
+        "top3_layout_match": true,
+        "at_least_3_hits": true,
+        "active_requirement_satisfied": true
+      },
+      "hit_counts": {
+        "total": 8,
+        "active": 0,
+        "reference": 8
+      },
+      "top_hits": [
+        {
+          "record_id": "ZOTERO::ZOT-3M33NPCZ-EZYQFXX8-FIG5-P5",
+          "tier": "reference",
+          "journal": "The ISME Journal",
+          "year": "2022",
+          "article_title": "Light-driven carbon dioxide reduction to methane by <i>Methanosarcina barkeri</i> in an electric syntrophic coculture",
+          "figure_id": "Figure 5",
+          "primary_purpose": "microbial_interaction",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "two_organism_interaction",
+          "asset_path": "assets/zotero/The-ISME-Journal/3M33NPCZ/ZOT-3M33NPCZ-EZYQFXX8-FIG5-P5.png",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-KE8ZBP93-NLGDNRV3-FIG7-P10",
+          "tier": "reference",
+          "journal": "Applied Microbiology and Biotechnology",
+          "year": "2022",
+          "article_title": "Systems analysis of the effect of hydrogen sulfide on the growth of Methylococcus capsulatus Bath",
+          "figure_id": "Figure 7",
+          "primary_purpose": "metabolic_pathway",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "other",
+          "asset_path": "assets/zotero/Applied-Microbiology-and-Biotechnology/KE8ZBP93/ZOT-KE8ZBP93-NLGDNRV3-FIG7-P10.png",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-ZEMR5578-MVJMFUN7-FIGGA-P1",
+          "tier": "reference",
+          "journal": "ISME Communications",
+          "year": "2024",
+          "article_title": "Ferrihydrite-mediated methanotrophic nitrogen fixation in paddy soil under hypoxia",
+          "figure_id": "Graphical abstract",
+          "primary_purpose": "graphical_abstract",
+          "style_family": "editorial_2d_overview",
+          "layout": "other",
+          "asset_path": "assets/zotero/ISME-Communications/ZEMR5578/ZOT-ZEMR5578-MVJMFUN7-FIGGA-P1.png",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-I9HQ7Q29-RKRJ6LBS-FIGGA-P1",
+          "tier": "reference",
+          "journal": "Bioresource Technology",
+          "year": "2024",
+          "article_title": "Biosynthesis of polyhydroxybutyrate from methane and carbon dioxide using type II methanotrophs",
+          "figure_id": "Graphical abstract",
+          "primary_purpose": "graphical_abstract",
+          "style_family": "editorial_2d_overview",
+          "layout": "other",
+          "asset_path": "assets/zotero/Bioresource-Technology/I9HQ7Q29/ZOT-I9HQ7Q29-RKRJ6LBS-FIGGA-P1.png",
+          "classification_source": "fallback_inference"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-LBY4FZWM-QXHSFP9F-FIGGA-P1",
+          "tier": "reference",
+          "journal": "Bioresource Technology",
+          "year": "2021",
+          "article_title": "Electricity from methane by Methylococcus capsulatus (Bath) and Methylosinus trichosporium OB3b",
+          "figure_id": "Graphical abstract",
+          "primary_purpose": "graphical_abstract",
+          "style_family": "editorial_2d_overview",
+          "layout": "other",
+          "asset_path": "assets/zotero/Bioresource-Technology/LBY4FZWM/ZOT-LBY4FZWM-QXHSFP9F-FIGGA-P1.png",
+          "classification_source": "fallback_inference"
+        }
+      ]
+    },
+    {
+      "id": "objective3_click_gac_experimental_design",
+      "request": "Design an Objective 3 experimental-design schematic comparing GAC-facilitated coupling and click-chemistry-enhanced cell association.",
+      "query_text": "experimental design GAC conductive material click chemistry cell association electron transfer microbial interaction",
+      "require_active_hit": true,
+      "passed": true,
+      "checks": {
+        "top3_purpose_match": true,
+        "top3_style_match": true,
+        "top3_layout_match": true,
+        "at_least_3_hits": true,
+        "active_requirement_satisfied": true
+      },
+      "hit_counts": {
+        "total": 8,
+        "active": 4,
+        "reference": 4
+      },
+      "top_hits": [
+        {
+          "record_id": "ACTIVE::S15-031::Figure 1",
+          "tier": "active",
+          "journal": "Advanced Science",
+          "year": "2024",
+          "article_title": "",
+          "figure_id": "Figure 1",
+          "primary_purpose": "material_microbe_interface",
+          "style_family": "editorial_2d_overview",
+          "layout": "zoom_in_multiscale",
+          "asset_path": "assets/stage1_5/S15-031/S15-031_fig1.jpg",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-VVKBH8NA-NEQH4DHJ-FIG1-P3",
+          "tier": "reference",
+          "journal": "Electrochemistry",
+          "year": "2024",
+          "article_title": "Electrochemical Monitoring of Metabolic Activity of Methane/Methanol Conversing <i>Methylococcus Capsulatus</i> (Bath) Cells Based on Extracellular Electron Transfer",
+          "figure_id": "Figure 1",
+          "primary_purpose": "experimental_design",
+          "style_family": "editorial_2d_overview",
+          "layout": "linear_flow",
+          "asset_path": "assets/zotero/Electrochemistry/VVKBH8NA/ZOT-VVKBH8NA-NEQH4DHJ-FIG1-P3.png",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-YVMA22R4-6R56RAIY-FIG1-P6",
+          "tier": "reference",
+          "journal": "Environmental Microbiology Reports",
+          "year": "2021",
+          "article_title": "Anaerobic oxidation of methane mediated by microbial extracellular respiration",
+          "figure_id": "Figure 1",
+          "primary_purpose": "microbial_interaction",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "two_organism_interaction",
+          "asset_path": "assets/zotero/Environmental-Microbiology-Reports/YVMA22R4/ZOT-YVMA22R4-6R56RAIY-FIG1-P6.png",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ZOTERO::ZOT-YVMA22R4-6R56RAIY-FIG2-P9",
+          "tier": "reference",
+          "journal": "Environmental Microbiology Reports",
+          "year": "2021",
+          "article_title": "Anaerobic oxidation of methane mediated by microbial extracellular respiration",
+          "figure_id": "Figure 2",
+          "primary_purpose": "microbial_interaction",
+          "style_family": "pathway_cutaway_2d",
+          "layout": "two_organism_interaction",
+          "asset_path": "assets/zotero/Environmental-Microbiology-Reports/YVMA22R4/ZOT-YVMA22R4-6R56RAIY-FIG2-P9.png",
+          "classification_source": "inferred_from_caption"
+        },
+        {
+          "record_id": "ACTIVE::S15-003::Figure 1",
+          "tier": "active",
+          "journal": "Nature Communications",
+          "year": "2025",
+          "article_title": "",
+          "figure_id": "Figure 1",
+          "primary_purpose": "electron_transfer",
+          "style_family": "editorial_2d_overview",
+          "layout": "other",
+          "asset_path": "assets/stage1_5/S15-003/S15-003_fig1.jpg",
+          "classification_source": "fallback_inference"
+        }
+      ]
+    }
+  ]
+}

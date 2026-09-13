@@ -1,0 +1,14 @@
+{
+  "validation_passed": true,
+  "source_rows": 235,
+  "active_source_records": 96,
+  "reference_source_records": 139,
+  "canonical_records": 234,
+  "active_canonical_records": 95,
+  "reference_canonical_records": 139,
+  "exact_duplicate_alias_rows": 1,
+  "check_assets": true,
+  "strict_snapshot": true,
+  "errors": [],
+  "warnings": []
+}
