@@ -1,5 +1,6 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
+  "authorization_snapshot": "registry-reference-authorization-2026-09-13",
   "cases": [
     {
       "id": "bath_rp_dark_carbon_integrated_mechanism",
