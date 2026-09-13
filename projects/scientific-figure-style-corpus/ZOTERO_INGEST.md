@@ -2,98 +2,52 @@
 
 ## Purpose
 
-Import high-value scientific figures from PDFs already downloaded in the user's local Zotero library into the **Unified Scientific Figure Library**.
+Import high-value scientific figures from PDFs in the user's Zotero library into the **Unified Scientific Figure Library**.
 
-Zotero-derived figures are no longer treated as a separate database. They enter the same logical library as the validated Stage 1.5 records, but retain the `reference` tier until their rights and visual-QA requirements are satisfied.
+Zotero figures are the `reference` tier of the same logical library used by the validated active figures. Physical storage stays separate for provenance; retrieval does not.
 
-The importer remains deliberately local and provenance-aware:
+## Current imported reference tier
 
-- Zotero is read-only;
-- PDFs are never modified;
-- extracted figures preserve source item/attachment metadata;
-- every record keeps a SHA-256 checksum;
-- rights, QA state and active eligibility are record-level fields;
-- a reference-tier record may be retrieved for style/mechanism comparison without being silently promoted to active.
+- **139 source rows**;
+- **104 unique source articles**;
+- **33 visual-QA complete**;
+- **106 pending manual visual QA**.
 
-## Unified-library relationship
+Reference status controls QA/active eligibility. It does not prevent a scientifically relevant record from being returned as a design reference.
 
-Master registry:
+## Authoritative files
 
-`projects/scientific-figure-style-corpus/manifests/library-registry.json`
+- source manifest: `manifests/zotero-private-manifest.csv`
+- assets: `assets/zotero/`
+- master registry: `manifests/library-registry.json`
+- materialized unified index: `manifests/unified-library-index.csv`
+- builder/validator: `scripts/unified_library.py`
+- Router adapter: `scripts/router_reference_query.py`
 
-Unified loader/index builder:
+## Ingestion
 
-`projects/scientific-figure-style-corpus/scripts/unified_library.py`
-
-Zotero source manifest:
-
-`projects/scientific-figure-style-corpus/manifests/zotero-private-manifest.csv`
-
-Physical asset root:
-
-`projects/scientific-figure-style-corpus/assets/zotero/`
-
-The physical folder remains separate only for provenance and auditability. Retrieval is unified.
-
-## Script
+Main importer:
 
 `projects/scientific-figure-style-corpus/scripts/ingest_zotero_figures.py`
 
-## Default selection logic
+The importer is local/provenance-aware:
 
-### Core journals
+- Zotero is read-only;
+- PDFs are never modified;
+- source item/attachment metadata are retained;
+- extracted figures carry SHA-256 checksums;
+- visual QA and active eligibility remain explicit fields.
 
-- The ISME Journal
-- Nature Communications
-- Environmental Science & Technology
-- Water Research
-
-### Secondary accepted journals
-
-Includes high-value related sources such as Nature Microbiology, Science Advances, Nature Water, Energy & Environmental Science, ES&T Letters, Environmental Science & Ecotechnology, Microbiome, mBio, Applied and Environmental Microbiology, and selected environmental-engineering journals.
-
-Other journals can be admitted with `--allow-other-journals`, but they must pass the project-topic relevance threshold.
-
-### Figure priority
-
-The importer scores captions for:
-
-- schematic / conceptual overview;
-- mechanism / pathway;
-- microbial interaction / syntrophy;
-- EET / EEU / DIET / electron transfer;
-- material–microbe / mineral / electrode / conductive interface;
-- methane oxidation / methanotrophy;
-- dark or inorganic carbon fixation;
-- oxygen limitation / microoxic–anoxic / redox gradients;
-- experimental design and workflow.
-
-Routine quantitative plots are down-weighted.
-
-## Current reference tier
-
-The currently imported Zotero collection contains:
-
-- **139 figure records**;
-- **104 unique source articles**;
-- **33 records with completed visual QA**;
-- **106 records pending manual visual QA**.
-
-These 139 records are part of the unified library's retrieval surface. They are not automatically active-eligible.
-
-## Run
-
-From the repository root:
+Typical run from repository root:
 
 ```bash
-python -m pip install pymupdf
+python -m pip install -r projects/scientific-figure-style-corpus/scripts/requirements.txt
 python projects/scientific-figure-style-corpus/scripts/ingest_zotero_figures.py \
   --repo-root . \
-  --max-figures 100 \
   --max-per-article 2
 ```
 
-The script attempts to locate the Zotero data directory automatically. If needed, pass it explicitly:
+If Zotero cannot be located automatically:
 
 ```bash
 python projects/scientific-figure-style-corpus/scripts/ingest_zotero_figures.py \
@@ -101,60 +55,82 @@ python projects/scientific-figure-style-corpus/scripts/ingest_zotero_figures.py 
   --zotero-root "C:/Users/<USER>/Zotero"
 ```
 
-To include strongly relevant papers outside the accepted journal list:
+Use `--allow-other-journals` only when relevant papers outside the normal journal set should be considered.
 
-```bash
-python projects/scientific-figure-style-corpus/scripts/ingest_zotero_figures.py \
-  --repo-root . \
-  --allow-other-journals
-```
+## Rebuild the unified index
 
-## Unified indexing
-
-After ingestion or manifest changes, rebuild the unified row-level index with:
-
-```bash
-python projects/scientific-figure-style-corpus/scripts/unified_library.py
-```
-
-This normalizes the 42 baseline active records, Wave 1–7 additions, and Zotero reference records into one retrieval schema and performs exact SHA-256 / asset-path duplicate marking while preserving provenance aliases.
-
-Example retrieval:
+After any source-manifest or ingestion change:
 
 ```bash
 python projects/scientific-figure-style-corpus/scripts/unified_library.py \
-  --query "methane electron transfer mineral interface" \
-  --limit 20
+  --project-root projects/scientific-figure-style-corpus \
+  build
 ```
 
-Use `--active-only` when only validated active records are permitted.
+Then validate the generated index against the canonical Router schema, current snapshot, stored files, and SHA-256 values:
+
+```bash
+python projects/scientific-figure-style-corpus/scripts/unified_library.py \
+  --project-root projects/scientific-figure-style-corpus \
+  validate \
+  --check-assets \
+  --strict-snapshot
+```
+
+The current snapshot is **235 source rows**. Exact deduplication identifies one active alias, so the canonical retrieval surface contains **234 unique records = 95 active + 139 reference** while preserving all 235 source rows for provenance.
+
+## Query through the Router adapter
+
+Normal figure-design retrieval should use the read-only adapter:
+
+```bash
+python projects/scientific-figure-style-corpus/scripts/router_reference_query.py \
+  --text "methane electron transfer mineral interface" \
+  --limit 8
+```
+
+Structured filters are available for canonical Router fields such as `--purpose`, `--layout`, `--style-family`, `--density`, `--topic`, and `--tier`.
+
+The query adapter never rebuilds or overwrites the index.
+
+## Selection logic
+
+High-value captions are prioritized for:
+
+- schematic / conceptual overview;
+- mechanism / pathway;
+- microbial interaction / syntrophy;
+- EET / EEU / DIET;
+- material–microbe / mineral / electrode / conductive interfaces;
+- methane oxidation / methanotrophy;
+- dark or inorganic carbon fixation;
+- oxygen limitation / microoxic–anoxic / redox gradients;
+- experimental design and workflow.
+
+Routine quantitative plots are down-weighted.
 
 ## Promotion rule
 
-A Zotero-derived figure starts in the `reference` tier. Promotion to `active` requires the project-defined figure-level rights verification and completed visual QA.
+A Zotero-derived record remains `reference` until the project-defined active gates are satisfied. Relevance in a Router query does not by itself promote the record.
 
-Until promotion, it can still contribute to:
+Promotion and retrieval are deliberately separate concepts:
 
-- source discovery;
-- comparison of mechanism/layout grammar;
-- retrieval of relevant visual precedents;
-- corpus gap analysis;
-- style-routing context.
-
-It must not silently inherit active/public reuse status.
+- **retrieval** asks whether the figure is useful for the current design problem;
+- **promotion** asks whether its QA/classification/provenance state is strong enough for the validated active tier.
 
 ## Manual QA
 
-Automated PDF crop extraction is a first-pass ingestion step. Retained figures should be checked for:
+Automated PDF crop extraction is only the first pass. Retained records should be reviewed for:
 
 1. crop completeness;
-2. correct figure/caption pairing;
-3. actual visual relevance;
-4. duplicate or near-duplicate panels;
+2. figure/caption pairing;
+3. visual relevance;
+4. exact and near-duplicate panels;
 5. third-party reproduced material;
 6. suitability for 2D/2.5D style learning;
-7. consistency between the stored SHA-256 and the reviewed image.
+7. checksum consistency;
+8. canonical purpose/style/layout annotation quality.
 
 ## Design principle
 
-There is now **one scientific figure library with record-level tiers**, not an active library plus a separate Zotero library. Physical storage may remain separated for provenance, but task retrieval should use the unified interface by default.
+There is **one scientific figure library with record-level tiers**. Do not query `assets/zotero/` as a separate database and do not use the old pilot `corpus-index.csv` as the authoritative retrieval index. The materialized `unified-library-index.csv` is the runtime retrieval surface.
