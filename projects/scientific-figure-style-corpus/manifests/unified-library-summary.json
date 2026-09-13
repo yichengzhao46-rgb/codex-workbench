@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "library": "unified_scientific_figure_library",
+  "library_id": "unified_master",
+  "logical_integration": "complete",
+  "registered_records": 235,
+  "active_tier_records": 96,
+  "reference_tier_records": 139,
+  "reference_unique_articles": 104,
+  "reference_visual_qa_complete": 33,
+  "reference_visual_qa_pending": 106,
+  "retrieval_surface": "single_library",
+  "active_ab_total": 96,
+  "physical_asset_roots": [
+    "projects/scientific-figure-style-corpus/assets/stage1_5",
+    "projects/scientific-figure-style-corpus/assets/zotero"
+  ],
+  "row_level_index_path": "projects/scientific-figure-style-corpus/manifests/unified-library-index.csv",
+  "row_level_index_builder": "projects/scientific-figure-style-corpus/scripts/unified_library.py",
+  "exact_deduplication": "implemented_in_builder",
+  "cross_tier_perceptual_deduplication": "pending",
+  "rights_model": "rights and QA are record-level fields inside one library; reference-tier records are not automatically active-eligible",
+  "default_retrieval": "search active and reference tiers together, preferring active records when relevance is comparable"
+}
