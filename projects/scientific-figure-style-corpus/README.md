@@ -1,37 +1,101 @@
-# 2D/2.5D Scientific Figure Style Corpus
+# Unified 2D/2.5D Scientific Figure Library
 
 ## Objective
 
-Build a source-backed visual corpus for the experimental `scientific-figure-style-router` defined in `codex-playbook` PR #23.
+Build one source-backed scientific figure library for the experimental `scientific-figure-style-router` defined in `codex-playbook` PR #23.
 
 The project follows a strict **raw images first** architecture:
 
 > **real source images → figure-level annotation → reusable element extraction → Style Router validation**
 
-The corpus now has two explicitly separated pools:
+## One unified library
 
-1. **Public active A/B pool** — 96 validated style-learning records in `assets/stage1_5/`.
-2. **Zotero reference pool** — 139 Codex-imported records from 104 articles in `assets/zotero/`, indexed by `manifests/zotero-private-manifest.csv` and registered through `manifests/library-registry.json`.
+The corpus is now exposed as a single **Unified Scientific Figure Library** rather than two separate libraries.
 
-The Zotero pool is available for reference and retrieval, but it is not counted toward the public active A/B total unless a figure receives figure-level rights verification and completed visual QA.
+Current registered content:
 
-## Stage 0 — raw corpus gate
+- **235 records total** before cross-tier perceptual deduplication;
+- **96 active records** — validated A/B style-learning assets from Stage 1.5;
+- **139 reference records** — Codex/Zotero-derived figures from 104 articles;
+- Zotero visual QA: **33 complete**, **106 pending**.
 
-The public mirrored corpus requires legally mirrorable, provenance-checked, visually inspected source images.
+The distinction between `active` and `reference` is now a **tier inside one library**, not a separate database boundary.
 
-See `RAW_CORPUS_POLICY.md` for the acceptance gate, diversity requirements, rights rules, and anti-bias constraints.
+The single registry is:
 
-A record counts toward the public mirrored set only when the actual image file is stored in an allowed asset location and has verified source metadata, redistribution rights, checksum, and completed visual inspection. Metadata-only or reference-only records do not count toward that public threshold.
+`manifests/library-registry.json`
 
-## Rights-aware mirror design
+The unified row-level loader/index builder is:
 
-`codex-workbench` is public. Full publisher/source images should therefore be treated as public mirrored assets only when their license or explicit permission allows redistribution. Open-access status alone is not enough: the exact Creative Commons/public-use license and any third-party exclusions must be checked.
+`scripts/unified_library.py`
 
-The Codex-imported Zotero images are registered as a separate reference pool. Their manifest records retain `redistribution_allowed=false`; they must not be promoted into the public active A/B pool without a rights audit.
+It normalizes all Stage 1.5 harvested manifests plus `zotero-private-manifest.csv` into:
 
-## Stage 1 — figure-level annotation
+- `manifests/unified-library-index.csv`
+- `manifests/unified-library-summary.json`
 
-Annotate figures using the playbook schema:
+The builder preserves provenance, exact-hash duplicate aliases, QA state, rights status, active eligibility and retrieval eligibility.
+
+## Retrieval policy
+
+All figure-discovery and style-learning queries should use the **unified library** by default.
+
+Retrieval behavior:
+
+1. search both tiers;
+2. rank relevance first;
+3. prefer `active` records when relevance is otherwise comparable;
+4. use `reference` records for visual/mechanistic inspiration and comparison;
+5. restrict public reuse to records whose rights status permits it;
+6. do not promote a reference record to active until figure-level rights verification and visual QA are complete.
+
+For Bath/RP/MOB/EET/DIET/material-interface/environmental-gradient tasks, both tiers are searchable through the same interface.
+
+Example:
+
+```bash
+python projects/scientific-figure-style-corpus/scripts/unified_library.py \
+  --query "methane EET material microbe interface" \
+  --limit 20
+```
+
+Use `--active-only` when a task specifically requires only validated active records.
+
+## Physical storage vs logical library
+
+The logical library is unified, while physical assets remain in provenance-preserving locations:
+
+```text
+projects/scientific-figure-style-corpus/
+├── assets/
+│   ├── stage1_5/                  # active tier, 96
+│   └── zotero/                    # reference tier, 139
+├── manifests/
+│   ├── library-registry.json      # single master registry
+│   ├── unified-library-index.csv  # generated unified row-level index
+│   ├── unified-library-summary.json
+│   ├── zotero-private-manifest.csv
+│   └── stage1_5*_harvested_figures.csv
+├── scripts/
+│   └── unified_library.py
+├── corpus/
+├── derived-elements/
+└── validation/
+```
+
+Physical separation is retained only to preserve provenance, auditability and rights controls. It no longer represents two independent libraries.
+
+## Stage 0 / rights boundary
+
+See `RAW_CORPUS_POLICY.md` for provenance, diversity, rights and anti-bias requirements.
+
+A record is `active` only when its source metadata, stored asset, checksum, redistribution status and visual QA satisfy the project gate. Reference-tier records remain searchable even when they are not active-eligible.
+
+`codex-workbench` is public. Therefore public reuse and redistribution remain governed by the rights field on each record. A reference record does not become redistribution-safe merely because it is searchable in the unified library.
+
+## Figure-level annotation
+
+The unified index carries or links the following design dimensions where available:
 
 - scientific purpose;
 - information type and density;
@@ -42,60 +106,27 @@ Annotate figures using the playbook schema:
 - palette and outline strategy;
 - evidence-state coding;
 - reusable principles;
-- limitations and unsuitable transfer cases.
+- limitations and unsuitable transfer cases;
+- topics and domain relevance;
+- QA state;
+- rights and active eligibility.
 
-An experimental QC block remains useful:
+## Exact vs perceptual deduplication
 
-```yaml
-annotation_qc:
-  inspection_level: direct_image | direct_figure_page | caption_plus_page | metadata_only
-  annotation_confidence: high | medium | low
-  direct_pixel_qa: complete | pending
-  notes: ""
-```
+`unified_library.py` performs exact deduplication using SHA-256 and asset path while retaining alias/provenance rows.
 
-## Stage 2 — element library
-
-Element extraction should use the validated active set first. Reference-only Zotero figures may inform retrieval and comparison, but should not silently bypass rights or QA gates.
-
-## Stage 3 — Style Router
-
-The target workflow is:
-
-`task → figure purpose → information structure → layout → style family → evidence grammar → reusable elements → final image`
-
-For Bath/RP/MOB/EET/material-interface tasks, retrieval should consult both the active pool and the Zotero reference manifest, while preserving their different QA and rights status.
-
-## Current files
-
-```text
-projects/scientific-figure-style-corpus/
-├── README.md
-├── RAW_CORPUS_POLICY.md
-├── ANNOTATION_QA.md
-├── ZOTERO_INGEST.md
-├── corpus-index.csv
-├── manifests/
-│   ├── raw-image-manifest.csv
-│   ├── zotero-private-manifest.csv
-│   └── library-registry.json
-├── assets/
-│   ├── stage1_5/                  # 96 active A/B records
-│   └── zotero/                    # 139 reference records
-├── corpus/
-├── derived-elements/
-└── validation/
-```
+Cross-tier **perceptual** duplicate detection remains a separate corpus-level QA task because Zotero figures can be re-rendered/cropped versions of the same published figure and therefore may have different byte hashes.
 
 ## Current status
 
-- public active A/B set: **96**;
-- Codex/Zotero reference records: **139** from **104** articles;
-- Zotero visual QA: **33 complete**, **106 pending**;
-- total registered records across both pools: **235** before cross-pool perceptual deduplication;
-- Zotero reference records counted toward public active A/B: **no**;
-- PR remains a workbench validation project rather than a final immutable training standard.
+- unified registered records: **235**;
+- active tier: **96**;
+- reference tier: **139** from **104** articles;
+- reference visual QA: **33 complete**, **106 pending**;
+- exact deduplication: supported by unified builder;
+- cross-tier perceptual deduplication: **pending**;
+- Style Router: continues to treat active eligibility and rights as explicit fields, not as separate-library boundaries.
 
 ## Key quality principle
 
-The goal is not to imitate journal branding. The corpus should be large and heterogeneous enough to learn **which visual language works for which scientific job**. Journal/source family is a retrieval filter after purpose and information structure, not the primary style label.
+The goal is not to imitate journal branding. The unified library should be large and heterogeneous enough to learn **which visual language works for which scientific job**. Scientific purpose and information structure lead retrieval; journal/source family is a secondary filter.
