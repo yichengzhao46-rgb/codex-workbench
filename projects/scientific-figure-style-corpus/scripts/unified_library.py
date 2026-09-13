@@ -88,7 +88,57 @@ def normalize_zotero_asset_path(raw: str, sample_id: str) -> str:
 
 def active_manifest_paths(project: Path) -> list[Path]:
     manifests = project / "manifests"
-    return sorted(manifests.glob("stage1_5*_harvested_figures.csv"))
+    paths = sorted(manifests.glob("stage1_5*_harvested_figures.csv"))
+    return paths
+
+
+def baseline_active_rows(project: Path) -> list[dict[str, str]]:
+    raw_path = project / "manifests" / "raw-image-manifest.csv"
+    cls_path = project / "annotations" / "figure-level-classification-v0.1.csv"
+    raw = {first(r, "sample_id"): r for r in read_csv(raw_path)}
+    out = []
+    for c in read_csv(cls_path):
+        if first(c, "style_learning_tier") not in {"A_style_reference", "B_style_reference"}:
+            continue
+        sid = first(c, "sample_id")
+        r = raw.get(sid)
+        if not r:
+            raise SystemExit(f"Baseline active record missing from raw manifest: {sid}")
+        out.append({**r, **{f"classification__{k}": v for k, v in c.items()}})
+    return out
+
+
+def normalize_baseline(row: dict[str, str]) -> dict[str, str]:
+    rid = first(row, "sample_id")
+    purpose = first(row, "classification__primary_purpose")
+    tier = first(row, "classification__style_learning_tier")
+    return {
+        "record_id": f"ACTIVE::{rid}::baseline",
+        "canonical_record_id": "",
+        "duplicate_of": "",
+        "library_tier": "active",
+        "source_manifest": "manifests/raw-image-manifest.csv + annotations/figure-level-classification-v0.1.csv",
+        "source_record_id": rid,
+        "source_type": "stage1_baseline_raw_corpus",
+        "journal": first(row, "journal"),
+        "year": first(row, "year"),
+        "article_title": first(row, "article_title"),
+        "doi": first(row, "doi"),
+        "article_url": first(row, "article_url"),
+        "figure_id": first(row, "figure_id"),
+        "primary_purpose": purpose,
+        "style_family": first(row, "classification__style_family"),
+        "layout": first(row, "classification__layout"),
+        "topics": first(row, "classification__domain_relevance_to_bath_rp"),
+        "asset_path": first(row, "asset_path"),
+        "sha256": first(row, "sha256").lower(),
+        "rights_status": first(row, "rights_status", "license"),
+        "redistribution_allowed": "true",
+        "visual_qa_status": first(row, "inspection_status") or "classified",
+        "active_eligible": "true",
+        "retrieval_enabled": "true",
+        "notes": ";".join(x for x in [tier, first(row, "classification__qa_caveats"), first(row, "caption")] if x),
+    }
 
 
 def normalize_active(row: dict[str, str], source: Path) -> dict[str, str]:
@@ -191,6 +241,10 @@ def dedupe(records: list[dict[str, str]]) -> tuple[list[dict[str, str]], int]:
 
 def build(project: Path) -> tuple[list[dict[str, str]], dict]:
     records: list[dict[str, str]] = []
+    baseline_rows = baseline_active_rows(project)
+    for row in baseline_rows:
+        records.append(normalize_baseline(row))
+
     active_sources = active_manifest_paths(project)
     for source in active_sources:
         for row in read_csv(source):
@@ -215,6 +269,8 @@ def build(project: Path) -> tuple[list[dict[str, str]], dict]:
         "exact_duplicate_alias_rows": duplicate_rows,
         "active_canonical_records": len(active),
         "reference_canonical_records": len(reference),
+        "baseline_active_records": len(baseline_rows),
+        "expected_baseline_active_records": 42,
         "expected_active_records": 96,
         "expected_zotero_source_rows": 139,
         "zotero_source_rows": len(zotero_rows),
@@ -223,6 +279,8 @@ def build(project: Path) -> tuple[list[dict[str, str]], dict]:
         "retrieval_surface": "unified",
         "promotion_rule": "reference records require figure-level rights verification and completed visual QA before active promotion",
     }
+    if len(baseline_rows) != 42:
+        raise SystemExit(f"Expected 42 baseline active records, found {len(baseline_rows)}")
     if len(zotero_rows) != 139:
         raise SystemExit(f"Expected 139 Zotero rows, found {len(zotero_rows)}")
     if len(active) != 96:
