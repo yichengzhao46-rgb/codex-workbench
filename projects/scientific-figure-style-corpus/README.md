@@ -2,131 +2,143 @@
 
 ## Objective
 
-Build one source-backed scientific figure library for the experimental `scientific-figure-style-router` defined in `codex-playbook` PR #23.
+Build one source-backed scientific figure library for the experimental `scientific-figure-style-router` in `codex-playbook` PR #23.
 
-The project follows a strict **raw images first** architecture:
+The architecture is:
 
-> **real source images → figure-level annotation → reusable element extraction → Style Router validation**
+> **real source images → figure-level annotation → unified index → Router retrieval → reusable visual decisions**
 
-## One unified library
+## Current snapshot
 
-The corpus is now exposed as a single **Unified Scientific Figure Library** rather than two separate libraries.
+The library has one logical retrieval surface with two provenance tiers:
 
-Current registered content:
-
-- **235 records total** before cross-tier perceptual deduplication;
-- **96 active records** — validated A/B style-learning assets from Stage 1.5;
-- **139 reference records** — Codex/Zotero-derived figures from 104 articles;
+- **235 source rows** total;
+- **96 active source rows** from the validated baseline + Stage 1.5 refinement;
+- **139 reference source rows** from 104 Zotero/Codex articles;
+- exact SHA/path deduplication identifies **1 active alias**, leaving **234 canonical unique records = 95 active + 139 reference**;
 - Zotero visual QA: **33 complete**, **106 pending**.
 
-The distinction between `active` and `reference` is now a **tier inside one library**, not a separate database boundary.
+The duplicate alias is retained for provenance but excluded from normal retrieval. `active` and `reference` are tiers inside one library, not separate databases.
 
-The single registry is:
+## Authoritative runtime files
 
-`manifests/library-registry.json`
+- registry: `manifests/library-registry.json`
+- materialized index: `manifests/unified-library-index.csv`
+- generated summary: `manifests/unified-library-summary.json`
+- builder / validator / low-level query: `scripts/unified_library.py`
+- Router-facing query adapter: `scripts/router_reference_query.py`
+- end-to-end retrieval validation: `scripts/validate_router_retrieval.py`
+- real-task validation cases: `validation/router-retrieval-test-cases.json`
 
-The unified row-level loader/index builder is:
+## Build, validate, query
 
-`scripts/unified_library.py`
-
-It normalizes all Stage 1.5 harvested manifests plus `zotero-private-manifest.csv` into:
-
-- `manifests/unified-library-index.csv`
-- `manifests/unified-library-summary.json`
-
-The builder preserves provenance, exact-hash duplicate aliases, QA state, rights status, active eligibility and retrieval eligibility.
-
-## Retrieval policy
-
-All figure-discovery and style-learning queries should use the **unified library** by default.
-
-Retrieval behavior:
-
-1. search both tiers;
-2. rank relevance first;
-3. prefer `active` records when relevance is otherwise comparable;
-4. use `reference` records for visual/mechanistic inspiration and comparison;
-5. restrict public reuse to records whose rights status permits it;
-6. do not promote a reference record to active until figure-level rights verification and visual QA are complete.
-
-For Bath/RP/MOB/EET/DIET/material-interface/environmental-gradient tasks, both tiers are searchable through the same interface.
-
-Example:
+From the repository root:
 
 ```bash
 python projects/scientific-figure-style-corpus/scripts/unified_library.py \
-  --query "methane EET material microbe interface" \
-  --limit 20
+  --project-root projects/scientific-figure-style-corpus \
+  build
 ```
 
-Use `--active-only` when a task specifically requires only validated active records.
+Validate the materialized index, canonical taxonomy, current snapshot, asset presence, and every stored SHA-256:
 
-## Physical storage vs logical library
+```bash
+python projects/scientific-figure-style-corpus/scripts/unified_library.py \
+  --project-root projects/scientific-figure-style-corpus \
+  validate \
+  --check-assets \
+  --strict-snapshot
+```
 
-The logical library is unified, while physical assets remain in provenance-preserving locations:
+Router-style retrieval is read-only and should normally use the adapter:
+
+```bash
+python projects/scientific-figure-style-corpus/scripts/router_reference_query.py \
+  --text "methane EET material microbe interface" \
+  --limit 8
+```
+
+The query command does **not** rebuild or rewrite the index.
+
+## Canonical Router schema
+
+The unified builder preserves source text while normalizing records to the Router contract.
+
+Primary purpose:
+
+`conceptual_overview | microbial_interaction | mechanistic_pathway | metabolic_pathway | electron_transfer | material_microbe_interface | environmental_process | experimental_design | comparative_perturbation | integrated_mechanism | graphical_abstract | multiscale_zoom`
+
+Style family:
+
+`flat_2d_mechanism | soft_2_5d_schematic | pathway_cutaway_2d | editorial_2d_overview`
+
+Layout:
+
+`linear_flow | two_organism_interaction | central_hub | mirrored_comparison | zoom_in_multiscale | circular_pathway | layered_gradient | evidence_to_model | other`
+
+Information density:
+
+`low | medium | high`
+
+Original free-text labels remain in `*_raw` fields so normalization remains auditable.
+
+## Retrieval policy
+
+Default figure-design retrieval:
+
+1. search both tiers through the materialized unified index;
+2. rank scientific relevance first;
+3. use active status only as a small tie-break preference;
+4. exclude exact duplicate aliases (`duplicate_of`) from normal results;
+5. preserve QA, provenance, rights, and active eligibility on every row;
+6. do not promote a reference record to active merely because it is relevant.
+
+This is important for tasks where the reference tier contains the strongest precedent—for example methanotroph biohybrids or graphical abstracts. The Router should not insert a less relevant active record simply to force tier balance.
+
+## Physical storage
+
+Physical locations remain provenance-preserving:
 
 ```text
 projects/scientific-figure-style-corpus/
 ├── assets/
-│   ├── stage1_5/                  # active tier, 96
-│   └── zotero/                    # reference tier, 139
+│   ├── raw/                       # baseline raw corpus; 42 A/B source rows selected from it
+│   ├── stage1_5/                  # Wave 1–7 active additions
+│   └── zotero/                    # 139 reference assets
 ├── manifests/
-│   ├── library-registry.json      # single master registry
-│   ├── unified-library-index.csv  # generated unified row-level index
+│   ├── library-registry.json
+│   ├── unified-library-index.csv
 │   ├── unified-library-summary.json
+│   ├── raw-image-manifest.csv
 │   ├── zotero-private-manifest.csv
 │   └── stage1_5*_harvested_figures.csv
 ├── scripts/
-│   └── unified_library.py
-├── corpus/
-├── derived-elements/
+│   ├── unified_library.py
+│   ├── router_reference_query.py
+│   └── validate_router_retrieval.py
 └── validation/
 ```
 
-Physical separation is retained only to preserve provenance, auditability and rights controls. It no longer represents two independent libraries.
+Physical separation is for provenance and auditability only; retrieval is unified.
 
-## Stage 0 / rights boundary
+## Validation
 
-See `RAW_CORPUS_POLICY.md` for provenance, diversity, rights and anti-bias requirements.
+The main corpus workflow now performs, in order:
 
-A record is `active` only when its source metadata, stored asset, checksum, redistribution status and visual QA satisfy the project gate. Reference-tier records remain searchable even when they are not active-eligible.
+1. raw 100-image validation;
+2. unified-index materialization;
+3. strict unified schema/snapshot/asset/SHA validation;
+4. Router retrieval validation against eight real drawing tasks;
+5. commit of the generated index and validation reports only after the gates pass.
 
-`codex-workbench` is public. Therefore public reuse and redistribution remain governed by the rights field on each record. A reference record does not become redistribution-safe merely because it is searchable in the unified library.
+The eight task families cover Bath–RP dark carbon fixation, Bath–Bio-Se, oxygen perturbation, GAC/potential DIET, membrane EET, environmental redox gradients, a graphical abstract, and Objective 3 experimental design.
 
-## Figure-level annotation
+## Remaining QA
 
-The unified index carries or links the following design dimensions where available:
-
-- scientific purpose;
-- information type and density;
-- 2D / light-2.5D style family;
-- layout/composition;
-- cell/material/molecule rendering;
-- arrow/connector grammar;
-- palette and outline strategy;
-- evidence-state coding;
-- reusable principles;
-- limitations and unsuitable transfer cases;
-- topics and domain relevance;
-- QA state;
-- rights and active eligibility.
-
-## Exact vs perceptual deduplication
-
-`unified_library.py` performs exact deduplication using SHA-256 and asset path while retaining alias/provenance rows.
-
-Cross-tier **perceptual** duplicate detection remains a separate corpus-level QA task because Zotero figures can be re-rendered/cropped versions of the same published figure and therefore may have different byte hashes.
-
-## Current status
-
-- unified registered records: **235**;
-- active tier: **96**;
-- reference tier: **139** from **104** articles;
-- reference visual QA: **33 complete**, **106 pending**;
-- exact deduplication: supported by unified builder;
-- cross-tier perceptual deduplication: **pending**;
-- Style Router: continues to treat active eligibility and rights as explicit fields, not as separate-library boundaries.
+- cross-tier **perceptual** duplicate detection is still pending; exact SHA/path deduplication is implemented;
+- 106 Zotero/reference figures still require manual visual QA;
+- reference records inferred from captions should be promoted to higher-confidence style/layout annotations as they are visually reviewed.
 
 ## Key quality principle
 
-The goal is not to imitate journal branding. The unified library should be large and heterogeneous enough to learn **which visual language works for which scientific job**. Scientific purpose and information structure lead retrieval; journal/source family is a secondary filter.
+The goal is not to imitate journal branding. Scientific purpose and information structure lead retrieval; journal/source family is a secondary filter. The system should learn **which visual language works for which scientific job** while preserving evidence boundaries and provenance.
