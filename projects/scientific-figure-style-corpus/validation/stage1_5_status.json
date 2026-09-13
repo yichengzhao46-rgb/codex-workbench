@@ -6,13 +6,14 @@
   "wave3_active_ab_added": 5,
   "wave4_active_ab_added": 14,
   "wave5_active_ab_added": 7,
-  "wave6_active_ab_added": 4,
-  "wave7_active_ab_validated": 8,
-  "current_ab_committed": 88,
-  "current_ab_provisional_after_wave7": 96,
-  "target_ab_range": [96, 100],
+  "wave6_active_ab_added": 8,
+  "current_ab_after_wave6": 92,
+  "target_ab_range": [
+    100,
+    110
+  ],
+  "wave6_screened_figures": 8,
+  "wave6_public_assets": 8,
   "wave6_validation": "passed",
-  "wave7_validation": "passed_from_scan_source_media_cache",
-  "wave7_repository_binary_assets_committed": false,
-  "next_action": "write back the 8 validated Wave 7 binary assets, then advance committed active A+B from 88 to 96"
+  "next_action": "continue targeted non-cross-feeding refinement toward 100-110 A+B"
 }
