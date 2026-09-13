@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "override_id": "registry-reference-authorization-2026-09-13",
+  "source": "library-registry.json#reference_authorization",
+  "applies_to_manifest": "zotero-private-manifest.csv",
+  "applies_to_all_rows": true,
+  "effective_rights_status": "user_confirmed_redistribution_permission",
+  "redistribution_allowed": true,
+  "note": "Preserve historical source-manifest fields; use this record for the current effective project authorization state. Active promotion remains a separate QA/classification decision."
+}
