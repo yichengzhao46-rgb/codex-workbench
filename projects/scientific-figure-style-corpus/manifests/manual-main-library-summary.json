@@ -2,8 +2,8 @@
   "updated_at": "2026-09-14",
   "main_style_library": {
     "local_mirrored_assets": 14,
-    "restricted_external_references": 6,
-    "total_references": 20,
+    "restricted_external_references": 7,
+    "total_references": 21,
     "local_asset_manifest": "projects/scientific-figure-style-corpus/manifests/manual-kept-library.csv",
     "restricted_reference_manifest": "projects/scientific-figure-style-corpus/manifests/manual-main-restricted-references.csv"
   },
@@ -22,7 +22,8 @@
     {"id":"U003","journal":"Environmental Science & Technology","year":2025,"figure_id":"Visual Abstract","doi":"10.1021/acs.est.4c11221","binary_committed":false,"reason":"ACS copyrighted figure; reference metadata only in public repository."},
     {"id":"U004","journal":"Environmental Science & Technology","year":2025,"figure_id":"Visual Abstract","doi":"10.1021/acs.est.5c01275","binary_committed":false,"reason":"ACS copyrighted figure; reference metadata only in public repository."},
     {"id":"U005","journal":"Angewandte Chemie International Edition","year":2026,"figure_id":"Figure 6g (working-model panel)","doi":"10.1002/anie.4522602","binary_committed":false,"reason":"Wiley-VCH copyrighted figure; no Creative Commons reuse notice identified; reference metadata only in public repository."},
-    {"id":"U006","journal":"Angewandte Chemie International Edition","year":2026,"figure_id":"Graphical Abstract","doi":"10.1002/anie.4522602","binary_committed":false,"reason":"Wiley-VCH copyrighted graphical abstract; no Creative Commons reuse notice identified; reference metadata only in public repository."}
+    {"id":"U006","journal":"Angewandte Chemie International Edition","year":2026,"figure_id":"Graphical Abstract","doi":"10.1002/anie.4522602","binary_committed":false,"reason":"Wiley-VCH copyrighted graphical abstract; no Creative Commons reuse notice identified; reference metadata only in public repository."},
+    {"id":"U007","journal":"Angewandte Chemie International Edition","year":2025,"figure_id":"Figure 1","doi":"10.1002/anie.202419973","binary_committed":false,"reason":"Figure caption states BioRender publication-license use; store reference metadata only in the public repository."}
   ],
   "restricted_bioinformatics_references": [
     {"id":"B001","journal":"Environmental Science & Technology","year":2025,"figure_id":"Figure 4","doi":"10.1021/acs.est.4c11221","binary_committed":false,"reason":"ACS copyrighted figure; reference metadata only in public repository."},
