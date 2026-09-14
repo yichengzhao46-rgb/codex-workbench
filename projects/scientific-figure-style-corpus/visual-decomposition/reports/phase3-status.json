@@ -1,0 +1,15 @@
+{
+  "phase": "phase3_cross_reference_visual_grammar_synthesis",
+  "updated_at": "2026-09-14",
+  "phase2_complete": true,
+  "main_references": 21,
+  "grammar_families": 9,
+  "grammar_family_manifest": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/visual-grammar-families.csv",
+  "style_recipe_template": "projects/scientific-figure-style-corpus/style-recipes/STYLE-RECIPE-TEMPLATE.md",
+  "next_tasks": [
+    "map each main reference to reusable visual roles",
+    "build task-specific retrieval rules",
+    "generate first Bath-RP Style Recipe",
+    "validate recipe against user aesthetic judgement"
+  ]
+}
