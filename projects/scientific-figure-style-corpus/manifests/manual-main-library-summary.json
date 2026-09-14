@@ -11,13 +11,24 @@
     "total_references": 13,
     "manifest": "projects/bioinformatics-figure-reference-library/manifest.csv"
   },
-  "latest_main_reference": {
-    "id": "U002",
-    "journal": "Environmental Science & Technology",
-    "year": 2026,
-    "figure_id": "Visual Abstract",
-    "doi": "10.1021/acs.est.5c07417",
-    "binary_committed": false,
-    "reason": "ACS copyrighted figure; reference metadata only in public repository."
-  }
+  "restricted_main_references": [
+    {
+      "id": "U001",
+      "journal": "Nature Ecology & Evolution",
+      "year": 2026,
+      "figure_id": "Fig. 6",
+      "doi": "10.1038/s41559-026-02976-9",
+      "binary_committed": false,
+      "reason": "Springer Nature exclusive-rights figure; reference metadata only in public repository."
+    },
+    {
+      "id": "U002",
+      "journal": "Environmental Science & Technology",
+      "year": 2026,
+      "figure_id": "Visual Abstract",
+      "doi": "10.1021/acs.est.5c07417",
+      "binary_committed": false,
+      "reason": "ACS copyrighted figure; reference metadata only in public repository."
+    }
+  ]
 }
