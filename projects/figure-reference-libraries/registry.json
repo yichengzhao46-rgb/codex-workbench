@@ -14,6 +14,7 @@
       "count": 21,
       "local_assets": 14,
       "external_reference_only": 7,
+      "current_range": "M001-M021",
       "next_id": "M022"
     },
     "bioinformatics": {
@@ -23,8 +24,10 @@
       "local_assets": 15,
       "restricted_external": 5,
       "open_access_metadata_only": 2,
+      "current_range": "BI001-BI022",
       "next_id": "BI023"
     }
   },
-  "migration_map": "projects/figure-reference-libraries/id-map.csv"
+  "migration_map": "projects/figure-reference-libraries/id-map.csv",
+  "numbering_order": "curation chronology; categories are stored as metadata rather than encoded into IDs"
 }
