@@ -1,8 +1,20 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "library": "unified_scientific_figure_library",
   "library_id": "unified_master",
   "retrieval_surface": "single_library",
+  "curated_reference_layer": {
+    "status": "authoritative_for_user_selected_style_references",
+    "main_catalog": "projects/scientific-figure-style-corpus/manifests/main-reference-catalog.csv",
+    "bioinformatics_catalog": "projects/bioinformatics-figure-reference-library/reference-catalog.csv",
+    "cross_library_registry": "projects/figure-reference-libraries/registry.json",
+    "id_migration_map": "projects/figure-reference-libraries/id-map.csv",
+    "canonical_id_schemes": {
+      "main": "M001-M999",
+      "bioinformatics": "BI001-BI999"
+    },
+    "note": "The historical unified harvest below remains available for provenance and legacy router experiments. For the current manually curated libraries, use the canonical M### and BI### catalogs."
+  },
   "snapshot": {
     "source_rows": 235,
     "active_source_records": 96,
@@ -12,7 +24,7 @@
     "reference_canonical_records": 139,
     "exact_duplicate_alias_rows": 1
   },
-  "snapshot_note": "The active source set contains 96 validated A/B rows, but exact SHA/path deduplication identifies one alias, leaving 95 unique active references. The alias is retained for provenance and excluded from default retrieval.",
+  "snapshot_note": "Historical pre-manual-curation unified snapshot retained for provenance. Current user-curated reference sets are tracked separately in curated_reference_layer.",
   "reference_authorization": {
     "source_manifest_historical_state": "zotero-private-manifest.csv preserves the state recorded at ingestion time",
     "current_project_state": "user_confirmed_redistribution_permission",
@@ -70,9 +82,9 @@
     "cross_tier_perceptual": "pending"
   },
   "retrieval_policy": {
-    "default": "search both tiers through the materialized unified index",
-    "ranking": "relevance first; active tier receives only a small tie-break preference",
-    "duplicates": "exclude rows with duplicate_of by default",
-    "promotion": "reference records remain reference until separately promoted after QA/classification"
+    "default": "for manually curated style work, use curated_reference_layer first; historical unified index remains a fallback/provenance surface",
+    "ranking": "scientific purpose and user-curated aesthetic relevance first",
+    "duplicates": "exclude rows with duplicate_of by default in the historical unified index",
+    "promotion": "historical reference records remain reference until separately promoted after QA/classification"
   }
 }
