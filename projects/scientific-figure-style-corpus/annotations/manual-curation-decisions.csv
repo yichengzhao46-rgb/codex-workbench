@@ -1,0 +1,13 @@
+id,asset_path,decision,review_batch,reviewed_at
+R001,assets/raw/ese/ese-001-PMC13545441-fig5.webp,delete,1,2026-09-14
+R002,assets/raw/ese/ese-002-PMC13319378-fig2.jpg,delete,1,2026-09-14
+R003,assets/raw/ese/ese-006-PMC13319378-fig3.jpg,delete,1,2026-09-14
+R004,assets/raw/ese/ese-007-PMC13223959-fig1.jpg,delete,1,2026-09-14
+R005,assets/raw/ese/ese-008-PMC13223959-fig5.jpg,delete,1,2026-09-14
+R006,assets/raw/ese/ese-017-PMC13122226-fig1.jpg,delete,1,2026-09-14
+R007,assets/raw/est/est-001-PMC13492273-fig5.webp,delete,1,2026-09-14
+R008,assets/raw/est/est-002-PMC13492273-fig4.webp,delete,1,2026-09-14
+R009,assets/raw/est/est-008-PMC13276906-fig1.jpg,delete,1,2026-09-14
+R010,assets/raw/est/est-010-PMC13276896-fig3.jpg,delete,1,2026-09-14
+R011,assets/raw/est/est-019-PMC13261874-fig1.jpg,delete,1,2026-09-14
+R012,assets/raw/est/est-020-PMC13235560-fig3.jpg,delete,1,2026-09-14
