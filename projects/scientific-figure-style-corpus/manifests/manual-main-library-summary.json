@@ -10,8 +10,8 @@
   "bioinformatics_reference_library": {
     "local_mirrored_assets": 15,
     "restricted_external_references": 5,
-    "open_access_external_metadata_only_references": 1,
-    "total_references": 21,
+    "open_access_external_metadata_only_references": 2,
+    "total_references": 22,
     "manifest": "projects/bioinformatics-figure-reference-library/manifest.csv",
     "restricted_reference_manifest": "projects/bioinformatics-figure-reference-library/restricted-references.csv",
     "open_access_reference_manifest": "projects/bioinformatics-figure-reference-library/open-access-references.csv"
@@ -35,6 +35,7 @@
   "open_access_bioinformatics_references": [
     {"id":"B002","journal":"Nature Communications","year":2019,"figure_id":"Figure 4","doi":"10.1038/s41467-019-09377-6","binary_committed":true,"license":"CC BY 4.0"},
     {"id":"B007","journal":"Advanced Science","year":2026,"figure_id":"Figure 6","doi":"10.1002/advs.202516258","binary_committed":false,"license":"CC BY 4.0"},
-    {"id":"B008","journal":"Advanced Science","year":2025,"figure_id":"Figure 6","doi":"10.1002/advs.202501376","binary_committed":true,"license":"CC BY 4.0"}
+    {"id":"B008","journal":"Advanced Science","year":2025,"figure_id":"Figure 6","doi":"10.1002/advs.202501376","binary_committed":true,"license":"CC BY 4.0"},
+    {"id":"B009","journal":"Nature Communications","year":2025,"figure_id":"Figure 5","doi":"10.1038/s41467-025-60908-w","binary_committed":false,"license":"CC BY-NC-ND 4.0"}
   ]
 }
