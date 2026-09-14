@@ -14,18 +14,5 @@
     "manifest": "projects/bioinformatics-figure-reference-library/manifest.csv",
     "restricted_reference_manifest": "projects/bioinformatics-figure-reference-library/restricted-references.csv",
     "open_access_reference_manifest": "projects/bioinformatics-figure-reference-library/open-access-references.csv"
-  },
-  "restricted_main_references": [
-    {"id":"U001","journal":"Nature Ecology & Evolution","year":2026,"figure_id":"Fig. 6","doi":"10.1038/s41559-026-02976-9","binary_committed":false,"reason":"Springer Nature exclusive-rights figure; reference metadata only in public repository."},
-    {"id":"U002","journal":"Environmental Science & Technology","year":2026,"figure_id":"Visual Abstract","doi":"10.1021/acs.est.5c07417","binary_committed":false,"reason":"ACS copyrighted figure; reference metadata only in public repository."},
-    {"id":"U003","journal":"Environmental Science & Technology","year":2025,"figure_id":"Visual Abstract","doi":"10.1021/acs.est.4c11221","binary_committed":false,"reason":"ACS copyrighted figure; reference metadata only in public repository."},
-    {"id":"U004","journal":"Environmental Science & Technology","year":2025,"figure_id":"Visual Abstract","doi":"10.1021/acs.est.5c01275","binary_committed":false,"reason":"ACS copyrighted figure; reference metadata only in public repository."},
-    {"id":"U005","journal":"Angewandte Chemie International Edition","year":2026,"figure_id":"Figure 6g (working-model panel)","doi":"10.1002/anie.4522602","binary_committed":false,"reason":"Wiley-VCH copyrighted figure; no Creative Commons reuse notice identified; reference metadata only in public repository."},
-    {"id":"U006","journal":"Angewandte Chemie International Edition","year":2026,"figure_id":"Graphical Abstract","doi":"10.1002/anie.4522602","binary_committed":false,"reason":"Wiley-VCH copyrighted graphical abstract; no Creative Commons reuse notice identified; reference metadata only in public repository."}
-  ],
-  "restricted_bioinformatics_references": [
-    {"id":"B001","journal":"Environmental Science & Technology","year":2025,"figure_id":"Figure 4","doi":"10.1021/acs.est.4c11221","binary_committed":false,"reason":"ACS copyrighted figure; reference metadata only in public repository."},
-    {"id":"B003","journal":"The ISME Journal","year":2022,"figure_id":"Figure 5","doi":"10.1038/s41396-021-01078-7","binary_committed":false,"reason":"No Creative Commons reuse notice found on article page; reference metadata only in public repository."},
-    {"id":"B004","journal":"Environmental Science & Technology","year":2025,"figure_id":"Figure 5","doi":"10.1021/acs.est.5c01275","binary_committed":false,"reason":"ACS copyrighted figure; reference metadata only in public repository."}
-  ]
+  }
 }
