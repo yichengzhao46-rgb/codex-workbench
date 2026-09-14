@@ -28,6 +28,14 @@ This directory defines the canonical IDs for the two user-curated figure referen
 - Canonical catalog: `projects/bioinformatics-figure-reference-library/reference-catalog.csv`.
 - Current range: `BI001`–`BI022`; next ID: `BI023`.
 
+## Numbering order
+
+Canonical numbering preserves the user's curation chronology rather than grouping by journal or topic. This keeps IDs stable as the libraries grow. Scientific function is stored separately in catalog fields such as `primary_purpose`, `style_family`, and `layout`.
+
+For the main library, `M001`–`M014` are the surviving local figures from the manual screening and `M015`–`M021` are later user-added reference-only figures.
+
+For the bioinformatics library, `BI001`–`BI013` are the figures moved out of the original curated set and `BI014`–`BI022` are later user-added bioinformatics references.
+
 ## Migration and retrieval
 
 `id-map.csv` is the authoritative crosswalk from canonical IDs to legacy IDs and physical/source locations. New discussion, retrieval, style analysis, and figure-generation tasks should use the canonical IDs. Legacy IDs should only be used when tracing the original curation history or source manifests.
