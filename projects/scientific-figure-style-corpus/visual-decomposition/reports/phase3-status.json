@@ -6,10 +6,13 @@
   "grammar_families": 9,
   "grammar_family_manifest": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/visual-grammar-families.csv",
   "style_recipe_template": "projects/scientific-figure-style-corpus/style-recipes/STYLE-RECIPE-TEMPLATE.md",
+  "style_recipes_created": 1,
+  "first_recipe": "projects/scientific-figure-style-corpus/style-recipes/BATH-RP-DARK-CARBON-FIXATION-v1.md",
+  "first_recipe_status": "ready_for_user_validation",
   "next_tasks": [
     "map each main reference to reusable visual roles",
     "build task-specific retrieval rules",
-    "generate first Bath-RP Style Recipe",
-    "validate recipe against user aesthetic judgement"
+    "validate the Bath-RP recipe against user aesthetic judgement",
+    "derive additional recipes for Bath-Bio-Se and GAC/DIET tasks"
   ]
 }
