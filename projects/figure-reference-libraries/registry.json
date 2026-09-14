@@ -1,6 +1,20 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "updated_at": "2026-09-14",
+  "system_principle": "The user decides what PR20 learns from; user + ChatGPT decide what the figure needs to say; PR20 decides how it should look.",
+  "curation_policy": {
+    "selection_authority": "user_manual_selection",
+    "approved_reference_meaning": "every retained reference is a valid visual-learning source",
+    "automatic_aesthetic_regating": false,
+    "retrieval_priority": "visual_solution_fit_first; scientific_topic_similarity_as_compatibility_constraint",
+    "synthesis_mode": "multi_reference_by_visual_role",
+    "dimensionality": [
+      "2D",
+      "2.5D",
+      "3D",
+      "hybrid_2D_3D"
+    ]
+  },
   "canonical_id_policy": {
     "main_library": "M001-M999",
     "bioinformatics_library": "BI001-BI999",
@@ -9,8 +23,10 @@
   },
   "libraries": {
     "main": {
-      "name": "Main Scientific Figure Style Library",
+      "name": "Main Scientific Visual-Learning Library",
+      "role": "authoritative user-curated aesthetic and visual-grammar reference set",
       "canonical_catalog": "projects/scientific-figure-style-corpus/manifests/main-reference-catalog.csv",
+      "visual_grammar_annotations": "projects/scientific-figure-style-corpus/annotations/main-reference-visual-grammar.csv",
       "count": 21,
       "local_assets": 14,
       "external_reference_only": 7,
@@ -19,6 +35,7 @@
     },
     "bioinformatics": {
       "name": "Bioinformatics Figure Reference Library",
+      "role": "user-curated visual reference set for bioinformatics and omics figure design",
       "canonical_catalog": "projects/bioinformatics-figure-reference-library/reference-catalog.csv",
       "count": 22,
       "local_assets": 15,
