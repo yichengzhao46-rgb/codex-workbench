@@ -21,7 +21,8 @@ The decomposition asks how each reference solves specific visual problems:
 ## Authoritative files
 
 - canonical main-library catalog: `../manifests/main-reference-catalog.csv`
-- structured grammar matrix: `../annotations/main-reference-visual-grammar.csv`
+- Batch-1 structured grammar in the main matrix: `../annotations/main-reference-visual-grammar.csv`
+- Batch-2 structured grammar fragment: `manifests/batch2-visual-grammar.csv`
 - Phase-2 worklist: `manifests/main-library-decomposition-worklist.csv`
 - reusable element inventory: `manifests/style-element-inventory.csv`
 - decomposition schema: `schema/visual-decomposition-schema.md`
@@ -31,19 +32,26 @@ The decomposition asks how each reference solves specific visual problems:
 
 ## Current execution state
 
-Batch 1 is complete for the seven high-value recent references `M015`–`M021`. These cover environmental multiscale mechanism, mirrored perturbation, rhizosphere zoom, soft-2.5D condition comparison, membrane EET cutaway, synthesis-to-function graphical abstract, and methanotroph biohybrid storytelling.
+**15 / 21 references are now complete.**
 
-`M001`–`M014` remain queued. They should be decomposed only after direct visual inspection; PR20 must not infer detailed aesthetics from captions or topical metadata alone.
+Batch 1 completed `M015`–`M021`, covering environmental multiscale mechanism, mirrored perturbation, rhizosphere zoom, soft-2.5D condition comparison, membrane EET cutaway, synthesis-to-function graphical abstract, and methanotroph biohybrid storytelling.
+
+Batch 2 completed `M003`, `M004`, `M005`, `M006`, `M011`, `M012`, `M013`, and `M014`. This batch adds mechanism-plus-evidence composition, central material–microbe hero objects, conductive-carrier/redox-ladder logic, data-to-mechanism stacking, environmental-stress storytelling, omics-to-mechanism layout, alternative-mechanism comparison, and membrane-to-carbon methanotroph metabolism.
+
+The remaining queued references are `M001`, `M002`, and `M007`–`M010`. They should be decomposed only after direct visual inspection; PR20 must not infer detailed aesthetics from captions or topical metadata alone.
+
+Batch-2 structured rows are stored as a fragment and will be consolidated with Batch 3 into `main-reference-visual-grammar.csv` at Phase-2 closeout, so the final matrix has one clean authoritative row per `M###` reference.
 
 ## Completion gate
 
 Phase 2 is complete only when:
 
 1. all 21 references have a completed decomposition;
-2. every completed note has a corresponding structured row in `main-reference-visual-grammar.csv`;
-3. reusable elements have been consolidated into the element inventory;
-4. recurring visual grammars have been summarized without collapsing the corpus into a single house style;
-5. the resulting knowledge can support task-specific multi-reference Style Recipes.
+2. every completed note has a corresponding structured grammar row;
+3. Batch-2/Batch-3 grammar rows have been consolidated into `main-reference-visual-grammar.csv`;
+4. reusable elements have been consolidated into the element inventory;
+5. recurring visual grammars have been summarized without collapsing the corpus into a single house style;
+6. the resulting knowledge can support task-specific multi-reference Style Recipes.
 
 ## Core rule
 
