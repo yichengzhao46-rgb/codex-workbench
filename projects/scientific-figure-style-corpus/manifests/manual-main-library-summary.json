@@ -2,8 +2,8 @@
   "updated_at": "2026-09-14",
   "main_style_library": {
     "local_mirrored_assets": 14,
-    "restricted_external_references": 4,
-    "total_references": 18,
+    "restricted_external_references": 6,
+    "total_references": 20,
     "local_asset_manifest": "projects/scientific-figure-style-corpus/manifests/manual-kept-library.csv",
     "restricted_reference_manifest": "projects/scientific-figure-style-corpus/manifests/manual-main-restricted-references.csv"
   },
@@ -51,6 +51,24 @@
       "doi": "10.1021/acs.est.5c01275",
       "binary_committed": false,
       "reason": "ACS copyrighted figure; reference metadata only in public repository."
+    },
+    {
+      "id": "U005",
+      "journal": "Angewandte Chemie International Edition",
+      "year": 2026,
+      "figure_id": "Figure 6g (working-model panel)",
+      "doi": "10.1002/anie.4522602",
+      "binary_committed": false,
+      "reason": "Wiley-VCH copyrighted figure; no Creative Commons reuse notice identified; reference metadata only in public repository."
+    },
+    {
+      "id": "U006",
+      "journal": "Angewandte Chemie International Edition",
+      "year": 2026,
+      "figure_id": "Graphical Abstract",
+      "doi": "10.1002/anie.4522602",
+      "binary_committed": false,
+      "reason": "Wiley-VCH copyrighted graphical abstract; no Creative Commons reuse notice identified; reference metadata only in public repository."
     }
   ],
   "restricted_bioinformatics_references": [
