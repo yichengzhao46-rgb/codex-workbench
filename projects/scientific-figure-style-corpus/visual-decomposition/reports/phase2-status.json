@@ -1,0 +1,17 @@
+{
+  "phase": "phase2_visual_decomposition",
+  "library": "main_scientific_visual_learning_library",
+  "updated_at": "2026-09-14",
+  "total_figures": 21,
+  "completed": 7,
+  "queued": 14,
+  "in_progress": 0,
+  "completed_ids": ["M015", "M016", "M017", "M018", "M019", "M020", "M021"],
+  "queued_ids": ["M001", "M002", "M003", "M004", "M005", "M006", "M007", "M008", "M009", "M010", "M011", "M012", "M013", "M014"],
+  "structured_grammar_matrix": "projects/scientific-figure-style-corpus/annotations/main-reference-visual-grammar.csv",
+  "worklist": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/main-library-decomposition-worklist.csv",
+  "element_inventory": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/style-element-inventory.csv",
+  "element_inventory_started": true,
+  "next_recommended_batch": ["M003", "M004", "M005", "M006", "M011", "M012", "M013", "M014"],
+  "completion_gate": "All 21 figures directly inspected; per-reference note plus structured grammar row complete; element inventory consolidated; reusable grammars ready for task-specific Style Recipe synthesis."
+}
