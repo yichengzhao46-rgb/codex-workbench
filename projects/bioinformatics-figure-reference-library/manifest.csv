@@ -1,0 +1,5 @@
+id,source_group,asset_path,origin_library,origin_asset_path,selection_role,size_bytes,sha256
+R037,R,assets/R037/isme-020-PMC13548325-f4.webp,scientific-figure-style-corpus,assets/raw/isme/isme-020-PMC13548325-f4.webp,bioinformatics_analysis_visual_reference,257830,0be1c00f7a234c6e0d2fc8dd6c10b44fc03363c91543c595deeabb82eb73ce93
+S001,S,assets/S001/S15-001_fig5.jpg,scientific-figure-style-corpus,assets/stage1_5/S15-001/S15-001_fig5.jpg,bioinformatics_analysis_visual_reference,238738,db4891eb98d8b4de3b3a07d1f565ab151671324e727a956e8ddbf14f061bb50b
+S002,S,assets/S002/S15-002_fig7.jpg,scientific-figure-style-corpus,assets/stage1_5/S15-002/S15-002_fig7.jpg,bioinformatics_analysis_visual_reference,172388,a37eafd285526e5e2942f64ed388946ea21007ca89ba6ca01733dd5ac9e6d0fa
+S033,S,assets/S033/S15-036_fig3.jpg,scientific-figure-style-corpus,assets/stage1_5/S15-036/S15-036_fig3.jpg,bioinformatics_analysis_visual_reference,110127,d80cf641056c52efb4e3bd1a0e6c1d49cfbc7225dcfde40d0a837bc072c676d0
