@@ -1,0 +1,1 @@
+PR20 Style Recipe layer. Each new scientific figure should combine approved references by role: composition, rendering, connectors, palette, typography, whitespace, density, and depth. Do not copy one complete source figure.
