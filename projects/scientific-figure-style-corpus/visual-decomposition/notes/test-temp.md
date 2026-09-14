@@ -1,1 +1,1 @@
-test
+Reference 007 visual decomposition: chemical transformation and membrane-process schematic paired with quantitative kinetics evidence. Direct visual inspection completed; structured grammar is recorded in the Batch 3 grammar manifest.
