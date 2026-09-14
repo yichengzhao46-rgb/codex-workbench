@@ -2,8 +2,11 @@
 
 This library contains figures explicitly selected by the user as references for bioinformatics-analysis figure design.
 
-The seed set was transferred from the manually curated scientific figure style corpus and should not be treated as part of that main active reference set.
+Final split after manual review of the 27 aesthetic keepers:
 
-Current seed IDs: R037, S001, S002, S033.
+- 13 figures in this bioinformatics reference library
+- 14 figures remain in the general scientific figure style library
 
-See `manifest.csv` for preserved provenance and checksums.
+Bioinformatics IDs: R037, S001, S002, S033, Z019, Z021, Z052, Z078, Z097, Z107, Z108, Z109, Z133.
+
+See `manifest.csv` for preserved provenance and checksums, `final_split.csv` for the authoritative main-vs-bioinformatics assignment, and `split_report.json` for validation.
