@@ -1,0 +1,6 @@
+B002
+sha256=0bd1a75fab402668e502a6e341686f915f2085e2ccf0a43f9f81067a46c3fc4d
+size_bytes=133256
+dimensions=2036x986
+source=https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-019-09377-6/MediaObjects/41467_2019_9377_Fig4_HTML.png
+license=CC BY 4.0

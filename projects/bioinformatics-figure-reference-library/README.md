@@ -13,3 +13,6 @@ Locally mirrored IDs: R037, S001, S002, S033, Z019, Z021, Z052, Z078, Z097, Z107
 `B001` is a user-selected high-density bioinformatics reference combining a genome-based phylogenetic tree with MAG-resolved metabolic pathway reconstruction. Its binary is not committed because the source figure is ACS copyrighted; provenance, visual role, and the user-upload fingerprint are stored in `restricted-references.csv`.
 
 See `manifest.csv` for locally mirrored assets, `restricted-references.csv` for external restricted references, `final_split.csv` for the original main-vs-bioinformatics assignment, and `split_report.json` for validation of the original 27-figure split.
+
+
+Additional open-access local reference: `B002` — Guzman et al., Nature Communications (2019), Figure 4, DOI `10.1038/s41467-019-09377-6`, CC BY 4.0.
