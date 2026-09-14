@@ -8,9 +8,10 @@
     "restricted_reference_manifest": "projects/scientific-figure-style-corpus/manifests/manual-main-restricted-references.csv"
   },
   "bioinformatics_reference_library": {
-    "local_mirrored_assets": 14,
+    "local_mirrored_assets": 15,
     "restricted_external_references": 5,
-    "total_references": 19,
+    "open_access_external_metadata_only_references": 1,
+    "total_references": 21,
     "manifest": "projects/bioinformatics-figure-reference-library/manifest.csv",
     "restricted_reference_manifest": "projects/bioinformatics-figure-reference-library/restricted-references.csv",
     "open_access_reference_manifest": "projects/bioinformatics-figure-reference-library/open-access-references.csv"
@@ -29,5 +30,10 @@
     {"id":"B004","journal":"Environmental Science & Technology","year":2025,"figure_id":"Figure 5","doi":"10.1021/acs.est.5c01275","binary_committed":false,"reason":"ACS copyrighted figure; reference metadata only in public repository."},
     {"id":"B005","journal":"Environmental Science & Technology","year":2026,"figure_id":"Figure panel e","doi":"10.1021/acs.est.5c17814","binary_committed":false,"reason":"ACS copyrighted figure; reference metadata only in public repository."},
     {"id":"B006","journal":"Environmental Science & Technology","year":2026,"figure_id":"Figure 7","doi":"10.1021/acs.est.5c16493","binary_committed":false,"reason":"ACS copyrighted figure; reference metadata only in public repository."}
+  ],
+  "open_access_bioinformatics_references": [
+    {"id":"B002","journal":"Nature Communications","year":2019,"figure_id":"Figure 4","doi":"10.1038/s41467-019-09377-6","binary_committed":true,"license":"CC BY 4.0"},
+    {"id":"B007","journal":"Advanced Science","year":2026,"figure_id":"Figure 6","doi":"10.1002/advs.202516258","binary_committed":false,"license":"CC BY 4.0"},
+    {"id":"B008","journal":"Advanced Science","year":2025,"figure_id":"Figure 6","doi":"10.1002/advs.202501376","binary_committed":true,"license":"CC BY 4.0"}
   ]
 }
