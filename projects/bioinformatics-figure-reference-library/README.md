@@ -4,10 +4,10 @@ This library contains figures explicitly selected by the user as references for 
 
 Current set:
 
-- 21 references total
+- 22 references total
 - 15 locally mirrored assets
 - 5 restricted external references
-- 1 open-access external metadata-only reference
+- 2 open-access external metadata-only references
 
 Original split-derived local IDs: R037, S001, S002, S033, Z019, Z021, Z052, Z078, Z097, Z107, Z108, Z109, Z133.
 
@@ -15,8 +15,9 @@ Additional local open-access references:
 - `B002` — Guzman et al., Nature Communications (2019), Figure 4, DOI `10.1038/s41467-019-09377-6`, CC BY 4.0. Strong reference for integrating CBB-cycle differential expression, isotope-validation bar plots, and heatmaps into one evidence-linked figure.
 - `B008` — Liu et al., Advanced Science (2025), Figure 6, DOI `10.1002/advs.202501376`, CC BY 4.0. Strong reference for embedding transcriptomic log2FC tiles directly into an outward-EET/CBB/nitrogenase mechanism and pairing it with knockout validation.
 
-Open-access external metadata-only reference:
+Open-access external metadata-only references:
 - `B007` — Tian et al., Advanced Science (2026), Figure 6, DOI `10.1002/advs.202516258`, CC BY 4.0. Strong reference for redox-potential-guided carrier-to-biofilm DET, methanogenic pathway reconstruction and metatranscriptomic abundance overlays. User-upload fingerprint retained; local mirror not yet committed.
+- `B009` — Ye et al., Nature Communications (2025), Figure 5, DOI `10.1038/s41467-025-60908-w`, CC BY-NC-ND 4.0. Strong reference for integrating a membrane-level metabolic-response schematic, differential-expression heatmaps/fold-change plots, GO enrichment and Mantel/Pearson correlation analysis into one transcriptomics-led mechanism figure. Metadata-only under the repository's stricter public-binary policy.
 
 Restricted external references:
 - `B001` — Yu et al., Environmental Science & Technology (2025), Figure 4, DOI `10.1021/acs.est.4c11221`.
