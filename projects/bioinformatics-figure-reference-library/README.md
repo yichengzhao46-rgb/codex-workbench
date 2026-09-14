@@ -4,9 +4,9 @@ This library contains figures explicitly selected by the user as references for 
 
 Current set:
 
-- 16 references total
+- 17 references total
 - 14 locally mirrored assets
-- 2 restricted external references
+- 3 restricted external references
 
 Original split-derived local IDs: R037, S001, S002, S033, Z019, Z021, Z052, Z078, Z097, Z107, Z108, Z109, Z133.
 
@@ -16,5 +16,6 @@ Additional local open-access reference:
 Restricted external references:
 - `B001` — Yu et al., Environmental Science & Technology (2025), Figure 4, DOI `10.1021/acs.est.4c11221`.
 - `B003` — Huang et al., The ISME Journal (2022), Figure 5, DOI `10.1038/s41396-021-01078-7`. Strong reference for species-resolved metatranscriptomic mechanism mapping in an electric syntrophic coculture, integrating transcript-abundance tiles with electron-flow and pathway modules.
+- `B004` — Yao et al., Environmental Science & Technology (2025), Figure 5, DOI `10.1021/acs.est.5c01275`. Strong reference for combining differential-expression bar plots with Calvin-cycle, serine-pathway and TCA-cycle pathway reconstruction, inferred metabolite routing, heme/iron links, and ferritin structure in one multi-omics mechanism panel.
 
 See `manifest.csv` for locally mirrored assets, `restricted-references.csv` for restricted external references, `open-access-references.csv` for redistributable source metadata, `final_split.csv` for the original main-vs-bioinformatics split, and `split_report.json` for split validation.
