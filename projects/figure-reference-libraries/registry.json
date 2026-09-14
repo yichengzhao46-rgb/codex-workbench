@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-14",
+  "canonical_id_policy": {
+    "main_library": "M001-M999",
+    "bioinformatics_library": "BI001-BI999",
+    "legacy_ids": "retained for provenance only; do not use as primary identifiers after this migration",
+    "physical_assets": "not renamed; canonical IDs are catalog-level identifiers to avoid breaking provenance manifests"
+  },
+  "libraries": {
+    "main": {
+      "name": "Main Scientific Figure Style Library",
+      "canonical_catalog": "projects/scientific-figure-style-corpus/manifests/main-reference-catalog.csv",
+      "count": 21,
+      "local_assets": 14,
+      "external_reference_only": 7,
+      "next_id": "M022"
+    },
+    "bioinformatics": {
+      "name": "Bioinformatics Figure Reference Library",
+      "canonical_catalog": "projects/bioinformatics-figure-reference-library/reference-catalog.csv",
+      "count": 22,
+      "local_assets": 15,
+      "restricted_external": 5,
+      "open_access_metadata_only": 2,
+      "next_id": "BI023"
+    }
+  },
+  "migration_map": "projects/figure-reference-libraries/id-map.csv"
+}
