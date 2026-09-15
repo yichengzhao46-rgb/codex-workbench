@@ -1,0 +1,559 @@
+000 ZOT-KRUDZRWN-XBZRQ7D5-FIG1-P3
+Functional genes and microbial interactions governing methanogenesis via direct interspecies electron transfer: Functions and emerging concepts
+Fig. 1. Schematic representation of proposed mechanisms of DIET mechanism in AD. (a) Pili-based electron transfer through Type IV conductive pili (PilA) enabling direct electron exchange between microbial partners. (b) Outer-membrane c-type cytochrome-mediated transfer via redox-active proteins (e.g., OmcS, OmcZ) forming electron conduits. (c) Conductive material-assisted DIET pathway, where carbon- and iron-based materials (biochar, magnetite) serve as electron bridges between exoelectrogens and methanogens. Arrows indicate electron flow (e−) and syntrophic interaction routes facilitating enhanced methane production.
+
+001 ZOT-KRUDZRWN-XBZRQ7D5-FIG4-P6
+Functional genes and microbial interactions governing methanogenesis via direct interspecies electron transfer: Functions and emerging concepts
+Fig. 4. (a) Conceptual illustration of electron transfer between exoelectrogenic and endoelectrogenic microorganisms during DIET-mediated methanogenesis. Exoelectrogens (e.g., Geobacter spp.) oxidize substrates and transfer electrons via conductive pili (PilA), cytochromes (OmcS, OmcZ), and associated complexes (Rnf, PpaA, HydAB), which are accepted by methanogens through key redox enzymes (Fmd, Ftr, Mer, Mtr, Mcr) leading to methane formation. (b) Substrate-specific metabolic conversion pathways showing the transformation of food waste, complex polymers, and lignocellulosic biomass into intermediates (propionate, ethanol, butyrate, acetate) and subsequent acetoclastic and hydrogenotrophic methanogenesis. Coloured boxes represent the dominant microbial groups associated with each substrate. (c) Functional genes and enzyme complexes involved in DIET-driven electron transfer and methanogenesis. The colour indicators denote gene regulation patterns in response to conductive materials: blue = increased relative abundance with carbon-based materials; yellow = increased relative abundance with iron-based materials; red = decreased relative abundance with iron-based materials.
+
+002 ZOT-J5XG9Z5E-I4IT3A4W-FIG4-P5
+Syntrophic interspecies electron transfer drives carbon fixation and growth by <i>Rhodopseudomonas palustris</i> under dark, anoxic conditions
+Fig. 4. Pathways of IET and dark CO2 fixation in G. metallireducens and R. palustris coculture. (A) Electrosyntrophy (i.e., IET) between G. metallireducens and R. palustris and dark CO2 fixation by R. palustris. Red arrows illustrate electron transfer paths from G. metallireducens to R. palustris. Green lines show the path of dark CO2 fixa- tion. The blue dashed square indicates the region selected to detail the electron uptake pathway in R. palustris shown in (B). Inset heat maps show the transcript abundances of related annotated genes involved in the corresponding pathway in G. metallireducens and R. palustris presented as log2 FPKM values (fragments per kilobase per million mapped reads). The median log2 FPKM values for G. metallireducens and R. palustris in the coculture were 7.5 and 6.5, respectively. (B) Detailed pathway of electron uptake in R. palustris during electric syntrophy with G. metallireducens. (1) Acyl-CoA (coenzyme A) synthetase; (2) and (4) NADH dehydrogenase complex; (3) c-type cytochromes, e-pili and flagella of G. metallireducens; (5) nanofilaments and (6) c-type cytochromes of R. palustris; (7) cytochrome c2; (8) ubiquinol:cytochrome c oxidoreductase complex; (9) nitrate reductase; (10) ATPase; (11) RuBisCo form II; (12) enzymes participating in the CBB cycle. OM, outer membrane; IM, inner membrane; ES, electron shuttles.
+
+003 ZOT-DBURERI2-8GGDPTWB-FIG3-P7
+Electrogenic CH4 oxidation on a bioanode: putative extracellular electron transport system in                     <i>Methylobacter</i>                     sp
+Figure 3 Metabolic reconstruction and predicted EET architecture of the Methylobacter MAG. (A) Schematic overview of pathways encoded by the genome, including methane oxidation by particulate and soluble methane mono-oxygenases (pMMO, sMMO) and methanol dehydrogenase (MDH). The particulate methane mono-oxygenase corresponds to a canonical pmoCAB gene cluster, and the soluble methane mono-oxygenase to mmoXYZBDC. Methanol dehydrogenases include both calcium-dependent Mxa-type ( mxaF ) and lanthanide-dependent XoxF-type ( xoxF ) enzymes. Formaldehyde oxidation and assimilation via the ribulose monophosphate (RuMP) pathway and C1 -processing enzymes (Fae, formaldehyde-activating enzyme; MtdB, methylene-tetrahydromethanopterin dehydrogenase; Mch, methenyl-H4 MPT cyclohydrolase; Ftr, formyltransferase; Fwd, formylmethanofuran dehydrogenase). Sulfur metabolism comprises the Sox multienzyme complex (SoxABCDXY), sulfide: quinone oxidoreductase (SQR), and sulfide dehydrogenase (FccAB). The respiratory chain comprises NADH: quinone oxidoreductase (Nuo), cytochrome bc1 , cytochrome aa3 oxidase, and bd - and o -type quinol oxidases. The RNF complex functions as a ferredoxin: NAD+ oxidoreductase. “C” denotes c -type cytochromes, 4 TMR indicates the inner membrane-anchored cytochrome, and the outer membrane conduit is depicted as a PCC-like (porin-cytochrome complex). (B) Organization of a putative extracellular EET gene cluster (locus tags 2045–2048) with predicted protein structures including signal peptides. (C) Predicted trans-envelope architecture of the EET conduit. Protein structures of 2046–2047 were generated as a complex, whereas 2045 and 2048 were modeled separately; models were generated without signal peptides. Arrows indicate outward electron transfer toward extracellular acceptors.
+
+004 ZOT-VVKBH8NA-NEQH4DHJ-FIG2-P3
+Electrochemical Monitoring of Metabolic Activity of Methane/Methanol Conversing <i>Methylococcus Capsulatus</i> (Bath) Cells Based on Extracellular Electron Transfer
+Figure 2. The metabolic pathway in M. capsulatus (Bath) for CH4/CH3OH conversion. ADP: adenosine diphosphate. ATP: adenosine triphosphate. Cytaa3: cytochrome aa3. Cytbc1: cytochrome bc1. Cytbd: cytochrome bd. CytC: cytochrome C. NAD+/NADH: nicotinamide adenine dinucleotide. NDH: NADH dehydrogenase. pMMO: particulate methane monooxygenase. sMMO: soluble methane monooxygenase. UQ/UQH2: ubiquinone/ubiquinol.
+
+005 ZOT-3MNSQTVZ-9K59TG86-FIG4-P7
+Synthetic microbial community drive methane oxidation coupled to Cr(VI) reduction via division of labor and extracellular electron transfer
+Fig. 4. (a) Methane metabolism pathway (Ru5P: Ribulose 5-phosphate; H6P: arabino-Hex-3-ulose 6-phosphate; F6P: Fructose 6-phosphate; F1,6P: Fructose 1,6- bisphosphate; G3P: Glyceraldehyde 3-phosphate; R5P: Ribose 5-phosphate; Xu5P: Xylulose 5-phosphate; E4P: Erythrose 4-phosphate; Su7P: Sedoheptulose 7-phos­ phate); (b) Key genes involved in chromate reduction in the twelve MAGs (chrA and chrR); (c) Key genes involved in the EET in the twelve MAGs; (d) Schematic diagram of EET; (e) Variation of Cr(VI) concentration in the inhibition experiment; (f) CH4 consumption and inhibition rate in the inhibition experiment.
+
+006 ZOT-FCN7YRTW-MJYP7MYI-FIG6-P8
+Carbon Reallocation Driven by Aerobic–Anoxic Alternation during Methanotrophic Metabolism
+Figure 6. Schematic diagram of metabolic flux and the regulation mechanism by aerobic−anoxic alternation.
+
+007 ZOT-J5XG9Z5E-I4IT3A4W-FIG5-P6
+Syntrophic interspecies electron transfer drives carbon fixation and growth by <i>Rhodopseudomonas palustris</i> under dark, anoxic conditions
+Fig. 5. Strategies of CO2 fixation by R. palustris under anoxic conditions. (A) Two conventional pathways of light-dependent CO2 fixation in R. palustris, includ- ing photoheterotrophy and photoautotrophy. (B) Syntrophic light-independent electroautotrophy. Analytical techniques Acetate consumption by monocultures and coculture of G. metallireducens and R. palustris was monitored using ultrahigh-performance liquid chromatography (U-3000, Thermo Fisher Scientific, Massachusetts, USA), as described previously with an Aminex HPX-87H column (Bio-Rad, Hercules, USA) and detected at 210 nm by an ultraviolet detector (11). Nitrate was measured with an ion chromatograph (ICS 900, Thermo Fisher Scientific), as previously described (44).
+
+008 ZOT-B5DYAD9Y-38F3E98C-FIG3-P5
+Iron oxides act as an alternative electron acceptor for aerobic methanotrophs in anoxic lake sediments
+Fig. 3. Key genes and potential mechanisms of extracellular electron transfer in the consortium. (a) Key genes involved in extracellular electron transfer in the six MAGs. ubiquinol c1: cytochrome c reductase cytochrome c1 subunit; ubiquinol b: cytochrome c reductase cytochrome b subunit; pilA: type IV pilus assembly protein PilA; blueB: 5,6-dimethylbenzimidazole synthase; C1-hpah: 4-hydroxyphenylacetate 3-hydroxylase; fre: aquacobalamin reductase; phoN: acid phosphatase (class A); ribA: GTP cyclohydrolase II; ribBA: 3,4-dihydroxy 2-butanone 4-phosphate synthase; ribD: diaminohydroxyphosphoribosylaminopyrimidine deaminase; ribE: ribo­ flavin synthase; ribF: riboflavin kinase; ribH: 6,7-dimethyl-8-ribityllumazine synthase; ssuE: FMN reductase; yigB: FMN hydrolase. (b) The potential extracellular electron transfer mechanism in the consortium. I, II, III and IV denote to the four complexes involved in intracellular respiration; Q: coenzyme Q; MHC: multiheme c- type cytochromes. The pathway 1 represents intracellular aerobic respiration by using O2 as the electron acceptor. The pathway 2-4 represent extracellular electron transfer pathways by putative multiheme c-type cytochromes (MHC), electron shuttles and electrically conductive pili (e-pili), respectively.
+
+009 ZOT-2IMW52SF-9CSAUBPH-FIG2-P4
+Phototrophic extracellular electron uptake is linked to carbon dioxide fixation in the bacterium Rhodopseudomonas palustris
+Fig. 2 Photosynthetic electron transfer is required for extracellular electron uptake. Current densities of TIE-1 wild-type (WT) in response to inhibition of the photosynthetic ETC under illuminated and dark (shaded regions) conditions with (a) antimycin A, (b) carbonyl cyanide m-chlorophenyl hydrazine (CCCP), and (c) rotenone. Data shown are representative of three experiments. Each current density diagram (left) is followed by the proposed path of electron ﬂow (right). The site of chemical inhibition is indicated by a red halo on the electron path diagrams. P870 (photosystem), P870* (excited photosystem), UQ (ubiquinone), bc1 (cytochrome bc1), c2 (cytochrome c2), NADH-DH (NADH dehydrogenase), Δp (proton gradient), H+ (protons), hv (light), ? (currently unknown), PMF (proton motive force) and ATP (adenosine triphosphate). Source data are provided as a Source Data File
+
+010 ZOT-EGA3EPP9-EE5SP927-FIG7-P12
+Mechanisms of Direct Electron Transfer Governed by Redox‐Active Conductive Carrier with Superior Wettability in Anaerobic Biofilms
+Figure 7. Schematic of redox-active conductive TA-FeBC bioﬁlm driving dual-pathway DET mechanism.
+
+011 ZOT-B5DYAD9Y-38F3E98C-FIG2-P5
+Iron oxides act as an alternative electron acceptor for aerobic methanotrophs in anoxic lake sediments
+Fig. 2. Key genes and potential mechanisms of CH4 oxidation in the consortium. (a) Key genes involved in CH4 oxidation in the six metagenome assembled genomes (MAGs). pmoA/B/C: particulate methane monooxygenase subunit A/B/C; mxaA/C/D/F/G/I/J/K/L: methanol dehydrogenase subunit A/C/D/F/G/I/J/K/L; fdhA: glutathione-independent formaldehyde dehydrogenase; fdhF: formate dehydrogenase major subunit; fdsD: formate dehydrogenase subunit delta. (b) Metabolic pathways of CH4 or CH3OH in Methylomonas and Methylophilus. MMO: methane monooxygenase (particulate); Mdh: methanol dehydrogenase; MtdA: methyl­ enetetrahydrofolate dehydrogenase; Fch: methenyltetrahydrofolate cyclohydrolase; FtfL: formatetetrahydrofolate ligase; Fdh: formate dehydrogenase; GlyA: serine hydroxymethyltransferase; Sga: serine-glyoxylate transaminase; Hpr: hydroxypyruvate reductase; Glk: D-glycerate 2-kinase; Eno: enolase; Ppc: phosphoenolpyruvate carboxylase; MtkAB: malyl-CoA synthetase subunit; Mcl: Malyl-CoA lyase; H4F, tetrahydrofolate; H4MPT, tetrahydromethanopterin; Hps: 3-hexulose-6-phosphate synthase; Phi: 6-phospho-3-hexuloisomerase; Pgi: glucose-6-phosphate isomerase; Zwf: glucose-6-phosphatedehydrogenase; Pgl: 6-phosphogluconolactonase; Edd: phosphogluconate dehydratase; Pfk: 6-phosphofructokinase; Fba: fructose-bisphosphate aldolase; Pyk: pyruvate kinase; Ru5P: Ribulose-5-phosphate; H6P: Hexulose- 6-phosphate; F6P: Fructose-6-phosphate; G6P: glucose-6-phosphate; 6PG: 6-phosphogluconate; F1,6P: fructose 1,6-bisphosphate; GAP: glyceraldehyde-3-phosphate; PG: phosphoglycerate; PEP: phosphoenolpyruvate; 1.1.1.37: malate dehydrogenase; 4.2.1.2: fumarate hydratase; 1.3.5.4: fumarate reductase (quinol); 1.1.2.4: cytochrome-dependent D-lactate dehydrogenase; 2.3.1.8: phosphate acetyltransferase; acetate kinase.
+
+012 ZOT-G4HH6M96-4N5AUJP6-FIG1-P3
+Single-particle imaging uncovers reverse electron transfer efficiency between Shewanella oneidensis MR-1 and shaped haematite
+Fig. 1 | Contrasting abiotic catalysis and biotic electron transfer. Schematic illustrations of abiotic heterogeneous catalysis and biotic electron transfer on shaped semiconductors, highlighting key fundamental differences in kinetic definitions, pathway complexity, equivalent molecule–facet binding versus preferential cell–facet binding, energy-level constraints alone versus additional biological regulation, driving forces for inter-molecular and intercellular interactions, and emergent synergistic or antagonistic behaviours (for example, microbial facet-binding preference can either align with or oppose facet-dependent charge-transfer capabilities, enhancing or suppressing net performance) (for details, see Supplementary Table 4).
+
+013 ZOT-Q638MGHN-NZSG4WKV-FIGScheme1-P8
+Bidirectional extracellular electron transfer modulates heterotrophic CO2 fixation in Rhodopseudomonas palustris
+Scheme 1. Schematic illustration of the response mechanism of heterotrophic CO2 fixation of R. palustris TIE-1 under outward EET and inward EET conditions.
+
+014 ZOT-VVKBH8NA-NEQH4DHJ-FIG1-P3
+Electrochemical Monitoring of Metabolic Activity of Methane/Methanol Conversing <i>Methylococcus Capsulatus</i> (Bath) Cells Based on Extracellular Electron Transfer
+Figure 1. A photograph (A) and a schematic (B) of a single-chamber electrochemical device for electrochemical measurements.
+
+015 ZOT-2IMW52SF-9CSAUBPH-FIG7-P10
+Phototrophic extracellular electron uptake is linked to carbon dioxide fixation in the bacterium Rhodopseudomonas palustris
+Fig. 7 Conceptual model of phototrophic extracellular electron uptake. Extracellular electron uptake is connected to the photosynthetic electron transport chain (pETC) and carbon dioxide (CO2) ﬁxation in R. palustris TIE-1. The CBB cycle (Calvin-Benson-Bassham) uses RuBisCO and is the primary sink for electrons that enter the photosystem from poised electrodes. The electrons are used by the CBB cycle as NAD(P)H (reduced nicotinamide adenine dinucleotide phosphate) that is exchanged with NADH (reduced nicotinamide adenine dinucleotide) produced via reverse electron ﬂow. For details please read the text. ATP (adenosine triphosphate), e−(electrons), P870 (photosystem), P870* (excited photosystem), UQ (ubiquinone), bc1 (cytochrome bc1), c2 (cytochrome c2), H+ (protons), hv (light), ? (currently unknown), OM (outer membrane), P (periplasm), CM (cytoplasmic membrane) and ICM (inner cytoplasmic membrane)
+
+016 ZOT-IBRIGFYC-CHCB7JWI-FIG5-P5
+Syntrophic anaerobic photosynthesis via direct interspecies electron transfer
+Figure 5 | Conceptual model of syntrophic anaerobic photosynthesis of G. sulfurreducens and P. aestuarii via direct electron transfer. Syntrophic growth of both species is supported through acetate oxidation by the heterotroph and CO2 reduction by the phototroph.
+
+017 ZOT-CG5HDS4W-N6NDNVD8-FIG4-P8
+Sustainable Oxygen Reduction Catalyzed by Whole-Cell Electro-Mutualism
+Figure 4. Functional assessment of riboflavin-mediated electron transport in RAG-1 under respiratory inhibition. (a) Schematic diagram of electron transfer pathways in RAG-1 and corresponding inhibition mechanisms. Rotenone (CIi) inhibits NADH oxidation at Complex I; dicoumarol (CoQi) impairs quinone-mediated electron transfer; combined inhibition (CI&CoQi) disrupts riboflavin-driven electron flow by blocking both routes. (b) Maximum cathodic current densities of RAG-1 under each condition with 5 μM riboflavin supplementation. (c) Apparent electron transfer rate constants (Kapp) determined by linear fitting of anodic (Epa) and cathodic (Epc) peak separations under control and inhibitor-treated conditions. (d) CVs of RAG-1 under control and inhibitor-treated conditions, showing characteristic redox features. Annotated peaks correspond to representative anodic and cathodic potentials.
+
+018 ZOT-CG5HDS4W-N6NDNVD8-FIG3-P6
+Sustainable Oxygen Reduction Catalyzed by Whole-Cell Electro-Mutualism
+Figure 3. Riboflavin-enhanced extracellular electron transfer in RAG-1 via interaction with membrane-bound RnfB. (a) Proposed electron transfer pathway in RAG-1 involving riboflavin−RnfB interaction and downstream respiratory complexes. IM, inner membrane; OM, outer membrane. (b) Maximum cathodic current densities of RAG-1 biocathodes supplemented with increasing riboflavin concentrations (0.5−5 μM). (c) Molecular docking model of riboflavin in the quinone-binding pocket of RnfB. (d) NCI analysis of the riboflavin−RnfB complex. (e) Frontier molecular orbital diagrams of free riboflavin and the riboflavin−RnfB complex.
+
+019 ZOT-AKRKE9WD-ICD39ZT7-FIG6-P7
+In Situ Biosynthesis of FeS Nanoparticles Boosts Current Generation in Bioelectrochemical Systems Through Efficient Electron Transfer
+Figure 6. A) Genes that encode electron transport proteins (c-type cytochromes or pili) that were diﬀerentially expressed in G. sulfurreducens bioﬁlm on the Fe3O4/L-Cys modiﬁed/unmodiﬁed IDAs; B) The up-regulated GO terms of G. sulfurreducens bioﬁlm on the Fe3O4/L-Cys modiﬁed IDAs; C) Schematic illustration of the electron transfer process between microbe to microbe, and microbes to the electrode (Fe3O4/L-Cys modiﬁed IDAs); D) Schematic image of the proposed EET model of G. sulfurreducence on the Fe3O4/L-Cys modiﬁed IDAs. IM: inner membrane; OM: outer membrane.
+
+020 ZOT-AKWEURIC-85GGRG7R-FIG1-P2
+Metabolic modeling of a mutualistic microbial community
+Figure 1 Methanogenic syntrophies and their potential distribution. (A) The digestive system of ruminants and other animals, fresh water sediments, and anaerobic digesters for the treatment of agricultural waste are representative environments where syntrophy-based methanogenesis is vigorously active, likely as a result of syntrophic associations between methanogenic archaea and hydrogen-producing microorganisms such as D. vulgaris. (B) Schematic representation of an anaerobic trophic cascade. Hydrogen produced in the fermentation of biopolymers and fatty acids serve as the electron donor for the secondary fermenters and subsequently for methanogenic reduction of carbon dioxide. (C) FISH microphotograph of a syntrophic association between M. maripaludis (red) and D. vulgaris (green), the model syntrophy for this study. (D) Diagram representing the main metabolic interactions between D. vulgaris and M. maripaludis in methanogenic co-cultures. Hydrogen, carbon dioxide, and acetate are known substrates for M. maripaludis; the transfer of formate from D. vulgaris to M. maripaludis is proposed based on our data.
+
+021 ZOT-FJ5UWFVX-T72ZHZ7N-FIG4-P8
+Bio‐Photocatalytic Synergy Enables Valorization of CH                     <sub>4</sub>                     and CO                     <sub>2</sub>                     Into Hydrogen and 4‐Hydroxybenzoate in Engineered Methanotrophic Bacteria
+FIGURE 4 CO2 bio-sequestration for succinate production. a) Schematic illustration of the metabolic engineered pathway for CO2 bio- sequestration in the DC03 strain. SUC, succinate; MAL, malate. b) CO2 emission of KO12 and DC03 strains. c) Influence of CO2 bio-sequestration on production in KO12 and DC03 strains. Data represent mean ± s.d. derived from three independent biological replicates (n = 3). Note that some error bars are obscured by the data symbols due to small standard deviations.
+
+022 ZOT-FJ5UWFVX-T72ZHZ7N-FIGScheme1-P2
+Bio‐Photocatalytic Synergy Enables Valorization of CH                     <sub>4</sub>                     and CO                     <sub>2</sub>                     Into Hydrogen and 4‐Hydroxybenzoate in Engineered Methanotrophic Bacteria
+SCHEME 1 Schematic illustration of greenhouse gas valorization in a biohybrid system. a) H2 production from CH4 by SMR. b) Bioconversion of CH4 and CO2 for 4HBA biosynthesis by methanotrophic bacteria. c) Solar-driven formate dehydrogenation by metal complexes. d) In situ H2 and 4HBA co-synthesis by a biohybrid system. The yellow arrows represent the flow of photo-generated electrons, while the blue arrows indicate the metabolic mass transfer of substrates.
+
+023 ZOT-GPEXBYFS-X774ASNN-FIG1-P4
+Biosynthesized ZnS nanoparticles across cell membranes for highly selective microbial electrosynthesis of acetate from CO2
+Fig. 1. Conceptual design, structure, and viability characterization of the ZnS NPs@bacteria hybrid biocathode. (a) Schematic illustration of the in-situ biosynthesis of ZnS nanoparticles on a CC electrode to form a ZnS NPs@bacteria hybrid biocathode with a continuous conductive interface. (b) SEM image of an ZnS NPs@bacteria cell. (c and d) TEM mapping of an ultrathin biofilm section from the ZnS NPs@bacteria hybrid biocathode (day 6). (e) Size distribution of ZnS NPs. (f) HAADF-STEM and EDS mapping of an ultrathin biofilm section from the ZnS NPs@bacteria hybrid biocathode (day 6). (g) Magnified HAADF-STEM and EDS mapping of the cell surface. IM, inner membrane; OM, outer membrane. (h) XRD pattern of ZnS NPs; (i-k) SEM image, CLSM image, and biofilm viability profile of the CC biocathode on day 36. (l-n) SEM image, CLSM image, and biofilm viability profile of the ZnS NPs@bacteria hybrid biocathode on day 36.
+
+024 ZOT-JFZAS9NS-S5SU82R3-FIG5-P9
+Diverse electron carriers drive syntrophic interactions in an enriched anaerobic acetate-oxidizing consortium
+Fig. 5 Predicted metabolic ﬂuxes in the three-member SAO consortium. Cell diagrams showing the predicted metabolic pathways for acetate oxidation in DTU068_1 and methane generation from hydrogen/formate in Methanothermobacter_1 and Methanothermobacter_2. Values of predicted ﬂux, obtained from parsimonious ﬂux balance analysis, are shown in red text within boxes. Net catabolic reactions are based on stoichiometry obtained from parsimonious ﬂux balance analysis. Protein abbreviations are deﬁned in the legend of Fig. 4.
+
+025 ZOT-TW2PI7B6-2M3TAALY-FIG5-P6
+Biochar-Mediated Anaerobic Oxidation of Methane
+Figure 5. Proposed mechanisms for biochar-mediated AOM: (1) proposed direct electron transfer from ANME-2d to biochar; (2) indirect extracellular electron transfer from ANME-2d to biochar based on direct interspecies electron transfer between ANME-2d and Geobacteraceae; (3) indirect extracellular electron transfer from ANME-2d to biochar based on interspecies electron transfer between Geobacteraceae and ANME-2d via metabolism of intermediate, acetate (direct electron transfer from ANME-2d to biochar is the thermodynamic premise for biosynthesis of acetate from CH4 oxidation in this case).
+
+026 ZOT-YVMA22R4-6R56RAIY-FIG1-P6
+Anaerobic oxidation of methane mediated by microbial extracellular respiration
+Fig. 1. Extracellular electron transfer pathways in ANME–SRB assemblages for electromicrobiology of AOM coupled to sulfate reduction. A. A putative diffusion-dependent interspecies electron transfer between ANME and SRB: ANME lacking membrane-associated redox-active and con- ductive apparatus transfer electrons to SRB via diffusive intermediates. B. Direct electron transfer from ANME to closely associated SRB via membrane-bound multi-heme cytochrome (MHC) proteins. C. Direct electron transfer from ANME to spatially distanced SRB via conductive ﬁla- ments generated by SRB (Pili) or/and putatively by ANME (archaella), accompanied by MHCs-mediated electron exchanges on ANME and SRB outer membranes.
+
+027 ZOT-GPEXBYFS-X774ASNN-FIG4-P8
+Biosynthesized ZnS nanoparticles across cell membranes for highly selective microbial electrosynthesis of acetate from CO2
+Fig. 4. ZnS NPs shifted carbon metabolism and functional gene allocation toward acetate-oriented pathways. (a) Schematic illustration of metabolic pathways for CO2 fixation and carbon flux redistribution under CC and ZnS NPs@bacteria hybrid biocathodes. Enzyme commission (EC) numbers are indicated next to the re­ actions. (b-d) The heatmaps show log2-fold changes in gene abundances between the ZnS NPs@bacteria hybrid and CC biocathode for representative enzymes in (b) the Wood-Ljungdahl pathway, (c) reverse β-oxidation, and (d) fatty acid biosynthesis. (e) The bar diagram shows show the genus-level contributions to functional genes associated with electron transfer and energy metabolism under CC and ZnS NPs@bacteria hybrid biocathodes. CC and ZnS/CC denote the CC bioelectrode and the ZnS NPs@bacteria hybrid bioelectrode, respectively.
+
+028 ZOT-HKIZ3I85-GKR7TU4P-FIG2-P4
+A <i>De Novo</i> Auto‐Activated Solar‐Driven Biohybrid System for Hydrogen Production in Methanotrophic Cells
+Figure 2. H2 production in genetically engineered 5GB1 (5GB1-H01 and 5GB1-H02) and wild type. (a) Genetically overexpressing endogenous gene hox in mutants. For uncropped gel scan see Figure S3 in Supporting Information. (b) H2 production by wild-type and mutants in PBS. (c) H2 production by 5GB1-H02 in PBS with the addition of inhibitors. (d) Methane utilization by 5GB1-H02 in PBS with the addition of inhibitors. (e) Schematic mechanism for electron transfer in methanotrophic resting cells. This Figure was created using BioRender with permission (publication license: PI27IO4UK2). Data are presented as means.d. (n=3).
+
+029 ZOT-ZN7J262M-NV53KDXC-FIG1-P3
+Enigmatic persistence of aerobic methanotrophs in oxygen-limiting freshwater habitats
+Figure 1. Schematic representation of the possible steps in the metabolism of aerobic methanotrophic bacteria. O2 is used in the oxidation of CH4 to methanol in the first step catalyzed by MMO enzymes (represented by the pMMO in this scheme). This first step may also be performed in the cytoplasm by the sMMO in methanotrophic bacteria possessing this enzyme. Methanol is converted to formaldehyde by methanol dehydrogenase (MDH); formaldehyde can be assimilated into cellular compounds (via the ribulose monophosphate (RuMP) cycle in gammaproteobacterial MOB or via the serine cycle in alphaproteobacterial MOB) or be oxidized to formate by formaldehyde dehydrogenases (FADH); formate is then oxidized to CO2 by formate dehydrogenases (FDH). O2 is the terminal electron acceptor in aerobic respiration, while other oxidants can potentially serve as terminal electron acceptors in methanotrophic bacteria performing anaerobic respiration under O2-limiting conditions. Under O2 limitation, carbon that enters the RuMP cycle can go through fermentation for energy generation as opposed to respiration. ∗Iron (Fe3+) and manganese (Mn4+) reduction would presumably occur outside the cell, via extracellular electron transfer, and could potentially be mediated by electron shuttles or microbial consortia. This figure was created with BioRender.
+
+030 ZOT-2ZZCT8JM-ZSXP8Q2T-FIG7-P10
+Carbon partitioning mechanisms in environmental methanotrophic consortia for methane-based single-cell protein production
+Fig. 7. Conceptual metabolic framework illustrating the proposed relationship between methane oxidation, downstream C1 metabolism, carbon allo­ cation, and SCP productivity in the enriched methanotrophic consortia. The pathway integrates methane oxidation, methanol and formaldehyde conversion, RuMP assimilation, H4F/H4MPT-linked C1 transfer, serine-cycle-associated metabolism, serine biosynthesis genes (serA, serB, and serC), the Calvin–Benson–Bassham (CBB) cycle for CO2 re-assimilation, and formate oxidation to CO2. Colored mini-bars represent row min-max normalized metagenomic gene abundance for MOBC1–MOBC4 and are presented as indicators of metagenomic functional potential.
+
+031 ZOT-4YYHXE4L-E2S47CMC-FIG4-P7
+Current trends in electromicrobiology of methane oxidation
+Figure 4. Conceptual representation of biogeochemical cycles associated with electrochemically driven methane oxidation across geochemical zones. The special metabolism of methane-oxidizing bacteria (MOB) under microaerobic conditions enables coupling of methane oxidation to extracellular electron transfer (EET)-linked biogeochemical cycles, including direct Fe(III)/Mn(IV) reduction (1), or intermediate-dependent synergistic interactions with bacterial partners for more diverse elemental (Fe, Mn, Cr, and As) cycles (2). In anoxic zones, anaerobic methanotrophic archaea (ANME) use EET pathways to couple anaerobic oxidation of methane (AOM) to direct Fe(III)/Mn(IV) reduction (3), reduction of humic substances and analogs like pyrogenic carbon (4), Cr(VI) (5), and As(V) (6), or through direct interspecies electron transfer with sulfate-reducing bacteria for sulfate reduction (7). Certain methanogens can also couple AOM to Fe(III) reduction via direct EET (8) or through intermediate-dependent synergistic interactions with metal-reducing bacteria (9). AOM-linked biogeochemical cycles can also interact with each other: humic substances and pyrogenic carbon can function as electron snorkels to facilitate Fe(III)- and Mn(IV)-dependent AOM (10); iron minerals can interact with and stimulate humic-dependent (11) and sulfate-dependent AOM (12); humic or iron minerals can mediate methane oxidation coupled to CO2 reduction (13) or N2O reduction (14).
+
+032 ZOT-YVMA22R4-6R56RAIY-FIG2-P9
+Anaerobic oxidation of methane mediated by microbial extracellular respiration
+Fig. 2. Extracellular electron transfer pathways of AOM coupled to reduction of metal oxides (iron and manganese oxides). A. Direct electron trans- fer from ANME or methane-oxidizing archaea to metals via membrane-bound multi-heme cytochrome (MHC) proteins, or putatively accompanied by long-range electron transfer via conductive archaellum. B. Putative mediated electron transfer from methane-oxidizing archaea to metals via cyclic redox of soluble electron shuttles secreted by cells. C. Methane-oxidizing archaea lacking membrane-associated redox-active and conductive apparatus transfer electrons to metals with metal-reducing bacteria playing a bridging role, i.e. archaea transfer electrons to partnered metal- reducing bacteria through diffusive intermediates, then bacteria oxidizing intermediates to reduce metals via canonical EET pathways.
+
+033 ZOT-2XQJC5ZR-3EDUZ88P-FIG6-P28
+Magnetite-enhanced humic substances-driven anaerobic oxidation of methane: Insights into extracellular electron transfer mechanisms and microbial interactions
+Figure 6. Potential model of microbial syntrophic cooperation in HA-driven AOM.
+
+034 ZOT-XKPR3PWL-63E7V4ZZ-FIG5-P7
+Methane-dependent selenate reduction by a bacterial consortium
+Fig. 5 Metabolic pathway linking methane oxidation to selenate reduction by bacterial consortia. The color of the symbols indicates the number of expressed unique peptides identiﬁed with proteomics. Empty symbols indicate genes missing in the corresponding MAGs. Pmo particulate methane monooxygenase, Medh PQQ-dependent methanol dehydrogenase, Fae formaldehyde-activating enzyme, Fdh NAD- dependent formate dehydrogenase, Gly serine hydroxymethyltransferase, AGXT serine-glyoxylate aminotransferase, Hpr hydroxypyruvate reductase, Gck glycerate kinase, ENO enolase, Pyk pyruvate kinase, Ppc phosphoenolpyruvate carboxylase, Madh malate dehydrogenase, Mtk malate-CoA ligase, Mcl malyl-CoA lyase, Fum fumarate hydratase, Sdh succinate dehydrogenase, CS citrate synthase, Ace pyruvate dehydrogenase, Pta phosphate acetyltransferase, Ack acetate kinase, Lld L-lactate dehydrogenase, Suc succinyl-CoA synthetase, Mut methylmalonyl-CoA mutase, Mce methylmalonyl-CoA epimerase, Mmd methylmalonyl-CoA decarboxylase, Pct propionyl-CoA transferase, Aca acetyl-CoA C-acetyltransferase, Hbd 3-hydroxybutyryl-CoA dehydrogenase, Ech enoyl-CoA hydratase, Ccr crotonyl-CoA reductase, Bct butyryl- CoA transferase, Nap periplasmic nitrate reductase, Nir copper-containing nitrite reductase, Pcs propionyl-CoA synthetase, Acs acetyl-CoA synthetase, Ldh lactate dehydrogenase.
+
+035 ZOT-3625XNU4-DIPJIBAZ-FIG6-P7
+Genomic and enzymatic evidence of acetogenesis by anaerobic methanotrophic archaea
+Fig. 6 Proposed conceptual diagram of carbon cycling in cold seeps. A proposed conceptual model of carbon cycling in cold seeps: during the classic anaerobic oxidation of methane process, methane can be converted into organic carbon, such as acetate, which further fuels the heterotrophic community in the ecosystem.
+
+036 ZOT-H6FIEJJA-8FF87MRP-FIG2-P4
+Methanotroph-driven phosphorus recovery for sustainable wastewater management
+Fig. 2 | Genetic and metabolic characterization of methanotrophic PAOs revealing their dual roles in methane oxidation and polyP metabolism. a, Gene abundance for key metabolic pathways, including methane oxidation, polyP metabolism, glycogen metabolism, RuMP and RuBP cycles across methanotrophic PAOs (Ca. M. multiphosphori and 22 Methylococcaceae) and canonical PAOs (19 Accumulibacter and 4 Tetrasphaera), retrieved from NCBI RefSeq Database and our study. Methanotrophic PAOs show conserved polyP and methane metabolism genes, while the missing glgA gene in its glycogen biosynthesis pathway of Ca. M. multiphosphori was filled on the basis of RACS- detected glycogen accumulation. b, Generalized and reconstructed metabolic model representing the integration of methane oxidation, RuMP cycle, polyP metabolism and P transport, TCA cycle and glycogen metabolism in both methanotrophic and canonical PAOs. The illustration highlights shared pathways such as the TCA cycle, P transport and polyP metabolism among methanotrophic and canonical PAOs. Only methanotrophic PAOs contain the methane oxidation pathway and RuMP cycle. For glycogen synthesis, Tetrasphaera uses the glgCME pathway, while methanotrophic PAOs and Accumulibacter use the glgCAB pathway. c, Metabolic interaction potential (MIP) of mixed communities containing methanotrophic and canonical PAOs, for the evaluation of cooperative behaviours between these organisms. This illustrates how shared metabolites evolve as community complexity increases, highlighting potential synergies between methanotrophic and canonical PAOs in P recovery systems.
+
+037 ZOT-4WW3EAGK-YVETMRNQ-FIG4-P7
+Iron Modulates the Growth and Activity of Nitrate-Dependent Methanotrophic Bacteria by Reprogramming Carbon Metabolism
+Figure 4. Expression of genes involved in iron, nitrogen and methane metabolic pathways in “Ca. M. sinica” under 40 μM Fe2+treatment compared to 20 μM Fe2+treatment. a, b, d, e, Changes in transcripts (a, d) and proteins (b, e) related to iron metabolism (a, b) and methane oxidation coupled with complete denitrification (d, e) in “M. sinica” exposed to 40 μM Fe2+. Each symbol represents the mean of three replicates, with error bars indicating standard deviations. Differences between the two setups were assessed using Hedges’ g for effect size, with’**’ indicating a substantial difference (effect size > 0.8) between the two sets of data (Tables S8−S11). c, f, Scheme of iron metabolism and methane oxidation coupled to complete denitrification in “M. sinica”. Fur, ferric uptake regulation protein; Fd, ferredoxin; Bfr, bacterioferritin; Nap, periplasmic nitrate reductase; NirS, cytochrome cd1 nitrite reductase; Nod, putative nitric oxide dismutase; pMMO, particulate methane monooxygenase; Serine, serine pathway; CBB, Calvin Benson Bassham cycle.
+
+038 ZOT-8UQKG5QR-8IBESLUP-FIG6-P8
+Persistent activity of aerobic methane-oxidizing bacteria in anoxic lake waters due to metabolic versatility
+Fig. 6 | Schematic overview of microbial methane oxidation in the anoxic hypolimnion of Lake Zug. The left panel depicts representative water column proﬁles of oxygen and methane. The right panel illustrates the MOB groups, comprising gammaproteobacterial MOB (ﬁlaments, large rods, small rods, cocci) as well as anaerobic NC10 bacteria and their respective contribution to methane oxidation and assimilation at and below the oxic–anoxic interface. Note that the abundance, activity, and cell size of the different gamma-MOB groups are reﬂected by their respective numbers, color shading, and size in the ﬁgure. In the presence of oxygen, all four distinct Methylococcales-related gamma-MOB groups showed methane-dependent growth at comparable rates, whereas under apparent anoxia, only one group, the large rod-shaped gamma-MOB, was persistently active. Based on this, we conclude that under hypoxic conditions, all identiﬁed MOB groups contribute to methane oxidation, while large rod-shaped MOBs, as well as pre- sumably NC10 bacteria, are responsible for the observed methane oxidation under anoxic conditions. Under anoxia, the assimilation of methane carbon into biomass exceeded the oxidation to carbon dioxide in this sampling campaign (see also Fig. S1). We envision that aerobic methane oxidation by gamma-MOB under apparent anoxia can be sustained by traces of oxygen that are periodically mixed into the anoxic waters (green arrows), in combination with anaerobic processes such as denitriﬁcation and/or fermentation that allow for energy conservation independently of oxygen. This image was created with Adobe Illustrator.
+
+039 ZOT-C2JA7PJP-R8NIKWYW-FIG3-P5
+Characterization and modelling of interspecies electron transfer mechanisms and microbial community dynamics of a syntrophic association
+Figure 3 | Insights into the mechanisms of electron transfer from transcriptomic data. (a) Fold changes observed for the differentially expressed genes in the hyb K.O. strain and CS K.O. strain. (b) Metabolic interpretation of the transcriptomic differences in the hyb K.O. strain relative to the WTstrain. The main genes unregulated in the hyb K.O. strain include the omcS that are associated with the pathway for DIET in the consortium. (c) Metabolic adjustments in the CS K.O. strain based on the transcriptomic data. The elimination of interspecies electron transfer via acetate oxidation confers a suboptimal direct electron transfer phenotype to the consortium. This is mirrored by the signiﬁcant suppression of the electron transfer pathway involved in DIET in G. metallireducens. All ﬂux values are in mmol per gram DW per h.
+
+040 ZOT-3M33NPCZ-EZYQFXX8-FIG5-P5
+Light-driven carbon dioxide reduction to methane by <i>Methanosarcina barkeri</i> in an electric syntrophic coculture
+Fig. 5 The mechanism of light-driven CO2-to-CH4 conversion in R. palustris and M. barkeri coculture as revealed by metatranscriptomics. Genes involved in the processes include those that encode (1) Sox proteins, (2) proteins involved in cyclic photophosphorylation, (3) NADH- quinone oxidoreductase, (4) Ribulose-1,5-bisphosphate carboxylase/oxygenase, (5) and (23) ATP synthase, (6) enzymes participating in the Calvin–Benson–Bassham cycle, (7) PioABC, (8) nitrogenases, (9) c-type cytochromes, (10) ﬂagellar proteins, (11) pilus proteins, (12) F420H2 dehydrogenases Fpo, (13) and (16) proteins involved in methanophenazine biosynthesis, (14) EchA-F hydrogenases, (15) MP-reducing hydrogenases VhtACG, (17) heterodisulﬁde reductases HdrDE, (18) heterodisulﬁde reductases HdrABC, (19) Formylmethanofuran dehydrogenases, (20) F420 hydrogenases, (21) Methenyl cyclohydrolases, (22) Methyl-CoM reductases, (24) methyltransferases MtrA-H, (25) Na+/H+ antiporter Nha, (26) acyl-CoA synthetases. Inset heat maps show the average transcript abundance of genes from triplicate independent cocultures presented as log2 FPKM values. The median log2 FPKM was 6.6 for R. palustris and 7.1 for M. barkeri. The blue and red lines indicate the speculated electron ﬂux and CO2 ﬁxation pathway, respectively, during light-driven methanogenesis in the coculture.
+
+041 ZOT-G67LXLNE-JPGVHPRK-FIG5-P7
+Metabolic coupling between soil aerobic methanotrophs and denitrifiers in rice paddy fields
+Fig. 5 | The proposed metabolic pathways of the coupling between aerobic methane (CH4) oxidation and denitriﬁcation in the paddy soils. A The color gradients represent the logarithm of transcripts per million (TPM) of major genes in the corresponding metagenome-assembled genomes (MAGs) classiﬁed as metha- notrophs and denitriﬁers, respectively, in the heavy DNA from 13CH4 incubation. The deﬁnitions of genes are listed in Supplementary Table 7. B Changes in the soils. The square, circle, and triangle in (A) represent MAGs recovered from black soil, red soil, and yellow soil, respectively. The error bar in (B) represents the standard error of triplicate samples, and data are presented as mean values ± standard error (n = 3; one-way ANOVA followed by two-sided Tukey post hoc test). Different lowercase letters in (B) indicate signiﬁcant differences between treat- ments (p < 0.05). Exact p values and Source data are provided as a Source Data ﬁle.
+
+042 ZOT-EGT8E7B6-VIU9D7QE-FIG5-P8
+Humic Substances Mediate Anaerobic Methane Oxidation Linked to Nitrous Oxide Reduction in Wetland Sediments
+FIGURE 5 | Schematic representation of anaerobic CH4 oxidation linked to N2O reduction mediated by the electron shuttling capacity of humic substances. Panel (A) illustrates the extracellular electron transfer process promoted by humic substances, which links the metabolic capabilities of anaerobic methane oxidizing and nitrous oxide reducing microbes. Full (green) batteries are a representation of the high content of reducing equivalents in CH4, which are taken by anaerobic methane oxidizing-humus reducing microorganisms and then taken from the reduced redox-active moieties (hydroquinones) by humus oxidizing-nitrous oxide-reducing microbes to reduce N2O, represented by an energy depleted (red) battery, into inert N2. In the absence of humic substances (B), each process consuming CH4 and N2O could be independently fueled by an alternative electron donor or electron acceptor present at the wetland sediments (displayed in attenuated colors).
+
+043 ZOT-ZN7J262M-NV53KDXC-FIG2-P4
+Enigmatic persistence of aerobic methanotrophs in oxygen-limiting freshwater habitats
+Figure 2. Schematic representation of methane (CH4) oxidation zones in seasonally or permanently stratified lakes with anoxic hypolimnia and sediments. Shown are typical profiles of dissolved oxygen (O2), CH4, and carbon stable isotope composition of CH4 and the methanotrophic microorganisms commonly found in each layer. In the oxic and hypoxic portions of the water column, alphaproteobacterial and gammaproteobacterial MOB can be found, with gammaproteobacterial MOB often more abundant in hypoxic waters, as indicated by bold fonts. Gammaproteobacterial MOB, “Ca. Methylomirabilota”, and anaerobic methanotrophic archaea (ANME) can be present in anoxic hypolimnia and sediments.The abundance, activity, and importance of each methanotrophic group to the total CH4 consumption in each of the layers may vary with the ecosystem. Methanotrophic bacteria in the “Ca. Methylomirabilota” (formerly NC10) phylum aerobically oxidize CH4 under anoxic conditions through intracellular O2 production from nitrite.
+
+044 ZOT-V6E2YIFI-8C3WF7PI-FIG1-P2
+Mechanical Energy Drives the Growth and Carbon Fixation of Electroactive Microorganisms
+Fig. 1. Illustration of the R. palustris-BTO system. (a) Depiction of the R. palustris-BTO system, in which cells grow via the BPE process based on mechanical energy; (b) proposed principle of the BPE process in a system with R. palustris and BTO; (c) pathway diagram for sustainable carbon ﬁxation coupled with NO3  reduction in the R. palustris-BTO system; CBB: Calvin–Benson–Bassham cycle.
+
+045 ZOT-HJAAZ9NZ-SKTAN8CE-FIG1-P6
+Beyond methanogenesis: expanding roles for methanogenic archaea
+Figure 1. Proposed coupling of three classic methanogenic pathways with Fe(III) reduction in iron minerals. (A) Hydrogenotrophic methanogenesis in M. thermautotrophicus, an obligate CO2 reducer. (B) Methylotrophic methanogenesis in M. mazei. (C) Acetotrophic methanogenesis in M. acetivorans. Atp: ATP synthase; CoMS–SCoB: coenzyme M–coenzyme B heterodisulﬁde; Cyt c: multiheme cytochrome c; Ech: energy-conserving hydrogenase; EhaA-T: energy-converting hydrogenases; F420: coenzyme F420; Fd: ferredoxin; Fpo: membrane-bound F420 dehydrogenase; Frh/FrhABG: F420-reducing hydrogenases; Fwd: formyl-methanofuran dehydrogenase; HdrABC: heterodisulﬁde reductases; HdrED: membrane-bound heterodisulﬁde reductase; H4SPT/H4MPT: tetrahydrosarcinapterin; HSCoB: coenzyme B; HSCoM: coenzyme M; Mcr: methyl- coenzyme M reductase; Mer: F420-dependent methylene-H4MPT reductase; MF: methanofuran; MP: methanophenazine; Mrp: multisubunit sodium/proton antiporter; Mta: methanol-speciﬁc corrinoid protein coenzyme M methyltransferase; Mtd: F420- dependent methylene H4SPT dehydrogenase; Mtr: CH3-H4SPT:HSCoM methyltransferase; MvhADG: heterodisulﬁde reductase-associated hydrogenase; Nha: Na+/H+ antiporter; Rnf: homolog of the Rhodobacter nitrogen ﬁxation complex; Vho: methanophenazine-reducing hydrogenase. Adapted from Guo et al [34] and Prakash et al [22], respectively.
+
+046 ZOT-HKIZ3I85-GKR7TU4P-FIG4-P7
+A <i>De Novo</i> Auto‐Activated Solar‐Driven Biohybrid System for Hydrogen Production in Methanotrophic Cells
+Figure 4. Solar-driven H2 production from methane in PBS. (a) Methanol accumulation in mutants of 5GB1-H02 and 5GB1-H03. (b) Solar-driven methanol production by 5GB1-H03 using 0.1 mg/L S-MV2+ with EDTA-2Na as a sacrificial agent under micro-aerobic conditions (N2 bubbling for 10 min) at 48 hrs. (c) Solar-driven H2 production under different light intensity. NADH/NAD+ ratio (inset) of the biohybrid system using 20 mg/L S-MV2+ under micro-aerobic condition at 24 hrs. (d) Solar-driven H2 production rate and TON under different light intensity. (e) Solar-driven H2 production yield of auto-activated biohybrid system. (f) Photoelectron transfer studies of H2 production and methane utilization by 5GB1-H03 in PBS. (g) Schematic mechanism for photoelectron transfer in methanotrophic resting cells. This figure was created using BioRender with permission (publication license: TM27IO3 C5E). Data are presented as mean  s.d. (n=3).
+
+047 ZOT-ZUQEZDGQ-9SLCTHIN-FIG4-P6
+Reversing Electron Transfer Chain for Light-Driven Hydrogen Production in Biotic–Abiotic Hybrid Systems
+Figure 4. Proposed mechanism of the light-driven hydrogen production by the S. oneidensis MR-1-CdS photosynthetic system. The numbers 1−4 show the pathways of hydrogen production.
+
+048 ZOT-6NV7H8SC-8ARZXCQK-FIG2-P5
+Methanoperedenaceae archaea: a 20-year research journey
+Fig. 2 | Fundamental breakthroughs in the understanding of Methanoper- edenaceae archaea. Fundamental discoveries include, but are not limited to, the identiﬁcation of diverse electron acceptors (a), extracellular electron transfer mechanisms (b), diverse electron donors (c), and extrachromosomal genetic ele- ments (d). The level of evidence for the depicted ﬁndings and pathways is indicated as follows: red dashed arrows indicate putative pathways based on genomic pre- diction; green dotted arrows indicate pathways supported by microbial activity assays, genomic, and transcriptomic data; green solid arrows indicate well-deﬁned pathways with robust physiological and biochemical evidence. Notably, not all of the depicted metabolic functions are conserved across different Methanoper- edenaceae species. For instance, the nitrate reductases (narGH) are present in “Ca. M. nitroreducens” but absent in “Ca. M. ferrireducens”9. Likewise, the formate and hydrogen-related genes were only detected in several species, such as “Ca. M. MGW-1”47. Instead, the EET ability enabled by MHCs appears to be universal across all Methanoperedenaceae archaea.
+
+049 ZOT-XREI87CV-KQZ6SYI7-FIG6-P9
+Non‐Respiratory Extracellular Electron Transfer Competes with Nitrogenase for Electrons in <i>Rhodopseudomonas Palustris</i>
+Figure 6. The mechanism of anode reduction during photosynthetic nitrogen ﬁxation by R. palustris TIE-1. a) Diﬀerential gene expression analysis of R. palustris TIE-1 growing with a poised anode versus without a poised anode. Genes include those that encode (1) Acyl-CoA synthetase, (2) enzymes participating in the tricarboxylic acid cycle, (3) enzymes participating in the Glyoxylate cycle, (4) ATP synthase, (5) enzymes participating in the CBB cycle, (6) pio operon, (7) c-type cytochrome, (8) Ni/Fe-hydrogenase, (9) ﬁx complex, (10) PFOR, (11) ferredoxin and ﬂavodoxin, (12) enzymes participating in the ammonium assimilation, (13) nitrogenase, (14) pilus, (15) exopolysaccharide, (16) ﬂagellar. b) Maximum current density of WT and WTΔpioABC mutant in photo-e-BNF systems. Data were presented as mean ± SD (n = 3). Statistical analysis was performed using two-tailed Student’s t-tests (b). ** p < 0.01.
+
+050 ZOT-LDNRIZQ4-AJ2JIVVA-FIG4-P4
+Single cell activity reveals direct electron transfer in methanotrophic consortia
+Figure 4 | A proposal for the energy metabolism of ANME-2a. The syntrophic half-reaction for ANME-2a is CH4 1 2H2O R CO2 1 8e2 1 8H1. Reducing equivalents from methane are generated through the methyl branch of the Wood–Ljungdahl pathway and are deposited in the membrane-bound methanophenazine pool (Mp/MpH2) via reactions at the Hdr, Fpo, and Rnf complexes, which oxidize CoM-SH/CoB-SH, F420H2, and Fdred, respectively. All proteins involved in the reverse methanogenesis pathway (green) have been identified in the ANME-2a genome27. We have identified proteins (orange) in the ANME-2 genomes that may be responsible for extracellular electron transport as outlined in the text. Haem groups are shown schematically as in Fig. 3, and the number of haems predicted to be bound by the peptide (CxxCH motifs) is indicted.
+
+051 ZOT-TWUXCRM4-IHWKQZBT-FIG6-P10
+Nitrous oxide respiration in acidophilic methanotrophs
+Fig. 6 | Metabolic reconstruction and transcriptional response of Methylocella tundrae T4 cells to O2-replete (CH3OH + O2) and anoxic (CH3OH + N2O) methanol-oxidizing growth conditions. The genes used to reconstruct the metabolic pathway are listed in Table S5. The gene products are shaded according to the relative fold change (Log2FC) in gene expression between cells grown under anoxic (CH3OH + N2O) and O2-replete (CH3OH + O2) conditions. Genes up- regulated in CH3OH + N2O-grown cells are shown in teal green, while those up- regulated in CH3OH + O2-grown cells are shown in purple. Note that proteins are not drawn to scale. Methanol oxidation: Methanol is oxidized to formaldehyde in the periplasmic space by the PQQ-dependent methanol dehydrogenase (Xox- and Mxa-type), T4_03519–21, T4_00353–5, and T4_01862–76. The NAD(P)+-dependent alcohol dehydrogenase (T4_03199) may also be involved in methanol oxidation to formaldehyde in the cytoplasmic space during anaerobic growth on methanol. Formaldehyde oxidation to formate then proceeds via the tetra- hydromethanopterin (H4MPT) pathway, and C1 incorporation into the serine cycle is mediated by the tetrahydrofolate (H4F) carbon assimilation pathway. The Calvin- Benson-Bassham pathway is also a possible route for CO2 ﬁxation. Nitrous oxide reduction: N2O is reduced to N2 through the activity of nitrous oxide reductase in the periplasmic space. Electron transfer to NosZ occurs via cytochrome c from the cytochrome bc1 (Qcr) complex136,137. Electron transfer to the NosZ may also involve direct interaction with methanol dehydrogenase C-typecytochrome (XoxG, MxaG). The NosR protein may be involved in the transfer of electrons to NosZ (refs. 136,137).
+
+052 ZOT-JTMW87NI-J3V79QMF-FIG10-P10
+Intra/extracellular electron transfer for aerobic denitrification mediated by in-situ biosynthesis palladium nanoparticles
+Fig. 10. Proposed impact mechanism of bio-Pd(0) on the intra/extracellular electron transfer of aerobic denitriﬁcation by B. megaterium Y-4.
+
+053 ZOT-W7L5EHV7-NXST2C32-FIG1-P2
+Rhamnolipid Modulates Microbial Interspecies Electron Transfer for Synchronous Sulfidogenesis and Acidogenesis from Mariculture Solid Wastes
+Figure 1. Schematic diagram of the IET between electron-donating and electron-accepting bacteria. Interspecies hydrogen transfer (a) and DIET via redox mediator (b), conductive pili (c), and cytochrome c (d).
+
+054 ZOT-ZEMR5578-MVJMFUN7-FIG5-P9
+Ferrihydrite-mediated methanotrophic nitrogen fixation in paddy soil under hypoxia
+Figure 5. Proposed metabolic pathway for Fe(III)-mediated methanotrophic BNF by the methanotroph/methylotroph; Ru-5P: ribulose 5-phosphate, H6P: hexose 6-phosphate, F6P: fructose 6-phosphate, F1,6P: fructose 1,6-bisphosphate, GAP: glyceraldehyde 3-phosphate, 1,3-BPG: 1,3-bisphosphoglycerate, 3PG: 3-phosphoglycerate, 2PG: 2-phosphoglycerate, PEP: phosphoenolpyruvate, G6P: glucose-6-phosphate, 6PGL: 6-phosphogluconolactone, 6PG: 6-phosphogluconate, KDPG: 2-keto-3-deoxy-6-phosphogluconate, DHBP: 3,4-dihydroxy-2-butanone 4-phosphate, DMRL: 6,7-dimethyl-8-ribityllumazine, FMN: flavin mononucleotide, FAD: flavin adenine dinucleotide, FldHq/FldSq: flavodoxin hydroquinone/semiquinone, RFox/RFred: oxidized/reduced riboflavin, H4F: tetrahydrofolate, H4MPT: methenyltetrahydromethanopterin, Fe-Mbn: Fe-bound methanobactin.
+
+055 ZOT-2UXJZ9V5-SR44U4IL-FIG3-P6
+Electricity from methane by reversing methanogenesis
+Figure 3 | Proposed model of biological production of electricity from methane in MFCs. The air-adapted strain producing Mcr from ANME (‘AA/pES1-MATmcr3’) consumes methane to produce acetate and excess electrons. Acetate is further oxidized completely to carbon dioxide, producing more excess electrons by G. sulfurreducens or sludge that can be substituted to a signiﬁcant extent by P. denitriﬁcans (‘Sludge (Paracoccus spp.)’). The sludge has a second role in providing humic acid-like electron shuttles, and G. sulfurreducens has a second role in providing optimized electron transfer to electron shuttles via multi-haem cytochromes (grey circles) that are located in the outer membrane or S-layer in bacteria and archaea, respectively.
+
+056 ZOT-4WW3EAGK-YVETMRNQ-FIG5-P8
+Iron Modulates the Growth and Activity of Nitrate-Dependent Methanotrophic Bacteria by Reprogramming Carbon Metabolism
+Figure 5. Expression of genes involved in CBB cycle (a, d), Serine pathway (b, e) and TCA cycle (c, f) in “Ca. M. sinica” under 40 μM Fe2+treatment compared to 20 μM Fe2+treatment. a-f, Change in transcripts (a−c) and proteins (d−f) of CBB cycle (a, d), Serine pathway (b, e) and TCA cycle (c, f) in “M. sinica” fed with 40 μM of Fe2+. Each symbol represents the mean of three replicates, with error bars indicating standard deviations. Differences between the two setups were assessed using Hedges’ g for effect size, with’**’ indicating a substantial difference (effect size > 0.8) between the two sets of data (Tables S12−S17). g, Scheme of key metabolic pathways in “M. sinica” fed with 40 μM of Fe2+. Blue represents functional enzymes involved in the Calvin cycle. Green represents functional enzymes involved in the TCA cycle. Yellow represents functional enzymes involved in the Serine pathway. And red represents precursor substances and synthesis pathways for Bfr. The structure of Bfr is predicted using AlphaFold 3 (Figure 12). The thickness of the arrow indicates up or down expression level of relevant functional enzymes. Dashed arrows with question marks indicate metabolic steps for which the corresponding genes are present in the genome of “M. sinica” but were not detected in the metatranscriptomic or metaproteomic datasets in this study.
+
+057 ZOT-ASTTL4UH-6BXHCGNA-FIG1-P3
+Survival strategies of aerobic methanotrophs under hypoxia in methanogenic lake sediments
+Fig. 1 Experimental layout. Experimental design—sediment cores were collected from the methanotrophic zone in Lake Kineret and used to initiate two enrichment experiments. A Experiment 1: Incubated with ambient air, representing a "classical" enrichment approach coupled with DNA-SIP analysis. B Experiment 2: Hypoxic enrichment by repeatedly introducing small amounts (spikes) of oxygen (1%) to maintain low-oxygen conditions. Extracted DNA was used for 16S rRNA amplicon sequencing, and representing samples were also used to assemble and bin Methylococcales MAGs. Genome-based metabolic comparative analyses were performed using different bioinformatic platforms C
+
+058 ZOT-JCF9LF9A-GZYTIUAW-FIG4-P6
+Redox conduction facilitates direct interspecies electron transport in anaerobic methanotrophic consortia
+Fig. 4. Redox properties of cytochromes in model electroactive organisms and syntrophic consortia. Electron transport routes and the reduction potentials of key components in (A) Geobacter, (B) Shewanella, (C) syntrophic consortia of SRB and methanogen based on interspecies hydrogen transfer, and (D) syntrophic consortia of ANME and SRB based on direct interspecies electron transport. Black lines indicate the midpoint reduction potentials. Gray bars indicate the reduction potential windows of multiheme cytochromes. The midpoint reduction potentials of cytochromes are more positive than their electron acceptors, but their broad redox-­active windows al- low reactions to occur. (E) Compilation of reduction potential windows show window size increase with increasing number of hemes in purified cytochromes. The large multiheme cytochrome c (MHC) in ANME/SRB consortia could have even broader redox-­active windows to facilitate electron transport to electron acceptors at a large range of reduction potentials.
+
+059 ZOT-5IMTSNH8-MTCJDYR6-FIG12-P20
+Toward Next-Generation Semiartificial Photosynthesis: Multidisciplinary Engineering of Biohybrid Systems
+Figure 12. Modular strategies and representative examples in biohybrid systems. (a) Schematic overview of the modular design framework for semiartificial photosynthetic systems, comprising light harvesting, cofactor regeneration, and energy storage modules. (b) Engineered light-harvesting module constructed in E. coli to initiate light reaction. Reproduced with permission from ref 73. Copyright 2025 open access article distributed under CC BY-NC-ND License 4.0. (c) Schematic illustration of CdS-mediated NADH regeneration and PR-driven ATP synthesis via light-induced proton gradient. Reproduced with permission from ref 367. Copyright 2021 Springer Nature. (d) Schematic illustration of NADPH and ATP generation via photoexcited electrons and PR-mediated PMF in the ZGGO:Ni-R. palustris biohybrid. Adapted with permission from ref 127. Copyright 2025 Wiley- VCH GmbH. (e) Light-activated GR drives reverse NADH dehydrogenase (NDH) to produce NADH from quinone, which is subsequently converted into NADPH by transhydrogenase (TRANS). Reproduced with permission from ref 368. Copyright 2023 open access article distributed under CC BY License 4.0. (f) Schematic illustration of NADPH regeneration in the dark enabled by energy storage in a defect-rich ZGGO photocatalyst. Reproduced with permission from ref 70. Copyright 2024 Elsevier. (g) Programming photosynthetic systems with energy adapters to enable bioproduct. Reproduced with permission from ref 73. Copyright 2025 open access article distributed under CC BY-NC-ND License 4.0. (h) Schematic diagram of a modular E. coli photosynthesis system integrating an energy adapter composed of an energy responder and a protein capacitor to dynamically coordinate light-phase (NPM*) and dark-phase (ADRP) reactions. Reproduced with permission from ref 73. Copyright 2025 open access article distributed under CC BY-NC-ND License 4.0. Abbreviations: IM, inner membrane; ETC, electron transport chain; NuoK*, the mutant of NADH dehydrogenase complex subunit K; PufL, core protein of photosynthesis reaction center from Rhodopseudomonas viridis; MgP, magnesium protoporphyrin IX; Sred/Sox, redox species in reduced/oxidized form; IPs, inner-membrane proteins; EA, energy adapter; NPM*, biogenic photosystem NuoK* + PufL + MgP; ADRP, artificial dark reaction pathway.
+
+060 ZOT-JHNU7NII-XNPNWT2M-FIG6-P9
+Intracellular–Extracellular Synergistic Biohybrid System Boosts Photosynthetic Carbon Fixation
+Figure 6. Intracellular−extracellular synergistic biohybrid system (Syne/Zn) induces differential metabolism and differential gene expression. (a) Schematic illustration of the photosynthetic transcriptional response in the intracellular−extracellular synergistic biohybrid system. The orange text indicates upregulated genes. (b, c) Relative expression of CO2 capture genes and RuBisCO genes related to photosynthesis and carbon fixation. The error bars correspond to the standard deviation. *p < 0.05. (d) Overview of significantly differentially abundant metabolites and transcriptional responses in the intracellular−extracellular synergistic biohybrid system. The red and purple text indicates upregulated and upregulated metabolites, respectively (p < 0.05 and log2(fold-change)>1).
+
+061 ZOT-U2IKRPF6-MCK3AMFD-FIG1-P5
+The genome-scale metabolic model for the purple non-sulfur bacterium Rhodopseudomonas palustris Bis A53 accurately predicts phenotypes under chemoheterotrophic, chemoautotrophic, photoheterotrophic, and photoautotrophic growth conditions
+Fig 1. Workflow to build a metabolic model of R. palustris BisA53 using a semiautomatic approach. A A draft model was reconstructed using optimized BLAST parameters (e-value, query length, and identity percentage) from three template models present in BiGG (Escherichia coli K-12 substr. MG1655, Synechocystis sp. PCC 6803, and Synechococcus elongatus PCC 7942). NCBI reference sequence annotation was employed in GPR associations. The RAVEN and COBRA packages for MATLAB were deployed in the reconstruction stage. B The resulting optimized draft model and constituents of the Biomass Objective Function (BOF) were manually curated. Protein, RNA and DNA metabolites of the BOF were calculated based on genomic and proteomic data, meanwhile the rest of the metabolic requirements were estimated based on experimental evidence previously published. Disconnected metabolites were properly integrated into metabolic pathways using bioinformatics databases. The iDT1278 model (A. vinelandii) worked as a template for nitrogen fixation, hydrogen production, and PHB biosynthesis reactions using BLASTp homology. The resulting draft model of the BOF and dead-ends curation contained 2,298 reactions, 1,918 metabolites, and 1,515 genes (200 exogenous genes). C Four detailed subsystems were manually added to the model to reflect specific metabolic capabilities of R. palustris BisA53: aromatic compound degradation under anaerobic conditions, nitrogen fixation and denitrification (with partial denitrification), PHB production and pigment metabolism (including carotenoid and bacteriochlorophyll of PNSB). For the aromatic compounds biosynthesis pathways, the reactions and metabolites involved were carefully added based on enough experimental evidence and curated information of the pathways from the bioinformatics databases (See Methods). D The resulting model was validated using experimental data retrieved from the literature and growth experiments performed in this study. The iterative model refinement process included manual curation, gap-filling, and curation under chemoheterotrophic, chemoautotrophic, photoautotrophic, and photoheterotrophic conditions changing the oxygen requirements depending on the experimental environments. Ultimately, the model was validated using kinetics data to compare the prediction capabilities of the M-model using growth rates and substrate concentrations for specific time points. The final model, containing 2,721 reactions, 2,123 metabolites, and 1,294 genes, predicted growth with 90% accuracy for carbon and nitrogen substrates.
+
+062 ZOT-XIR3TDSG-ATNQ7D3X-FIG6-P9
+Building an efficient simultaneous aerobic nitrification and denitrification (SAND) system by enhancing interspecies electron transfer (IET)
+Fig. 6. Mechanisms of intra- and extracellular electron transfer and IET in SANDF.
+
+063 ZOT-5I7WJUY6-ZXE2T9QH-FIG1-P3
+Methanogenesis in the presence of oxygenic photosynthetic bacteria may contribute to global methane cycle
+Fig. 1 | Schematic illustration of CH4 production in the presence of oxygenic photosynthetic bacteria. a Syntrophic methanogenesis under anoxic conditions in darkness. b Abiotic methanogenesis under oxic conditions in illumination.
+
+064 ZOT-UMPHI3MT-ABCNV2L7-FIG9-P9
+Biosynthesis of biogenic ferrous sulfide as a potential electron shuttle for enhanced Cr(VI) removal by Shewanella oneidensis MR-1
+Fig. 9. Schematic illustration of the mechanisms of Bio-FeS enhancing the Cr(VI) removal by MR-1.
+
+065 ZOT-3625XNU4-DIPJIBAZ-FIG2-P4
+Genomic and enzymatic evidence of acetogenesis by anaerobic methanotrophic archaea
+Fig. 2 Reconstruction of ANME-2a metabolic pathways. The solid arrows indicate the presence of genes and the dashed arrows indicate the absence of genes involved in the processes based on metagenome-assembled genome.
+
+066 ZOT-EJN6IS6D-D2JH757R-FIG1-P2
+<i>Rhodopseudomonas palustris</i> -based conversion of organic acids to hydrogen using plasmonic nanoparticles and near-infrared light
+Fig. 1 Experimental scheme and reaction pathway. (a) NIR illumination was used as a light source for growing PNSB (R. palustris). The silica–gold core–shell plasmonic nanoparticles further enhanced the biohydrogen production in solution through light scattering and surface plasmon eﬀects. (b) Overview of the metabolic process of R. palustris under photoheterotrophic nitrogen ﬁxing conditions. Abbreviations: LH1, LH2 ¼ light harvesting complexes; RC ¼ reaction center; Fd ¼ ferredoxin (oxidized, reduced); adapted from (13). (c) 3D drawing of bacteria and nanoparticles in suspension with evolved CO2 and H2 in the headspace.
+
+067 ZOT-HJAAZ9NZ-SKTAN8CE-FIG2-P9
+Beyond methanogenesis: expanding roles for methanogenic archaea
+Figure 2. Extracellular electron transport-driven reverse methanogenesis in M. acetivorans. (A) Stoichiometrically constrained reverse methanogenesis in wild-type M. acetivorans. (B) PHA-producing pathway via reverse methanogenesis in engineered M. acetivorans. Other abbreviations follow the caption of Figure 1. Ack: acetate kinase; CODH/ACS: CO dehydrogenase/acetyl-CoA synthase complex; Fmd: formylmethanofuran dehydrogenase; Ftr: formylmethanofuran-H4SPT formyltransferase; HdrA2B2C2: cytoplasmic heterodisulﬁde reductase; HSCoA: coenzyme A; Mch: methylene-H4SPT cyclohydrolase; MmcA: multiheme cytochrome c; phaA: β-ketothiolase; phaB: acetoacetyl-CoA reductase; phaC: PHB synthase; PHA: polyhydroxyalkanoate; Pta: phosphotransacetylase. Adapted from Yan et al [78] and Li et al [81], respectively.
+
+068 ZOT-W7L5EHV7-NXST2C32-FIG7-P10
+Rhamnolipid Modulates Microbial Interspecies Electron Transfer for Synchronous Sulfidogenesis and Acidogenesis from Mariculture Solid Wastes
+Figure 7. Microbial metabolic response and self-adaptation mechanism to RL at the transcriptomic level. Circle heatmap of specific differentially expressed genes involved in metabolic pathways of acidogenesis and sulfidogenesis (a), and microbial self-adaptation (b); expression level of microbial self-adaptation-related genes encoding AI-2 signal molecule synthesis and transport (Function 1), perception (Function 2), and TCS (Function 3) (c), EPSs secretion-related genes encoding exopolysaccharide biosynthesis (Function 1) and protein export (Function 2) (d), ATP synthesis-related genes encoding substrate phosphorylation (Function 1) and oxidative phosphorylation (Function 2) (e); a mechanistic diagram for RL-modulated microbial IET and self-adaptive responses (f).
+
+069 ZOT-T8NW8R66-MTG3Z6IG-FIG4-P6
+Redox mediator-based bacterial cooperation for anammox extracellular electron transfer
+Fig. 4 | Potential cooperation among anammox bacteria and the key symbiotic bacteria in microbial EET. a, Gene expression levels of genes related to the electron transport chain and ferredoxin transport in AMX (Ca. Brocadia sinica). b, Presence or absence of vitamin and amino acid biosynthesis pathways in AMX, PRO, PLA and ACT (top), and the expression levels of these pathways in AMX (bottom). c, Potential cooperation mechanism among anammox bacteria (AMX), phenazine synthesis bacteria (PLA) and quinone synthesis bacteria (PRO and ACT) under an applied voltage. amt, ammonium transporter; Fdox, oxidized ferredoxin; Fdred, reduced ferredoxin; Quox, oxidized quinones; Qured, reduced quinones; NADH, reduced nicotinamide adenine dinucleotide; Pzox, oxidized phenazines; Pzred, reduced phenazines; PNox, oxidized extracellular protein; PNred, reduced extracellular protein; T2SS, type II secretion system; T4SS, type IV secretion system. Statistical significances between S1 or S2 samples and the control group (S0) were determined via a two-sided Student’s t-test, where P < 0.05 was considered significant: *P < 0.05; **P < 0.01; ***P < 0.001. For each condition, TPM values represent the mean derived from three biological replicates.
+
+070 ZOT-AKRKE9WD-ICD39ZT7-FIG1-P2
+In Situ Biosynthesis of FeS Nanoparticles Boosts Current Generation in Bioelectrochemical Systems Through Efficient Electron Transfer
+Figure 1. Schematic diagram of the preparation process of Fe3O4/L-Cys nanoparticles and Fe3O4/L-Cys modiﬁed IDAs GA/ppy.
+
+071 ZOT-WIKJ4FZ4-C8ZDHCUX-FIG2-P4
+Programming Bio–Bio Electronic Interfaces for Light‐Driven Interspecies Electron Transfer
+FIGURE 2 PEDOT enabled artificial EET module constructed in non-exoelectrogenic Syne. (A) Schematic of the in situ oxidative polymerization of EDOT on Syne. SEM images and magnified views of P-Syne (B) and native Syne (C). Slice-TEM images and magnified views of P-Syne (D) and native Syne (E), showing PEDOT distribution on the cellular surface and partial intracellular penetration. CLSM image of Syne with fluorescently labeled PEDOT (F), and the corresponding fluorescence intensity profile (G). (H) Comparison of PEDOT-mediated artificial EET in Syne with natural EET pathways in exoelectrogenic bacteria. Photocurrent response (I), EIS curves (J), and net electrochemical charge-transfer resistance (K) of Syne cells modified with conductive polymers (PEDOT, PPy, or PANI) and native Syne. Data are presented as mean ± SD from n = 3 independent replicates, with error bars representing SD. Statistical analysis was performed using the Kruskal-Wallis test followed by multiple-comparison analysis. **p < 0.01; n.s., not significant.
+
+072 ZOT-6EIAJMRK-BL2SNCPV-FIG3-P5
+Methanotrophs: Discoveries, Environmental Relevance, and a Perspective on Current and Future Applications
+FIGURE 3 | Schematic representation of the nitrate- and nitrite-dependent Anaerobic Oxidation of Methane (N-dAOM). Methylomirabilis bacteria (process in blue) reduce nitrite and through an intra-aerobic pathway, oxidize methane to CO2. “Ca. M. nitroreducens” (process in green) reduce nitrate, with nitrite as an intermediate, while oxidizing methane anaerobically using nitrate as terminal electron acceptor. Furthermore, Methanoperedens archaea are capable of producing ammonia through dissimilatory nitrate reduction (DNRA).
+
+073 ZOT-PTLX22Q7-AVD2B9JZ-FIG1-P2
+Unveiling Janus Chemical Processes in Contact-Electro-Chemistry through Oxygen Reduction Reactions
+Figure 1. Janus characteristics of CE-Chemistry in aqueous systems. Redox reactions involved in organisms (a(i)) and FEP/water interfaces (a(ii)). (b) HRTEM and SAED diagrams corresponding to different metal ions. (c) Schematic of the reaction mechanism for metal ion reduction by CE- Chemistry. (d) Evolution of Au concentration in conditions of various radical scavengers. DMSO and tert-butanol were used as scavengers for electrons and •OH radicals, respectively. (e) SEPs of various metal ion reductions in the CE-Chemistry system.
+
+074 ZOT-XKWNLCJH-27H8JTM2-FIGGA-P1
+Visualizing Microbial Indirect Extracellular Electron Transfer
+Graphical abstract; artwork adjacent to explicit abstract heading in source PDF.
+
+075 ZOT-6T7CNEB4-HEUWDX89-FIG6-P11
+Periplasmic FeS Electron Conduits: Tuning Electrocoupling and Respiratory Dehalogenation in a Synthetic Consortium
+FIGURE 6 Proposed working model for noncanonical respiratory debromination and electron transfer in the defined synthetic consortium. (a) PCA clustering of samples from the six transcriptomic conditions (n = 3 biological replicates per group) based on gene-expression profiles. (b and c) AlphaFold3-predicted structure of a B1 QueG-like protein, proposed here as a candidate noncanonical corrinoid-dependent terminal reductase, shown in ribbon and surface views with cobalamin (orange) and docked HBCD (blue). (d and e) Structural model of the putative interaction between the QueG-like candidate reductase and a representative upregulated quinone-linked electron-transfer module, exemplified by NapBC. In the model, the substrate-facing pocket is oriented toward the periplasm, and the [4Fe-4S] clusters (yellow) are positioned adjacent to the c-type heme (blue),
+
+076 ZOT-K3E82HZJ-5MU8ZHBV-FIG1-P2
+Electrochemically coupled CH4 and CO2 consumption driven by microbial processes
+Fig. 1 | CH4 oxidation and CO2 reduction in microcosms, promoted by iron minerals. a CH4 oxidation and CO2 reduction with and without iron minerals in microcosm incubations. The killed control represents the incubation with sterilized soil. Data generated from n = 3 biologically independent samples for each group and error bars indicate standard deviation of the mean. b Proposed mechanism for iron minerals serving as a geo-battery to couple CH4 oxidation and CO2 reduction.
+
+077 ZOT-6EIAJMRK-BL2SNCPV-FIG8-P17
+Methanotrophs: Discoveries, Environmental Relevance, and a Perspective on Current and Future Applications
+FIGURE 8 | Schematic representation of the fate of methane. (1) No action leads to methane-GHG release to the atmosphere (red arrow). (2) Methane can be neutralized into CO2, a less harmful GHG (in a short timescale) (yellow arrow). Methane oxidation can occur aerobically or anaerobically depending on the availability of electron acceptors and the microorganisms present. (3) Methane can be collected and used as a biogas for heat and electricity production (green arrow). (4) Methane can enter bio-based and circular economy models through the application of aerobic methanotrophs for the production of various chemicals, biodiesel, bioplastics, protein, and even the potential recovery of precious metals (blue arrows).
+
+078 ZOT-KE8ZBP93-NLGDNRV3-FIG7-P10
+Systems analysis of the effect of hydrogen sulfide on the growth of Methylococcus capsulatus Bath
+Fig. 7 Schematic of selected cellular metabolism modules used by M. capsulatus Bath to adapt to sulfide. Note that there is no SoxD annotated in the M. capsulatus Bath genome. However, immediately downstream of the soxC gene (MCA_RS07400) there is a cytochrome c gene (MCA_RS07405) sharing 33% amino-acid sequence identity to SoxD from Rhodopseudomonas palustris
+
+079 ZOT-RV2CBZ4W-6GV77TXY-FIG5-P7
+Microbial iron oxide respiration coupled to sulfide oxidation
+Fig. 5 | Schematic metabolic model of D. alkaliphilus for sulfide oxidation with iron(iii) oxides based on comparative transcriptomics. D. alkaliphilus uses a reversed canonical dissimilatory sulfate reduction (Dsr) pathway to oxidize sulfide to sulfate (blue protein labels). Sulfide reacts with DsrC to form DsrC trisulfide (DCT), which is oxidized stepwise to sulfate via DsrAB, AprAB and Sat. The reducing equivalents are transferred to iron(iii) oxides via EET mechanisms (green protein labels) facilitated by MHCs. D. alkaliphilus also has genes encoding type IV pili (grey protein labels). The tight adhesion (Tad) pilus may drive the cell adherence to the surface of solid iron oxides and/or FeS. The transcription level of each gene during MISO is indicated by mean reads per kilobase of transcript per million mapped reads (RPKM) of four replicates corresponding to the colour in the legend. Blue and green dots show significantly increased gene transcription during sulfide/FeS oxidation and ferrihydrite reduction, respectively. The identifier, full name, RPKM, statistical significance of differential transcription and genomic arrangement for each gene are provided in Extended Data Fig. 3 and Supplementary Tables 2–5. Electron flow and proton translocation are indicated by red arrows. Black dotted arrows indicate putative sulfur redox reactions with unclear enzymology. APS, adenosine-5′-phosphosulfate, Qox, oxidized menaquinone; Qred, reduced menaquinone; FoxFeR, incubation of D. alkaliphilus under formate-oxidizing and ferrihydrite-reducing conditions; FeSoxFeR, incubation of D. alkaliphilus under FeS-oxidizing and ferrihydrite-reducing conditions; Sdisp, incubation of D. alkaliphilus under S(0) disproportionation conditions; SoxFeR, incubation of D. alkaliphilus under sulfide-oxidizing and ferrihydrite-reducing conditions; SoxNR, incubation of D. alkaliphilus under sulfide-oxidizing and nitrate- reducing conditions.
+
+080 ZOT-SCG5Z7EM-5LGPHJMR-FIG4-P7
+Rice Root Iron Plaque as a Mediator to Stimulate Methanotrophic Nitrogen Fixation
+Figure 4. Genome-based phylogenetic tree showing taxonomic positions of high-quality MAGs (A) and metabolic pathway linking methane oxidation to Fe(III) reduction and BNF by the consortia (B). Ru-5P, ribulose 5-phosphate; GAP, glyceraldehyde 3-phosphate; PEP, phosphoenolpyruvate; F6P, fructose 6-phosphate; H6P, hexose 6-phosphate; DHBP, 3,4-dihydroxy-2-butanone 4-phosphate; DMRL, 6,7-dimethyl- 8-ribityllumazine; HBA, hydrogenobyrinic acid; CBAD, cobyrinic acid a,c-diamide; OAA, oxaloacetic acid; c-Cyt, c-type cytochrome; FMN, flavin mononucleotide; FAD, flavin adenine dinucleotide; RFox/RFred, oxidized/reduced riboflavin.
+
+081 ZOT-4YYHXE4L-E2S47CMC-FIG1-P3
+Current trends in electromicrobiology of methane oxidation
+Figure 1. Metabolic pathways of methane-oxidizing bacteria (MOB) for electrochemically driven methane oxidation coupled with iron reduction. (A) An indirect pathway involving synergistic interactions with electroactive bacteria through methane-derived intermediates. (B) Potential direct extracellular electron transfer pathways utilized independently by MOB. Full arrows indicate a single process, and dashed arrows indicate several reactions that were simpliﬁed. Abbreviations: DHase, NADH dehydrogenase; F6P, fructose-6-phosphate; FADH, formaldehyde dehydrogenase; FDH, formate dehydrogenase; H6P, hexulose-6-phosphate; MDH, methanol dehydrogenase; Me, mediator; MMO, methane monooxygenase; Ru5P, ribulose-5-phosphate; RuMP, ribulose monophosphate.
+
+082 ZOT-UBQV4WFS-4NVQE6HP-FIG1-P2
+Carbon dioxide fixation as a central redox cofactor recycling mechanism in bacteria
+Fig. 1. Redox balancing strategies used by PNSB during anaerobic photoheterotrophic growth on a reduced carbon source. During photoheterotrophic growth of PNSB on butyrate, ATP is produced by cyclic photophosphorylation, in which electrons are repeatedly energized by light, allowing them to be cycled through a proton-pumping electron transport chain, rather than being transferred to a terminal electron acceptor. Thus, PNSB must use other means to dispose of extra electrons that are generated during use of a carbon source like butyrate, which is more reduced than biomass (Table 1). Three mechanisms are depicted: (A) CO2 ﬁxation via the Calvin cycle; (B) H2 production via nitrogenase (N2ase; green arrow); and (C) DMSO reduction by DMSO reductase (DMSOR; red arrow). Solid black lines, carbon metabolism; solid blue lines, energy metabolism; dotted lines, electron metabolism.
+
+083 ZOT-66J4LWIV-E9BLC7MK-FIG3-P6
+Electromicrobiology: the ecophysiology of phylogenetically diverse electroactive microorganisms
+Fig. 3 | Mechanisms for electron transport across the outer surface. Models for the porin–cytochrome system found in Gram-​negative bacteria (part a), the cytochrome-​based system in Gram-​positive bacteria (part b), the cytochrome-​based system in archaea (part c) and the flavoprotein-​based system in Gram-​positive bacteria (part d). Electrons derived from electron donor oxidation within the cell are typically transferred to lipophilic, quinone-​based electron carriers, such as menaquinone or demethylmenaquinone (DMK), or in the case of some archaea possibly to membrane-​bound proteins such as Rnf complexes. In many systems, one or more c-​type cytochromes route electrons to the outer surface. Additional c-​type cytochromes displayed on the outer cell surface can provide additional electrical contacts for electron transfer to electron acceptors. Gram-​positive bacteria that lack c-​type cytochromes rely on flavoproteins, which transfer electrons to chelated Fe(III) or flavins (represented by hexagons) that can diffuse through the cell wall. The subscripts ox and red in parts a–d refer to oxidized and reduced, respectively.
+
+084 ZOT-JHNU7NII-XNPNWT2M-FIG5-P8
+Intracellular–Extracellular Synergistic Biohybrid System Boosts Photosynthetic Carbon Fixation
+Figure 5. Improving electron enhancement and accelerating transfer in the intracellular−extracellular synergistic biohybrid system (Syne/Zn). (a) NADH/NAD+ ratios in Syne and Syne/Zn cells. (b) Illustration of the probable mechanism of electron transfer from ZnO-OM to Syne/Zn cells under light conditions. (c) Photosynthetic activities (Fv/Fm) of Syne/Zn cells treated with no inhibitor, DCMU or DBMIB. (d, e) NADPH and ATP levels in Syne/Zn cells treated with no inhibitor, DCMU or DBMIB. (f) Illustration of carbon capture and fixation in the intracellular− extracellular synergistic biohybrid system. The error bars correspond to the standard deviation. *p < 0.05, **p < 0.01, ***p < 0.001.
+
+085 ZOT-JJWDZWKP-86WI2D4S-FIG6-P7
+Zero-valent iron as an alternative electron donor for extracellular electron uptake linked to CO2 fixation in Rhodopseudomonas palustris
+Fig. 6. Regulation of nZVI and mZVI on phototrophic growth of R. palustris. Pathways are associated with the photosynthetic system, peptide biosynthesis processes, the electron transport chain, the TCA cycle, the CBB cycle, and flagellum assembly. Inset heat maps show the transcript abundances of related annotated genes involved in the corresponding pathway in R. palustris presented as log2 FPKM values (fragments per kilobase per million mapped reads). ETC (electron transport chain), e−(electrons), PQ (plastoquinone), Cytb6f (Cytochrome b6f), PC (plastocyanin), PS I (photosynthetic system I), Fd (ferredoxin),? (currently unknown), H+ (protons). This image was created by Figdraw.
+
+086 ZOT-VFBRUWBG-G7CGL9X7-FIG3-P4
+Extracellular Electron Transfer Enables Cellular Control of Cu(I)-Catalyzed Alkyne–Azide Cycloaddition
+Figure 3. Control over CuAAC using genetic engineering of the CymA/Mtr-pathway. (a) Aerobic kinetic curves performed with various S. oneidensis knockouts (OD600 = 0.1) and an E. coli MG1655 negative control. (b) Quantiﬁcation of the observed rate of copper reduction for varying S. oneidensis knockouts or an E. coli negative control. (c) Diagram of a generic buﬀer gate circuit used to control expression of the gene of interest (mtrC, mtrA, or cymA) in S. oneidensis knockout strains.18 Quantiﬁcation of the observed rate of copper reduction for raw kinetic curves inoculated at an OD600 = 0.025 (5 × 107 CFU/mL) with (d) JG596 + mtrC, (e) ΔmtrA + mtrA, and (f) ΔcymA + cymA for fully induced and uninduced constructs. Data show a mean ± SD of n = 3 biological replicates. **P < 0.01, ****P < 0.0001.
+
+087 ZOT-TDHGXHG7-NSTUJJD7-FIG1-P3
+Polyhydroxybutyrate (PHB) production and methane uptake by methanotrophic bacteria in a membrane-based reactor
+Fig. 1. Schematic diagram of the reactor with HFMs separately delivering O2 and CH4 (a) and a photograph of the reactor (b).
+
+088 ZOT-WIKJ4FZ4-C8ZDHCUX-FIG5-P10
+Programming Bio–Bio Electronic Interfaces for Light‐Driven Interspecies Electron Transfer
+FIGURE 5 A phototrophic microbial consortium established through interspecies electron and sucrose transfer. (A) Schematic of the engineered consortium, where Syne acts as both an energy (electron) and carbon (sucrose) source for E. coli, thereby enhancing azo-compound degradation by the latter. The enlarged inset summarizes a comprehensive stoichiometric electron-balance analysis in the acceptor partner. (B) Decolorization performance of methyl red across different microbial configurations. Data are presented as mean ± SD from n = 3 independent replicates, with error bars representing SD. (C) Comparative analysis of degradation products at 30 min in different microbial configurations under IET-only and IET–sucrose coupled systems. Data are presented as mean ± SD from n = 3 independent replicates, with error bars representing SD. (D) NADPH/NADP+ ratio of individually cultured E. coli controls and E. coli fractions obtained from Syne–E. coli systems with different configurations. Data are presented as mean ± SD from n = 3 independent replicates, with error bars representing SD. (E) Representative on-site photographs of methyl red decolorization over time by PNR-Syne- cscB@CB7-E2-cscABK encapsulated in dual-crosslinked Alg-MA hydrogel. (F) Repeated-batch decolorization performance of methyl red by PNR-Syne- cscB@CB7-E2-cscABK. Data are presented as mean ± SD from n = 3 independent replicates, with error bars representing SD.
+
+089 ZOT-7ND8V73J-RZE7UZEQ-FIG5-P4
+Effective photocatalytic methane oxidation over the TiO2/methanotrophs system
+Fig. 5. The redox potential diagram and the possible electron transfer process from TiO2 conduction band to pMMO.
+
+090 ZOT-LBY4FZWM-QXHSFP9F-FIGGA-P1
+Electricity from methane by Methylococcus capsulatus (Bath) and Methylosinus trichosporium OB3b
+Graphical abstract; complete region between explicit graphical-abstract heading and next section.
+
+091 ZOT-G9BSG7GG-CIECJNTR-FIG1-P2
+Biohybrid-based pyroelectric bio-denitrification driven by temperature fluctuations
+Fig. 1 | Schematic diagram of T. d-WS2 biohybrids. a Depiction of T. d-WS2, proceeding pyroelectric bio-denitriﬁcation via temperature ﬂuctuations during heating-cooling cycle. b Construction of T. d-WS2 biohybrids. c Proposed pathways for pyroelectric bio-denitriﬁcation by T. d-WS2. The electrons generated from both intracellular and extracellular WS2 under temperature variation were utilized by T. d for NO3 −reduction to N2/N2O.
+
+092 ZOT-HHE73DU7-UFSPI54M-FIG1-P2
+Complete genome sequence of the metabolically versatile photosynthetic bacterium Rhodopseudomonas palustris
+Figure 1 Overview of the physiology of R. palustris. Schematic representations of the four types of metabolism that support its growth are shown. The multicolored circle in each cell represents the enzymatic reactions of central metabolism.
+
+093 ZOT-XJ53ES6L-NZ69HNNJ-FIG1-P2
+Bioupcycling methane into triacylglycerol for the production of sustainable aviation fuel by methanotrophic bacteria
+Fig. 1. Schematic representation of methane-derived TAG production and its downstream applications.
+
+094 ZOT-XKIAABQD-JDV5UULN-FIG1-P3
+Metabolic alteration of Methylococcus capsulatus str. Bath during a microbial gas-phase reaction
+Fig. 1. Illustrations of systems for the gas-phase reaction and the aqueous phase reaction. (a) Conceptual design of a reactor capable of supplying gaseous substrates (CH4 and O2) and liquid nutrients continuously. (b) Configuration of the system for the gas-phase reaction. (c) Batch-type vial system for the aqueous phase reaction.
+
+095 ZOT-5ZKWZC43-WU27BGWS-FIG2-P3
+Direct Methane Oxidation by Copper- and Iron-Dependent Methane Monooxygenases
+Figure 2. Methanotroph metabolic pathways. The pMMO trimer is colored by protomer, showing its C3 symmetrical organization. sMMO is colored by subunits that comprise the complex, along with the MMO regulatory protein B (MMOB) bound (indigo) on the front and back (dashed line) sides of sMMO. MDH, methanol dehydrogenase; ICMs, intracytoplasmic membranes; PFLAs, phospholipid fatty acids; RuMP, ribulose monophosphate; CBB, Calvin-Benson-Bassham; H4MPT, tetrahydromethanopterin pathway; H4F, tetrahydrofolate pathway; FDH, formate dehydrogenase; SHMT, serine hydroxymethyltransferase; Hps, hexulose 6-phosphate synthase; RuBisCo, ribulose 1,5-bisphosphate carboxylase.
+
+096 ZOT-5ZKWZC43-WU27BGWS-FIG24-P21
+Direct Methane Oxidation by Copper- and Iron-Dependent Methane Monooxygenases
+Figure 24. Model for regulation of electron transfer and substrate binding in sMMO adapted with permission from ref 343.
+
+097 ZOT-XJL6K8XC-VYLLYB6F-FIG6-P13
+Metal(loid) speciation and transformation by aerobic methanotrophs
+Fig. 6 Schematic representation of potential biotic and abiotic interactions that constrains methanotroph-dependent metal(loid) transformation in the environment. N – nitrogen, P – phosphorus, K – potassium, C – carbon, Cu – copper, Fe – iron, Ni – nickel, Cr – chromium, Se – selenium, Hg – mercury, Zn – zinc, Co – Cobalt, Na – sodium, Cl – chlorine and F – flourine
+
+098 ZOT-76D7M9IR-7HDP65DC-FIG1-P3
+Highly efficient methane biocatalysis revealed in a methanotrophic bacterium
+Figure 1 | Methane oxidation and formaldehyde assimilation. (a) Predicted positions of incorporated 13C (indicted in red) for the EDD (dark red arrows) and the EMP (blue arrows) variants. Dashed lines indicate multistep reactions. The pentose-phosphate pathway variant for regeneration of ribulose 5-phosphate is indicated by orange dashed arrows. Enzyme activities (in nmol min  1 per mg protein) in cell free extracts of M. alcaliphilum 20Z were as follows: methane monoxygenase (Mmo), 70±5; PQQ-dependent methanol dehydrogenase (Mdh), 230±12; NAD-dependent formate dehydrogenase (Fdh), 130±7; hexulose phosphate synthase/hexulose phosphate isomerase (Hps/Hpi), 600±30; glucose phosphate isomerase (Gpi), 32±5; NADP- dependent glucose 6-phosphate dehydrogenase, 34±2 (Gpd); NAD-dependent glucose 6-phosphate dehydrogenase, 23±2 (Gdp); NADP-dependent 6-phosphogluconate dehydrogenase (Edd), 32±2; KDPG aldolase (Eda), 60±4; fructose-bisphosphate aldolase (Fba), 35± 2; PPi-phosphofructokinase (Pfk), 70± 4. (b) Summary equations for production of 3-phosphoglycerate from formaldehyde via the RuMP pathway for the EDD variant (1) or the EMP variant with either the ATP-dependent EMP pathway (2) or the PPi-dependent EMP pathway (3). Abbreviations: Ru5P, ribulose 5-phosphate; He6P, 3-hexulose 6-phosphate; F6P, fructose 6-phosphate; KDPG, 2-keto-3-deoxy 6-phosphogluconate; F1,6P, fructose 1,6-bisphosphate; DAP, dihydroxyacetone phosphate; GAP, glyceraldehyde 3-phosphate; PGA, 3-phosphoglycerate; Pi, inorganic phosphate.
+
+099 ZOT-VSXJGLG4-7MKUAAL7-FIG1-P2
+Recent trends in methane to bioproduct conversion by methanotrophs
+Fig. 1. Methane assimilation pathways in methanotrophs. Abbreviations: DHAP–dihydroxyacetone phosphate, EMC–ethylmalonyl-coenzyme A, G3P–glyceraldehyde 3-phosphate, methylene-THF-methylene tetrahydrofolate, OAA–oxaloacetate, PEP–phosphoenolpyruvate, RuMP – ribulose monophosphate.
+
+100 ZOT-XJ53ES6L-NZ69HNNJ-FIG2-P4
+Bioupcycling methane into triacylglycerol for the production of sustainable aviation fuel by methanotrophic bacteria
+Fig. 2. Overview of the TAG biosynthesis pathway and genetic modifications introduced in M. buryatense 5GB1S. (F6P: fructose-6-phosphate, Acetyl-CoA: acetyl- coenzyme A, Acyl-CoA: acyl-coenzyme A, G3P: glyceraldehyde-3-phosphate, PA: phosphatidic acid, DAG: diacylglycerol, TAG: triacylglycerol, RoPAP: phospha­ tidic acid phosphatase, tDGAT: diacylglycerol acyltransferase, fadE: acyl-CoA dehydrogenase, dgkA: diacylglycerol kinase, gfp: green fluorescent protein, Ptac: tac promoter, PmxaF: mxaF promoter, T: terminator).
+
+101 ZOT-D4S6BYKJ-HWQX8ZWK-FIG4-P6
+Reduction of chromate and nitrate by type II aerobic methanotrophs under micro-aerobic conditions
+Fig. 4. Metabolic pathways and functional gene abundance. (a) Nitrogen metabolism; (b) Methane metabolism and (c) Cr(VI) reduction. (lg(X + 1) transformation of functional gene abundance, and the heatmap of functional gene abundance for samples S0 , A0 , A, B from left to right.).
+
+102 ZOT-KMND3UPA-CEJAHA7A-FIG3-P6
+Electroactive Materials for Anaerobic Bioenergy and Bioproduct Recovery from Wastewater: Decoding Tripartite Interfaces in Microbial Electron Transfer
+Figure 3. Material−microbe interfacial mechanisms of iron-based material-mediated MET. (a) Electrical bioconduction. (b) Semiconductive capacitance. (c) Solid-phase redox cycling. (d) Corrosion-driven evolution.
+
+103 ZOT-NII5DGFH-JSKN6AAN-FIG5-P7
+Bacteria-piezocatalyst for NO3- reduction to NH4+ driven by hydraulic kinetic energy
+Fig. 5. Main pathways of the piezo-electrons transfer in S. oneidensis MR-1 during the piezo-reduction of nitrate to ammonium. (a) Changes in genes involved of the reversing Mtr route in the S. oneidensis MR-1/ZnO biohybrid system. (b) Changes in nitrogen compounds of the △cymA mutant/ZnO biohybrid system. (c) Changes in nitrogen compounds of the S. oneidensis MR-1/ZnO biohybrid system using dicumarol inhibitor. (d) Reversing Mtr route of the piezo-electrons transfer in S. oneidensis MR-1.
+
+104 ZOT-U5V9QN8E-KN6CU9V7-FIG7-P7
+Self-regenerable bio-hybrid with biogenic ferrous sulfide nanoparticles for treating high-concentration chromium-containing wastewater
+Fig. 7. Schematic diagram of Cr(VI) reduction by pure cells (A) and the bio-hybrid (B). EM, extracellular medium; OM, outer membrane; PM, periplasm; IM, inner membrane; MQ/ MQH2, the oxidized / reduced form of menaquinone.
+
+105 ZOT-XKIAABQD-JDV5UULN-FIG4-P6
+Metabolic alteration of Methylococcus capsulatus str. Bath during a microbial gas-phase reaction
+Fig. 4. Traditional overview of the central carbon metabolism of Methylococcus capsulatus (Bath). The central carbon metabolism of M. capsulatus (Bath) was described as being limited to the RuMP cycle, the TCA cycle, and an incomplete serine cycle.
+
+106 ZOT-ZEMR5578-MVJMFUN7-FIGGA-P1
+Ferrihydrite-mediated methanotrophic nitrogen fixation in paddy soil under hypoxia
+Graphical abstract; complete region between explicit graphical-abstract heading and next section.
+
+107 ZOT-DPTF2RKF-XBNIWI5Q-FIG5-P8
+Nano-Fe3O4 Enhances the Biological Removal of Low-Concentration Methane during Long-Term Operation
+Figure 5. Specific methanotrophic activity, bioenergetic, and genetic analysis of the aerobic MOB consortia with and without nano-Fe3O4. (a) CH4 removal efficiency of BF1 and BF3 biosamples in sealed serum bottles under 500 ppmv CH4 across three consecutive batch cycles and (b) average CH4 removal rates derived from the batch tests. (c) Intracellular ATP and ADP concentrations and ATP/ADP ratio in BF1 and BF3 biosamples. (d) Intracellular NADH and NAD+ concentrations and NAD+/NADH ratio in BF1 and BF3 biosamples. (e) Pathway schematic with summed gene abundance for each step and (f) heatmap of key gene abundance for the complete aerobic CH4 oxidation pathway. Gene abundances represent TPM values normalized by the single-copy housekeeping gene pyrG in the metagenome, as described in Text S10. (g) Absolute quantification of pmoA and mmoX transcripts and pmoA/mmoX gene transcript ratio. (h) Summary diagram illustrating the strengthening mechanism of the MOB-Fe3O4 hybrid system.
+
+108 ZOT-TW2PI7B6-2M3TAALY-FIGGA-P1
+Biochar-Mediated Anaerobic Oxidation of Methane
+Graphical abstract; artwork adjacent to explicit abstract heading in source PDF.
+
+109 ZOT-VFBRUWBG-G7CGL9X7-FIG1-P2
+Extracellular Electron Transfer Enables Cellular Control of Cu(I)-Catalyzed Alkyne–Azide Cycloaddition
+Figure 1. S. oneidensis enables both anaerobic and aerobic CuAAC. (a) The Mtr-pathway shuttles electrons to the extracellular space, where they can reduce soluble Cu(II) in situ to Cu(I). The Cu(I) participates in CuAAC, yielding turn-on ﬂuorescence upon cycloaddition (ex. 488 nm; em. 521 nm). (b) CuAAC between 0.6 μM CalFluor 488 and 100 μM alkyne-PEG4-acid and 50 μM Cu:THPTA (1:6) in SBM. Anaerobic controls in the presence or absence of Cu:THPTA and sodium ascorbate (NaAsc, 200 μM) or S. oneidensis (MR-1, OD600 = 0.1) measured after 5 h. (c) Anerobic kinetic curves monitoring the creation of the cycloaddition product in the presence of a sodium ascorbate (NaAsc, 200 μM), S. oneidensis (MR-1, OD600 = 0.1), or E. coli MG1655 (OD600 = 0.1). (d) Kinetic curves monitoring anaerobic reactions exposed to oxygen (gray bars) before resealing and monitoring. (e) Aerobic kinetic curves monitoring the creation of the cycloaddition product in the presence of sodium ascorbate (NaAsc, 200 μM), S. oneidensis (MR-1, OD600 = 0.1), or E. coli MG1655 (OD600 = 0.1). Data represent mean ± SD of n = 3 biological replicates.
+
+110 ZOT-3ZNQTQ8Z-UNFHVW6W-FIG1-P2
+Optimization of Methanotrophic Growth and Production of Poly(3-Hydroxybutyrate) in a High-Throughput Microbioreactor System
+FIG 1 Schematic of the gas ﬂow system used for high-throughput growth. Gas composition inside the gastight box was controlled using a constant ﬂow of gas supplied via electronic mass ﬂow controllers. Gas-permeable plate covers keep replicates separate and prevent excessive evaporation. Shaking at 225 rpm with a 2-in. radius is used to break surface tension within wells, ensuring rapid mass transfer. Temperature control is achieved using a resistance heating element attached to a variable-voltage transformer.
+
+111 ZOT-B7TGUF38-IMGY2MBN-FIG2-P4
+Genomic Insights into Methanotrophy: The Complete Genome Sequence of Methylococcus capsulatus (Bath)
+Figure 2. Predicted Central Metabolic Pathways of M. capsulatus Genomic information was used to predict the ﬂow of carbon from methanotrophy pathways into carbon ﬁxation pathways, and thence into glycolysis/gluconeogenesis and the TCA cycle. Locus names are indicated next to key steps. Some intermediates are omitted. DOI: 10.1371/journal.pbio.0020303.g002
+
+112 ZOT-BSV4JMQQ-RTP7Q3IV-FIG6-P8
+Cadmium-Induced Responses and Tolerance Mechanisms of Aerobic Methanotrophs in Rice Paddy Soils
+Figure 6. Speculative Cd tolerance mechanism of methanotrophs in rice paddy soils.
+
+113 ZOT-PAHHNPV2-XCHSQ7TD-FIG4-P5
+Anaerobic methane oxidation coupled with denitrification mitigates soil nitrous oxide emissions
+Fig. 4. Proposed metabolic pathways of the coupling between aerobic methane oxidation and denitrification. Ru5P, ribulose-­5-­phosphate; H6P, hexulose-­6-­ phosphate; F6P, fructose-­6-­phosphate; E4P, erythrose-­4-­phosphate; STP, sedoheptulose-­7-­phosphate; R5P, ribose-­5-­phosphate; Xu5P, xylulose-­5-­phosphate; G6P, glucose-­ 6-­phosphate; The definitions of genes are listed in table S4.
+
+114 ZOT-VSXJGLG4-7MKUAAL7-FIG5-P9
+Recent trends in methane to bioproduct conversion by methanotrophs
+Fig. 5. Ectoine synthesis pathway in methanotrophic bacteria.
+
+115 ZOT-5IMTSNH8-MTCJDYR6-FIG19-P33
+Toward Next-Generation Semiartificial Photosynthesis: Multidisciplinary Engineering of Biohybrid Systems
+Figure 19. Overview of quantum and energy efficiencies in biohybrid systems. (a) Schematic illustration of the calculation methods for quantum efficiencies, including apparent quantum efficiency (AQE) and internal quantum efficiency (IQE), as well as energy efficiency represented by solar-to- chemical efficiency (SCE). (b) Summary of reported AQE and IQE values in various biohybrid systems from the literature, as listed in Table S2.
+
+116 ZOT-CXIQ4VWK-IVRNVEA5-FIG6-P6
+Humic substances as electron acceptors for anaerobic oxidation of methane driven by ANME-2d
+Fig. 6. Hypothesized different electron transfer models to electron acceptors (a) ni- trate and (b) humics.
+
+117 ZOT-4BFE7KNF-36SPFBUL-FIG2-P5
+Revealing the mechanisms of keystone microbial assembly in a bioaugmentation strategy for anaerobic digestion of waste activated sludge
+Fig. 2. Metabolic mechanism of enriched ADC and correlation analysis between metabolic enzyme genes and bacterial genera within the ADC. (a), the metabolic pathway of alginate in ADC, with bar plots representing the transcript abundances (based on metatranscriptomic data) of the corresponding enzymes across the three growth phases (n = 3); (b), correlation analysis between metabolic enzyme genes and bacterial genera within the ADC. Notes: EC 4.2.2.3, Alginate lyase; EC 4.2.2.11, Guluronate-specific alginate lyase; EC 4.2.2.26, Oligo-alginate lyase; EC 4.1.2.14, 2-dehydro-3-deoxy-phosphogluconate aldolase; EC 5.3.1.17, 5- dehydro-4-deoxy-D-glucuronate isomerase; EC 1.1.1.127, 2-keto-3-deoxy-D-gluconate dehydrogenase; EC 2.7.1.45, 2-dehydro-3-deoxygluconokinase.
+
+118 ZOT-95FUY4BW-IVHLV7KG-FIGGA-P1
+Methane-Driven Perchlorate Reduction by a Microbial Consortium
+Graphical abstract; artwork adjacent to explicit abstract heading in source PDF.
+
+119 ZOT-AHH3KBMH-GSEN658Y-FIG6-P6
+Identification of the microorganisms for methane-dependent arsenate reduction in wetland using DNA-stable isotope probing and metagenomics
+Fig. 6. The proposed metabolic pathways of M-AsR in wetland.
+
+120 ZOT-TBABRAWE-YJ2NY523-FIG1-P3
+Exploring New Strategies for Optimizing the Production of Poly(3-hydroxybutyrate- <i>co</i> -3-hydroxyvalerate) from Methane and VFAs in Synthetic Cocultures and Mixed Methanotrophic Consortia
+Figure 1. Overview of test series.
+
+121 ZOT-5WCM662A-TN6H4PYG-FIG7-P8
+Temperature-Dependent Regulation of Denitrification Intermediates in High-Temperature Ecosystems
+Figure 7. Temperature-dependent mechanisms underlying the accumulation of denitrification intermediates. The dominant products of denitrification vary across different temperature regimes, reflecting the shifts in microbial communities and associated gene expression profiles. As the temperature decreases, the product gradually changes from NO2 −to N2O to N2. Green arrows indicate pathways driven by highly expressed genes, black arrows represent steps encoded by genes present but likely lowly expressed, and red crosses mark genes absent or not expressed.
+
+122 ZOT-6LD6WCLF-URURPJTS-FIGGA-P1
+Extracellular electron uptake for CO2 fixation by Rhodopseudomonas palustris during electro-cultivation in darkness
+Graphical abstract; complete region between explicit graphical-abstract heading and next section.
+
+123 ZOT-E7SEZ5ZH-UIQCNUZG-FIG3-P5
+Ribulose-1,5-Bisphosphate Carboxylase/Oxygenase (RubisCO) Is Essential for Growth of the Methanotroph Methylococcus capsulatus Strain Bath
+FIG 3 RubisCO-dependent growth of M. capsulatus Bath. (a) Relative abundance of M. capsulatus Bath transcripts for enzymes of the ribulose monophosphate pathway (RuMP), Calvin-Basham-Benson (CBB) cycle, and serine cycle C1 assimilation routes during cultivation in a bioreactor with continuous inﬂuent and efﬂuent gas. (b) Relative transcript abundance of M. capsulatus Bath RubisCO large subunit (cbbL), pyruvate carboxylase (pyc), glycine cleavage protein H (gcvH), pyruvate::ferredoxin oxidoreductase (pfo), and malic enzyme (sfc) putative carboxylating enzymes. (c) Cultivation of pyruvate carboxylase (Dpyc, dark gray bar), serine-glyoxylate amino transferase (Dsga, light gray bar), and glycine cleavage (Dgcv, white bar) knockout strains compared to wild-type (black bar) M. capsulatus Bath in sealed serum vials. (d) Cultivation of the conditional RubisCO knockout strain (pCbbLS DcbbLS::Gmr) in a serum vial (left) or on solid NMS medium (right) with (1) or without (2) RubisCO induction. Data represent the mean 6 standard deviation of 4 biological replicates from two independent experiments (b to d) or a representative experiment (a and d). ***, P # 0.001 compared to WT, determined by unpaired Student’s t test.
+
+124 ZOT-Z558DE8E-EG2XPCRR-FIG4-P7
+Enhanced medium-chain fatty acids production from waste activated sludge via manganese-driven two-stage fermentation: promoted electron transfer and regulated energy metabolism
+Fig. 4. Potential chain elongation pathways involved in MCFA production and the relative abundance of involving enzymes in the control and ZVMn-added groups.
+
+125 ZOT-BSV4JMQQ-RTP7Q3IV-FIGGA-P1
+Cadmium-Induced Responses and Tolerance Mechanisms of Aerobic Methanotrophs in Rice Paddy Soils
+Graphical abstract; artwork adjacent to explicit abstract heading in source PDF.
+
+126 ZOT-I9HQ7Q29-RKRJ6LBS-FIGGA-P1
+Biosynthesis of polyhydroxybutyrate from methane and carbon dioxide using type II methanotrophs
+Graphical abstract; complete region between explicit graphical-abstract heading and next section.
+
+127 ZOT-TBABRAWE-YJ2NY523-FIGGA-P1
+Exploring New Strategies for Optimizing the Production of Poly(3-hydroxybutyrate- <i>co</i> -3-hydroxyvalerate) from Methane and VFAs in Synthetic Cocultures and Mixed Methanotrophic Consortia
+Graphical abstract; artwork adjacent to explicit abstract heading in source PDF.
+
+128 ZOT-TDHGXHG7-NSTUJJD7-FIGGA-P1
+Polyhydroxybutyrate (PHB) production and methane uptake by methanotrophic bacteria in a membrane-based reactor
+Graphical abstract; complete region between explicit graphical-abstract heading and next section.
+
+129 ZOT-PECP6RDF-2ABPHVK7-FIG3-P6
+Heavy metal bioremediation in soil by copper-acclimated aerobic methanotrophs: performance and mechanisms
+Fig. 3. The impact of Cu2+ and Zn2+ on the methanotrophic pathway. (a) & (b) The differences in the expression of functional genes of individual Cu2+ and Zn2+
+
+130 ZOT-RV2CBZ4W-6GV77TXY-FIG2-P3
+Microbial iron oxide respiration coupled to sulfide oxidation
+Fig. 2 | Three potential metabolic pathways for coupling sulfur oxidation with reduction of iron(iii) oxides in a single bacterium. Top, genomic reconstruction predicts that dissimilatory reduction of iron(iii) oxides is coupled with oxidation of sulfide to sulfate (reaction 1; a), oxidation of sulfide to elemental sulfur (reaction 2; b) and oxidation of thiosulfate to sulfate (reaction 3; c). Key enzymes from Desulfobacterota and Gammaproteobacteria taxa are indicated as examples. Bottom, Gibbs free energy (∆Gr) of the iron- dependent sulfur oxidation reactions across a range of pH was calculated, assuming two different environmental settings. Marine ecosystem conditions (red line): ionic strength (I) = 0.7 M, T = 25 °C, [total dissolved sulfide] = 100 μM, [SO4 2−] = 28 mM, [S2O3 2−] = 1 μM, [Fe2+] = 10 μM; freshwater ecosystem conditions (black line): I = 0.001 M, T = 25 °C, [total dissolved sulfide] = 100 μM, [SO4 2−] = 100 μM, [S2O3 2−] = 1 μM, [Fe2+] =10 μM. The red and black lines overlap in c. Sox, thiosulfate-oxidizing system; OmcS and OmcZ, outer membrane multi-haem c-type cytochromes; PCC, porin–cytochrome complex.
+
+131 ZOT-I5T5XF57-RR9A4CZY-FIG5-P6
+Sulfur microenvironments as hotspots for biogenic pyrite formation
+Fig. 5. Proposed steps of biogenic pyrite formation through replacement of initial S0 particles. (1) Concurrent microbial reduction of ferrihydrite and S0. (2) Fe2+ adsorption onto sulfur particles. (3) Mackinawite formation on S0 particles. (4) Polysulfide enrichment on sulfur microenvironments, and an inside-out dissolution mechanism facilitated by mackinawite’s conductivity. (5) Iron sulfide transformation to pyrite with the consumption of S0 and (6) remaining pyrite particles preserving initial sulfur particle shape. SEM micrographs belong to chemically fixed samples.
+
+132 ZOT-RAB8URMQ-KJF2NIIZ-FIGGA-P1
+Fe(III) Oxide Reduction Bypassing Outer-Surface Cytochromes in a Marine Respiratory Anaerobe
+Graphical abstract; artwork adjacent to explicit abstract heading in source PDF.
+
+133 ZOT-4Y4MLDPE-LZC3NCHJ-FIG5-P6
+Siderophore-Mediated Cooperation in Anammox Consortia
+Figure 5. Potential iron uptake mechanism among Ca.Brocadia (AMX1), Bacteroidota.CLD3 (BCD1), and siderophore synthesis bacteria (PRO1, KSB1, and CFX6).
+
+134 ZOT-ECS7K5X9-6FD989SN-FIG6-P24
+Photosynthesis-driven interactions in the phycosphere enhance bacterial extracellular superoxide production
+Figure 6. Proposed working model for photosynthesis-enhanced bacterial extracellular
+
+135 ZOT-PAHHNPV2-XCHSQ7TD-FIG5-P5
+Anaerobic methane oxidation coupled with denitrification mitigates soil nitrous oxide emissions
+Fig. 5. Schematic of carbon and electron flow in microbial communities mediating AOM-­coupled nitrate and nitrite reduction. (A) Nitrate reduction; (B) nitrite reduc- tion. Gray lines indicate potential material flows between microorganisms inferred from MAG-­based functional predictions, while dashed lines represent electron flow.
+
+136 ZOT-DJSTSB3E-L5NV7G7Z-FIG6-P10
+Exploration of Fe speciation preference for aerobic methane oxidation by using isotopic Fe-modified zeolites
+Fig. 6. Mechanism of nitrification coupled with CH4 oxidation under NH4 + stimulation.
+
+137 ZOT-CP39QAM5-WDCVDQJW-FIGGA-P1
+Syntrophic interactions driving anaerobic methane oxidation in deep-sea cold seeps revealed by DNA-SIP
+Graphical abstract; complete region between explicit graphical-abstract heading and next section.
+
+138 ZOT-5WCM662A-TN6H4PYG-FIGGA-P1
+Temperature-Dependent Regulation of Denitrification Intermediates in High-Temperature Ecosystems
+Graphical abstract; artwork adjacent to explicit abstract heading in source PDF.
+
+139 ZOT-4Y4MLDPE-LZC3NCHJ-FIGGA-P1
+Siderophore-Mediated Cooperation in Anammox Consortia
+Graphical abstract; artwork adjacent to explicit abstract heading in source PDF.

@@ -1,0 +1,21 @@
+{
+  "decision_source": "annotations/manual_curation_final.csv",
+  "reviewed_total": 293,
+  "keep_total": 27,
+  "delete_total": 266,
+  "deleted_in_this_run": 65,
+  "already_absent_before_run": 201,
+  "filtered_csv_files": {
+    "annotations/figure-level-classification-v0.1.csv": 81,
+    "manifests/raw-image-manifest.csv": 81,
+    "manifests/stage1_5_harvested_figures.csv": 1,
+    "manifests/stage1_5_wave2_harvested_figures.csv": 1,
+    "manifests/stage1_5_wave5_harvested_figures.csv": 1,
+    "manifests/stage1_5_wave7_harvested_figures.csv": 2,
+    "manifests/unified-library-index.csv": 35
+  },
+  "missing_keep_assets": [],
+  "remaining_delete_assets": [],
+  "duplicate_sha256_among_kept": [],
+  "validation": "PASS"
+}

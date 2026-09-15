@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "visual_analysis_status": ["pending_visual_decomposition", "in_progress", "completed_batch1", "completed"],
+  "dimensionality": ["flat_2d", "editorial_2d", "soft_2_5d", "full_3d", "hybrid_2d_3d"],
+  "layout_archetype": ["linear_flow", "two_organism_interaction", "central_hub", "mirrored_comparison", "zoom_in_multiscale", "circular_pathway", "layered_gradient", "evidence_to_model", "staged_a_b_c_story", "scene_to_mechanism", "process_to_function", "membrane_cutaway", "other"],
+  "reading_direction": ["left_to_right", "top_to_bottom", "center_outward", "mirrored", "scene_to_zoom", "mixed"],
+  "panel_structure": ["single_panel", "multi_panel_loose", "multi_panel_tightly_integrated"],
+  "information_density": ["low", "medium", "medium-high", "high"],
+  "palette_temperature": ["cool", "warm", "neutral", "split_warm_cool", "mixed"],
+  "saturation": ["low", "low-medium", "medium", "medium-high", "high"],
+  "whitespace": ["sparse", "balanced", "generous"],
+  "perspective_camera": ["flat", "landscape_cutaway", "cell_cutaway", "oblique", "isometric", "scene_perspective", "mixed"],
+  "connector_semantics": ["metabolic_flow", "electron_flow", "carbon_flow", "gas_exchange", "causal_transition", "bidirectional_exchange", "inhibition", "candidate_pathway", "established_pathway", "zoom_connector"],
+  "recommended_visual_roles": ["overall_composition", "environmental_context", "condition_comparison", "cell_rendering", "membrane_rendering", "material_rendering", "molecule_rendering", "arrow_grammar", "palette", "typography", "whitespace", "information_density", "evidence_integration", "biohybrid_story", "EET_mechanism", "graphical_abstract"]
+}

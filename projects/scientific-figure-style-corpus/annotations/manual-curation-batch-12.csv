@@ -1,0 +1,13 @@
+id,asset_path,decision
+S033,assets/stage1_5/S15-036/S15-036_fig3.jpg,keep
+S034,assets/stage1_5/S15-037/S15-037_fig2.jpg,delete
+S035,assets/stage1_5/S15-037/S15-037_fig3.jpg,delete
+S036,assets/stage1_5/S15-038/S15-038_fig4.jpg,delete
+S037,assets/stage1_5/S15-038/S15-038_fig6.jpg,delete
+S038,assets/stage1_5/S15-039/S15-039_fig3.jpg,delete
+S039,assets/stage1_5/S15-039/S15-039_fig4.jpg,delete
+S040,assets/stage1_5/S15-041/S15-041_fig1.jpg,delete
+S041,assets/stage1_5/S15-043/S15-043_fig2.jpg,delete
+S042,assets/stage1_5/S15-043/S15-043_fig7.jpg,keep
+S043,assets/stage1_5/S15-047/S15-047_fig1.jpg,delete
+S044,assets/stage1_5/S15-047/S15-047_fig4.jpg,delete

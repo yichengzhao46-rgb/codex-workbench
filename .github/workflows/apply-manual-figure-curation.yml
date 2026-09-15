@@ -1,0 +1,45 @@
+name: Apply final manual figure curation
+
+on:
+  push:
+    branches:
+      - feat/figure-style-corpus-v0.1
+    paths:
+      - .github/workflows/apply-manual-figure-curation.yml
+      - projects/scientific-figure-style-corpus/scripts/apply_manual_curation.py
+      - projects/scientific-figure-style-corpus/annotations/manual_curation_final.csv
+
+permissions:
+  contents: write
+
+jobs:
+  apply-curation:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout curation branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/figure-style-corpus-v0.1
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply final manual decisions
+        run: python projects/scientific-figure-style-corpus/scripts/apply_manual_curation.py
+
+      - name: Commit cleaned corpus and rebuilt indexes
+        shell: bash
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No cleanup changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A projects/scientific-figure-style-corpus
+          git commit -m "Apply final manual figure curation"
+          git push origin HEAD:feat/figure-style-corpus-v0.1

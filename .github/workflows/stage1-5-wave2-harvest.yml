@@ -1,0 +1,93 @@
+name: Stage 1.5 wave 2 screened harvest
+
+on:
+  push:
+    branches:
+      - feat/figure-style-corpus-v0.1
+    paths:
+      - ".github/workflows/stage1-5-wave2-harvest.yml"
+      - "projects/scientific-figure-style-corpus/scripts/harvest_stage1_5_wave2_aws.py"
+      - "projects/scientific-figure-style-corpus/scripts/recover_stage1_5_wave2_exact_figures.py"
+      - "projects/scientific-figure-style-corpus/annotations/stage1_5_wave2_figure_screening.csv"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stage1-5-wave2-harvest-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout corpus branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests pillow
+
+      - name: Harvest screened wave 2 assets from PMC AWS
+        run: |
+          python projects/scientific-figure-style-corpus/scripts/harvest_stage1_5_wave2_aws.py \
+            --project-root projects/scientific-figure-style-corpus \
+            --selection projects/scientific-figure-style-corpus/annotations/stage1_5_wave2_figure_screening.csv
+
+      - name: Recover exact JATS figure-id collisions
+        run: python projects/scientific-figure-style-corpus/scripts/recover_stage1_5_wave2_exact_figures.py
+
+      - name: Validate harvested assets
+        run: |
+          python - <<'PY'
+          import csv, hashlib, pathlib
+          root = pathlib.Path('projects/scientific-figure-style-corpus')
+          p = root / 'manifests/stage1_5_wave2_harvested_figures.csv'
+          rows = list(csv.DictReader(p.open(encoding='utf-8', newline='')))
+          selected = [r for r in csv.DictReader((root / 'annotations/stage1_5_wave2_figure_screening.csv').open(encoding='utf-8', newline='')) if r['public_mirror'].lower() == 'true']
+          if len(rows) != len(selected):
+              raise SystemExit(f'wave2 harvest incomplete: {len(rows)}/{len(selected)} selected assets')
+          for r in rows:
+              asset = root / r['asset_path']
+              if not asset.exists():
+                  raise SystemExit(f'missing asset: {asset}')
+              if hashlib.sha256(asset.read_bytes()).hexdigest() != r['sha256']:
+                  raise SystemExit(f'checksum mismatch: {asset}')
+          print(f'validated {len(rows)} wave2 assets')
+          PY
+
+      - name: Commit wave 2 assets and reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            projects/scientific-figure-style-corpus/assets/stage1_5 \
+            projects/scientific-figure-style-corpus/manifests/stage1_5_wave2_harvested_figures.csv \
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave2_harvest_report.json \
+            projects/scientific-figure-style-corpus/validation/stage1_5_status.json
+          if git diff --cached --quiet; then
+            echo "No wave2 harvest changes"
+          else
+            git commit -m "Harvest Stage 1.5 wave 2 scientific figures"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+
+      - name: Upload wave 2 harvest artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1-5-wave2-harvest
+          path: |
+            projects/scientific-figure-style-corpus/assets/stage1_5
+            projects/scientific-figure-style-corpus/manifests/stage1_5_wave2_harvested_figures.csv
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave2_harvest_report.json
+            projects/scientific-figure-style-corpus/validation/stage1_5_status.json
+          if-no-files-found: error

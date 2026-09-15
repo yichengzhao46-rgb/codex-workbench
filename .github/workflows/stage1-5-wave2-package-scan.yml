@@ -1,0 +1,68 @@
+name: Stage 1.5 wave 2 OA package scan
+
+on:
+  push:
+    branches:
+      - feat/figure-style-corpus-v0.1
+    paths:
+      - ".github/workflows/stage1-5-wave2-package-scan.yml"
+      - "projects/scientific-figure-style-corpus/scripts/scan_stage1_5_wave2_oa_package.py"
+      - "projects/scientific-figure-style-corpus/manifests/stage1_5_wave2_candidates.csv"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stage1-5-wave2-package-scan-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout corpus branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests pillow
+
+      - name: Scan PMC OA packages
+        run: |
+          python projects/scientific-figure-style-corpus/scripts/scan_stage1_5_wave2_oa_package.py \
+            --project-root projects/scientific-figure-style-corpus \
+            --candidates projects/scientific-figure-style-corpus/manifests/stage1_5_wave2_candidates.csv
+
+      - name: Commit package scan metadata only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave2_package_scan/stage1_5_wave2_all_figures.csv \
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave2_package_scan/stage1_5_wave2_scan_summary.json
+          if git diff --cached --quiet; then
+            echo "No package scan metadata changes"
+          else
+            git commit -m "Scan Stage 1.5 wave 2 OA packages"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+
+      - name: Upload package-scan visual QA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1-5-wave2-package-scan
+          path: |
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave2_package_scan/stage1_5_wave2_all_figures.csv
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave2_package_scan/stage1_5_wave2_scan_summary.json
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave2_package_scan/previews
+            projects/scientific-figure-style-corpus/validation/stage1_5_wave2_package_scan/contact_sheets
+          if-no-files-found: error

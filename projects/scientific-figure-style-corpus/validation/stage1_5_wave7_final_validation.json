@@ -1,0 +1,13 @@
+{
+  "validated_assets": 8,
+  "selected_assets": 8,
+  "checksum_validation": "passed",
+  "within_wave_duplicate_hashes": [],
+  "cross_wave_duplicates": [],
+  "manifest_complete": true,
+  "validation_passed": true,
+  "active_ab_total": 96,
+  "repository_binary_assets_committed": true,
+  "committed_active_ab_total": 96,
+  "execution_note": "Wave 7 assets were harvested from the validated source-media bytes, committed to assets/stage1_5, and the original Wave 6 screening and metadata were restored successfully."
+}

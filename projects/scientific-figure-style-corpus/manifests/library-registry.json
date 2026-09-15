@@ -1,0 +1,90 @@
+{
+  "schema_version": 6,
+  "library": "unified_scientific_figure_library",
+  "library_id": "unified_master",
+  "retrieval_surface": "single_library",
+  "curated_reference_layer": {
+    "status": "authoritative_for_user_selected_style_references",
+    "main_catalog": "projects/scientific-figure-style-corpus/manifests/main-reference-catalog.csv",
+    "bioinformatics_catalog": "projects/bioinformatics-figure-reference-library/reference-catalog.csv",
+    "cross_library_registry": "projects/figure-reference-libraries/registry.json",
+    "id_migration_map": "projects/figure-reference-libraries/id-map.csv",
+    "canonical_id_schemes": {
+      "main": "M001-M999",
+      "bioinformatics": "BI001-BI999"
+    },
+    "note": "The historical unified harvest below remains available for provenance and legacy router experiments. For the current manually curated libraries, use the canonical M### and BI### catalogs."
+  },
+  "snapshot": {
+    "source_rows": 235,
+    "active_source_records": 96,
+    "reference_source_records": 139,
+    "canonical_records": 234,
+    "active_canonical_records": 95,
+    "reference_canonical_records": 139,
+    "exact_duplicate_alias_rows": 1
+  },
+  "snapshot_note": "Historical pre-manual-curation unified snapshot retained for provenance. Current user-curated reference sets are tracked separately in curated_reference_layer.",
+  "reference_authorization": {
+    "source_manifest_historical_state": "zotero-private-manifest.csv preserves the state recorded at ingestion time",
+    "current_project_state": "user_confirmed_redistribution_permission",
+    "confirmed_at": "2026-09-13",
+    "applies_to_reference_source_rows": 139,
+    "user_confirmed_public_redistribution": true,
+    "note": "Keep the original manifest values for provenance; this registry records the user's later authorization separately. Authorization does not promote reference records to active or waive visual-QA/classification gates."
+  },
+  "tiers": [
+    {
+      "tier_id": "active",
+      "role": "validated_style_learning",
+      "asset_roots": [
+        "projects/scientific-figure-style-corpus/assets/raw",
+        "projects/scientific-figure-style-corpus/assets/stage1_5"
+      ],
+      "active_eligible": true,
+      "retrieval_enabled": true,
+      "default_rank_priority": 1
+    },
+    {
+      "tier_id": "reference",
+      "role": "reference_style_retrieval",
+      "asset_roots": [
+        "projects/scientific-figure-style-corpus/assets/zotero"
+      ],
+      "source_manifest": "projects/scientific-figure-style-corpus/manifests/zotero-private-manifest.csv",
+      "authorization_record": "reference_authorization",
+      "active_eligible": false,
+      "retrieval_enabled": true,
+      "default_rank_priority": 2
+    }
+  ],
+  "unified_index": "projects/scientific-figure-style-corpus/manifests/unified-library-index.csv",
+  "unified_summary": "projects/scientific-figure-style-corpus/manifests/unified-library-summary.json",
+  "builder": "projects/scientific-figure-style-corpus/scripts/unified_library.py",
+  "router_adapter": "projects/scientific-figure-style-corpus/scripts/router_reference_query.py",
+  "validation_script": "projects/scientific-figure-style-corpus/scripts/validate_router_retrieval.py",
+  "router_test_cases": "projects/scientific-figure-style-corpus/validation/router-retrieval-test-cases.json",
+  "commands": {
+    "build": "python projects/scientific-figure-style-corpus/scripts/unified_library.py --project-root projects/scientific-figure-style-corpus build",
+    "validate": "python projects/scientific-figure-style-corpus/scripts/unified_library.py --project-root projects/scientific-figure-style-corpus validate --check-assets --strict-snapshot",
+    "query": "python projects/scientific-figure-style-corpus/scripts/router_reference_query.py --text <query> --limit 8",
+    "router_validation": "python projects/scientific-figure-style-corpus/scripts/validate_router_retrieval.py"
+  },
+  "schema_contract": {
+    "primary_purpose": ["conceptual_overview","microbial_interaction","mechanistic_pathway","metabolic_pathway","electron_transfer","material_microbe_interface","environmental_process","experimental_design","comparative_perturbation","integrated_mechanism","graphical_abstract","multiscale_zoom"],
+    "style_family": ["flat_2d_mechanism","soft_2_5d_schematic","pathway_cutaway_2d","editorial_2d_overview"],
+    "layout": ["linear_flow","two_organism_interaction","central_hub","mirrored_comparison","zoom_in_multiscale","circular_pathway","layered_gradient","evidence_to_model","other"],
+    "information_density": ["low","medium","high"]
+  },
+  "deduplication": {
+    "exact_sha256": "performed during build; aliases remain for provenance but are excluded from default query results",
+    "asset_path": "performed during build",
+    "cross_tier_perceptual": "pending"
+  },
+  "retrieval_policy": {
+    "default": "for manually curated style work, use curated_reference_layer first; historical unified index remains a fallback/provenance surface",
+    "ranking": "scientific purpose and user-curated aesthetic relevance first",
+    "duplicates": "exclude rows with duplicate_of by default in the historical unified index",
+    "promotion": "historical reference records remain reference until separately promoted after QA/classification"
+  }
+}

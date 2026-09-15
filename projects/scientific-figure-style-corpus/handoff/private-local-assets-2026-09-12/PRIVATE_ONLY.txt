@@ -1,0 +1,1 @@
+本包含出版社图片和私有复查材料。仅限本地私人参考，不要上传公开GitHub。只有zotero/下现行139张PNG计入corpus。qa-diagnostics-before-latest-rerender/为旧诊断图片，不能当作最新输出已通过QA的证据。

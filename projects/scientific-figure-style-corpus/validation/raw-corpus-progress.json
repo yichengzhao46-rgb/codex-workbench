@@ -1,0 +1,23 @@
+{
+  "count": 100,
+  "target": 100,
+  "batch_target": 100,
+  "batch_start_count": 90,
+  "new_this_batch": 10,
+  "distinct_articles": 65,
+  "core_images": 59,
+  "journals": {
+    "ese": 6,
+    "est": 15,
+    "isme": 20,
+    "isme-communications": 6,
+    "nature": 4,
+    "nature-communications": 20,
+    "nature-microbiology": 8,
+    "nature-water": 6,
+    "science": 3,
+    "science-advances": 8,
+    "water-research": 4
+  },
+  "updated_at_utc": "2026-09-11T10:51:22.783839+00:00"
+}

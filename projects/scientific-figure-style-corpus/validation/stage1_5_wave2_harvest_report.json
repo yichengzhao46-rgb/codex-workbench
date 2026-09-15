@@ -1,0 +1,17 @@
+{
+  "wave": 2,
+  "screened_figure_rows": 58,
+  "public_mirror_selected": 9,
+  "harvested_assets": 9,
+  "failed_or_rejected": 0,
+  "tier_counts": {
+    "B_style_reference": 5,
+    "A_style_reference": 4
+  },
+  "journal_counts": {
+    "Nature Communications": 3,
+    "The ISME Journal": 4,
+    "ISME Communications": 2
+  },
+  "failures": []
+}

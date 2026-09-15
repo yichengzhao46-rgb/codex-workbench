@@ -1,0 +1,38 @@
+name: Manual figure curation sheets
+
+on:
+  push:
+    branches:
+      - feat/figure-style-corpus-v0.1
+    paths:
+      - ".github/workflows/manual-curation-sheets.yml"
+      - "projects/scientific-figure-style-corpus/scripts/build_manual_curation_sheets.py"
+      - "projects/scientific-figure-style-corpus/assets/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout corpus branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/figure-style-corpus-v0.1
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Pillow
+        run: pip install pillow
+      - name: Build manual curation sheets
+        run: python projects/scientific-figure-style-corpus/scripts/build_manual_curation_sheets.py
+      - name: Upload sheets
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr20-manual-curation-sheets
+          path: projects/scientific-figure-style-corpus/validation/manual_curation
+          if-no-files-found: error

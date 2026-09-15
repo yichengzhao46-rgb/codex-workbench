@@ -1,0 +1,30 @@
+{
+  "phase": "phase3_cross_reference_visual_grammar_synthesis",
+  "updated_at": "2026-09-15",
+  "phase2_complete": true,
+  "main_references": 22,
+  "grammar_families": 10,
+  "grammar_family_manifest": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/visual-grammar-families.csv",
+  "reference_role_map": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/reference-role-map.csv",
+  "task_reference_routing": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/task-reference-routing.csv",
+  "style_recipe_template": "projects/scientific-figure-style-corpus/style-recipes/STYLE-RECIPE-TEMPLATE.md",
+  "style_recipes_created": 1,
+  "first_recipe": "projects/scientific-figure-style-corpus/style-recipes/BATH-RP-DARK-CARBON-FIXATION-v1.md",
+  "first_recipe_status": "under_visual_validation",
+  "routing_layer_ready": true,
+  "anti_ai_look_layer_ready": true,
+  "anti_ai_look_policy": "projects/scientific-figure-style-corpus/ANTI-AI-LOOK-PASS.md",
+  "anti_ai_look_checklist": "projects/scientific-figure-style-corpus/validation/anti-ai-look-checklist.json",
+  "publication_generation_policy": "asset_first_controlled_assembly",
+  "default_rendering_intensity": 2,
+  "ai_flavor_target": "0-2",
+  "latest_incremental_reference": "M022",
+  "latest_incremental_family": "VG10_intervention_to_adaptation",
+  "next_tasks": [
+    "visual-validate Bath-RP recipe using the new anti-AI-look pass",
+    "derive Bath-Bio-Se recipe with asset-first generation controls",
+    "derive GAC/potential-DIET recipe with asset-first generation controls",
+    "add task-specific anti-AI exceptions only when supported by user-approved references",
+    "use M022 for acclimation/adaptive-evolution graphical-abstract tasks when scientifically justified"
+  ]
+}

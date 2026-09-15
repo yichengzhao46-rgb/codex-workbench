@@ -1,0 +1,68 @@
+{
+  "schema_version": 3,
+  "library": "unified_scientific_figure_library",
+  "generated_at_utc": "2026-09-14T06:19:03.567752+00:00",
+  "source_row_count": 235,
+  "source_tier_counts": {
+    "active": 96,
+    "reference": 139
+  },
+  "canonical_record_count_exact_dedup": 234,
+  "canonical_tier_counts": {
+    "active": 95,
+    "reference": 139
+  },
+  "exact_duplicate_alias_rows": 1,
+  "baseline_active_records": 42,
+  "stage1_5_source_manifests": [
+    "stage1_5_harvested_figures.csv",
+    "stage1_5_wave2_harvested_figures.csv",
+    "stage1_5_wave3_harvested_figures.csv",
+    "stage1_5_wave4_harvested_figures.csv",
+    "stage1_5_wave5_harvested_figures.csv",
+    "stage1_5_wave6_harvested_figures.csv",
+    "stage1_5_wave7_harvested_figures.csv"
+  ],
+  "zotero_source_rows": 139,
+  "purpose_counts": {
+    "integrated_mechanism": 23,
+    "electron_transfer": 53,
+    "material_microbe_interface": 18,
+    "microbial_interaction": 24,
+    "environmental_process": 17,
+    "comparative_perturbation": 13,
+    "experimental_design": 26,
+    "mechanistic_pathway": 6,
+    "conceptual_overview": 8,
+    "metabolic_pathway": 31,
+    "multiscale_zoom": 2,
+    "graphical_abstract": 13
+  },
+  "style_counts": {
+    "flat_2d_mechanism": 121,
+    "editorial_2d_overview": 56,
+    "pathway_cutaway_2d": 47,
+    "soft_2_5d_schematic": 10
+  },
+  "layout_counts": {
+    "evidence_to_model": 33,
+    "other": 87,
+    "mirrored_comparison": 23,
+    "central_hub": 2,
+    "layered_gradient": 32,
+    "two_organism_interaction": 20,
+    "zoom_in_multiscale": 21,
+    "linear_flow": 16
+  },
+  "density_counts": {
+    "high": 90,
+    "medium": 110,
+    "low": 34
+  },
+  "reference_visual_qa_status_counts": {
+    "complete": 33,
+    "pending_manual_qa": 106
+  },
+  "cross_tier_perceptual_deduplication": "not_run",
+  "retrieval_surface": "unified"
+}

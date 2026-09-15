@@ -1,0 +1,13 @@
+id,asset_path,decision
+R097,assets/raw/water-research/water-research-002-PMC7617467-F6.jpg,delete
+R098,assets/raw/water-research/water-research-009-PMC4773403-fig2.jpg,delete
+R099,assets/raw/water-research/water-research-013-PMC7001102-fig1.jpg,delete
+R100,assets/raw/water-research/water-research-022-PMC6176912-fig1.jpg,delete
+S001,assets/stage1_5/S15-001/S15-001_fig5.jpg,keep
+S002,assets/stage1_5/S15-002/S15-002_fig7.jpg,keep
+S003,assets/stage1_5/S15-003/S15-003_fig1.jpg,delete
+S004,assets/stage1_5/S15-003/S15-003_fig3.jpg,delete
+S005,assets/stage1_5/S15-004/S15-004_fig1.jpg,delete
+S006,assets/stage1_5/S15-005/S15-005_fig2.jpg,delete
+S007,assets/stage1_5/S15-005/S15-005_fig5.jpg,keep
+S008,assets/stage1_5/S15-010/S15-010_fig4.jpg,delete

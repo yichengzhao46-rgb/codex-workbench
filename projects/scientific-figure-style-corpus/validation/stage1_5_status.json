@@ -1,0 +1,21 @@
+{
+  "stage": "1.5_recent_targeted_refinement",
+  "stage1_ab_baseline": 42,
+  "wave1_active_ab_added": 7,
+  "wave2_active_ab_added": 9,
+  "wave3_active_ab_added": 5,
+  "wave4_active_ab_added": 14,
+  "wave5_active_ab_added": 7,
+  "wave6_active_ab_added": 4,
+  "wave7_active_ab_added": 8,
+  "current_ab_after_wave7": 96,
+  "target_ab_range": [
+    96,
+    100
+  ],
+  "wave7_screened_figures": 82,
+  "wave7_public_assets": 8,
+  "wave7_assets_committed": 8,
+  "wave7_validation": "passed",
+  "next_action": "corpus-level balance QA"
+}

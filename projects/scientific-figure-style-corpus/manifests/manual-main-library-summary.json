@@ -1,0 +1,56 @@
+{
+  "updated_at": "2026-09-15",
+  "canonical_numbering": {
+    "main": {
+      "scheme": "M001-M999",
+      "current_range": "M001-M022",
+      "next_id": "M023"
+    },
+    "bioinformatics": {
+      "scheme": "BI001-BI999",
+      "current_range": "BI001-BI022",
+      "next_id": "BI023"
+    },
+    "migration_map": "projects/figure-reference-libraries/id-map.csv",
+    "note": "Legacy R/S/Z/U/B IDs are provenance aliases only; physical asset paths are unchanged."
+  },
+  "main_style_library": {
+    "local_mirrored_assets": 14,
+    "restricted_external_references": 8,
+    "total_references": 22,
+    "canonical_catalog": "projects/scientific-figure-style-corpus/manifests/main-reference-catalog.csv",
+    "local_asset_manifest": "projects/scientific-figure-style-corpus/manifests/manual-kept-library.csv",
+    "restricted_reference_manifest": "projects/scientific-figure-style-corpus/manifests/manual-main-restricted-references.csv"
+  },
+  "bioinformatics_reference_library": {
+    "local_mirrored_assets": 15,
+    "restricted_external_references": 5,
+    "open_access_external_metadata_only_references": 2,
+    "total_references": 22,
+    "canonical_catalog": "projects/bioinformatics-figure-reference-library/reference-catalog.csv",
+    "manifest": "projects/bioinformatics-figure-reference-library/manifest.csv",
+    "restricted_reference_manifest": "projects/bioinformatics-figure-reference-library/restricted-references.csv",
+    "open_access_reference_manifest": "projects/bioinformatics-figure-reference-library/open-access-references.csv"
+  },
+  "main_external_references": [
+    {"id":"M015","legacy_id":"U001","journal":"Nature Ecology & Evolution","year":2026,"figure_id":"Fig. 6","doi":"10.1038/s41559-026-02976-9","binary_committed":false},
+    {"id":"M016","legacy_id":"U002","journal":"Environmental Science & Technology","year":2026,"figure_id":"Visual Abstract","doi":"10.1021/acs.est.5c07417","binary_committed":false},
+    {"id":"M017","legacy_id":"U003","journal":"Environmental Science & Technology","year":2025,"figure_id":"Visual Abstract","doi":"10.1021/acs.est.4c11221","binary_committed":false},
+    {"id":"M018","legacy_id":"U004","journal":"Environmental Science & Technology","year":2025,"figure_id":"Visual Abstract","doi":"10.1021/acs.est.5c01275","binary_committed":false},
+    {"id":"M019","legacy_id":"U005","journal":"Angewandte Chemie International Edition","year":2026,"figure_id":"Figure 6g","doi":"10.1002/anie.4522602","binary_committed":false},
+    {"id":"M020","legacy_id":"U006","journal":"Angewandte Chemie International Edition","year":2026,"figure_id":"Graphical Abstract","doi":"10.1002/anie.4522602","binary_committed":false},
+    {"id":"M021","legacy_id":"U007","journal":"Angewandte Chemie International Edition","year":2025,"figure_id":"Figure 1","doi":"10.1002/anie.202419973","binary_committed":false},
+    {"id":"M022","legacy_id":"U008","journal":"Environmental Science & Technology","year":2026,"figure_id":"Visual Abstract","doi":"10.1021/acs.est.6c02194","binary_committed":false}
+  ],
+  "bioinformatics_added_references": [
+    {"id":"BI014","legacy_id":"B001","storage_mode":"restricted_external","doi":"10.1021/acs.est.4c11221"},
+    {"id":"BI015","legacy_id":"B002","storage_mode":"local_open_access","doi":"10.1038/s41467-019-09377-6"},
+    {"id":"BI016","legacy_id":"B003","storage_mode":"restricted_external","doi":"10.1038/s41396-021-01078-7"},
+    {"id":"BI017","legacy_id":"B004","storage_mode":"restricted_external","doi":"10.1021/acs.est.5c01275"},
+    {"id":"BI018","legacy_id":"B005","storage_mode":"restricted_external","doi":"10.1021/acs.est.5c17814"},
+    {"id":"BI019","legacy_id":"B006","storage_mode":"restricted_external","doi":"10.1021/acs.est.5c16493"},
+    {"id":"BI020","legacy_id":"B007","storage_mode":"open_access_metadata_only","doi":"10.1002/advs.202516258"},
+    {"id":"BI021","legacy_id":"B008","storage_mode":"local_open_access","doi":"10.1002/advs.202501376"},
+    {"id":"BI022","legacy_id":"B009","storage_mode":"open_access_metadata_only","doi":"10.1038/s41467-025-60908-w"}
+  ]
+}

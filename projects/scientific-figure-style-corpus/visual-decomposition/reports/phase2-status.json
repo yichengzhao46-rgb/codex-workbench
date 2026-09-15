@@ -1,0 +1,24 @@
+{
+  "phase": "phase2_visual_decomposition",
+  "library": "main_scientific_visual_learning_library",
+  "updated_at": "2026-09-15",
+  "total_figures": 22,
+  "completed": 22,
+  "queued": 0,
+  "in_progress": 0,
+  "completed_ids": [
+    "M001","M002","M003","M004","M005","M006","M007","M008","M009","M010","M011","M012","M013","M014","M015","M016","M017","M018","M019","M020","M021","M022"
+  ],
+  "queued_ids": [],
+  "grammar_sources": [
+    "projects/scientific-figure-style-corpus/annotations/main-reference-visual-grammar.csv",
+    "projects/scientific-figure-style-corpus/visual-decomposition/manifests/batch2-visual-grammar.csv",
+    "projects/scientific-figure-style-corpus/visual-decomposition/manifests/batch3-visual-grammar.csv",
+    "projects/scientific-figure-style-corpus/visual-decomposition/manifests/incremental-visual-grammar.csv"
+  ],
+  "worklist": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/main-library-decomposition-worklist.csv",
+  "element_inventory": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/style-element-inventory.csv",
+  "summary_ready": true,
+  "next_phase": "phase3_cross_reference_visual_grammar_synthesis",
+  "completion_gate": "PASS: all 22 active main-library references directly inspected and assigned reusable visual grammar."
+}

@@ -1,0 +1,13 @@
+id,asset_path,decision
+S045,assets/stage1_5/S15-052/S15-052_fig1.jpg,keep
+S046,assets/stage1_5/S15-052/S15-052_fig4.jpg,delete
+S047,assets/stage1_5/S15-056/S15-056_fig1.jpg,delete
+S048,assets/stage1_5/S15-056/S15-056_fig3.jpg,delete
+S049,assets/stage1_5/S15-057/S15-057_fig4.jpg,delete
+S050,assets/stage1_5/S15-057/S15-057_fig5.jpg,delete
+S051,assets/stage1_5/S15-059/S15-059_fig4.jpg,delete
+S052,assets/stage1_5/S15-062/S15-062_fig3.jpg,delete
+S053,assets/stage1_5/S15-063/S15-063_fig10.jpg,delete
+S054,assets/stage1_5/S15-063/S15-063_fig9.jpg,delete
+Z001,assets/zotero/ACS-Central-Science/VFBRUWBG/ZOT-VFBRUWBG-G7CGL9X7-FIG1-P2.png,keep
+Z002,assets/zotero/ACS-Central-Science/VFBRUWBG/ZOT-VFBRUWBG-G7CGL9X7-FIG3-P4.png,delete
