@@ -12,12 +12,19 @@
   "first_recipe": "projects/scientific-figure-style-corpus/style-recipes/BATH-RP-DARK-CARBON-FIXATION-v1.md",
   "first_recipe_status": "under_visual_validation",
   "routing_layer_ready": true,
+  "anti_ai_look_layer_ready": true,
+  "anti_ai_look_policy": "projects/scientific-figure-style-corpus/ANTI-AI-LOOK-PASS.md",
+  "anti_ai_look_checklist": "projects/scientific-figure-style-corpus/validation/anti-ai-look-checklist.json",
+  "publication_generation_policy": "asset_first_controlled_assembly",
+  "default_rendering_intensity": 2,
+  "ai_flavor_target": "0-2",
   "latest_incremental_reference": "M022",
   "latest_incremental_family": "VG10_intervention_to_adaptation",
   "next_tasks": [
-    "continue visual validation of Bath-RP recipe",
-    "derive Bath-Bio-Se recipe",
-    "derive GAC/potential-DIET recipe",
+    "visual-validate Bath-RP recipe using the new anti-AI-look pass",
+    "derive Bath-Bio-Se recipe with asset-first generation controls",
+    "derive GAC/potential-DIET recipe with asset-first generation controls",
+    "add task-specific anti-AI exceptions only when supported by user-approved references",
     "use M022 for acclimation/adaptive-evolution graphical-abstract tasks when scientifically justified"
   ]
 }
