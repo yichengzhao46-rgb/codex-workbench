@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-14",
+  "updated_at": "2026-09-15",
   "system_principle": "The user decides what PR20 learns from; user + ChatGPT decide what the figure needs to say; PR20 decides how it should look.",
   "curation_policy": {
     "selection_authority": "user_manual_selection",
@@ -27,11 +27,11 @@
       "role": "authoritative user-curated aesthetic and visual-grammar reference set",
       "canonical_catalog": "projects/scientific-figure-style-corpus/manifests/main-reference-catalog.csv",
       "visual_grammar_annotations": "projects/scientific-figure-style-corpus/annotations/main-reference-visual-grammar.csv",
-      "count": 21,
+      "count": 22,
       "local_assets": 14,
-      "external_reference_only": 7,
-      "current_range": "M001-M021",
-      "next_id": "M022"
+      "external_reference_only": 8,
+      "current_range": "M001-M022",
+      "next_id": "M023"
     },
     "bioinformatics": {
       "name": "Bioinformatics Figure Reference Library",
