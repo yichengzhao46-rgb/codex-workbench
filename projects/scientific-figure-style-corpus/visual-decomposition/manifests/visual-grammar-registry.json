@@ -1,9 +1,10 @@
 {
   "phase2_complete": true,
-  "total_main_references": 21,
+  "total_main_references": 22,
   "batch1": "projects/scientific-figure-style-corpus/annotations/main-reference-visual-grammar.csv",
   "batch2": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/batch2-visual-grammar.csv",
   "batch3": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/batch3-visual-grammar.csv",
-  "coverage": "M001-M021",
+  "incremental": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/incremental-visual-grammar.csv",
+  "coverage": "M001-M022",
   "next_step": "cross-reference grammar synthesis and task-specific Style Recipe generation"
 }
