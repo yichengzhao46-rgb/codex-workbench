@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-09-14",
+  "updated_at": "2026-09-15",
   "canonical_numbering": {
     "main": {
       "scheme": "M001-M999",
-      "current_range": "M001-M021",
-      "next_id": "M022"
+      "current_range": "M001-M022",
+      "next_id": "M023"
     },
     "bioinformatics": {
       "scheme": "BI001-BI999",
@@ -16,8 +16,8 @@
   },
   "main_style_library": {
     "local_mirrored_assets": 14,
-    "restricted_external_references": 7,
-    "total_references": 21,
+    "restricted_external_references": 8,
+    "total_references": 22,
     "canonical_catalog": "projects/scientific-figure-style-corpus/manifests/main-reference-catalog.csv",
     "local_asset_manifest": "projects/scientific-figure-style-corpus/manifests/manual-kept-library.csv",
     "restricted_reference_manifest": "projects/scientific-figure-style-corpus/manifests/manual-main-restricted-references.csv"
@@ -39,7 +39,8 @@
     {"id":"M018","legacy_id":"U004","journal":"Environmental Science & Technology","year":2025,"figure_id":"Visual Abstract","doi":"10.1021/acs.est.5c01275","binary_committed":false},
     {"id":"M019","legacy_id":"U005","journal":"Angewandte Chemie International Edition","year":2026,"figure_id":"Figure 6g","doi":"10.1002/anie.4522602","binary_committed":false},
     {"id":"M020","legacy_id":"U006","journal":"Angewandte Chemie International Edition","year":2026,"figure_id":"Graphical Abstract","doi":"10.1002/anie.4522602","binary_committed":false},
-    {"id":"M021","legacy_id":"U007","journal":"Angewandte Chemie International Edition","year":2025,"figure_id":"Figure 1","doi":"10.1002/anie.202419973","binary_committed":false}
+    {"id":"M021","legacy_id":"U007","journal":"Angewandte Chemie International Edition","year":2025,"figure_id":"Figure 1","doi":"10.1002/anie.202419973","binary_committed":false},
+    {"id":"M022","legacy_id":"U008","journal":"Environmental Science & Technology","year":2026,"figure_id":"Visual Abstract","doi":"10.1021/acs.est.6c02194","binary_committed":false}
   ],
   "bioinformatics_added_references": [
     {"id":"BI014","legacy_id":"B001","storage_mode":"restricted_external","doi":"10.1021/acs.est.4c11221"},
