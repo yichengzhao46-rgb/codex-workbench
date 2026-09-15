@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "name": "PR20 Anti-AI-Look QA",
+  "purpose": "Detect and remove generic AI-generated visual signatures from scientific illustrations before human approval.",
+  "hard_gates": [
+    {
+      "id": "scientific_fidelity",
+      "question": "Are all depicted mechanisms, relationships, morphologies, labels, and evidence states scientifically supportable?",
+      "failure_action": "reject"
+    },
+    {
+      "id": "generated_text_removed",
+      "question": "Has publication-facing AI-generated text been replaced with controlled typography?",
+      "failure_action": "revise"
+    },
+    {
+      "id": "connector_semantics_checked",
+      "question": "Have arrows and connectors been checked or redrawn to preserve scientific evidence semantics?",
+      "failure_action": "revise"
+    }
+  ],
+  "ai_flavor_categories": [
+    "glossy_or_plastic_rendering",
+    "excessive_gradients",
+    "neon_or_generic_ai_palette",
+    "glow_effects",
+    "cinematic_or_volumetric_lighting",
+    "decorative_floating_particles",
+    "fake_or_unnecessary_depth",
+    "overrounded_or_toylike_morphology",
+    "inconsistent_shading_or_perspective",
+    "overrendered_decorative_objects"
+  ],
+  "score_interpretation": {
+    "0-2": "acceptable",
+    "3-4": "polish_required",
+    "5-6": "major_revision",
+    "7-10": "regenerate_or_reconstruct"
+  },
+  "subtraction_pass": [
+    "remove meaningless particles",
+    "remove redundant highlights",
+    "remove unnecessary gradients",
+    "remove decorative shadows",
+    "remove non-informative background texture",
+    "remove repeated molecules without communication value",
+    "remove duplicate arrows",
+    "remove ornamental lines and icons"
+  ],
+  "final_quality_dimensions": [
+    "scientific_fidelity",
+    "visual_hierarchy",
+    "readability",
+    "aesthetic_quality",
+    "style_consistency",
+    "editability"
+  ]
+}
