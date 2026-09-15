@@ -1,21 +1,23 @@
 {
   "phase": "phase3_cross_reference_visual_grammar_synthesis",
-  "updated_at": "2026-09-14",
+  "updated_at": "2026-09-15",
   "phase2_complete": true,
-  "main_references": 21,
-  "grammar_families": 9,
+  "main_references": 22,
+  "grammar_families": 10,
   "grammar_family_manifest": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/visual-grammar-families.csv",
   "reference_role_map": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/reference-role-map.csv",
   "task_reference_routing": "projects/scientific-figure-style-corpus/visual-decomposition/manifests/task-reference-routing.csv",
   "style_recipe_template": "projects/scientific-figure-style-corpus/style-recipes/STYLE-RECIPE-TEMPLATE.md",
   "style_recipes_created": 1,
   "first_recipe": "projects/scientific-figure-style-corpus/style-recipes/BATH-RP-DARK-CARBON-FIXATION-v1.md",
-  "first_recipe_status": "ready_for_user_validation",
+  "first_recipe_status": "under_visual_validation",
   "routing_layer_ready": true,
+  "latest_incremental_reference": "M022",
+  "latest_incremental_family": "VG10_intervention_to_adaptation",
   "next_tasks": [
-    "validate the Bath-RP recipe against user aesthetic judgement",
+    "continue visual validation of Bath-RP recipe",
     "derive Bath-Bio-Se recipe",
     "derive GAC/potential-DIET recipe",
-    "turn validated recipes into generation prompts and figure previews"
+    "use M022 for acclimation/adaptive-evolution graphical-abstract tasks when scientifically justified"
   ]
 }
