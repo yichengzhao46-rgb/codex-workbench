@@ -115,5 +115,94 @@ This follows the matched-condition grammar from M016 and M018. Do not redesign b
 - dense protein-level pathway labels
 - full 3D cells
 
+## Anti-AI-look production controls
+
+### Rendering intensity
+
+```text
+rendering_intensity = 2 / 5
+```
+
+Use restrained 2D–2.5D rendering. Cell volume can be indicated by one subtle tonal transition, but surfaces should remain matte and publication-like rather than glossy.
+
+### Generation mode
+
+Default to **asset-first generation + controlled assembly**.
+
+Generate individually when needed:
+- Bath cell shell / cutaway;
+- RP cell shell / cutaway;
+- small methane / oxygen visual motifs if an icon treatment is required.
+
+Do not ask the image model to finalize:
+- labels;
+- chemical formulas;
+- pathway names;
+- arrows;
+- evidence-status line styles;
+- panel letters;
+- final alignment.
+
+Transparent-background single-cell assets are preferred.
+
+### Negative-style vocabulary
+
+```text
+no glossy plastic cells
+no neon blue-purple gradient aesthetic
+no glowing arrows
+no volumetric or cinematic light
+no decorative floating particles
+no toy-like cell morphology
+no excessive roundness
+no hyper-detailed pseudo-cellular structures
+no futuristic infographic background
+no strong drop shadows
+no unnecessary texture
+```
+
+### Visual hierarchy
+
+Primary: Bath → shared extracellular exchange → RP coupling logic.
+
+Secondary: simplified intracellular energy/redox and CBB-related modules.
+
+Context: CH4, O2, bicarbonate / inorganic-carbon outcome cues.
+
+Contextual objects should be flatter and quieter than the two cells and the exchange zone.
+
+### Post-generation reconstruction
+
+Required before publication-facing use:
+
+1. replace all generated text with controlled typography;
+2. redraw all interspecies and evidence-bearing connectors as vectors;
+3. normalize Bath/RP/coculture colors to the project palette;
+4. normalize outline and arrow stroke weights;
+5. remove non-informative particles, highlights, shadows, textures, and repeated molecular motifs;
+6. verify one consistent lighting/shading direction;
+7. run the subtraction pass;
+8. run AI Flavor QA.
+
+### AI Flavor target
+
+Target score: `0–2 / 10`.
+
+A score of `3–4` requires polish. A score of `5+` means the figure should be substantially reconstructed rather than cosmetically patched.
+
+## Final QA hard gate
+
+Scientific fidelity overrides aesthetic quality.
+
+Reject any version that visually converts candidate diffusible support into proven DIET, assigns community-level isotope incorporation specifically to RP, implies one dominant carrier, or uses connector strength/style to overstate evidence.
+
+Then assess:
+- visual hierarchy;
+- readability;
+- aesthetic quality;
+- style consistency;
+- editability;
+- AI Flavor Score.
+
 ## Final visual direction
-A clean, publication-grade 2D / restrained-2.5D two-organism mechanism with a wide shared extracellular zone, disciplined arrow semantics, low-saturation Bath/RP colors, and explicit separation between observed processes and candidate interspecies-transfer routes. The figure should look synthesized from several reference grammars rather than copied from any one source.
+A clean, publication-grade 2D / restrained-2.5D two-organism mechanism with a wide shared extracellular zone, disciplined arrow semantics, low-saturation Bath/RP colors, and explicit separation between observed processes and candidate interspecies-transfer routes. The figure should look synthesized from several reference grammars rather than copied from any one source, and it should look intentionally designed rather than generically AI-generated.
