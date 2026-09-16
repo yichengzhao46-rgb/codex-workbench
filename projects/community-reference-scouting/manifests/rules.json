@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "rule_id": "R01",
+      "title": "一句主信息先于美化",
+      "action": "先写一句可证实的主信息，再画信息模块；缩略图中应先看到核心对象和结果方向。",
+      "applicable_to": [
+        "graphical_abstract",
+        "first_figure"
+      ],
+      "do_not_transfer": "不能把图形摘要当作全文所有实验的缩小拼图。",
+      "evidence_level": "source_supported",
+      "source_ids": [
+        "S001",
+        "S002"
+      ],
+      "source_locator": "Starting your graphical abstract; Design Summary",
+      "validation": "让未参与绘图的人复述第一眼看到的信息。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R02",
+      "title": "图 1 与图形摘要分工",
+      "action": "首图优先回答研究对象、条件和体系组织；GA 优先传达主要发现。首图是否以概念图开场由论文叙事决定。",
+      "applicable_to": [
+        "first_figure",
+        "graphical_abstract"
+      ],
+      "do_not_transfer": "不存在已证实的“Nature 大子刊首图必须是示意图”通则。",
+      "evidence_level": "curator_synthesis",
+      "source_ids": [
+        "S002",
+        "S009"
+      ],
+      "source_locator": "Layout recommendations; Figure 1 model overview",
+      "validation": "分别写出两个交付物的读者问题，避免同一内容机械复用。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R03",
+      "title": "按逻辑选择布局",
+      "action": "顺序用线性，对照用平行，尺度变化用嵌套，只有真实闭环才用环形。",
+      "applicable_to": [
+        "mechanism_schematic",
+        "graphical_abstract"
+      ],
+      "do_not_transfer": "不能为画面平衡把单向交换闭合为循环。",
+      "evidence_level": "source_supported",
+      "source_ids": [
+        "S002",
+        "S008"
+      ],
+      "source_locator": "Circular and Unique Designs; Rule 5 / Fig 5",
+      "validation": "遮去箭头后仍能判断入口和阅读方向。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R04",
+      "title": "层级由信息重要性决定",
+      "action": "设一个主视觉焦点；辅助对象缩小、降饱和或减少细节。",
+      "applicable_to": [
+        "first_figure",
+        "mechanism_schematic",
+        "2d_2_5d"
+      ],
+      "do_not_transfer": "不要把每个颗粒、细胞和仪器都画成同等醒目的主体。",
+      "evidence_level": "curator_synthesis",
+      "source_ids": [
+        "S001",
+        "S017"
+      ],
+      "source_locator": "Color and contrast; PR20 visual architecture",
+      "validation": "缩小后能指出第一、第二、第三阅读层级。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R05",
+      "title": "颜色表达稳定语义",
+      "action": "同一实体跨 panel 使用同色；以少量语义色配中性色和必要强调色。",
+      "applicable_to": [
+        "mechanism_schematic",
+        "graphical_abstract"
+      ],
+      "do_not_transfer": "2–3 色是起点，不是所有机制图的硬上限；不强行套医学“暖色坏、冷色好”。",
+      "evidence_level": "source_supported",
+      "source_ids": [
+        "S001",
+        "S017"
+      ],
+      "source_locator": "Color and contrast; palette discipline",
+      "validation": "用对象—颜色映射检查所有 panel；额外颜色需说明功能。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R06",
+      "title": "对比与可访问性",
+      "action": "灰度缩小检查关键边界；用标签或线型补充颜色。",
+      "applicable_to": [
+        "all_schematics"
+      ],
+      "do_not_transfer": "不能只看彩色大屏是否漂亮，也不能让淡色文字融入背景。",
+      "evidence_level": "source_supported",
+      "source_ids": [
+        "S001",
+        "S008"
+      ],
+      "source_locator": "Color and contrast; Rule 8",
+      "validation": "最终使用尺寸下检查灰度和关键标签；必要时模拟色觉差异。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R07",
+      "title": "箭头有语义而非只指方向",
+      "action": "分别定义碳流、电子流、物质交换和叙事转场；不确定关系要有明确图例。",
+      "applicable_to": [
+        "mechanism_schematic"
+      ],
+      "do_not_transfer": "虚线没有跨论文统一含义；不能靠箭头美化把假设画成事实。",
+      "evidence_level": "curator_synthesis",
+      "source_ids": [
+        "S008",
+        "S017"
+      ],
+      "source_locator": "Rule 6 / Fig 6; semantic visual grammar",
+      "validation": "逐条核对起点、终点、方向、标签、证据状态。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R08",
+      "title": "对齐和留白形成分组",
+      "action": "同级模块对齐，模块间距离大于模块内部距离；移除无作用的框。",
+      "applicable_to": [
+        "all_schematics"
+      ],
+      "do_not_transfer": "留白不是规定比例，不能以装饰分隔线取代逻辑分组。",
+      "evidence_level": "source_supported",
+      "source_ids": [
+        "S001",
+        "S008"
+      ],
+      "source_locator": "Alignment; Rule 6 grouping",
+      "validation": "检查横纵基线、标签间距和线条相撞。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R09",
+      "title": "先决定使用尺寸",
+      "action": "在期刊要求的画幅和实际排版尺寸上设计；社交媒体与论文版分别排版。",
+      "applicable_to": [
+        "first_figure",
+        "graphical_abstract"
+      ],
+      "do_not_transfer": "不是所有期刊 GA 都必须是正方形；不要从大海报直接缩小。",
+      "evidence_level": "source_supported",
+      "source_ids": [
+        "S001",
+        "S002",
+        "S008"
+      ],
+      "source_locator": "Plan ahead; social media formatting; Rule 4 / Fig 4",
+      "validation": "最终宽度下检查文字及最细线条，确认目标期刊要求。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R10",
+      "title": "统一素材外观",
+      "action": "来自不同素材库的对象统一线宽、细节量、透视和视觉重量。",
+      "applicable_to": [
+        "mechanism_schematic",
+        "2d_2_5d"
+      ],
+      "do_not_transfer": "不能用软件品牌或图标数量代替视觉一致性。",
+      "evidence_level": "curator_synthesis",
+      "source_ids": [
+        "S005",
+        "S006",
+        "S017"
+      ],
+      "source_locator": "Editorial redraw anecdotes; template discussion; rendering rules",
+      "validation": "并排检查重复对象，纠正无语义的样式变化。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R11",
+      "title": "2.5D 为结构服务",
+      "action": "优先用轮廓、剖面和遮挡说明空间；轻微渐变仅在改善体积辨识时加入。",
+      "applicable_to": [
+        "2d_2_5d",
+        "material_interface"
+      ],
+      "do_not_transfer": "不是禁止 3D；不要把封面级光效带入所有论文机制图。",
+      "evidence_level": "curator_synthesis",
+      "source_ids": [
+        "S003",
+        "S004",
+        "S007",
+        "S017"
+      ],
+      "source_locator": "Dimension and Shading; low-poly paragraph; dimensionality discussion",
+      "validation": "与平面版本比较：深度是否新增了有用信息，是否遮挡标签。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R12",
+      "title": "平面与空间 panel 可按任务混合",
+      "action": "用 2D 剖面讲通量，用空间视图讲位置；通过重复对象和标号连接。",
+      "applicable_to": [
+        "first_figure",
+        "environmental_context"
+      ],
+      "do_not_transfer": "同一场景内部不能出现无法解释的透视变化。",
+      "evidence_level": "visual_observation",
+      "source_ids": [
+        "S009"
+      ],
+      "source_locator": "Figure 1 panels a–c",
+      "validation": "每种视角写出一个信息目的；删除仅为炫技的角度。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R13",
+      "title": "形态和机制不得由教程推断",
+      "action": "先冻结物种、材料形态和已知结构；通用细菌教程只借用制作方法。",
+      "applicable_to": [
+        "microbial_schematic",
+        "material_interface"
+      ],
+      "do_not_transfer": "不可把教程中的杆状轮廓、表面丝状物或蛋白装饰直接套到研究对象。",
+      "evidence_level": "project_guardrail",
+      "source_ids": [
+        "S003",
+        "S017"
+      ],
+      "source_locator": "H. pylori tutorial; PR20 science lock",
+      "validation": "形态和结构回到当前任务的显微证据或可靠物种资料确认。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R14",
+      "title": "限制装饰性渲染",
+      "action": "默认哑光、低纹理、白色或近白背景；去掉没有信息功能的辉光、浮游颗粒和强反射。",
+      "applicable_to": [
+        "2d_2_5d",
+        "mechanism_schematic"
+      ],
+      "do_not_transfer": "合理的光照、材料界面或空间信息可有例外，但必须写明理由。",
+      "evidence_level": "project_guardrail",
+      "source_ids": [
+        "S001",
+        "S017"
+      ],
+      "source_locator": "Common mistakes; anti-AI-look pass",
+      "validation": "逐项解释光效或纹理编码的信息；无法解释则删除。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R15",
+      "title": "重建文字和证据连接线",
+      "action": "AI 可辅助资产草稿；最终标签、化学式、panel 字母与箭头由可控工具排版并核对。",
+      "applicable_to": [
+        "ai_assisted_schematic"
+      ],
+      "do_not_transfer": "不能把生成模型输出的科学标签或连接关系当成可靠内容。",
+      "evidence_level": "project_guardrail",
+      "source_ids": [
+        "S017"
+      ],
+      "source_locator": "Asset-first generation; reconstruction",
+      "validation": "检查文字可编辑性、箭头语义和 science lock 的一一对应。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R16",
+      "title": "消除模板感靠内容特异性",
+      "action": "用研究问题决定构图和视觉角色；参考按不同功能组合，并保留有意义的物种或材料差异。",
+      "applicable_to": [
+        "graphical_abstract",
+        "mechanism_schematic"
+      ],
+      "do_not_transfer": "不添加随机粗糙、不规则噪声或伪手绘以伪装“人类风格”。",
+      "evidence_level": "curator_synthesis",
+      "source_ids": [
+        "S006",
+        "S017"
+      ],
+      "source_locator": "Template fatigue; intentional consistency",
+      "validation": "若删去标题仍与无关论文完全通用，应检查缺失的研究特异信息。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R17",
+      "title": "区分设计经验和科研证据",
+      "action": "论坛评价用于发现困扰和候选方法；不得据此确认 EET、EEU、DIET 或物种特异碳固定。",
+      "applicable_to": [
+        "all_schematics"
+      ],
+      "do_not_transfer": "流行度、点赞、发表期刊和视觉精致度都不能确定科学机制。",
+      "evidence_level": "project_guardrail",
+      "source_ids": [
+        "S005",
+        "S007",
+        "S017"
+      ],
+      "source_locator": "Community anecdotes; science lock",
+      "validation": "每条机制连接必须另有科学证据记录，参考库只提供视觉依据。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R18",
+      "title": "取得单资产权限再入库",
+      "action": "分别核查阅读、保存、公开重分发、改编和模型输入权限；不明确则只留链接。",
+      "applicable_to": [
+        "reference_scouting"
+      ],
+      "do_not_transfer": "CC 网页、开放文章、免费账号和公开截图均不是所有内含素材的统一许可。",
+      "evidence_level": "rights_policy",
+      "source_ids": [
+        "S010",
+        "S011",
+        "S018"
+      ],
+      "source_locator": "Rights pages in source catalog",
+      "validation": "本地资产必须有许可依据、署名、变更说明和 SHA256。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R19",
+      "title": "独立参考按角色晋级",
+      "action": "社区来源先形成候选包；用户选择和 PR20 直接视觉审核之后才分配 M 编号或加入 Style Recipe。",
+      "applicable_to": [
+        "reference_scouting"
+      ],
+      "do_not_transfer": "不能因规则听起来合理而自动添加进 PR20 主库。",
+      "evidence_level": "interface_contract",
+      "source_ids": [
+        "S017"
+      ],
+      "source_locator": "PR20 design rule; reference roles",
+      "validation": "检查 proposed 状态和空的 canonical_id；禁止直接写 PR20 目录。",
+      "status": "candidate"
+    },
+    {
+      "rule_id": "R20",
+      "title": "用小样验证而非审美分数代替验收",
+      "action": "比较读图顺序、标签可读性、证据含义和编辑能力；记录失败与修订。",
+      "applicable_to": [
+        "all_schematics"
+      ],
+      "do_not_transfer": "anti-AI-look 清单不能检测作者身份，也不能保证期刊接收。",
+      "evidence_level": "curator_synthesis",
+      "source_ids": [
+        "S005",
+        "S017"
+      ],
+      "source_locator": "Editorial normalization anecdotes; QA",
+      "validation": "下一步真实绘图任务再做盲读测试；本 PR 不宣称用户验证已完成。",
+      "status": "candidate"
+    }
+  ]
+}
