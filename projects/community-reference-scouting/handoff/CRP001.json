@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "proposal_id": "CRP001",
+  "status": "proposed",
+  "target_pr": 20,
+  "target_snapshot_sha": "c4dea1b31db6b022e73e29967a0f02c959e39bcb",
+  "source_ids": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S017"
+  ],
+  "asset_ids": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005"
+  ],
+  "rule_ids": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "R19",
+    "R20"
+  ],
+  "recommended_visual_roles": [
+    "overall_composition",
+    "environmental_context",
+    "arrow_grammar",
+    "palette",
+    "whitespace",
+    "information_density",
+    "material_rendering"
+  ],
+  "style_recipe_field_map": {
+    "B/C": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R08",
+      "R09"
+    ],
+    "D": [
+      "R10",
+      "R11",
+      "R12",
+      "R13"
+    ],
+    "E": [
+      "R05",
+      "R06",
+      "R07"
+    ],
+    "F/H": [
+      "R15"
+    ],
+    "G/I": [
+      "R14",
+      "R16",
+      "R17",
+      "R20"
+    ]
+  },
+  "rights_summary": "E001-E004: attributed unmodified CC BY 4.0 figures; E005: link-only BioRender visual. No asset extraction or training rights inferred.",
+  "limitations": [
+    "Not a user-approved reference selection",
+    "No Bath-specific biological evidence supplied",
+    "E004 is a spatial-composition analogy, not a microbial mechanism",
+    "No automatic ingestion or production figure validation"
+  ],
+  "user_selection_required": true,
+  "approved_for_pr20": false,
+  "canonical_id": null
+}
