@@ -1,0 +1,149 @@
+[
+  {
+    "id": "R01",
+    "title": "Nutritional and host environments determine community ecology and keystone species in a synthetic gut bacterial community",
+    "journal": "Nature Communications",
+    "year": 2023,
+    "doi": "10.1038/s41467-023-40372-0",
+    "figure": "Fig. 1a",
+    "role": "主锚点：白底与留白",
+    "adopt": "开放连续流程、自然分组、浅玻璃与清晰阅读方向",
+    "exclude": "粗渐变箭头、标签密度不直接照搬",
+    "visually_inspected": true,
+    "retrieved": "2026-10-02",
+    "source": "https://doi.org/10.1038/s41467-023-40372-0",
+    "image_size": [
+      1993,
+      415
+    ],
+    "attribution": "Original figure belongs to the cited authors/publisher; reference-only. Third-party asset licenses may differ. No asset reuse license is claimed.",
+    "inspection_provenance": "Inherited from the 2026-10-02 reference package; not re-inspected for this PR.",
+    "asset_policy": "link_only; no third-party figure binary committed"
+  },
+  {
+    "id": "R02",
+    "title": "Ecological significance of extracellular vesicles in modulating host-virus interactions during algal blooms",
+    "journal": "The ISME Journal",
+    "year": 2021,
+    "doi": "10.1038/s41396-021-01018-5",
+    "figure": "Fig. 1c",
+    "role": "主锚点：器材与柔和配色",
+    "adopt": "浅 2.5D 器材、灰蓝主体、淡青液体、统一图标语法",
+    "exclude": "大蓝底面板与阶段编号",
+    "visually_inspected": true,
+    "retrieved": "2026-10-02",
+    "source": "https://doi.org/10.1038/s41396-021-01018-5",
+    "image_size": [
+      1314,
+      903
+    ],
+    "attribution": "Original figure belongs to the cited authors/publisher; reference-only. Third-party asset licenses may differ. No asset reuse license is claimed.",
+    "inspection_provenance": "Inherited from the 2026-10-02 reference package; not re-inspected for this PR.",
+    "asset_policy": "link_only; no third-party figure binary committed"
+  },
+  {
+    "id": "R03",
+    "title": "Novel metabolic interactions and environmental conditions mediate the boreal peatmoss-cyanobacteria mutualism",
+    "journal": "The ISME Journal",
+    "year": 2022,
+    "doi": "10.1038/s41396-021-01136-0",
+    "figure": "Fig. 2 A–B",
+    "role": "新增：主要画法参考",
+    "adopt": "淡玻璃、平面细胞、重复瓶形与自然间隔",
+    "exclude": "结果面板 C；不迁移生物学关系",
+    "visually_inspected": true,
+    "retrieved": "2026-10-02",
+    "source": "https://doi.org/10.1038/s41396-021-01136-0",
+    "image_size": [
+      930,
+      722
+    ],
+    "attribution": "Original figure belongs to the cited authors/publisher; reference-only. Third-party asset licenses may differ. No asset reuse license is claimed.",
+    "inspection_provenance": "Inherited from the 2026-10-02 reference package; not re-inspected for this PR.",
+    "asset_policy": "link_only; no third-party figure binary committed"
+  },
+  {
+    "id": "R04",
+    "title": "Variable influences of soil and seed-associated bacterial communities on the assembly of seedling microbiomes",
+    "journal": "The ISME Journal",
+    "year": 2021,
+    "doi": "10.1038/s41396-021-00967-1",
+    "figure": "Fig. 1",
+    "role": "新增：器材局部参考",
+    "adopt": "细试管、淡黄培养皿、重复取样符号",
+    "exclude": "灰背景带、地图、鲜艳细菌颜色",
+    "visually_inspected": true,
+    "retrieved": "2026-10-02",
+    "source": "https://doi.org/10.1038/s41396-021-00967-1",
+    "image_size": [
+      1750,
+      1463
+    ],
+    "attribution": "Original figure belongs to the cited authors/publisher; reference-only. Third-party asset licenses may differ. No asset reuse license is claimed.",
+    "inspection_provenance": "Inherited from the 2026-10-02 reference package; not re-inspected for this PR.",
+    "asset_policy": "link_only; no third-party figure binary committed"
+  },
+  {
+    "id": "R05",
+    "title": "Comparative single-nucleus RNA-seq analysis revealed localized and cell type-specific pathways governing root-microbiome interactions",
+    "journal": "Nature Communications",
+    "year": 2025,
+    "doi": "10.1038/s41467-025-58395-0",
+    "figure": "Fig. 1a",
+    "role": "新增：布局局部参考",
+    "adopt": "培养操作—取样—核提取—分析的连续路线与贴近对象的标签",
+    "exclude": "粗箭头、渐变横幅、高饱和红绿、较深仪器填色",
+    "visually_inspected": true,
+    "retrieved": "2026-10-02",
+    "source": "https://doi.org/10.1038/s41467-025-58395-0",
+    "image_size": [
+      1803,
+      405
+    ],
+    "attribution": "Original figure belongs to the cited authors/publisher; reference-only. Third-party asset licenses may differ. No asset reuse license is claimed.",
+    "inspection_provenance": "Inherited from the 2026-10-02 reference package; not re-inspected for this PR.",
+    "asset_policy": "link_only; no third-party figure binary committed"
+  },
+  {
+    "id": "R06",
+    "title": "Engineering microbial consortia for mixed plastic upcycling",
+    "journal": "Nature Communications",
+    "year": 2026,
+    "doi": "10.1038/s41467-025-67409-w",
+    "figure": "Fig. 3a",
+    "role": "新增：配色局部参考",
+    "adopt": "粉紫、薄荷绿与淡青培养液；平行瓶形对齐",
+    "exclude": "3D 菌体、投影、粗箭头、大底板与虚线",
+    "visually_inspected": true,
+    "retrieved": "2026-10-02",
+    "source": "https://doi.org/10.1038/s41467-025-67409-w",
+    "image_size": [
+      1945,
+      657
+    ],
+    "attribution": "Original figure belongs to the cited authors/publisher; reference-only. Third-party asset licenses may differ. No asset reuse license is claimed.",
+    "inspection_provenance": "Inherited from the 2026-10-02 reference package; not re-inspected for this PR.",
+    "asset_policy": "link_only; no third-party figure binary committed"
+  },
+  {
+    "id": "R07",
+    "title": "Preserving the Biotransformation Potential of Activated Sludge in Time: Toward Reproducible Incubation Experiments for Persistence Assessment",
+    "journal": "Environmental Science & Technology",
+    "year": 2025,
+    "doi": "10.1021/acs.est.4c08657",
+    "figure": "Graphical abstract",
+    "role": "既有补充：流程汇合参考",
+    "adopt": "保存与重悬流程汇合，蓝色盖与浅色培养器材",
+    "exclude": "灰色宽背景、竖排标签、较亮结果图色彩",
+    "visually_inspected": true,
+    "retrieved": "2026-10-02",
+    "source": "https://doi.org/10.1021/acs.est.4c08657",
+    "image_size": [
+      996,
+      522
+    ],
+    "attribution": "Original figure belongs to the cited authors/publisher; reference-only. Third-party asset licenses may differ. No asset reuse license is claimed.",
+    "inspection_provenance": "Inherited from the 2026-10-02 reference package; not re-inspected for this PR.",
+    "asset_policy": "link_only; no third-party figure binary committed"
+  }
+]
