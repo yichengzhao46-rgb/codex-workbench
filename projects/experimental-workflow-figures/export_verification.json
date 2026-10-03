@@ -1,0 +1,27 @@
+{
+  "file": "Fig3_1a_130x56mm_1200dpi.tiff",
+  "size_px": [
+    6142,
+    2646
+  ],
+  "dpi": [
+    1200.0,
+    1200.0
+  ],
+  "size_mm": [
+    130.00567,
+    56.007
+  ],
+  "target_mm": [
+    130,
+    56
+  ],
+  "mode": "RGB",
+  "compression": "LZW",
+  "pixel_identical_to_png": true,
+  "source_native_px": [
+    1821,
+    864
+  ],
+  "note": "Resampled export; 1200 dpi metadata does not imply native 1200 dpi detail. Typeface in raster is not verified as Arial."
+}

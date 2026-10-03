@@ -1,0 +1,24 @@
+{
+  "protocol": "PR-EXP-Workflow v1",
+  "status": "fill_before_rendering",
+  "purpose": "",
+  "canvas": {
+    "width_mm": null,
+    "height_mm": null,
+    "export_dpi": null
+  },
+  "groups": [],
+  "conditions": [],
+  "routes": [],
+  "steps": [],
+  "labels": [],
+  "must_not_connect": [],
+  "locked_elements": [],
+  "allowed_changes": [],
+  "unknowns": [],
+  "qa": {
+    "science": "pending",
+    "visual": "pending",
+    "export": "pending"
+  }
+}

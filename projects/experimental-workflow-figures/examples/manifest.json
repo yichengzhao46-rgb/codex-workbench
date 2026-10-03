@@ -1,0 +1,18 @@
+[
+  {
+    "path": "examples/Fig3_1a_approved_style.jpg",
+    "status": "User-accepted style and latest typography anchor",
+    "provenance": "Generated during this user-requested workflow; JPEG format conversion only, no resizing or content edits",
+    "source_png_sha256": "9c06444b577fb357c261d510d9c980301efd35f741d0d5413a1978d0f20d54f6",
+    "sha256": "4a211d9b7782feaacb9f9b92e97c8715c0bbf6252132278480371ad4161973e2",
+    "size_bytes": 199888
+  },
+  {
+    "path": "examples/Fig3_2_layout_draft.jpg",
+    "status": "Draft layout example; individual defects must not become defaults",
+    "provenance": "Generated during this user-requested workflow; JPEG format conversion only, no resizing or content edits",
+    "source_png_sha256": "93d18052d9c9df5487d7ca0a9b267f117632d26e126b7b354b419725ca663fd4",
+    "sha256": "9a00d17b76e70ca023c6111bf0875dda12d35310466bdab4bad8366e40d1bcf2",
+    "size_bytes": 267762
+  }
+]
